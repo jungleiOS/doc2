@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多口充电器选购指南 · 思维导图</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        :root {
+            --bg: #0f0f12;
+            --surface: #16161a;
+            --panel: #1e1e24;
+            --border: #2a2a34;
+            --text: #f5f5f0;
+            --text-muted: #8b8b94;
+            --accent: #f59e0b;
+            --accent-tech: #06b6d4;
+            --accent-rose: #f43f5e;
+            --accent-violet: #8b5cf6;
+            --accent-slate: #64748b;
+            --glow: rgba(245, 158, 11, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow: hidden;
+        }
+
+        #container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.05) 0%, transparent 40%),
+                var(--bg);
+        }
+
+        #controls {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            z-index: 10;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            padding: 20px 22px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            max-width: 320px;
+        }
+
+        #controls h1 {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+
+        #controls .subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+        }
+
+        #controls p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+            padding: 8px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Outfit', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: #0f0f12;
+            border-color: var(--accent);
+            box-shadow: 0 0 20px var(--glow);
+        }
+
+        .btn.active {
+            background: rgba(245, 158, 11, 0.12);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            cursor: grab;
+        }
+
+        svg:active {
+            cursor: grabbing;
+        }
+
+        .link {
+            fill: none;
+            stroke: var(--border);
+            stroke-width: 2px;
+            stroke-linecap: round;
+        }
+
+        .link.active {
+            stroke: url(#current-gradient);
+            stroke-width: 2.5px;
+            stroke-dasharray: 8 6;
+            animation: flow 1.2s linear infinite;
+        }
+
+        @keyframes flow {
+            to { stroke-dashoffset: -28; }
+        }
+
+        .node-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .node-bg {
+            fill: var(--panel);
+            stroke: var(--border);
+            stroke-width: 1.5px;
+            rx: 10;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35));
+            transition: all 0.3s ease;
+        }
+
+        .node:hover .node-bg {
+            fill: var(--surface);
+            stroke: var(--accent);
+            filter: drop-shadow(0 0 20px var(--glow));
+        }
+
+        .node.root .node-bg {
+            fill: var(--surface);
+            stroke: var(--accent);
+            stroke-width: 2px;
+        }
+
+        .node.root:hover .node-bg {
+            filter: drop-shadow(0 0 30px var(--glow));
+        }
+
+        .node-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            fill: var(--text);
+            dominant-baseline: middle;
+        }
+
+        .node-index {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            fill: var(--text-muted);
+            dominant-baseline: middle;
+        }
+
+        .port-icon {
+            fill: none;
+            stroke: var(--accent);
+            stroke-width: 2;
+        }
+
+        .legend {
+            position: absolute;
+            bottom: 24px;
+            right: 24px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            padding: 16px 18px;
+            border-radius: 14px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            font-size: 12px;
+        }
+
+        .legend-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 8px currentColor;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .link.active { animation: none; }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="controls">
+            <h1>多口充电器选购指南</h1>
+            <div class="subtitle">Article Structure Map</div>
+            <p>点击节点展开/折叠 · 滚轮缩放 · 拖拽移动<br>结构比瓦数更重要</p>
+            <div class="btn-group">
+                <button class="btn" onclick="expandAll()">全部展开</button>
+                <button class="btn" onclick="collapseAll()">全部折叠</button>
+                <button class="btn" onclick="resetZoom()">重置视图</button>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-title">层级图例</div>
+            <div class="legend-item"><div class="legend-dot" style="color:#f59e0b;background:#f59e0b"></div>文章主题</div>
+            <div class="legend-item"><div class="legend-dot" style="color:#f59e0b;background:#f59e0b"></div>底层逻辑</div>
+            <div class="legend-item"><div class="legend-dot" style="color:#06b6d4;background:#06b6d4"></div>场景选择</div>
+            <div class="legend-item"><div class="legend-dot" style="color:#f43f5e;background:#f43f5e"></div>避坑指南</div>
+            <div class="legend-item"><div class="legend-dot" style="color:#8b5cf6;background:#8b5cf6"></div>决策总结</div>
+        </div>
+    </div>
+
+    <script>
+        const data = {
+  "name": "多口充电器选购指南：为什么看了总瓦数就下单的人，大多都后悔了",
+  "children": [
+    {
+      "name": "一、不想买回来吃灰，先搞懂这四个底层逻辑",
+      "children": [
+        {
+          "name": "1. 协议匹配决定实际速度，功率只是上限",
+          "children": [
+            {
+              "name": "充电协议到底是什么？",
+              "children": []
+            },
+            {
+              "name": "主流协议一张表看懂",
+              "children": []
+            },
+            {
+              "name": "这些协议有什么区别？",
+              "children": []
+            },
+            {
+              "name": "实际选购中容易踩的坑",
+              "children": []
+            },
+            {
+              "name": "小白选购口诀",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "2. 多口同时用，功率分配是一门玄学",
+          "children": []
+        },
+        {
+          "name": "3. MFi 认证不是智商税，苹果生态用户尤其要注意",
+          "children": []
+        },
+        {
+          "name": "4. EPR 线：跑满 140W 以上必须知道的事",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "二、按你的真实场景选，别为不需要的参数买单",
+      "children": [
+        {
+          "name": "1. 固定桌面，一个排插要扛住所有设备",
+          "children": []
+        },
+        {
+          "name": "2. 外出通勤 / 差旅，一个充电器喂饱所有",
+          "children": []
+        },
+        {
+          "name": "3. 床头 / 客厅轻量场景",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "三、这些问题我替你研究过了，别重蹈覆辙",
+      "children": [
+        {
+          "name": "1. 「总功率 140W」但单口只有 45W",
+          "children": []
+        },
+        {
+          "name": "2. 多口同插「断崖式降速」",
+          "children": []
+        },
+        {
+          "name": "3. 「兼容苹果快充」的文字游戏",
+          "children": []
+        },
+        {
+          "name": "4. 安卓私有协议的陷阱",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "四、一张图说清选购决策",
+      "children": []
+    },
+    {
+      "name": "写在最后",
+      "children": []
+    }
+  ]
+};
+
+        const container = d3.select("#container");
+        const width = container.node().clientWidth;
+        const height = container.node().clientHeight;
+
+        const colorByChapter = {
+            "一": "#f59e0b",
+            "二": "#06b6d4",
+            "三": "#f43f5e",
+            "四": "#8b5cf6",
+            "写": "#64748b"
+        };
+
+        function getNodeColor(d) {
+            if (d.depth === 0) return "#f59e0b";
+            const name = d.data.name;
+            for (const key in colorByChapter) {
+                if (name.startsWith(key)) return colorByChapter[key];
+            }
+            // Inherit from ancestor
+            let p = d.parent;
+            while (p) {
+                for (const key in colorByChapter) {
+                    if (p.data.name.startsWith(key)) return colorByChapter[key];
+                }
+                p = p.parent;
+            }
+            return "#8b8b94";
+        }
+
+        const svg = container.append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        const defs = svg.append("defs");
+        const gradient = defs.append("linearGradient")
+            .attr("id", "current-gradient")
+            .attr("x1", "0%").attr("y1", "0%")
+            .attr("x2", "100%").attr("y2", "0%");
+        gradient.append("stop").attr("offset", "0%").attr("stop-color", "#f59e0b").attr("stop-opacity", 0.3);
+        gradient.append("stop").attr("offset", "50%").attr("stop-color", "#f59e0b");
+        gradient.append("stop").attr("offset", "100%").attr("stop-color", "#06b6d4");
+
+        const g = svg.append("g");
+
+        const zoom = d3.zoom()
+            .scaleExtent([0.2, 3])
+            .on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            });
+
+        svg.call(zoom);
+
+        let i = 0;
+        const duration = 500;
+        let root;
+
+        const treeMap = d3.tree().nodeSize([56, 320]);
+
+        root = d3.hierarchy(data, d => d.children);
+        root.x0 = height / 2;
+        root.y0 = 0;
+
+        root.children.forEach(collapseLevel);
+
+        function collapseLevel(d) {
+            if (d.children) {
+                d.children.forEach(child => {
+                    if (child.children) {
+                        child.children.forEach(collapse);
+                    }
+                });
+            }
+        }
+
+        function collapse(d) {
+            if (d.children) {
+                d._children = d.children;
+                d._children.forEach(collapse);
+                d.children = null;
+            }
+        }
+
+        update(root);
+        setTimeout(resetZoom, 100);
+
+        function update(source) {
+            const treeData = treeMap(root);
+            const nodes = treeData.descendants();
+            const links = treeData.links();
+
+            nodes.forEach(d => {
+                d.y = d.depth * 320;
+                d.color = getNodeColor(d);
+            });
+
+            const node = g.selectAll('g.node')
+                .data(nodes, d => d.id || (d.id = ++i));
+
+            const nodeEnter = node.enter().append('g')
+                .attr('class', d => 'node' + (d.depth === 0 ? ' root' : ''))
+                .attr("transform", d => `translate(${source.y0},${source.x0})`)
+                .on('click', click)
+                .on('mouseenter', highlightPath)
+                .on('mouseleave', clearHighlight);
+
+            // Card background
+            nodeEnter.append('rect')
+                .attr('class', 'node-bg')
+                .attr('x', -8)
+                .attr('y', -22)
+                .attr('height', 44)
+                .attr('rx', 10)
+                .attr('width', 1e-6);
+
+            // Chapter index badge for depth 1
+            nodeEnter.filter(d => d.depth === 1).append('circle')
+                .attr('class', 'chapter-dot')
+                .attr('cx', -22)
+                .attr('cy', 0)
+                .attr('r', 5)
+                .style('fill', d => d.color)
+                .style('opacity', 0);
+
+            // Text label
+            nodeEnter.append('text')
+                .attr('class', 'node-label')
+                .attr('dy', '.35em')
+                .attr('x', 12)
+                .attr('text-anchor', 'start')
+                .text(d => d.data.name)
+                .style('fill-opacity', 1e-6);
+
+            // Measure and size cards
+            nodeEnter.each(function(d) {
+                const self = d3.select(this);
+                const textNode = self.select('text').node();
+                const bbox = textNode.getBBox();
+                self.select('.node-bg')
+                    .attr('width', bbox.width + 36)
+                    .attr('x', -8);
+            });
+
+            const nodeUpdate = node.merge(nodeEnter);
+
+            nodeUpdate.transition()
+                .duration(duration)
+                .attr("transform", d => `translate(${d.y},${d.x})`);
+
+            nodeUpdate.select('.node-bg')
+                .transition().duration(duration)
+                .attr('width', function(d) {
+                    const bbox = d3.select(this.parentNode).select('text').node().getBBox();
+                    return bbox.width + 36;
+                })
+                .style('stroke', d => d.depth === 0 ? '#f59e0b' : (d._children || d.children ? d.color : 'var(--border)'));
+
+            nodeUpdate.select('.chapter-dot')
+                .style('opacity', 1);
+
+            nodeUpdate.select('.node-label')
+                .style('fill-opacity', 1)
+                .style('fill', d => d.depth === 0 ? '#f5f5f0' : (d.depth === 1 ? d.color : '#f5f5f0'));
+
+            const nodeExit = node.exit().transition()
+                .duration(duration)
+                .attr("transform", d => `translate(${source.y},${source.x})`)
+                .remove();
+
+            nodeExit.select('.node-bg').attr('width', 1e-6);
+            nodeExit.select('text').style('fill-opacity', 1e-6);
+
+            const link = g.selectAll('path.link')
+                .data(links, d => d.target.id);
+
+            const linkEnter = link.enter().insert('path', "g")
+                .attr("class", "link")
+                .attr('d', d => {
+                    const o = {x: source.x0, y: source.y0};
+                    return diagonal(o, o);
+                });
+
+            const linkUpdate = link.merge(linkEnter);
+
+            linkUpdate.transition()
+                .duration(duration)
+                .attr('d', d => diagonal(d.source, d.target))
+                .style('stroke', d => d.target.color);
+
+            const linkExit = link.exit().transition()
+                .duration(duration)
+                .attr('d', d => {
+                    const o = {x: source.x, y: source.y};
+                    return diagonal(o, o);
+                })
+                .remove();
+
+            nodes.forEach(d => {
+                d.x0 = d.x;
+                d.y0 = d.y;
+            });
+        }
+
+        function diagonal(s, d) {
+            return `M ${s.y} ${s.x}
+                    C ${(s.y + d.y) / 2} ${s.x},
+                      ${(s.y + d.y) / 2} ${d.x},
+                      ${d.y} ${d.x}`;
+        }
+
+        function click(event, d) {
+            if (d.children) {
+                d._children = d.children;
+                d.children = null;
+            } else {
+                d.children = d._children;
+                d._children = null;
+            }
+            update(d);
+        }
+
+        function highlightPath(event, d) {
+            const ancestors = new Set(d.ancestors().map(n => n.id));
+            g.selectAll('.link')
+                .classed('active', l => ancestors.has(l.target.id));
+        }
+
+        function clearHighlight() {
+            g.selectAll('.link').classed('active', false);
+        }
+
+        function expandAll() {
+            expand(root);
+            update(root);
+            setTimeout(resetZoom, 550);
+        }
+
+        function expand(d) {
+            if (d._children) {
+                d.children = d._children;
+                d._children = null;
+            }
+            if (d.children) d.children.forEach(expand);
+        }
+
+        function collapseAll() {
+            if (root.children) {
+                root.children.forEach(d => {
+                    if (d.children) {
+                        d._children = d.children;
+                        d.children = null;
+                    }
+                });
+            }
+            update(root);
+            setTimeout(resetZoom, 550);
+        }
+
+        function resetZoom() {
+            const bounds = g.node().getBBox();
+            const fullWidth = width;
+            const fullHeight = height;
+            const scale = Math.min(
+                (fullWidth - 420) / (bounds.width + 80),
+                (fullHeight - 80) / (bounds.height + 80),
+                1.05
+            );
+            const translateX = 320;
+            const translateY = (fullHeight - bounds.height * scale) / 2 - bounds.y * scale;
+
+            svg.transition().duration(750).call(
+                zoom.transform,
+                d3.zoomIdentity.translate(translateX, translateY).scale(scale)
+            );
+        }
+    </script>
+</body>
+</html>
