@@ -33,15 +33,25 @@
 ```
 .
 ├── AGENTS.md                 # 本文件：项目级 Agent 指令
-├── README.md                 # 给人类看的项目简介（如有）
-├── 多口充电器选购指南.md     # 已发布的知乎风格文章示例
+├── 多口充电器选购指南.md     # 知乎长文（含真实案例引用）
+├── 知乎回答-iPad平替充电器.md # 知乎回答
+├── 多口充电器选购指南-思维导图.html  # 交互式思维导图（D3.js，树数据内嵌，需与文章标题结构同步）
+├── 多口充电器选购指南-封面.png       # 知乎封面 690×280（由思维导图截图生成）
+├── 多口充电器选购指南-案例图.png     # 四宫格案例图集（由 HTML 拼图截图生成）
+├── 多口充电器选购指南-决策图.png     # 五步决策流程图（由 HTML 截图生成）
+├── capture-cover.js          # 封面截图脚本（Puppeteer + Chrome）
+├── cover-assets/             # 配图素材与截图工作区
+│   ├── case-collage.html     # 案例图集拼图页（改图改字都在这里）
+│   ├── decision-flow.html    # 决策链流程图页面
+│   ├── capture-cases.js      # 案例图截图脚本
+│   ├── capture-decision.js   # 决策图截图脚本
+│   └── raw/                  # 从源文下载的原始配图（按事件分目录）
 ├── .agents/
 │   └── skills/
 │       ├── khazix-writer/    # 公众号长文写作 Skill
-│       │   └── SKILL.md
-│       └── zhihu-viral-answer/  # 知乎高赞回答写作 Skill
-│           └── SKILL.md
-├── drafts/                   # 进行中的初稿（建议目录）
+│       ├── zhihu-viral-answer/  # 知乎高赞回答写作 Skill
+│       └── frontend-design/  # 前端视觉设计 Skill
+├── drafts/                   # 进行中的初稿
 ├── outlines/                 # 选题、大纲、素材（建议目录）
 ├── published/                # 已发布/定稿文章（建议目录）
 └── references/               # 参考资料、数据、截图（建议目录）
@@ -54,22 +64,29 @@
 - 大纲文件名格式：`outlines/<主题>-outline.md`。
 - 已发布文件直接放在根目录或 `published/` 下，保持标题简洁。
 
+知乎封面/图集采用「HTML 渲染 → Puppeteer 截图」工作流：
+
+1. 启动本地服务：`python3 -m http.server 8766`（8765 被其他服务占用）
+2. 封面：`node capture-cover.js`；案例图：`node cover-assets/capture-cases.js`；决策图：`node cover-assets/capture-decision.js`
+3. 成品用 ReadMediaFile 工具回看校验后再交付
+
 ### 2.2 Markdown 格式约定
 
 - 标题层级：`#` 用于文章主标题，`##` 用于大章节，`###` 用于小节。
 - 知乎回答允许适度使用表格、列表、加粗；公众号长文尽量少用小标题，靠节奏和转场推进。
-- 图片位置用文字占位：`[图片：xxx 描述]`。
+- 图片位置用文字占位：`[图片：xxx 描述]`；已有成品图时用标准 Markdown 引用并注明图源。
 
 ---
 
 ## 3. 可用的 Agent Skills
 
-本项目已配置两个写作 Skill，Agent 在执行对应任务时应优先加载并遵循：
+本项目已配置三个 Skill，Agent 在执行对应任务时应优先加载并遵循：
 
 | Skill | 路径 | 触发场景 |
 |-------|------|---------|
 | `khazix-writer` | `.agents/skills/khazix-writer/SKILL.md` | 写公众号长文、续写、扩写、按风格出稿 |
 | `zhihu-viral-answer` | `.agents/skills/zhihu-viral-answer/SKILL.md` | 写知乎回答、知乎体、高赞爆款 |
+| `frontend-design` | `.agents/skills/frontend-design/SKILL.md` | 封面、图集、思维导图等视觉产出 |
 
 使用方式：
 
@@ -203,4 +220,4 @@
 
 ---
 
-**最后更新**：2026-08-12
+**最后更新**：2026-08-15

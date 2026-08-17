@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>多口充电器翻车现场 · 案例图集</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0c0d0f;
+    font-family: "Outfit", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #collage {
+    width: 1200px;
+    background: linear-gradient(160deg, #141519 0%, #101114 100%);
+    border: 1px solid #26282e;
+    border-radius: 20px;
+    padding: 36px 36px 28px;
+  }
+  /* ---------- header ---------- */
+  .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; letter-spacing: 2px;
+    color: #f59e0b;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tag::before { content: ""; width: 22px; height: 2px; background: #f59e0b; }
+  h1 {
+    margin-top: 10px;
+    font-size: 34px; font-weight: 800; color: #f3f4f6;
+    letter-spacing: 1px;
+  }
+  h1 em { font-style: normal; color: #f59e0b; }
+  .sub {
+    margin-top: 6px;
+    font-size: 14px; color: #8b8e98;
+  }
+  /* ---------- grid ---------- */
+  .grid {
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .card {
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .shot {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    background: #0e0f12;
+  }
+  .shot img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .shot.contain { background: #f4f4f5; display: flex; flex-direction: column; }
+  .shot.contain img { width: 100%; height: auto; display: block; border-bottom: 1px solid #e2e2e5; }
+  .quote-line {
+    flex: 1;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 10px 20px;
+    color: #18181b; font-size: 19px; font-weight: 600; line-height: 1.5;
+  }
+  .quote-line::before {
+    content: "华为商城产品说明 · 原文截图 ↑";
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; font-weight: 500; color: #9a9aa2;
+    margin-bottom: 8px;
+  }
+  .quote-line em { font-style: normal; color: #b45309; }
+  .num {
+    position: absolute; top: 12px; left: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px; font-weight: 700;
+    color: #0c0d0f; background: #f59e0b;
+    border-radius: 8px; padding: 3px 10px;
+  }
+  .chip {
+    position: absolute; bottom: 12px; right: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px; font-weight: 700;
+    color: #ffd9a0;
+    background: rgba(12, 13, 15, .82);
+    border: 1px solid rgba(245, 158, 11, .55);
+    border-radius: 8px; padding: 4px 10px;
+    backdrop-filter: blur(3px);
+  }
+  .chip.cyan { color: #a5f3fc; border-color: rgba(6, 182, 212, .55); }
+  .body { padding: 14px 16px 16px; }
+  .case-title {
+    font-size: 17px; font-weight: 600; color: #eceef1;
+    line-height: 1.45;
+  }
+  .case-desc {
+    margin-top: 6px;
+    font-size: 13px; color: #9a9ea8; line-height: 1.65;
+  }
+  .case-desc b { color: #d7dae0; font-weight: 600; }
+  .src {
+    margin-top: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; color: #6b6f78;
+  }
+  .src::before { content: "图源 · "; color: #4b4e55; }
+  /* ---------- footer ---------- */
+  .foot {
+    margin-top: 22px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; color: #5a5d66;
+  }
+</style>
+</head>
+<body>
+<div id="collage">
+  <div class="tag">FIELD REPORTS · 实测档案</div>
+  <h1>多口充电器的<em>翻车现场</em>：四个真实案例</h1>
+  <div class="sub">总瓦数不会告诉你的事，功率表和拆解会</div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="shot">
+        <img src="case-kongzai.jpg" alt="空载线实测">
+        <span class="num">01</span>
+        <span class="chip">掉到 9.66W</span>
+      </div>
+      <div class="body">
+        <div class="case-title">一根没接设备的苹果线，偷走了笔记本的功率</div>
+        <div class="case-desc">Lightning 线头里的芯片空载也耗电，多口充电器误判为「多口同插」，<b>另一台设备功率从满速掉到 9.66W</b>。用不到的线，随手拔掉。</div>
+        <div class="src">充电头网《空载数据线也会占用功率？实测六款多口充电器》2021</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="shot contain">
+        <span class="num">02</span>
+        <img src="case-huawei.png" alt="华为官方说明">
+        <div class="quote-line">「iOS 系统<em>仅兼容基于 PD 协议</em>的设备，部分 iOS 设备需搭配自有快充规格线缆。」</div>
+      </div>
+      <div class="body">
+        <div class="case-title">华为 66W 原装套装，给 iPhone 15 一瓦都输不出</div>
+        <div class="case-desc">6A 原装线为私有快充魔改了引脚，而 iPhone 只认 PD。华为官方说明也写明：<b>「iOS 系统仅兼容基于 PD 协议的设备」</b>。2023 年因此冲上热搜。</div>
+        <div class="src">华为商城 88W 充电器产品说明 · 电子发烧友网实测还原 2023</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="shot">
+        <img src="case-fake.jpeg" alt="真假拆解对比">
+        <span class="num">03</span>
+        <span class="chip cyan">实测仅 20W</span>
+      </div>
+      <div class="body">
+        <div class="case-title">山寨 66W 充电器，拆开是一块 20 克的铁</div>
+        <div class="case-desc">左：华为原装 66W，元件塞满；右：山寨版大片空板，<b>靠 20g 配重铁块冒充分量，实际输出只有 20W</b>，温度保护也没有。</div>
+        <div class="src">充电头网《华为真假 66W 超级快充拆解对比》2022</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="shot">
+        <img src="case-samsung.jpeg" alt="三星三口实测">
+        <span class="num">04</span>
+        <span class="chip">33.8W + 23.4W + 5.7W</span>
+      </div>
+      <div class="body">
+        <div class="case-title">原厂也躲不掉：三星 65W 三口充，插满只剩一半</div>
+        <div class="case-desc">三块功率表实拍：单口 65W 的三星原厂 2C1A，<b>三口插满后被固定分配为 35W + 25W + 5W</b>；双笔记本同插时 C2 口直接归零。</div>
+        <div class="src">充电头网《聊聊三星唯一一款 65W 多口充电器的分配策略》2022</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>多口充电器选购指南 · 案例图集</span>
+    <span>仅作案例引用，版权归原实测方所有</span>
+  </div>
+</div>
+</body>
+</html>

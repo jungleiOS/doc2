@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>多口充电器选购决策链</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0c0d0f;
+    font-family: "Outfit", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #flow {
+    width: 780px;
+    background: linear-gradient(160deg, #141519 0%, #101114 100%);
+    border: 1px solid #26282e;
+    border-radius: 20px;
+    padding: 36px 40px 28px;
+  }
+  .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; letter-spacing: 2px; color: #f59e0b;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tag::before { content: ""; width: 22px; height: 2px; background: #f59e0b; }
+  h1 { margin-top: 10px; font-size: 30px; font-weight: 800; color: #f3f4f6; }
+  h1 em { font-style: normal; color: #f59e0b; }
+  .sub { margin-top: 6px; font-size: 14px; color: #8b8e98; }
+
+  .steps { margin-top: 28px; position: relative; }
+  /* 左侧贯穿线 */
+  .steps::before {
+    content: "";
+    position: absolute; left: 25px; top: 30px; bottom: 30px;
+    width: 2px;
+    background: linear-gradient(#f59e0b, #06b6d4);
+    opacity: .4;
+  }
+  .step {
+    position: relative;
+    display: flex; gap: 18px;
+    padding: 14px 0;
+  }
+  .n {
+    flex: 0 0 52px; height: 52px;
+    border-radius: 14px;
+    background: #191b1f;
+    border: 1px solid rgba(245, 158, 11, .5);
+    color: #f59e0b;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1;
+  }
+  .step:last-child .n { border-color: rgba(6, 182, 212, .6); color: #67e8f9; }
+  .card {
+    flex: 1;
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 14px;
+    padding: 14px 18px;
+  }
+  .t { font-size: 18px; font-weight: 600; color: #eceef1; }
+  .d { margin-top: 6px; font-size: 13.5px; color: #9a9ea8; line-height: 1.7; }
+  .d b { color: #d7dae0; font-weight: 600; }
+  .chips { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .c {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px; color: #ffd9a0;
+    background: rgba(245, 158, 11, .1);
+    border: 1px solid rgba(245, 158, 11, .35);
+    border-radius: 6px; padding: 2px 8px;
+  }
+  .c.cy {
+    color: #a5f3fc;
+    background: rgba(6, 182, 212, .08);
+    border-color: rgba(6, 182, 212, .35);
+  }
+  .foot {
+    margin-top: 22px;
+    display: flex; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; color: #5a5d66;
+  }
+</style>
+</head>
+<body>
+<div id="flow">
+  <div class="tag">DECISION FLOW · 决策链</div>
+  <h1>多口充电器选购，<em>五步走完再下单</em></h1>
+  <div class="sub">懒得看长文的话，这一张图直接带走</div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="n">01</div>
+      <div class="card">
+        <div class="t">数设备</div>
+        <div class="d">笔记本要不要 <b>65W+</b>？有没有三星手机（要 <b>PPS</b>）？有没有华为 / OPPO / vivo / 小米的百瓦快充机型（认<b>官方授权</b>）？</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">02</div>
+      <div class="card">
+        <div class="t">定场景</div>
+        <div class="d">别为不需要的参数买单，也别贪白牌。</div>
+        <div class="chips">
+          <span class="c">固定桌面 100W+ · 75-150 元</span>
+          <span class="c">差旅 65W GaN · 50-120 元</span>
+          <span class="c">床头 30W 迷你 · 20-45 元</span>
+        </div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">03</div>
+      <div class="card">
+        <div class="t">查协议</div>
+        <div class="d">参数页找原文：<b>PD 必须有</b>；三星看 <b>PPS</b>（3.3V-11V 可调电压档）；「兼容快充」是文字游戏，「官方授权」才是。</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">04</div>
+      <div class="card">
+        <div class="t">验分配</div>
+        <div class="d">搜「<b>型号 + 多口输出</b>」看实测分配表：你最常用的设备组合同插时，每一口还剩多少瓦？</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">05</div>
+      <div class="card">
+        <div class="t">收货自测</div>
+        <div class="d">用足 7 天无理由：<b>满载</b>看笔记本掉不掉电，<b>插拔</b>看断不断连，<b>摸温度</b>看烫不烫手，不用的线随手拔掉。</div>
+        <div class="chips"><span class="c cy">全过 → 留下 · 翻车 → 退</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>多口充电器选购指南 · 决策链</span>
+    <span>选对工具，本身就是效率</span>
+  </div>
+</div>
+</body>
+</html>
