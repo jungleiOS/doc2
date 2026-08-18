@@ -35,26 +35,32 @@
 ├── AGENTS.md                 # 本文件：项目级 Agent 指令
 ├── 多口充电器选购指南.md     # 知乎长文（含真实案例引用）
 ├── 知乎回答-iPad平替充电器.md # 知乎回答
+├── 知乎回答-120W充电器给65W电脑充电.md # 知乎回答
 ├── 多口充电器选购指南-思维导图.html  # 交互式思维导图（D3.js，树数据内嵌，需与文章标题结构同步）
 ├── 多口充电器选购指南-封面.png       # 知乎封面 690×280（由思维导图截图生成）
 ├── 多口充电器选购指南-案例图.png     # 四宫格案例图集（由 HTML 拼图截图生成）
 ├── 多口充电器选购指南-决策图.png     # 五步决策流程图（由 HTML 截图生成）
+├── 多口充电器选购指南-图片尾巴.png   # 文末点赞收藏引导图（由 tail-cta.html 截图生成）
 ├── capture-cover.js          # 封面截图脚本（Puppeteer + Chrome）
 ├── cover-assets/             # 配图素材与截图工作区
 │   ├── case-collage.html     # 案例图集拼图页（改图改字都在这里）
 │   ├── decision-flow.html    # 决策链流程图页面
+│   ├── tail-cta.html         # 图片尾巴（点赞收藏引导）页面
 │   ├── capture-cases.js      # 案例图截图脚本
 │   ├── capture-decision.js   # 决策图截图脚本
+│   ├── capture-tail.js       # 图片尾巴截图脚本
 │   └── raw/                  # 从源文下载的原始配图（按事件分目录）
 ├── .agents/
 │   └── skills/
 │       ├── khazix-writer/    # 公众号长文写作 Skill
 │       ├── zhihu-viral-answer/  # 知乎高赞回答写作 Skill
+│       ├── neat-freak/       # 知识与规范收尾 Skill
 │       └── frontend-design/  # 前端视觉设计 Skill
 ├── drafts/                   # 进行中的初稿
 ├── outlines/                 # 选题、大纲、素材（建议目录）
 ├── published/                # 已发布/定稿文章（建议目录）
 └── references/               # 参考资料、数据、截图（建议目录）
+    └── 好物决策卡模板.md      # 好物推荐商品决策卡（写稿前填卡，含选题判断）
 ```
 
 ### 2.1 文件命名规范
@@ -67,7 +73,7 @@
 知乎封面/图集采用「HTML 渲染 → Puppeteer 截图」工作流：
 
 1. 启动本地服务：`python3 -m http.server 8766`（8765 被其他服务占用）
-2. 封面：`node capture-cover.js`；案例图：`node cover-assets/capture-cases.js`；决策图：`node cover-assets/capture-decision.js`
+2. 封面：`node capture-cover.js`；案例图：`node cover-assets/capture-cases.js`；决策图：`node cover-assets/capture-decision.js`；图片尾巴：`node cover-assets/capture-tail.js`
 3. 成品用 ReadMediaFile 工具回看校验后再交付
 
 ### 2.2 Markdown 格式约定
@@ -87,6 +93,7 @@
 | `khazix-writer` | `.agents/skills/khazix-writer/SKILL.md` | 写公众号长文、续写、扩写、按风格出稿 |
 | `zhihu-viral-answer` | `.agents/skills/zhihu-viral-answer/SKILL.md` | 写知乎回答、知乎体、高赞爆款 |
 | `frontend-design` | `.agents/skills/frontend-design/SKILL.md` | 封面、图集、思维导图等视觉产出 |
+| `neat-freak` | `.agents/skills/neat-freak/SKILL.md` | 文档/规则/残留收尾同步（说「洁癖」或「收尾」时触发） |
 
 使用方式：
 
