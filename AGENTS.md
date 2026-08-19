@@ -33,23 +33,38 @@
 ```
 .
 ├── AGENTS.md                 # 本文件：项目级 Agent 指令
-├── 多口充电器选购指南.md     # 知乎长文（含真实案例引用）
-├── 知乎回答-iPad平替充电器.md # 知乎回答
-├── 知乎回答-120W充电器给65W电脑充电.md # 知乎回答
-├── 多口充电器选购指南-思维导图.html  # 交互式思维导图（D3.js，树数据内嵌，需与文章标题结构同步）
-├── 多口充电器选购指南-封面.png       # 知乎封面 690×280（由思维导图截图生成）
-├── 多口充电器选购指南-案例图.png     # 四宫格案例图集（由 HTML 拼图截图生成）
-├── 多口充电器选购指南-决策图.png     # 五步决策流程图（由 HTML 截图生成）
-├── 多口充电器选购指南-图片尾巴.png   # 文末点赞收藏引导图（由 tail-cta.html 截图生成）
-├── capture-cover.js          # 封面截图脚本（Puppeteer + Chrome）
-├── cover-assets/             # 配图素材与截图工作区
-│   ├── case-collage.html     # 案例图集拼图页（改图改字都在这里）
-│   ├── decision-flow.html    # 决策链流程图页面
-│   ├── tail-cta.html         # 图片尾巴（点赞收藏引导）页面
-│   ├── capture-cases.js      # 案例图截图脚本
-│   ├── capture-decision.js   # 决策图截图脚本
-│   ├── capture-tail.js       # 图片尾巴截图脚本
-│   └── raw/                  # 从源文下载的原始配图（按事件分目录）
+├── 多口充电器选购指南/        # 一篇长文及其全部衍生内容的归集目录（文章 + 衍生文 + 配图 + 截图代码）
+│   ├── 多口充电器选购指南.md     # 知乎长文主稿（场景选购 + 决策图，原理部分已拆为系列文并互链）
+│   ├── 知乎文章-充电协议篇.md    # 系列拆文 A：协议原理（主文第一章导读互链，文末三篇互链）
+│   ├── 知乎文章-功率分配与验货篇.md # 系列拆文 B：功率分配原理 + 下单/收货验货清单
+│   ├── 知乎文章-充电线篇.md      # 系列拆文 C：MFi、3A/5A、EPR 线材选购
+│   ├── 知乎回答-iPad平替充电器.md # 衍生知乎回答（文末引流至长文）
+│   ├── 知乎回答-120W充电器给65W电脑充电.md # 衍生知乎回答（文末引流至长文）
+│   ├── drafts/                   # 衍生知乎草稿（素材均取自长文）
+│   │   ├── zhihu-氮化镓充电器值得买吗-v1.md
+│   │   ├── zhihu-充电器达不到额定功率-v1.md
+│   │   └── zhihu-充电器真实功率怎么看-v1.md
+│   ├── 多口充电器选购指南-思维导图.html  # 交互式思维导图（D3.js，树数据内嵌，需与文章标题结构同步）
+│   ├── 多口充电器选购指南-封面.png       # 知乎封面 690×280（由思维导图截图生成）
+│   ├── 多口充电器选购指南-案例图.png     # 四宫格案例图集（由 HTML 拼图截图生成）
+│   ├── 多口充电器选购指南-决策图.png     # 五步决策流程图（由 HTML 截图生成）
+│   ├── 多口充电器选购指南-图片尾巴.png   # 文末点赞收藏引导图（由 tail-cta.html 截图生成）
+│   ├── 知乎文章-充电协议篇-封面.png       # 拆文 A 封面 2760×1120（由 cover-protocol.html 截图生成）
+│   ├── 知乎文章-功率分配与验货篇-封面.png  # 拆文 B 封面（由 cover-power.html 截图生成）
+│   ├── 知乎文章-充电线篇-封面.png        # 拆文 C 封面（由 cover-cable.html 截图生成）
+│   ├── capture-cover.js          # 封面截图脚本（Puppeteer + Chrome）
+│   └── cover-assets/             # 配图素材与截图工作区
+│       ├── case-collage.html     # 案例图集拼图页（改图改字都在这里）
+│       ├── decision-flow.html    # 决策链流程图页面
+│       ├── tail-cta.html         # 图片尾巴（点赞收藏引导）页面
+│       ├── cover-protocol.html   # 拆文 A 封面页（100W→5W + 协议徽章）
+│       ├── cover-power.html      # 拆文 B 封面页（功率条对比 + 验货清单）
+│       ├── cover-cable.html      # 拆文 C 封面页（线材三档 + MFi 印章）
+│       ├── capture-cases.js      # 案例图截图脚本
+│       ├── capture-decision.js   # 决策图截图脚本
+│       ├── capture-tail.js       # 图片尾巴截图脚本
+│       ├── capture-cover-protocol.js / capture-cover-power.js / capture-cover-cable.js  # 三篇拆文封面截图脚本
+│       └── raw/                  # 从源文下载的原始配图（按事件分目录）
 ├── .agents/
 │   └── skills/
 │       ├── khazix-writer/    # 公众号长文写作 Skill
@@ -70,10 +85,10 @@
 - 大纲文件名格式：`outlines/<主题>-outline.md`。
 - 已发布文件直接放在根目录或 `published/` 下，保持标题简洁。
 
-知乎封面/图集采用「HTML 渲染 → Puppeteer 截图」工作流：
+知乎封面/图集采用「HTML 渲染 → Puppeteer 截图」工作流（以《多口充电器选购指南》为例，所有命令在其归集目录内执行）：
 
-1. 启动本地服务：`python3 -m http.server 8766`（8765 被其他服务占用）
-2. 封面：`node capture-cover.js`；案例图：`node cover-assets/capture-cases.js`；决策图：`node cover-assets/capture-decision.js`；图片尾巴：`node cover-assets/capture-tail.js`
+1. 进入目录并启动本地服务：`cd 多口充电器选购指南 && python3 -m http.server 8766`（8765 被其他服务占用）
+2. 封面：`node capture-cover.js`；案例图：`node cover-assets/capture-cases.js`；决策图：`node cover-assets/capture-decision.js`；图片尾巴：`node cover-assets/capture-tail.js`；三篇拆文封面：`node cover-assets/capture-cover-protocol.js` / `capture-cover-power.js` / `capture-cover-cable.js`（截图脚本里的页面 URL 和输出路径都相对于该目录）
 3. 成品用 ReadMediaFile 工具回看校验后再交付
 
 ### 2.2 Markdown 格式约定
@@ -94,6 +109,7 @@
 | `zhihu-viral-answer` | `.agents/skills/zhihu-viral-answer/SKILL.md` | 写知乎回答、知乎体、高赞爆款 |
 | `frontend-design` | `.agents/skills/frontend-design/SKILL.md` | 封面、图集、思维导图等视觉产出 |
 | `neat-freak` | `.agents/skills/neat-freak/SKILL.md` | 文档/规则/残留收尾同步（说「洁癖」或「收尾」时触发） |
+| `zhihu-question-scout` | `.agents/skills/zhihu-question-scout/SKILL.md` | 用 WebBridge 抓知乎邀请回答/推荐问题，结合已有文章每次选 3 个值得答的问题（说「选题」「看看知乎邀请」时触发） |
 
 使用方式：
 

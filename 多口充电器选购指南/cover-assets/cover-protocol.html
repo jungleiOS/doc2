@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>系列之一 · 充电协议篇 · 封面</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0c0d0f;
+    font-family: "Outfit", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 24px;
+  }
+  #cover {
+    width: 1380px; height: 560px;
+    background: linear-gradient(150deg, #17181d 0%, #101114 55%, #16130c 100%);
+    border: 1px solid #26282e;
+    border-radius: 24px;
+    padding: 38px 52px 28px;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  #cover::before {
+    content: "";
+    position: absolute; top: -140px; right: -80px;
+    width: 460px; height: 460px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(245,158,11,.15) 0%, transparent 70%);
+  }
+  #cover::after {
+    content: "";
+    position: absolute; bottom: -180px; left: -100px;
+    width: 420px; height: 420px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(245,158,11,.06) 0%, transparent 70%);
+  }
+
+  .head { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; letter-spacing: 2.5px; color: #f59e0b;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .tag::before { content: ""; width: 22px; height: 2px; background: #f59e0b; }
+  .no {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px; letter-spacing: 2px; color: #5a5d66;
+  }
+  .no b { color: #f59e0b; font-weight: 700; }
+
+  h1 {
+    margin-top: 14px;
+    font-size: 46px; font-weight: 800; color: #f3f4f6; letter-spacing: 1px;
+    position: relative; z-index: 1;
+  }
+  h1 em { font-style: normal; color: #f59e0b; }
+  .sub {
+    margin-top: 8px; font-size: 15px; color: #8b8e98; position: relative; z-index: 1;
+  }
+  .sub b { color: #c9ccd4; font-weight: 600; }
+
+  .sig { flex: 1; margin-top: 24px; display: flex; gap: 40px; align-items: stretch; position: relative; z-index: 1; }
+
+  /* 左：100W → 5W 落差 */
+  .drop {
+    flex: 0 0 470px;
+    background: #141519;
+    border: 1px solid #26282e;
+    border-radius: 18px;
+    padding: 20px 28px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .drop-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px; letter-spacing: 2px; color: #6b6e78;
+  }
+  .nums { margin-top: 10px; display: flex; align-items: center; gap: 22px; }
+  .num { display: flex; flex-direction: column; }
+  .num .v { font-size: 74px; font-weight: 800; line-height: 1; letter-spacing: -1px; }
+  .num .t {
+    margin-top: 8px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11.5px; letter-spacing: 1.5px;
+  }
+  .num.from .v { color: #f3f4f6; }
+  .num.from .t { color: #8b8e98; }
+  .num.to .v { color: #f59e0b; text-shadow: 0 0 34px rgba(245,158,11,.35); }
+  .num.to .t { color: #f59e0b; }
+  .arrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 40px; font-weight: 700; color: #f59e0b;
+    padding-bottom: 22px;
+  }
+
+  /* 右：协议徽章 */
+  .protocols { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+  .chip {
+    display: flex; align-items: baseline; gap: 12px;
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 12px;
+    padding: 9px 16px;
+  }
+  .chip .name {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px; font-weight: 700; color: #d7dae0;
+    flex: 0 0 92px;
+  }
+  .chip .note { font-size: 13px; color: #8b8e98; }
+  .chip.hl {
+    background: rgba(245,158,11,.09);
+    border-color: rgba(245,158,11,.55);
+    box-shadow: 0 0 24px rgba(245,158,11,.1);
+  }
+  .chip.hl .name { color: #f59e0b; }
+  .chip.hl .note { color: #d9c9a8; }
+  .chip.warn { border-style: dashed; }
+  .chip.warn .note { color: #b08894; }
+
+  .foot {
+    margin-top: 20px; padding-top: 15px;
+    border-top: 1px dashed #2a2d33;
+    display: flex; align-items: center; justify-content: space-between;
+    position: relative; z-index: 1;
+  }
+  .data {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px; color: #6b6e78; letter-spacing: .5px;
+  }
+  .data b { color: #f59e0b; font-weight: 700; }
+  .data i { font-style: normal; color: #3f424b; padding: 0 10px; }
+  .brand { font-size: 11.5px; color: #4b4e57; letter-spacing: 2.5px; }
+</style>
+</head>
+<body>
+<div id="cover">
+  <div class="head">
+    <div class="tag">多口充电器选购指南 · 系列之一</div>
+    <div class="no">SERIES <b>01</b> / 03 · 充电协议</div>
+  </div>
+  <h1>标称 100W，凭什么只跑 <em>5W</em>？</h1>
+  <div class="sub">协议是充电器和设备之间的<b>「暗号」</b>——暗号对不上，功率直接归零</div>
+
+  <div class="sig">
+    <div class="drop">
+      <div class="drop-label">// 协议对不上时</div>
+      <div class="nums">
+        <div class="num from">
+          <span class="v">100W</span>
+          <span class="t">充电器标称</span>
+        </div>
+        <div class="arrow">→</div>
+        <div class="num to">
+          <span class="v">5W</span>
+          <span class="t">实际输出 5V/1A</span>
+        </div>
+      </div>
+    </div>
+    <div class="protocols">
+      <div class="chip hl"><span class="name">PD</span><span class="note">通用普通话 · 买充电器先认它</span></div>
+      <div class="chip"><span class="name">PPS</span><span class="note">PD 进阶版 · 三星满速刚需</span></div>
+      <div class="chip"><span class="name">QC</span><span class="note">高通老协议 · 有 PD 就够</span></div>
+      <div class="chip"><span class="name">UFCS</span><span class="note">国产通用方言 · 加分项非决定项</span></div>
+      <div class="chip warn"><span class="name">私有协议</span><span class="note">各品牌方言 · 第三方跑不满</span></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="data">华为 66W 充 iPhone 15 = <b>0W</b><i>|</i>三星无 PPS 只有 <b>15W</b><i>|</i>功率决定上限，<b>协议决定下限</b></div>
+    <div class="brand">充电协议篇</div>
+  </div>
+</div>
+</body>
+</html>

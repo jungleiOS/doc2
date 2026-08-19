@@ -254,12 +254,13 @@
             <div class="legend-item"><div class="legend-dot" style="color:#06b6d4;background:#06b6d4"></div>场景选择</div>
             <div class="legend-item"><div class="legend-dot" style="color:#f43f5e;background:#f43f5e"></div>避坑指南</div>
             <div class="legend-item"><div class="legend-dot" style="color:#8b5cf6;background:#8b5cf6"></div>决策总结</div>
+            <div class="legend-item"><div class="legend-dot" style="color:#10b981;background:#10b981"></div>系列文章</div>
         </div>
     </div>
 
     <script>
         const data = {
-  "name": "多口充电器选购指南：为什么看了总瓦数就下单的人，大多都后悔了",
+  "name": "多口充电器怎么选？2026年氮化镓多口充电器推荐与选购指南",
   "children": [
     {
       "name": "一、不想买回来吃灰，先搞懂这四个底层逻辑",
@@ -268,42 +269,37 @@
           "name": "1. 协议匹配决定实际速度，功率只是上限",
           "children": [
             {
-              "name": "充电协议到底是什么？",
-              "children": []
-            },
-            {
-              "name": "主流协议一张表看懂",
-              "children": []
-            },
-            {
-              "name": "这些协议有什么区别？",
-              "children": []
-            },
-            {
-              "name": "UFCS：国产快充的通用方言",
-              "children": []
-            },
-            {
-              "name": "实际选购中容易踩的坑",
-              "children": []
-            },
-            {
-              "name": "小白选购口诀",
+              "name": "→ 拆文：充电协议一篇讲透",
               "children": []
             }
           ]
         },
         {
           "name": "2. 多口同时用，功率分配是一门玄学",
-          "children": []
+          "children": [
+            {
+              "name": "→ 拆文：功率分配与验货篇",
+              "children": []
+            }
+          ]
         },
         {
-          "name": "3. MFi 认证不是智商税，苹果生态用户尤其要注意",
-          "children": []
+          "name": "3. MFi 认证的是线，不是充电器",
+          "children": [
+            {
+              "name": "→ 拆文：充电线篇",
+              "children": []
+            }
+          ]
         },
         {
-          "name": "4. EPR 线：跑满 140W 以上必须知道的事",
-          "children": []
+          "name": "4. 100W 以上要配 EPR 线",
+          "children": [
+            {
+              "name": "→ 拆文：充电线篇",
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -325,22 +321,10 @@
       ]
     },
     {
-      "name": "三、10 分钟验证清单，查完再下单",
+      "name": "三、下单前后，别忘了验货",
       "children": [
         {
-          "name": "1. 查单口输出规格表",
-          "children": []
-        },
-        {
-          "name": "2. 查多口功率分配",
-          "children": []
-        },
-        {
-          "name": "3. 查协议列表原文",
-          "children": []
-        },
-        {
-          "name": "4. 收货后做三个测试",
+          "name": "→ 拆文：功率分配与验货篇",
           "children": []
         }
       ]
@@ -352,6 +336,62 @@
     {
       "name": "写在最后",
       "children": []
+    },
+    {
+      "name": "系列深度文章（互相引用）",
+      "children": [
+        {
+          "name": "充电协议篇：为什么 100W 充电器给 iPhone 只跑 5W",
+          "children": [
+            {
+              "name": "主流协议一张表 + 各协议区别",
+              "children": []
+            },
+            {
+              "name": "私有协议与 UFCS",
+              "children": []
+            },
+            {
+              "name": "四个坑 + 小白选购口诀",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "功率分配与验货篇：多口同充为什么掉速",
+          "children": [
+            {
+              "name": "总功率是广告词，分配表才是合同条款",
+              "children": []
+            },
+            {
+              "name": "下单前查三张表",
+              "children": []
+            },
+            {
+              "name": "收货后做三个测试",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "充电线篇：MFi、3A/5A、EPR 一次讲清",
+          "children": [
+            {
+              "name": "MFi 认证的是线，不是充电器",
+              "children": []
+            },
+            {
+              "name": "3A/5A 与 E-Marker",
+              "children": []
+            },
+            {
+              "name": "EPR：跑满 140W 以上必须知道",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ]
 };
@@ -365,7 +405,8 @@
             "二": "#06b6d4",
             "三": "#f43f5e",
             "四": "#8b5cf6",
-            "写": "#64748b"
+            "写": "#64748b",
+            "系": "#10b981"
         };
 
         function getNodeColor(d) {

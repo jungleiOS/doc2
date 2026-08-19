@@ -1,0 +1,14 @@
+const puppeteer = require('puppeteer-core');
+
+(async () => {
+  const browser = await puppeteer.launch({ channel: 'chrome', headless: true });
+  const page = await browser.newPage();
+  await page.setViewport({ width: 560, height: 700, deviceScaleFactor: 2 });
+  await page.goto('http://127.0.0.1:8766/cover-assets/tail-cta-left.html', { waitUntil: 'networkidle0' });
+  await page.evaluate(() => document.fonts.ready);
+  await new Promise(r => setTimeout(r, 600));
+  const el = await page.$('#tail');
+  await el.screenshot({ path: '多口充电器选购指南-图片尾巴-左版.png' });
+  await browser.close();
+  console.log('done');
+})();

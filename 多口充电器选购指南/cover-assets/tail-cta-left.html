@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>图片尾巴 · 左版（知乎回答小图）</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0c0d0f;
+    font-family: "Outfit", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  /* 窄版卡片：知乎回答中小于正文栏宽的图片会靠左/居中展示，不撑满 */
+  #tail {
+    width: 460px;
+    background: linear-gradient(160deg, #17181d 0%, #101114 55%, #15130d 100%);
+    border: 1px solid #26282e;
+    border-radius: 18px;
+    padding: 26px 28px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* 背景装饰：右上角琥珀光晕 */
+  #tail::before {
+    content: "";
+    position: absolute; top: -80px; right: -70px;
+    width: 240px; height: 240px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(245,158,11,.15) 0%, transparent 70%);
+  }
+  .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 2.5px;
+    color: #f59e0b;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tag::before { content: ""; width: 18px; height: 2px; background: #f59e0b; }
+  .headline {
+    margin-top: 10px;
+    font-size: 23px; font-weight: 800; color: #f3f4f6; letter-spacing: .5px;
+    line-height: 1.35;
+  }
+  .headline em { font-style: normal; color: #f59e0b; }
+  .sub {
+    margin-top: 8px;
+    font-size: 13px; color: #8b8e98; line-height: 1.7;
+  }
+  .sub b { color: #c9ccd4; font-weight: 600; }
+
+  /* 三个动作：窄版紧凑横排 */
+  .actions {
+    margin-top: 18px;
+    display: flex; gap: 10px;
+  }
+  .act {
+    flex: 1;
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 12px;
+    padding: 12px 6px 10px;
+    text-align: center;
+  }
+  .act .icon { font-size: 21px; line-height: 1; }
+  .act .label {
+    margin-top: 6px;
+    font-size: 13.5px; font-weight: 600; color: #e5e7eb;
+  }
+  .act .hint {
+    margin-top: 2px;
+    font-size: 10px; color: #6b6e78;
+  }
+  .act.hot { border-color: rgba(245,158,11,.45); background: #1c1a14; }
+  .act.hot .label { color: #f59e0b; }
+
+  /* 底部金句签名 */
+  .foot {
+    margin-top: 16px;
+    padding-top: 13px;
+    border-top: 1px dashed #2a2d33;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  }
+  .motto {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; color: #6b6e78; letter-spacing: .5px;
+  }
+  .motto b { color: #f59e0b; font-weight: 700; }
+  .brand { font-size: 10.5px; color: #4b4e57; letter-spacing: 1.5px; flex-shrink: 0; }
+</style>
+</head>
+<body>
+  <div id="tail">
+    <div class="tag">BEFORE YOU GO</div>
+    <div class="headline">整理不易，如果对你有<em>启发</em></div>
+    <div class="sub">欢迎点赞、收藏——<b>买之前翻出来对照着查一遍</b>；<br>也欢迎在评论区聊聊：你踩过充电器的什么坑？</div>
+    <div class="actions">
+      <div class="act">
+        <div class="icon">👍</div>
+        <div class="label">点赞</div>
+        <div class="hint">让更多人看到</div>
+      </div>
+      <div class="act hot">
+        <div class="icon">⭐</div>
+        <div class="label">收藏</div>
+        <div class="hint">下单前对照查</div>
+      </div>
+      <div class="act">
+        <div class="icon">💬</div>
+        <div class="label">评论</div>
+        <div class="hint">聊聊你踩的坑</div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="motto">// 功率决定上限，<b>协议决定下限</b></div>
+      <div class="brand">多口充电器选购指南</div>
+    </div>
+  </div>
+</body>
+</html>
