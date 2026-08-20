@@ -82,6 +82,12 @@ description: 用 Kimi WebBridge 抓取知乎「邀请回答」和「推荐问题
 
 用户确认题目后（或直接指定题目后），**直接起草，不重新选题、不再二次确认**。规则：
 
+- **先读问题完整描述再动笔（必做）**：用 WebBridge 逐个 navigate 到问题 URL，sleep 3 秒后用下面的 evaluate 脚本提取标题 + 补充说明（问题描述里常有具体机型、使用场景、提问者的真实困惑，回答必须逐点回应，只看标题写稿等于瞎写）：
+
+```js
+(()=>{const t=(document.querySelector(".QuestionHeader-title")||{}).innerText||"";const d=(document.querySelector(".QuestionRichText")||document.querySelector("div.RichText.ztext")||{}).innerText||"";return JSON.stringify({t:t.trim(),d:d.trim().slice(0,2000)})})()
+```
+
 - 调用 `zhihu-viral-answer` skill 的流程和结构。
 - 素材优先复用归集目录里的主文和已有回答，保持一致的口吻和「先说结论 + 实测案例 + 文尾引流」结构。
 - **事实核查**：涉及具体设备型号、充电功率、协议规格时，先用 WebSearch 核实（官网规格页、充电头网实测优先），不要沿用未经核实的数字；用户提供的真实设备信息要融入回答。
@@ -110,3 +116,4 @@ curl -s -X POST http://127.0.0.1:10086/command -d '{"action":"close_session","ar
 - 不编造问题数据；抓取失败就如实说明，不假装看到了列表。
 - 选题理由必须引用具体的已有文章文件名，禁止空泛的「和你的领域匹配」。
 - 起草不编造第一手体验；用户未提供的设备/经历不写进回答，涉及参数先核查再落笔。
+- 禁止只看问题标题就起草；未读问题完整描述写出的稿子必须作废重写。
