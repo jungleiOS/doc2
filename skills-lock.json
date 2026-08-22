@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "hv-analysis": {
+      "source": "KKKKhazix/khazix-skills",
+      "sourceType": "github",
+      "skillPath": "hv-analysis/SKILL.md",
+      "computedHash": "71e924a3018685b4b3de71c7e67e367764aac4cd49a6494f1557c0b534fc3b41"
+    }
+  }
+}

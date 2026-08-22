@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>2026 苹果返校季 · 配件抵扣方案</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    background: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+    color: #1d1d1f;
+    padding: 56px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 56px 64px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+  }
+  .eyebrow {
+    font-size: 26px;
+    font-weight: 600;
+    color: #0071e3;
+    letter-spacing: 0.12em;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .hero {
+    display: flex;
+    align-items: flex-end;
+    gap: 28px;
+    margin: 34px 0 8px;
+  }
+  .hero .amount {
+    font-size: 128px;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: #0071e3;
+    font-variant-numeric: tabular-nums;
+  }
+  .hero .label {
+    font-size: 28px;
+    color: #6e6e73;
+    line-height: 1.45;
+    padding-bottom: 12px;
+  }
+  .dates {
+    margin: 22px 0 40px;
+    font-size: 27px;
+    color: #6e6e73;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .dates .old { text-decoration: line-through; color: #b0b0b6; }
+  .dates .new {
+    background: #fff4e5;
+    color: #b64400;
+    font-weight: 700;
+    padding: 4px 18px;
+    border-radius: 999px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+  }
+  thead th {
+    font-size: 24px;
+    font-weight: 600;
+    color: #86868b;
+    text-align: left;
+    padding: 0 12px 16px;
+    border-bottom: 2px solid #d2d2d7;
+  }
+  thead th.num, td.num { text-align: right; }
+  thead th.fit, td.fit { text-align: center; }
+  tbody td {
+    padding: 24px 12px;
+    font-size: 30px;
+    border-bottom: 1px solid #e8e8ed;
+    vertical-align: middle;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.name { font-weight: 600; }
+  td.name .sub { display: block; font-size: 22px; color: #86868b; font-weight: 400; margin-top: 4px; }
+  td.price { color: #86868b; font-size: 28px; }
+  td.pay {
+    font-size: 40px;
+    font-weight: 700;
+    color: #b64400;
+  }
+  td.pay.zero { color: #0071e3; }
+  .pill {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 6px 18px;
+    border-radius: 999px;
+    background: #f5f5f7;
+    color: #1d1d1f;
+    border: 1px solid #d2d2d7;
+  }
+  .pill.ipad { background: #e8f0fd; color: #0071e3; border-color: transparent; }
+  .foot {
+    margin-top: 36px;
+    font-size: 23px;
+    color: #86868b;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">2026 苹果返校季 · 教育优惠</div>
+    <h1>买 Mac / iPad，送 849 元配件抵扣</h1>
+    <div class="hero">
+      <div class="amount">¥849</div>
+      <div class="label">一次性配件抵扣额度<br>今年取消免费 AirPods，改为按需换购</div>
+    </div>
+    <div class="dates">
+      <span>7 月 16 日开启</span>
+      <span class="old">原定 8.27 结束</span>
+      <span class="new">已延期至 9 月 24 日</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>配件</th>
+          <th class="num">原价</th>
+          <th class="num">抵扣后补差</th>
+          <th class="fit">适用</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">AirTag 四件装</td>
+          <td class="num price">¥849</td>
+          <td class="num pay zero">0 元</td>
+          <td class="fit"><span class="pill">Mac / iPad</span></td>
+        </tr>
+        <tr>
+          <td class="name">Apple Pencil Pro<span class="sub">记笔记、绘画首选</span></td>
+          <td class="num price">¥899</td>
+          <td class="num pay">50 元</td>
+          <td class="fit"><span class="pill ipad">仅 iPad</span></td>
+        </tr>
+        <tr>
+          <td class="name">AirPods 4</td>
+          <td class="num price">¥999</td>
+          <td class="num pay">150 元</td>
+          <td class="fit"><span class="pill">Mac / iPad</span></td>
+        </tr>
+        <tr>
+          <td class="name">AirPods 4<span class="sub">主动降噪版</span></td>
+          <td class="num price">¥1,399</td>
+          <td class="num pay">550 元</td>
+          <td class="fit"><span class="pill">Mac / iPad</span></td>
+        </tr>
+        <tr>
+          <td class="name">AirPods Pro 3</td>
+          <td class="num price">¥1,899</td>
+          <td class="num pay">1,050 元</td>
+          <td class="fit"><span class="pill">Mac / iPad</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="foot">参与机型：MacBook Air / MacBook Pro / iPad Air / iPad Pro（入门 iPad、iPad mini、MacBook Neo、iMac 等不参与）· 数据来源：苹果官网教育商店</div>
+  </div>
+</body>
+</html>

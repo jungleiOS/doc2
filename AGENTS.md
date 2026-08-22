@@ -65,6 +65,15 @@
 │       ├── capture-tail.js       # 图片尾巴截图脚本
 │       ├── capture-cover-protocol.js / capture-cover-power.js / capture-cover-cable.js  # 三篇拆文封面截图脚本
 │       └── raw/                  # 从源文下载的原始配图（按事件分目录）
+├── 苹果教育优惠2026/            # 2026 苹果返校季教育优惠内容归集目录（知乎想法配图）
+│   ├── 苹果返校季2026-抵扣方案表.png   # 849 元配件抵扣方案表格图（HTML 截图）
+│   ├── 苹果返校季2026-资格与机型.png   # 参与资格与机型信息图（HTML 截图）
+│   ├── 苹果官网-返校季促销区块.png     # 苹果教育商店真实截图：限时特惠区块
+│   ├── 苹果官网-教育商店产品区.png     # 苹果教育商店真实截图：首页 + 产品区
+│   └── assets/                 # 表格 HTML 源文件与截图脚本
+│       ├── table-main.html / table-info.html   # 两张表格图页面
+│       ├── capture-tables.js   # 表格截图脚本（file:// 加载，clip 裁掉留白）
+│       └── capture-apple-promo.js  # 官网真实截图脚本（定位含「AirTag 四件装」文案的区块）
 ├── .agents/
 │   └── skills/
 │       ├── khazix-writer/    # 公众号长文写作 Skill
@@ -110,6 +119,7 @@
 | `frontend-design` | `.agents/skills/frontend-design/SKILL.md` | 封面、图集、思维导图等视觉产出 |
 | `neat-freak` | `.agents/skills/neat-freak/SKILL.md` | 文档/规则/残留收尾同步（说「洁癖」或「收尾」时触发） |
 | `zhihu-question-scout` | `.agents/skills/zhihu-question-scout/SKILL.md` | 用 WebBridge 抓知乎邀请回答/推荐问题，结合已有文章每次选 3 个值得答的问题（说「选题」「看看知乎邀请」时触发） |
+| `hv-analysis` | `.agents/skills/hv-analysis/SKILL.md` | 横纵分析法深度研究（纵轴时间叙事 + 横轴竞品对比 + 交汇洞察），产出 PDF 研究报告（说「横纵分析」「深度研究」「调研一下」时触发） |
 
 使用方式：
 
