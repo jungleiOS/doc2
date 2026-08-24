@@ -65,15 +65,26 @@
 │       ├── capture-tail.js       # 图片尾巴截图脚本
 │       ├── capture-cover-protocol.js / capture-cover-power.js / capture-cover-cable.js  # 三篇拆文封面截图脚本
 │       └── raw/                  # 从源文下载的原始配图（按事件分目录）
-├── 苹果教育优惠2026/            # 2026 苹果返校季教育优惠内容归集目录（知乎想法配图）
+├── 苹果教育优惠2026/            # 2026 苹果返校季教育优惠内容归集目录（知乎想法配图 + 知乎长文）
+│   ├── 知乎文章-苹果返校季2026精算.md  # 知乎长文：官网 vs 京东国补两条路逐台实算（老文章年度更新稿）
 │   ├── 苹果返校季2026-抵扣方案表.png   # 849 元配件抵扣方案表格图（HTML 截图）
 │   ├── 苹果返校季2026-资格与机型.png   # 参与资格与机型信息图（HTML 截图）
+│   ├── 苹果返校季2026-官网路线喂饭图.png  # 官网购买四步实操图（feed-official.html 截图）
+│   ├── 苹果返校季2026-京东国补喂饭图.png  # 京东国补三步实操图（feed-jd.html 截图）
 │   ├── 苹果官网-返校季促销区块.png     # 苹果教育商店真实截图：限时特惠区块
 │   ├── 苹果官网-教育商店产品区.png     # 苹果教育商店真实截图：首页 + 产品区
 │   └── assets/                 # 表格 HTML 源文件与截图脚本
 │       ├── table-main.html / table-info.html   # 两张表格图页面
 │       ├── capture-tables.js   # 表格截图脚本（file:// 加载，clip 裁掉留白）
-│       └── capture-apple-promo.js  # 官网真实截图脚本（定位含「AirTag 四件装」文案的区块）
+│       ├── capture-apple-promo.js  # 官网真实截图脚本（定位含「AirTag 四件装」文案的区块）
+│       ├── feed-official.html / feed-jd.html   # 两张喂饭图页面（步骤编号 + 裁切后的实操截图）
+│       ├── capture-feed.js / capture-feed-shots.js   # 喂饭图拼图截图脚本 / 官网素材实拍脚本
+│       └── shots/              # 喂饭图原始截图（京东商品页、官网条款页，crop/ 子目录为 PIL 裁切后的聚焦图）
+├── 美版有锁iPhone17咨询/        # 付费咨询答复长图（HTML 渲染 → 分段截图 → PIL 拼接）
+│   ├── consult-reply.html      # 答复长图页面（冷白纸面 + 中段深色警示面板，Songti SC 标题 + PingFang 正文）
+│   ├── capture-consult.js      # 分段截图脚本（puppeteer-core，按块边界分段以规避 Chrome 16384px 截图高度上限）
+│   ├── stitch.py               # PIL 竖向拼接脚本（须用 .venv-md/bin/python3 运行，系统 python3 无 PIL）
+│   └── 美版有锁iPhone17咨询-答复长图.png  # 成品长图 1500×18194
 ├── .agents/
 │   └── skills/
 │       ├── khazix-writer/    # 公众号长文写作 Skill
@@ -84,7 +95,8 @@
 ├── outlines/                 # 选题、大纲、素材（建议目录）
 ├── published/                # 已发布/定稿文章（建议目录）
 └── references/               # 参考资料、数据、截图（建议目录）
-    └── 好物决策卡模板.md      # 好物推荐商品决策卡（写稿前填卡，含选题判断）
+    ├── 好物决策卡模板.md      # 好物推荐商品决策卡（写稿前填卡，含选题判断）
+    └── iPhone锁机制全解.md    # 运营商锁/激活锁/监管锁/双重认证机制辨析（咨询员自用，含信源）
 ```
 
 ### 2.1 文件命名规范
