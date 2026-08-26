@@ -38,17 +38,16 @@
 │   ├── 知乎文章-充电协议篇.md    # 系列拆文 A：协议原理（主文第一章导读互链，文末三篇互链）
 │   ├── 知乎文章-功率分配与验货篇.md # 系列拆文 B：功率分配原理 + 下单/收货验货清单
 │   ├── 知乎文章-充电线篇.md      # 系列拆文 C：MFi、3A/5A、EPR 线材选购
-│   ├── 知乎回答-iPad平替充电器.md # 衍生知乎回答（文末引流至长文）
-│   ├── 知乎回答-120W充电器给65W电脑充电.md # 衍生知乎回答（文末引流至长文）
-│   ├── drafts/                   # 衍生知乎草稿（素材均取自长文）
-│   │   ├── zhihu-氮化镓充电器值得买吗-v1.md
-│   │   ├── zhihu-充电器达不到额定功率-v1.md
-│   │   └── zhihu-充电器真实功率怎么看-v1.md
+│   ├── drafts/                   # 衍生知乎回答草稿 24 篇（素材均取自长文及三篇拆文）
+│   │   ├── AGENTS.md             # 草稿目录专属约定（排版、引流链接、AI 检测教训）
+│   │   ├── 问题对应表.md          # 草稿 ↔ 知乎问题唯一登记处，新增草稿必须追加一行
+│   │   ├── 知乎回答-iPad平替充电器.md / 知乎回答-120W充电器给65W电脑充电.md  # 结构完整的成稿（iPad 篇含利益声明，可作模板）
+│   │   └── zhihu-<主题>-v1.md    # 其余按问题逐篇对应，状态见问题对应表
 │   ├── 多口充电器选购指南-思维导图.html  # 交互式思维导图（D3.js，树数据内嵌，需与文章标题结构同步）
 │   ├── 多口充电器选购指南-封面.png       # 知乎封面 690×280（由思维导图截图生成）
 │   ├── 多口充电器选购指南-案例图.png     # 四宫格案例图集（由 HTML 拼图截图生成）
 │   ├── 多口充电器选购指南-决策图.png     # 五步决策流程图（由 HTML 截图生成）
-│   ├── 多口充电器选购指南-图片尾巴.png   # 文末点赞收藏引导图（由 tail-cta.html 截图生成）
+│   ├── 多口充电器选购指南-图片尾巴.png   # 文末点赞收藏引导图（由 tail-cta.html 截图生成；另有左版变体，由 capture-tail-left.js 生成）
 │   ├── 知乎文章-充电协议篇-封面.png       # 拆文 A 封面 2760×1120（由 cover-protocol.html 截图生成）
 │   ├── 知乎文章-功率分配与验货篇-封面.png  # 拆文 B 封面（由 cover-power.html 截图生成）
 │   ├── 知乎文章-充电线篇-封面.png        # 拆文 C 封面（由 cover-cable.html 截图生成）
@@ -62,11 +61,32 @@
 │       ├── cover-cable.html      # 拆文 C 封面页（线材三档 + MFi 印章）
 │       ├── capture-cases.js      # 案例图截图脚本
 │       ├── capture-decision.js   # 决策图截图脚本
-│       ├── capture-tail.js       # 图片尾巴截图脚本
+│       ├── capture-tail.js / capture-tail-left.js  # 图片尾巴截图脚本（右版 / 左版）
 │       ├── capture-cover-protocol.js / capture-cover-power.js / capture-cover-cable.js  # 三篇拆文封面截图脚本
 │       └── raw/                  # 从源文下载的原始配图（按事件分目录）
-├── 苹果教育优惠2026/            # 2026 苹果返校季教育优惠内容归集目录（知乎想法配图 + 知乎长文）
+├── 充电宝3C新规选购指南/        # 3C 新规 + 民航禁令 + 召回潮后的充电宝知乎长文归集目录（与多口充电器选购指南相互独立、可互链）
+│   ├── 知乎文章-充电宝3C新规选购指南.md  # 知乎专栏主稿：合规自查 + 旧机处置 + 按场景选购
+│   ├── drafts/                   # 衍生知乎回答草稿
+│   │   ├── AGENTS.md             # 草稿目录专属约定（引流、利益声明、AI 检测教训沿用多口充电器草稿）
+│   │   └── 知乎回答-<主题>-v1.md  # 按具体问题对应，状态登记在「问题对应表.md」
+│   ├── 充电宝3C新规选购指南-封面.png     # 知乎封面 690×280（由 cover-main.html 截图生成）
+│   ├── 充电宝3C新规选购指南-3C自查流程图.png  # 3C 认证自查流程图（由 3c-check-flow.html 截图生成）
+│   ├── 充电宝3C新规选购指南-登机决策卡.png    # Wh 计算 + 能带/不能带对照卡（由 boarding-check-card.html 截图生成）
+│   ├── 充电宝3C新规选购指南-图片尾巴.png      # 文末点赞收藏引导图（由 tail-cta.html 截图生成）
+│   ├── capture-cover.js          # 封面截图脚本
+│   ├── capture-3c-check.js       # 3C 自查流程图截图脚本
+│   ├── capture-boarding-card.js  # 登机决策卡截图脚本
+│   ├── capture-tail.js           # 图片尾巴截图脚本
+│   └── cover-assets/             # 配图素材与截图工作区
+│       ├── cover-main.html       # 封面页
+│       ├── 3c-check-flow.html    # 3C 自查流程图页面
+│       ├── boarding-check-card.html  # 登机决策卡页面
+│       ├── tail-cta.html         # 图片尾巴页面
+│       └── raw/                  # 原始配图（按事件分目录）
+├── 苹果教育优惠2026/            # 2026 苹果返校季教育优惠内容归集目录（知乎长文 + 公众号版 + 知乎想法文案及配图）
 │   ├── 知乎文章-苹果返校季2026精算.md  # 知乎长文：官网 vs 京东国补两条路逐台实算（老文章年度更新稿）
+│   ├── 公众号版-苹果返校季2026.md     # 公众号版长文（卡兹克风格）
+│   ├── 知乎想法文案.txt / 知乎想法-返校季2026引流.txt  # 知乎想法短文案
 │   ├── 苹果返校季2026-抵扣方案表.png   # 849 元配件抵扣方案表格图（HTML 截图）
 │   ├── 苹果返校季2026-资格与机型.png   # 参与资格与机型信息图（HTML 截图）
 │   ├── 苹果返校季2026-官网路线喂饭图.png  # 官网购买四步实操图（feed-official.html 截图）
@@ -85,14 +105,22 @@
 │   ├── capture-consult.js      # 分段截图脚本（puppeteer-core，按块边界分段以规避 Chrome 16384px 截图高度上限）
 │   ├── stitch.py               # PIL 竖向拼接脚本（须用 .venv-md/bin/python3 运行，系统 python3 无 PIL）
 │   └── 美版有锁iPhone17咨询-答复长图.png  # 成品长图 1500×18194
+├── 内容自荐筛选机制/            # 知乎「内容自荐」配额筛选方法（/creator/recommend）
+│   └── 内容自荐筛选机制.md      # 四层漏斗（资格→否决→E×L×V 打分→配额）+ 复盘闭环 + ego-browser 抓取脚本
+├── research/知乎转写多平台/     # 转写多平台研究素材（01 纵向平台史、02-04 横向平台、05 转写工作流方法论）
+├── 知乎回答转写多平台_横纵分析报告.md  # 转写多平台研究报告主稿（hv-analysis 产出，由 research/ 素材汇总）
+├── Apple研究生-选题与写作角度_横纵分析报告.{md,html,pdf}  # Apple 领域选题研究报告（hv-analysis 产出，三种格式）
 ├── .agents/
 │   └── skills/
 │       ├── khazix-writer/    # 公众号长文写作 Skill
 │       ├── zhihu-viral-answer/  # 知乎高赞回答写作 Skill
 │       ├── neat-freak/       # 知识与规范收尾 Skill
-│       └── frontend-design/  # 前端视觉设计 Skill
-├── drafts/                   # 进行中的初稿
-├── outlines/                 # 选题、大纲、素材（建议目录）
+│       ├── frontend-design/  # 前端视觉设计 Skill
+│       ├── zhihu-question-scout/  # 知乎选题 Skill（references/publish-assist.md 为作答辅助协议）
+│       ├── zhihu-haowu-evaluator/ # 知乎好物插入评估 Skill（被 scout 编排，也可独立触发）
+│       └── hv-analysis/      # 横纵分析法深度研究 Skill（产出 PDF 研究报告）
+├── drafts/                   # 进行中的初稿（当前为美版有锁iPhone17咨询答复 v1-v3，定稿后交付长图在 美版有锁iPhone17咨询/）
+├── outlines/                 # 选题、大纲、素材；选题历史.md 由 zhihu-question-scout 维护，按问题 ID 去重
 ├── published/                # 已发布/定稿文章（建议目录）
 └── references/               # 参考资料、数据、截图（建议目录）
     ├── 好物决策卡模板.md      # 好物推荐商品决策卡（写稿前填卡，含选题判断）
@@ -122,7 +150,7 @@
 
 ## 3. 可用的 Agent Skills
 
-本项目已配置三个 Skill，Agent 在执行对应任务时应优先加载并遵循：
+本项目已配置七个 Skill，Agent 在执行对应任务时应优先加载并遵循：
 
 | Skill | 路径 | 触发场景 |
 |-------|------|---------|
@@ -130,7 +158,8 @@
 | `zhihu-viral-answer` | `.agents/skills/zhihu-viral-answer/SKILL.md` | 写知乎回答、知乎体、高赞爆款 |
 | `frontend-design` | `.agents/skills/frontend-design/SKILL.md` | 封面、图集、思维导图等视觉产出 |
 | `neat-freak` | `.agents/skills/neat-freak/SKILL.md` | 文档/规则/残留收尾同步（说「洁癖」或「收尾」时触发） |
-| `zhihu-question-scout` | `.agents/skills/zhihu-question-scout/SKILL.md` | 用 WebBridge 抓知乎邀请回答/推荐问题，结合已有文章每次选 3 个值得答的问题（说「选题」「看看知乎邀请」时触发） |
+| `zhihu-question-scout` | `.agents/skills/zhihu-question-scout/SKILL.md` | 用 WebBridge 抓知乎邀请回答/推荐问题，结合已有文章每次选 3 个值得答的问题（说「选题」「看看知乎邀请」时触发）；作答辅助协议（判 AI 应对、填编辑器）在 `references/publish-assist.md` |
+| `zhihu-haowu-evaluator` | `.agents/skills/zhihu-haowu-evaluator/SKILL.md` | 评估问题/已有回答值不值得插好物卡片（说「好物评估」「值不值得插好物」「回填好物」时触发；也被 scout 选题精评调用） |
 | `hv-analysis` | `.agents/skills/hv-analysis/SKILL.md` | 横纵分析法深度研究（纵轴时间叙事 + 横轴竞品对比 + 交汇洞察），产出 PDF 研究报告（说「横纵分析」「深度研究」「调研一下」时触发） |
 
 使用方式：
@@ -265,4 +294,4 @@
 
 ---
 
-**最后更新**：2026-08-15
+**最后更新**：2026-08-25

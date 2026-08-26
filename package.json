@@ -2,7 +2,6 @@
   "name": "zhihu",
   "version": "1.0.0",
   "description": "",
-  "main": "capture-cover.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

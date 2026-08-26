@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>联想平板选购指南 · 知乎封面</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 690px;
+      height: 280px;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #f4f4f2;
+      color: #16181d;
+      display: flex;
+      align-items: stretch;
+      padding: 26px 30px;
+      gap: 26px;
+    }
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 0;
+    }
+    .tag {
+      display: inline-block;
+      align-self: flex-start;
+      background: #e02e24;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 5px 12px;
+      border-radius: 6px;
+    }
+    .headline {
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 1.28;
+      letter-spacing: 1px;
+    }
+    .headline .mark {
+      position: relative;
+      color: #e02e24;
+      display: inline-block;
+      padding: 0 2px;
+    }
+    .headline .mark svg {
+      position: absolute;
+      left: -12px;
+      top: -10px;
+      width: calc(100% + 24px);
+      height: calc(100% + 20px);
+      pointer-events: none;
+    }
+    .sub {
+      font-size: 15px;
+      color: #6b7280;
+      letter-spacing: 0.5px;
+    }
+    .sub b { color: #16181d; font-weight: 600; }
+
+    .card {
+      width: 268px;
+      flex-shrink: 0;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #16181d;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 2px;
+    }
+    .card-title::before {
+      content: "";
+      width: 4px;
+      height: 14px;
+      background: #e02e24;
+      border-radius: 2px;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #16181d;
+    }
+    .row .name { flex: 1; font-weight: 500; }
+    .row .price { color: #9aa0a6; font-size: 12.5px; }
+    .icon {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .icon.no { background: #e02e24; }
+    .icon.ok { background: #1f9d55; }
+    .row.ok { flex-wrap: nowrap; }
+    .row.ok .name { color: #1f9d55; font-weight: 600; font-size: 13px; white-space: nowrap; }
+    .row.ok .price { color: #1f9d55; white-space: nowrap; }
+    .divider { height: 1px; background: #f0f0ee; }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <div class="tag">2026 · 联想平板全系对比</div>
+    <div class="headline">
+      这几款联想平板<br>
+      我劝你<span class="mark">别买<svg viewBox="0 0 120 64" preserveAspectRatio="none"><ellipse cx="60" cy="32" rx="56" ry="27" fill="none" stroke="#e02e24" stroke-width="3.5" stroke-linecap="round" transform="rotate(-2 60 32)"/></svg></span>
+    </div>
+    <div class="sub"><b>小新 Pad / 拯救者 Y700 / YOGA</b> · 按预算给结论</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">劝退名单</div>
+    <div class="row"><span class="icon no">✕</span><span class="name">异能者 N10B</span><span class="price">¥748</span></div>
+    <div class="row"><span class="icon no">✕</span><span class="name">来酷 Pro12.7</span><span class="price">¥999</span></div>
+    <div class="row"><span class="icon no">✕</span><span class="name">小新 Pad 舒视版</span><span class="price">¥899</span></div>
+    <div class="divider"></div>
+    <div class="row ok"><span class="icon ok">✓</span><span class="name">千元内看它：小新 Pad 11</span><span class="price">¥949</span></div>
+  </div>
+</body>
+</html>

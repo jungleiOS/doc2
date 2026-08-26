@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>充电宝 3C 自查流程</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0c0d0f;
+    font-family: "Outfit", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #flow {
+    width: 780px;
+    background: linear-gradient(160deg, #141519 0%, #101114 100%);
+    border: 1px solid #26282e;
+    border-radius: 20px;
+    padding: 36px 40px 28px;
+  }
+  .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; letter-spacing: 2px; color: #f59e0b;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tag::before { content: ""; width: 22px; height: 2px; background: #f59e0b; }
+  h1 { margin-top: 10px; font-size: 30px; font-weight: 800; color: #f3f4f6; }
+  h1 em { font-style: normal; color: #f59e0b; }
+  .sub { margin-top: 6px; font-size: 14px; color: #8b8e98; }
+
+  .steps { margin-top: 28px; position: relative; }
+  .steps::before {
+    content: "";
+    position: absolute; left: 25px; top: 30px; bottom: 30px;
+    width: 2px;
+    background: linear-gradient(#f59e0b, #06b6d4);
+    opacity: .4;
+  }
+  .step {
+    position: relative;
+    display: flex; gap: 18px;
+    padding: 14px 0;
+  }
+  .n {
+    flex: 0 0 52px; height: 52px;
+    border-radius: 14px;
+    background: #191b1f;
+    border: 1px solid rgba(245, 158, 11, .5);
+    color: #f59e0b;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1;
+  }
+  .step:last-child .n { border-color: rgba(6, 182, 212, .6); color: #67e8f9; }
+  .card {
+    flex: 1;
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 14px;
+    padding: 14px 18px;
+  }
+  .t { font-size: 18px; font-weight: 600; color: #eceef1; }
+  .d { margin-top: 6px; font-size: 13.5px; color: #9a9ea8; line-height: 1.7; }
+  .d b { color: #d7dae0; font-weight: 600; }
+  .d a { color: #67e8f9; text-decoration: none; }
+  .chips { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .c {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px; color: #ffd9a0;
+    background: rgba(245, 158, 11, .1);
+    border: 1px solid rgba(245, 158, 11, .35);
+    border-radius: 6px; padding: 2px 8px;
+  }
+  .c.cy {
+    color: #a5f3fc;
+    background: rgba(6, 182, 212, .08);
+    border-color: rgba(6, 182, 212, .35);
+  }
+  .c.rd {
+    color: #fecaca;
+    background: rgba(239, 68, 68, .1);
+    border-color: rgba(239, 68, 68, .35);
+  }
+  .foot {
+    margin-top: 22px;
+    display: flex; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; color: #5a5d66;
+  }
+</style>
+</head>
+<body>
+<div id="flow">
+  <div class="tag">3C SELF CHECK · 合规自查</div>
+  <h1>登机前，<em>四步查完再出门</em></h1>
+  <div class="sub">安检员只认充电宝本体，截图和包装盒不算</div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="n">01</div>
+      <div class="card">
+        <div class="t">看本体标识</div>
+        <div class="d">机身必须有 <b>CCC 标志</b>、型号、额定容量（mAh）、额定能量（Wh）、输入输出参数。贴纸、磨损、缺失 = 不能登机。</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">02</div>
+      <div class="card">
+        <div class="t">查 3C 证书状态</div>
+        <div class="d">上 <a href="https://cx.cnca.cn/" target="_blank">cx.cnca.cn</a>，输入证书编号或型号。状态为「有效」才安心，「暂停/撤销」直接停用。</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">03</div>
+      <div class="card">
+        <div class="t">查召回名单</div>
+        <div class="d">在 <a href="https://www.samrdprc.org.cn/" target="_blank">samrdprc.org.cn</a> 核对型号/批次。罗马仕 PAC20-272/392、安克 A1642/A1647 等型号必须停用。</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">04</div>
+      <div class="card">
+        <div class="t">判断去向</div>
+        <div class="d"><b>能登机</b>：标识清晰 + 证书有效 + 不在召回名单。<br><b>能家用</b>：无 3C 或标识磨损，但无鼓包发热，不要带上飞机。<br><b>停用处置</b>：召回型号 / 鼓包 / 漏液 / 异常发热。</div>
+        <div class="chips">
+          <span class="c cy">能登机 → 带走</span>
+          <span class="c">能家用 → 留家</span>
+          <span class="c rd">有问题 → 停用</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>充电宝3C新规选购指南 · 合规自查</span>
+    <span>宁可出门前查十分钟，不要在安检口扔充电宝</span>
+  </div>
+</div>
+</body>
+</html>
