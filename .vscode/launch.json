@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:zhihu}/AppleIntelligence国行实测/dev-demo",
+      "name": "Debug DevDemo (AppleIntelligence国行实测/dev-demo)",
+      "target": "DevDemo",
+      "configuration": "debug",
+      "preLaunchTask": "swift: Build Debug DevDemo (AppleIntelligence国行实测/dev-demo)"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:zhihu}/AppleIntelligence国行实测/dev-demo",
+      "name": "Release DevDemo (AppleIntelligence国行实测/dev-demo)",
+      "target": "DevDemo",
+      "configuration": "release",
+      "preLaunchTask": "swift: Build Release DevDemo (AppleIntelligence国行实测/dev-demo)"
+    }
+  ]
+}

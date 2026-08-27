@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>合规充电宝标识说明</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0c0d0f;
+    font-family: "Outfit", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #card {
+    width: 780px;
+    background: linear-gradient(160deg, #141519 0%, #101114 100%);
+    border: 1px solid #26282e;
+    border-radius: 20px;
+    padding: 36px 40px 28px;
+  }
+  .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; letter-spacing: 2px; color: #f59e0b;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tag::before { content: ""; width: 22px; height: 2px; background: #f59e0b; }
+  h1 { margin-top: 10px; font-size: 30px; font-weight: 800; color: #f3f4f6; }
+  h1 em { font-style: normal; color: #f59e0b; }
+  .sub { margin-top: 6px; font-size: 14px; color: #8b8e98; }
+
+  .device {
+    margin-top: 28px;
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 20px;
+    padding: 28px 32px;
+    position: relative;
+  }
+  .device-body {
+    width: 100%;
+    height: 260px;
+    background: linear-gradient(145deg, #23252b 0%, #1a1c21 100%);
+    border: 1px solid #33363d;
+    border-radius: 16px;
+    position: relative;
+  }
+  .ccc {
+    position: absolute; left: 42px; top: 42px;
+    width: 58px; height: 58px;
+    border: 3px solid #f59e0b;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #f59e0b;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px; font-weight: 800;
+  }
+  .label-row {
+    position: absolute; left: 130px; top: 38px; right: 38px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .label-row .line {
+    height: 14px; background: #33363d; border-radius: 4px;
+  }
+  .label-row .line.w40 { width: 40%; }
+  .label-row .line.w55 { width: 55%; }
+  .label-row .line.w70 { width: 70%; }
+  .label-row .line.w85 { width: 85%; }
+
+  .callouts { margin-top: 26px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .co {
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .co .k {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px; color: #f59e0b; letter-spacing: 1px;
+  }
+  .co .v { margin-top: 4px; font-size: 15px; color: #eceef1; font-weight: 600; }
+  .co .tip { margin-top: 4px; font-size: 12px; color: #8b8e98; line-height: 1.5; }
+
+  .warn {
+    margin-top: 18px;
+    background: rgba(239, 68, 68, .08);
+    border: 1px solid rgba(239, 68, 68, .35);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .warn .icon {
+    flex: 0 0 24px; height: 24px;
+    background: rgba(239, 68, 68, .2);
+    color: #fca5a5;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 800;
+  }
+  .warn .txt { font-size: 14px; color: #d7dae0; line-height: 1.6; }
+  .warn .txt b { color: #fca5a5; }
+
+  .foot {
+    margin-top: 22px;
+    display: flex; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; color: #5a5d66;
+  }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="tag">LABEL CHECK · 标识核对</div>
+  <h1>合规充电宝，<em>本体上必须有这些</em></h1>
+  <div class="sub">包装盒不算，截图不算，安检员只认充电宝背面的模压/镭雕标识</div>
+
+  <div class="device">
+    <div class="device-body">
+      <div class="ccc">CCC</div>
+      <div class="label-row">
+        <div class="line w55"></div>
+        <div class="line w40"></div>
+        <div class="line w70"></div>
+        <div class="line w85"></div>
+        <div class="line w55"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callouts">
+    <div class="co">
+      <div class="k">01 · CCC 标志</div>
+      <div class="v">中国强制性产品认证</div>
+      <div class="tip">必须是模压或镭雕，贴纸、喷墨模糊的不行</div>
+    </div>
+    <div class="co">
+      <div class="k">02 · 品牌 / 型号</div>
+      <div class="v">与 3C 证书登记一致</div>
+      <div class="tip">型号对不上，证书可能是别人的</div>
+    </div>
+    <div class="co">
+      <div class="k">03 · 额定容量 / 额定能量</div>
+      <div class="v">mAh 和 Wh 都要有</div>
+      <div class="tip">登机看 Wh，mAh 只是 marketing 数字</div>
+    </div>
+    <div class="co">
+      <div class="k">04 · 输入 / 输出参数</div>
+      <div class="v">电压、电流、功率</div>
+      <div class="tip">功率决定能不能快充，也决定会不会被机场误判</div>
+    </div>
+  </div>
+
+  <div class="warn">
+    <div class="icon">!</div>
+    <div class="txt"><b>注意：</b>如果标识是贴纸、磨损到看不清、或者只有包装盒上有，登机风险很大。2024 年 8 月 1 日起，无 3C 标识的充电宝已禁止在国内市场销售。</div>
+  </div>
+
+  <div class="foot">
+    <span>充电宝3C新规选购指南 · 合规标识</span>
+    <span>先看本体，再查证书，最后看批次</span>
+  </div>
+</div>
+</body>
+</html>

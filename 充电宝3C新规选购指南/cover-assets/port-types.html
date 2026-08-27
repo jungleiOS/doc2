@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>接口形态对比</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0c0d0f;
+    font-family: "Outfit", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #card {
+    width: 780px;
+    background: linear-gradient(160deg, #141519 0%, #101114 100%);
+    border: 1px solid #26282e;
+    border-radius: 20px;
+    padding: 36px 40px 28px;
+  }
+  .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; letter-spacing: 2px; color: #a78bfa;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tag::before { content: ""; width: 22px; height: 2px; background: #a78bfa; }
+  h1 { margin-top: 10px; font-size: 30px; font-weight: 800; color: #f3f4f6; }
+  h1 em { font-style: normal; color: #a78bfa; }
+  .sub { margin-top: 6px; font-size: 14px; color: #8b8e98; }
+
+  .types { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .type {
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .type .visual {
+    height: 140px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #101114;
+  }
+  .type .visual img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  .type .name { margin-top: 12px; font-size: 17px; font-weight: 700; color: #f3f4f6; }
+  .type .pros, .type .cons {
+    margin-top: 10px;
+    font-size: 12px; line-height: 1.6;
+  }
+  .type .pros { color: #86efac; }
+  .type .cons { color: #fca5a5; }
+  .type .pros b, .type .cons b { display: block; margin-bottom: 2px; color: #d7dae0; }
+
+  .note {
+    margin-top: 22px;
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 14px; color: #d7dae0; line-height: 1.7;
+  }
+  .note b { color: #a78bfa; }
+
+  .foot {
+    margin-top: 22px;
+    display: flex; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; color: #5a5d66;
+  }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="tag">PORT TYPE · 接口形态</div>
+  <h1>三种形态，<em>按场景选</em></h1>
+  <div class="sub">没有标准答案，只有「你愿不愿意天天带它出门」</div>
+
+  <div class="types">
+    <div class="type">
+      <div class="visual"><img src="raw/接口形态/自带线_小米PB1033MI.jpg" alt="自带线充电宝实拍"></div>
+      <div class="name">自带线</div>
+      <div class="pros"><b>优点</b>出门少带一根线，即拉即充</div>
+      <div class="cons"><b>缺点</b>线材老化后换不了，只能整机换</div>
+    </div>
+    <div class="type">
+      <div class="visual"><img src="raw/接口形态/磁吸无线_小米WPB1007MI.jpg" alt="磁吸无线充电宝实拍"></div>
+      <div class="name">磁吸无线</div>
+      <div class="pros"><b>优点</b>iPhone 单手操作方便，不用掏线</div>
+      <div class="cons"><b>缺点</b>功率低、发热大，非 MagSafe 机型用不了</div>
+    </div>
+    <div class="type">
+      <div class="visual"><img src="raw/接口形态/传统多口_安克A1383.jpg" alt="传统多口充电宝实拍"></div>
+      <div class="name">传统多口</div>
+      <div class="pros"><b>优点</b>兼容性最好，线材可替换</div>
+      <div class="cons"><b>缺点</b>出门得多带一根线</div>
+    </div>
+  </div>
+
+  <div class="note">
+    通勤党优先 <b>自带线</b>，iPhone 用户可以考虑 <b>磁吸无线</b> 作为备用，多设备/差旅党选 <b>传统多口 + 大功率</b>。三种形态也可以组合使用：包里放一个主力大容量多口，口袋塞一个磁吸应急。
+  </div>
+
+  <div class="foot">
+    <span>充电宝3C新规选购指南 · 接口形态</span>
+    <span>方便和兼容往往不可兼得</span>
+  </div>
+</div>
+</body>
+</html>

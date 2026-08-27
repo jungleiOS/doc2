@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>好物决策卡</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0c0d0f;
+    font-family: "Outfit", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #card {
+    width: 900px;
+    background: linear-gradient(160deg, #141519 0%, #101114 100%);
+    border: 1px solid #26282e;
+    border-radius: 20px;
+    padding: 36px 40px 28px;
+  }
+  .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; letter-spacing: 2px; color: #f59e0b;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tag::before { content: ""; width: 22px; height: 2px; background: #f59e0b; }
+  h1 { margin-top: 10px; font-size: 30px; font-weight: 800; color: #f3f4f6; }
+  h1 em { font-style: normal; color: #f59e0b; }
+  .sub { margin-top: 6px; font-size: 14px; color: #8b8e98; }
+
+  .legend {
+    margin-top: 20px;
+    display: flex; gap: 18px;
+    font-size: 12px; color: #8b8e98;
+  }
+  .legend span { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .dot.green { background: #22c55e; }
+  .dot.yellow { background: #eab308; }
+  .dot.red { background: #ef4444; }
+
+  .grid { margin-top: 22px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .product {
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex; flex-direction: column;
+  }
+  .product .scene {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px; letter-spacing: 1px;
+    color: #8b8e98; text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .product .name { font-size: 15px; font-weight: 700; color: #f3f4f6; line-height: 1.4; }
+  .product .price { margin-top: 4px; font-size: 13px; color: #f59e0b; font-weight: 600; }
+  .product .specs {
+    margin-top: 10px;
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .product .spec {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; color: #9a9ea8;
+    background: #101114;
+    border: 1px solid #26282e;
+    border-radius: 5px;
+    padding: 3px 7px;
+  }
+  .product .divider { margin: 12px 0; height: 1px; background: #26282e; }
+  .product .who { font-size: 12px; line-height: 1.5; }
+  .product .who.ok { color: #86efac; }
+  .product .who.no { color: #fca5a5; margin-top: 6px; }
+  .product .who b { color: #d7dae0; }
+
+  .summary {
+    margin-top: 24px;
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 14px; color: #d7dae0; line-height: 1.7;
+  }
+  .summary b { color: #f59e0b; }
+
+  .foot {
+    margin-top: 22px;
+    display: flex; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; color: #5a5d66;
+  }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="tag">BUYING GUIDE · 好物决策卡</div>
+  <h1>9 款充电宝，<em>按场景对号入座</em></h1>
+  <div class="sub">每款都写了适合谁、不适合谁，别为用不到的功能多花钱</div>
+
+  <div class="legend">
+    <span><div class="dot green"></div> 能直接登机</span>
+    <span><div class="dot yellow"></div> 100Wh 以内</span>
+    <span><div class="dot red"></div> 大容量/高功率</span>
+  </div>
+
+  <div class="grid">
+    <div class="product">
+      <div class="scene">通勤 · 自带线</div>
+      <div class="name">小米 自带线充电宝 10000mAh 33W</div>
+      <div class="price">约 99 元</div>
+      <div class="specs">
+        <span class="spec">37Wh</span>
+        <span class="spec">33W</span>
+        <span class="spec">自带 C 线</span>
+      </div>
+      <div class="divider"></div>
+      <div class="who ok"><b>适合：</b>每天背包通勤，给手机续一次命</div>
+      <div class="who no"><b>不适合：</b>需要充笔记本/平板的人</div>
+    </div>
+
+    <div class="product">
+      <div class="scene">通勤 · 性价比</div>
+      <div class="name">京东京造 33W 快充自带线钢壳电芯 10000mAh</div>
+      <div class="price">约 99 元</div>
+      <div class="specs">
+        <span class="spec">≈37Wh</span>
+        <span class="spec">33W</span>
+        <span class="spec">1C1A</span>
+      </div>
+      <div class="divider"></div>
+      <div class="who ok"><b>适合：</b>预算有限、要京东自营售后</div>
+      <div class="who no"><b>不适合：</b>对充电速度要求很高的人</div>
+    </div>
+
+    <div class="product">
+      <div class="scene">通勤 · iPhone</div>
+      <div class="name">倍思 MagSafe 磁吸充电宝 10000mAh 22.5W</div>
+      <div class="price">约 99–129 元</div>
+      <div class="specs">
+        <span class="spec">37Wh</span>
+        <span class="spec">22.5W</span>
+        <span class="spec">磁吸无线</span>
+      </div>
+      <div class="divider"></div>
+      <div class="who ok"><b>适合：</b>iPhone 用户，不想掏线</div>
+      <div class="who no"><b>不适合：</b>非 MagSafe 机型、快充党</div>
+    </div>
+
+    <div class="product">
+      <div class="scene">差旅 · 全能</div>
+      <div class="name">绿联 PB521 20000mAh 30W 自带线</div>
+      <div class="price">约 99–129 元</div>
+      <div class="specs">
+        <span class="spec">72Wh</span>
+        <span class="spec">30W</span>
+        <span class="spec">自带 C 线</span>
+      </div>
+      <div class="divider"></div>
+      <div class="who ok"><b>适合：</b>3–5 天出差，手机+平板+耳机</div>
+      <div class="who no"><b>不适合：</b>需要给笔记本供电的人</div>
+    </div>
+
+    <div class="product">
+      <div class="scene">差旅 · 轻薄本</div>
+      <div class="name">安克 A1383 20000mAh 65W 自带线</div>
+      <div class="price">约 229–259 元</div>
+      <div class="specs">
+        <span class="spec">72Wh</span>
+        <span class="spec">65W</span>
+        <span class="spec">2C1A</span>
+      </div>
+      <div class="divider"></div>
+      <div class="who ok"><b>适合：</b>出差带 MacBook Air/轻薄本</div>
+      <div class="who no"><b>不适合：</b>只给手机用的人</div>
+    </div>
+
+    <div class="product">
+      <div class="scene">差旅 · 华为/荣耀</div>
+      <div class="name">荣耀亲选 100W 自带线 20000mAh</div>
+      <div class="price">约 249–289 元</div>
+      <div class="specs">
+        <span class="spec">74Wh</span>
+        <span class="spec">100W</span>
+        <span class="spec">SCP 快充</span>
+      </div>
+      <div class="divider"></div>
+      <div class="who ok"><b>适合：</b>华为/荣耀用户，要用私有快充</div>
+      <div class="who no"><b>不适合：</b>苹果或小米用户</div>
+    </div>
+
+    <div class="product">
+      <div class="scene">多设备 · 大容量</div>
+      <div class="name">酷态科 25 号 SE 25000mAh 120W</div>
+      <div class="price">约 179–199 元</div>
+      <div class="specs">
+        <span class="spec">88.2Wh</span>
+        <span class="spec">120W</span>
+        <span class="spec">自带 C 线</span>
+      </div>
+      <div class="divider"></div>
+      <div class="who ok"><b>适合：</b>多设备党、长途差旅、大容量性价比</div>
+      <div class="who no"><b>不适合：</b>日常通勤，太重</div>
+    </div>
+
+    <div class="product">
+      <div class="scene">重度 · 户外</div>
+      <div class="name">安克 A1695 能量舱 25000mAh 165W</div>
+      <div class="price">约 419–479 元</div>
+      <div class="specs">
+        <span class="spec">92.5Wh</span>
+        <span class="spec">165W</span>
+        <span class="spec">四口 + 屏显</span>
+      </div>
+      <div class="divider"></div>
+      <div class="who ok"><b>适合：</b>重度差旅/户外，同时给笔记本+相机供电</div>
+      <div class="who no"><b>不适合：</b>预算有限或只充手机的人</div>
+    </div>
+
+    <div class="product">
+      <div class="scene">快充 · 便携</div>
+      <div class="name">酷态科 10 号 Plus 15000mAh 120W</div>
+      <div class="price">约 199–229 元</div>
+      <div class="specs">
+        <span class="spec">52.9Wh</span>
+        <span class="spec">120W</span>
+        <span class="spec">2C1A</span>
+      </div>
+      <div class="divider"></div>
+      <div class="who ok"><b>适合：</b>追求快充、兼顾便携和速度</div>
+      <div class="who no"><b>不适合：</b>需要给笔记本长时间供电</div>
+    </div>
+  </div>
+
+  <div class="summary">
+    先按 <b>登机能量 ≤100Wh</b> 划一道红线，再按「你每天带出门的距离」和「要充的最大设备」两个维度选。通勤党优先 10000mAh 自带线，差旅党看 20000mAh，多设备/户外党才需要 25000mAh。
+  </div>
+
+  <div class="foot">
+    <span>充电宝3C新规选购指南 · 好物决策卡</span>
+    <span>价格仅供参考，以京东实时页面为准</span>
+  </div>
+</div>
+</body>
+</html>

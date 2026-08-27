@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>电芯类型对比</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0c0d0f;
+    font-family: "Outfit", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #card {
+    width: 780px;
+    background: linear-gradient(160deg, #141519 0%, #101114 100%);
+    border: 1px solid #26282e;
+    border-radius: 20px;
+    padding: 36px 40px 28px;
+  }
+  .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; letter-spacing: 2px; color: #06b6d4;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tag::before { content: ""; width: 22px; height: 2px; background: #06b6d4; }
+  h1 { margin-top: 10px; font-size: 30px; font-weight: 800; color: #f3f4f6; }
+  h1 em { font-style: normal; color: #06b6d4; }
+  .sub { margin-top: 6px; font-size: 14px; color: #8b8e98; }
+
+  .cells { margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .cell {
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 16px;
+    padding: 22px;
+  }
+  .cell .visual {
+    height: 160px;
+    display: flex; align-items: center; justify-content: center;
+    gap: 14px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #101114;
+  }
+  .cell .visual img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  .cell .name { margin-top: 12px; font-size: 18px; font-weight: 700; color: #f3f4f6; }
+  .cell .type { margin-top: 2px; font-size: 13px; color: #8b8e98; }
+  .cell .traits { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+  .cell .trait {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 13px; color: #b0b3bb; line-height: 1.5;
+  }
+  .cell .trait::before {
+    content: "●"; color: #06b6d4; font-size: 8px; margin-top: 5px;
+  }
+
+  .summary {
+    margin-top: 22px;
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 14px; color: #d7dae0; line-height: 1.7;
+  }
+  .summary b { color: #67e8f9; }
+
+  .foot {
+    margin-top: 22px;
+    display: flex; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; color: #5a5d66;
+  }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="tag">BATTERY CELL · 电芯类型</div>
+  <h1>两种主流电芯，<em>没有绝对优劣</em></h1>
+  <div class="sub">关键看热管理、保护电路和外壳阻燃做得够不够</div>
+
+  <div class="cells">
+    <div class="cell">
+      <div class="visual">
+        <img src="raw/电芯拆解/酷态科25号_21700电芯组.jpg" alt="21700 圆柱电芯组实拍">
+      </div>
+      <div class="name">21700 / 18650 圆柱电芯</div>
+      <div class="type">钢壳圆柱锂离子电池</div>
+      <div class="traits">
+        <div class="trait">能量密度高，同样容量体积更小</div>
+        <div class="trait">成本低，供应链成熟</div>
+        <div class="trait">单颗失效时热失控风险相对集中，需要更好的温控</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="visual">
+        <img src="raw/电芯拆解/mi_demtt7t4l8iuvvz0nq.jpg" alt="锂聚合物软包电芯实拍">
+      </div>
+      <div class="name">锂聚合物软包电芯</div>
+      <div class="type">铝塑膜封装锂离子电池</div>
+      <div class="traits">
+        <div class="trait">形状可定制，能做薄、做轻</div>
+        <div class="trait">发热相对可控，鼓包时更容易肉眼发现</div>
+        <div class="trait">成本更高，穿刺后漏液风险大于圆柱钢壳</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="summary">
+    普通用户其实不用纠结电芯形态。认准 <b>NTC 温度检测、过充/过放/短路保护、阻燃外壳</b> 这三项，比单纯选圆柱还是软包更重要。3C 认证已经覆盖了基础安全测试，但大厂和小厂在用料冗余上仍有差距。
+  </div>
+
+  <div class="foot">
+    <span>充电宝3C新规选购指南 · 电芯对比</span>
+    <span>电芯是里子，保护电路是面子</span>
+  </div>
+</div>
+</body>
+</html>
