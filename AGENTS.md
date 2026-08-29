@@ -26,6 +26,13 @@
 - 有信息增量：读者看完必须觉得「学到了」或「被说服了」。
 - 尊重平台调性：知乎理性克制，公众号节奏鲜活。
 
+### 1.4 创作原则
+
+- **数据导向**：把每一个回答、每一篇文章当作一个作品去不断打磨，发布后根据数据反馈持续迭代，不要怕重复修改、重复发布。
+- **观众导向**：研究观众喜欢什么，而不是自己想说什么。选题、角度、详略由观众需求决定。
+- **反说教**：不搞说教，要给观众带来快乐（知乎语境下的「快乐」是阅读爽感和获得感，公众号语境下是情绪共振）。
+- **坚持**：长期主义。数据不好不是停笔的理由，是打磨的依据。
+
 ---
 
 ## 2. 文件组织
@@ -117,14 +124,16 @@
 │       ├── neat-freak/       # 知识与规范收尾 Skill
 │       ├── frontend-design/  # 前端视觉设计 Skill
 │       ├── zhihu-question-scout/  # 知乎选题 Skill（references/publish-assist.md 为作答辅助协议）
+│       ├── zhihu-answer-tracker/  # 知乎回答数据回采 Skill（创作中心五指标 + 排名，喂 scout 5.4 校准回路；快照存 analytics/）
 │       ├── zhihu-haowu-evaluator/ # 知乎好物插入评估 Skill（被 scout 编排，也可独立触发）
+│       ├── zhihu-geo-optimizer/  # 知乎 GEO/SEO 优化 Skill（去 AI 味后做机器可读性审查：标题/正文/结尾；调研证据库在 references/geo-research.md）
 │       └── hv-analysis/      # 横纵分析法深度研究 Skill（产出 PDF 研究报告）
 ├── drafts/                   # 进行中的初稿（当前为美版有锁iPhone17咨询答复 v1-v3，定稿后交付长图在 美版有锁iPhone17咨询/）
 ├── outlines/                 # 选题、大纲、素材；选题历史.md 由 zhihu-question-scout 维护，按问题 ID 去重
 ├── published/                # 已发布/定稿文章（建议目录）
 └── references/               # 参考资料、数据、截图（建议目录）
     ├── 好物决策卡模板.md      # 好物推荐商品决策卡（写稿前填卡，含选题判断）
-    └── iPhone锁机制全解.md    # 运营商锁/激活锁/监管锁/双重认证机制辨析（咨询员自用，含信源）
+    └── iPhone锁机制全解.md    # 运营商锁/激活锁/监管锁/双重认证机制辨析 + 账号弃用换绑实操（咨询员自用，含信源）
 ```
 
 ### 2.1 文件命名规范
@@ -150,7 +159,7 @@
 
 ## 3. 可用的 Agent Skills
 
-本项目已配置七个 Skill，Agent 在执行对应任务时应优先加载并遵循：
+本项目已配置九个 Skill，Agent 在执行对应任务时应优先加载并遵循：
 
 | Skill | 路径 | 触发场景 |
 |-------|------|---------|
@@ -159,7 +168,9 @@
 | `frontend-design` | `.agents/skills/frontend-design/SKILL.md` | 封面、图集、思维导图等视觉产出 |
 | `neat-freak` | `.agents/skills/neat-freak/SKILL.md` | 文档/规则/残留收尾同步（说「洁癖」或「收尾」时触发） |
 | `zhihu-question-scout` | `.agents/skills/zhihu-question-scout/SKILL.md` | 用 WebBridge 抓知乎邀请回答/推荐问题，结合已有文章每次选 3 个值得答的问题（说「选题」「看看知乎邀请」时触发）；作答辅助协议（判 AI 应对、填编辑器）在 `references/publish-assist.md` |
+| `zhihu-answer-tracker` | `.agents/skills/zhihu-answer-tracker/SKILL.md` | 回采自己已发布回答的表现数据（阅读/赞同/评论/收藏/喜欢 + 问题页排名），回写 `outlines/选题历史.md` 复盘行，喂 scout 5.4 校准回路；快照存 `analytics/`（说「回采」「复盘」「看看我的回答表现」时触发） |
 | `zhihu-haowu-evaluator` | `.agents/skills/zhihu-haowu-evaluator/SKILL.md` | 评估问题/已有回答值不值得插好物卡片（说「好物评估」「值不值得插好物」「回填好物」时触发；也被 scout 选题精评调用） |
+| `zhihu-geo-optimizer` | `.agents/skills/zhihu-geo-optimizer/SKILL.md` | 知乎内容 GEO/SEO 审查：标题、正文、结尾的机器可读性优化，让内容被站内搜索、百度、AI 搜索引擎（DeepSeek/豆包/Kimi/知乎直答）优先引用（说「GEO」「SEO」「搜索流量」「被 AI 引用」「关键词布局」时触发；也被 scout 起草流程在去 AI 味之后调用；调研证据库在 `references/geo-research.md`） |
 | `hv-analysis` | `.agents/skills/hv-analysis/SKILL.md` | 横纵分析法深度研究（纵轴时间叙事 + 横轴竞品对比 + 交汇洞察），产出 PDF 研究报告（说「横纵分析」「深度研究」「调研一下」时触发） |
 
 使用方式：
@@ -294,4 +305,4 @@
 
 ---
 
-**最后更新**：2026-08-25
+**最后更新**：2026-08-29

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>NoSuchKey</Code>
+  <Message>The specified key does not exist.</Message>
+  <RequestId>6A8FCA81AF47593137DD8526</RequestId>
+  <HostId>chongdiantou-images.oss-cn-shenzhen.aliyuncs.com</HostId>
+  <Key>uploads/2025/05/21/dio448h6w9kdxvybbx.jpeg</Key>
+  <EC>0041-00000113</EC>
+  <RecommendDoc>https://api.aliyun.com/troubleshoot?q=0041-00000113</RecommendDoc>
+</Error>
