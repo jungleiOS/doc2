@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1200px; font-family: "PingFang SC", -apple-system, sans-serif; background: #f7f5f0; padding: 56px 64px; }
+  .card { background: #fff; border-radius: 20px; padding: 48px 52px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+  h1 { font-size: 38px; font-weight: 700; color: #1d1d1f; }
+  .sub { font-size: 20px; color: #86868b; margin-top: 10px; }
+  table { width: 100%; margin-top: 36px; border-collapse: collapse; }
+  th { text-align: left; font-size: 19px; color: #86868b; font-weight: 500; padding: 12px 16px; border-bottom: 2px solid #d2d2d7; }
+  td { font-size: 23px; color: #1d1d1f; padding: 20px 16px; border-bottom: 1px solid #e8e8ed; }
+  td.dev { font-weight: 700; }
+  tr.mac td { background: #f0f7ff; }
+  tr.mac td.dev { color: #0071e3; }
+  .tag { display: inline-block; font-size: 16px; border-radius: 999px; padding: 3px 12px; margin-left: 10px; vertical-align: middle; }
+  .tag.full { background: #e8e8ed; color: #6e6e73; }
+  .tag.free { background: #0071e3; color: #fff; }
+  .insight { margin-top: 32px; background: #1d1d1f; color: #f5f5f7; border-radius: 16px; padding: 26px 34px; font-size: 22px; line-height: 1.6; }
+  .insight b { color: #ffd60a; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>你的设备岗位表</h1>
+    <div class="sub">买之前先问：这台 MacBook 进来，接谁的活？</div>
+    <table>
+      <tr><th>设备</th><th>岗位</th><th>状态</th></tr>
+      <tr><td class="dev">台式机 98X + 5080</td><td>性能、游戏、重度负载</td><td>有人在岗<span class="tag full">已满</span></td></tr>
+      <tr><td class="dev">拯救者 R9000P</td><td>带出门的 Windows</td><td>有人在岗<span class="tag full">已满</span></td></tr>
+      <tr class="mac"><td class="dev">MacBook（如果买）</td><td>安静、无风扇、亮屏十几个小时的专注设备</td><td>唯一空位<span class="tag free">空缺</span></td></tr>
+    </table>
+    <div class="insight">没有这个空位，MacBook 买回去就是吃灰。<b>有，再谈买哪台：体验票买 Neo（教育价 4799），主力票买 Air（京东国补 7861）。</b></div>
+  </div>
+</body>
+</html>

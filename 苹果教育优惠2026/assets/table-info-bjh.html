@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>2026 苹果返校季 · 资格与机型（百家号版）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    background: #E7DEC9;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: #262117;
+    padding: 56px 60px;
+  }
+  .receipt {
+    background: #FBF6E9;
+    box-shadow: 0 10px 34px rgba(62, 50, 28, 0.18);
+  }
+  .zigzag { height: 14px; background:
+      linear-gradient(45deg, transparent 33.333%, #FBF6E9 33.333%, #FBF6E9 66.667%, transparent 66.667%),
+      linear-gradient(-45deg, transparent 33.333%, #FBF6E9 33.333%, #FBF6E9 66.667%, transparent 66.667%);
+    background-size: 28px 28px;
+    background-position: 0 -14px;
+  }
+  .zigzag.top { transform: rotate(180deg); }
+  .pad { padding: 60px 68px 50px; }
+
+  .brand {
+    text-align: center;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.42em;
+    color: #8A6D3B;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 58px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .dash { border: none; border-top: 3px dashed #B9A87F; margin: 32px 0; }
+
+  .section-label {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .section-label::before {
+    content: "";
+    width: 14px; height: 34px;
+    background: #B2372A;
+    flex: none;
+  }
+  .who-list { margin-bottom: 8px; }
+  .who {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 6px;
+    border-bottom: 2px dashed #D5C8A8;
+    font-size: 29px;
+    font-weight: 700;
+    font-family: "Songti SC", "STSong", serif;
+  }
+  .who:last-child { border-bottom: none; }
+  .who .tick {
+    flex: none;
+    width: 42px; height: 42px;
+    border: 3px solid #B2372A;
+    border-radius: 50%;
+    color: #B2372A;
+    font-family: "PingFang SC", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .who small { font-family: "PingFang SC", sans-serif; font-size: 22px; color: #8A7E66; font-weight: 400; margin-left: 12px; }
+  .verify {
+    margin-top: 20px;
+    border: 2px solid #B2372A;
+    background: #F7EBDD;
+    padding: 22px 26px;
+    font-size: 25px;
+    color: #7A3025;
+    line-height: 1.65;
+  }
+
+  .device-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 6px;
+    border-bottom: 2px dashed #D5C8A8;
+    font-size: 29px;
+    font-weight: 700;
+    font-family: "Songti SC", "STSong", serif;
+  }
+  .device-row:last-child { border-bottom: none; }
+  .mark {
+    font-family: "PingFang SC", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 5px 20px;
+    border: 2px solid;
+  }
+  .mark.yes { color: #B2372A; border-color: #B2372A; background: #F7EBDD; }
+  .mark.no { color: #9A8E74; border-color: #C9BA93; background: #EFE6CF; }
+  .device-row.no-row { color: #9A8E74; }
+
+  .foot {
+    margin-top: 24px;
+    font-size: 22px;
+    color: #8A7E66;
+    line-height: 1.7;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="receipt">
+    <div class="zigzag top"></div>
+    <div class="pad">
+      <div class="brand">返校季 · 精算小票</div>
+      <h1>谁能买？哪些机器参加？</h1>
+      <hr class="dash">
+
+      <div class="section-label">有资格的人群</div>
+      <div class="who-list">
+        <div class="who"><span class="tick">✓</span><span>高校在读学生<small>含专科、本科、研究生</small></span></div>
+        <div class="who"><span class="tick">✓</span><span>已被录取的新生<small>凭录取资格即可</small></span></div>
+        <div class="who"><span class="tick">✓</span><span>高校教职工<small>在职教师与员工</small></span></div>
+        <div class="who"><span class="tick">✓</span><span>代购的家长<small>为符合条件的子女购买</small></span></div>
+      </div>
+      <div class="verify">另：公立 / 私立幼儿园、中小学雇员同样符合资格。线上购买需先通过 UNiDAYS 身份验证；线下直营店出示学生证或在职证明即可。</div>
+
+      <div style="height: 40px"></div>
+
+      <div class="section-label">参与抵扣的机型</div>
+      <div class="device-row"><span>MacBook Air / MacBook Pro</span><span class="mark yes">参加</span></div>
+      <div class="device-row"><span>iPad Air / iPad Pro</span><span class="mark yes">参加</span></div>
+      <div class="device-row no-row"><span>入门款 iPad / iPad mini</span><span class="mark no">不参加</span></div>
+      <div class="device-row no-row"><span>MacBook Neo / iMac / Mac mini / Mac Studio</span><span class="mark no">不参加</span></div>
+      <div class="device-row no-row"><span>iPhone / Apple Watch</span><span class="mark no">不参加</span></div>
+
+      <hr class="dash">
+      <div class="foot">活动时间：2026.7.16 – 9.24（原定 8.27，已延期）· 教育优惠常年有效，返校季在此基础上叠加 849 元配件抵扣<br>数据来源：苹果官网教育商店</div>
+    </div>
+    <div class="zigzag"></div>
+  </div>
+</body>
+</html>

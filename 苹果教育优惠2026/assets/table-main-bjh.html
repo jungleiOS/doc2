@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>2026 苹果返校季 · 配件抵扣方案（百家号版）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    background: #E7DEC9;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: #262117;
+    padding: 56px 60px;
+  }
+  .receipt {
+    background: #FBF6E9;
+    box-shadow: 0 10px 34px rgba(62, 50, 28, 0.18);
+    position: relative;
+  }
+  .receipt .pad { padding: 60px 68px 50px; }
+  /* 小票锯齿边 */
+  .zigzag { height: 14px; background:
+      linear-gradient(45deg, transparent 33.333%, #FBF6E9 33.333%, #FBF6E9 66.667%, transparent 66.667%),
+      linear-gradient(-45deg, transparent 33.333%, #FBF6E9 33.333%, #FBF6E9 66.667%, transparent 66.667%);
+    background-size: 28px 28px;
+    background-position: 0 -14px;
+  }
+  .zigzag.top { transform: rotate(180deg); }
+
+  .brand {
+    text-align: center;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.42em;
+    color: #8A6D3B;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 58px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+  }
+  .dash {
+    border: none;
+    border-top: 3px dashed #B9A87F;
+    margin: 34px 0;
+  }
+  .hero {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 30px;
+    margin: 6px 0 10px;
+  }
+  .hero .amount {
+    font-family: "Menlo", "Courier New", monospace;
+    font-size: 132px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #262117;
+    line-height: 1;
+  }
+  .hero .amount .cur { font-size: 64px; font-weight: 700; }
+  .hero .label {
+    font-size: 26px;
+    color: #6E6350;
+    line-height: 1.55;
+    border-left: 3px solid #B2372A;
+    padding-left: 20px;
+  }
+  .dates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    font-size: 26px;
+    color: #6E6350;
+    margin: 26px 0 6px;
+    position: relative;
+  }
+  .dates .old { text-decoration: line-through; color: #A79A80; }
+  .dates .new {
+    font-weight: 700;
+    color: #B2372A;
+    border: 2px solid #B2372A;
+    padding: 3px 16px;
+  }
+  /* 朱红印章 */
+  .stamp {
+    position: absolute;
+    top: 250px;
+    right: 84px;
+    width: 168px; height: 168px;
+    border: 5px solid rgba(178, 55, 42, 0.85);
+    border-radius: 50%;
+    color: rgba(178, 55, 42, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Songti SC", "STSong", serif;
+    font-weight: 900;
+    transform: rotate(12deg);
+    pointer-events: none;
+  }
+  .stamp::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 2px solid rgba(178, 55, 42, 0.85);
+    border-radius: 50%;
+  }
+  .stamp .l1 { font-size: 30px; letter-spacing: 0.14em; }
+  .stamp .l2 { font-size: 38px; letter-spacing: 0.06em; margin-top: 4px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+  }
+  thead th {
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: #8A6D3B;
+    text-align: left;
+    padding: 0 10px 14px;
+    border-bottom: 2px solid #262117;
+  }
+  thead th.num, td.num { text-align: right; }
+  thead th.fit, td.fit { text-align: center; }
+  tbody td {
+    padding: 22px 10px;
+    font-size: 30px;
+    border-bottom: 2px dashed #D5C8A8;
+    vertical-align: middle;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.name { font-weight: 700; font-family: "Songti SC", "STSong", serif; }
+  td.name .sub { display: block; font-family: "PingFang SC", sans-serif; font-size: 21px; color: #8A7E66; font-weight: 400; margin-top: 5px; }
+  td.price {
+    font-family: "Menlo", "Courier New", monospace;
+    color: #8A7E66;
+    font-size: 27px;
+    text-decoration: line-through;
+    text-decoration-color: rgba(138, 126, 102, 0.55);
+  }
+  td.pay {
+    font-family: "Menlo", "Courier New", monospace;
+    font-size: 40px;
+    font-weight: 700;
+    color: #B2372A;
+  }
+  td.pay.zero { color: #262117; }
+  .pill {
+    display: inline-block;
+    font-size: 21px;
+    font-weight: 600;
+    padding: 5px 16px;
+    background: #EFE6CF;
+    color: #5C5238;
+    border: 1px solid #C9BA93;
+  }
+  .pill.ipad { background: #F3E3D9; color: #B2372A; border-color: #B2372A; }
+  .foot {
+    margin-top: 26px;
+    font-size: 22px;
+    color: #8A7E66;
+    line-height: 1.7;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="receipt">
+    <div class="zigzag top"></div>
+    <div class="pad">
+      <div class="brand">返校季 · 精算小票</div>
+      <h1>买 Mac / iPad<br>送 849 元配件抵扣</h1>
+      <div class="hero">
+        <div class="amount"><span class="cur">¥</span>849</div>
+        <div class="label">一次性配件抵扣额度<br>今年取消免费 AirPods，改为按需换购</div>
+      </div>
+      <div class="dates">
+        <span>2026.7.16 开启</span>
+        <span class="old">原定 8.27 结束</span>
+        <span class="new">已延期至 9 月 24 日</span>
+      </div>
+      <hr class="dash">
+      <table>
+        <thead>
+          <tr>
+            <th>配件</th>
+            <th class="num">原价</th>
+            <th class="num">抵扣后补差</th>
+            <th class="fit">适用</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">AirTag 四件装</td>
+            <td class="num price">¥849</td>
+            <td class="num pay zero">0 元</td>
+            <td class="fit"><span class="pill">Mac / iPad</span></td>
+          </tr>
+          <tr>
+            <td class="name">Apple Pencil Pro<span class="sub">记笔记、绘画首选</span></td>
+            <td class="num price">¥899</td>
+            <td class="num pay">50 元</td>
+            <td class="fit"><span class="pill ipad">仅 iPad</span></td>
+          </tr>
+          <tr>
+            <td class="name">AirPods 4</td>
+            <td class="num price">¥999</td>
+            <td class="num pay">150 元</td>
+            <td class="fit"><span class="pill">Mac / iPad</span></td>
+          </tr>
+          <tr>
+            <td class="name">AirPods 4<span class="sub">主动降噪版</span></td>
+            <td class="num price">¥1,399</td>
+            <td class="num pay">550 元</td>
+            <td class="fit"><span class="pill">Mac / iPad</span></td>
+          </tr>
+          <tr>
+            <td class="name">AirPods Pro 3</td>
+            <td class="num price">¥1,899</td>
+            <td class="num pay">1,050 元</td>
+            <td class="fit"><span class="pill">Mac / iPad</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <hr class="dash">
+      <div class="foot">参与机型：MacBook Air / MacBook Pro / iPad Air / iPad Pro（入门 iPad、iPad mini、MacBook Neo、iMac 等不参与）<br>数据来源：苹果官网教育商店</div>
+      <div class="stamp"><div class="l1">延期至</div><div class="l2">9.24</div></div>
+    </div>
+    <div class="zigzag"></div>
+  </div>
+</body>
+</html>

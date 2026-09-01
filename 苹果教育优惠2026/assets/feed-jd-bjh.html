@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    background: #E7DEC9;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: #262117;
+    padding: 52px;
+  }
+  .sheet {
+    background: #FBF6E9;
+    box-shadow: 0 10px 34px rgba(62, 50, 28, 0.18);
+    padding: 0 0 46px;
+  }
+  .head {
+    background: #2F5D50;
+    color: #F2F0E4;
+    padding: 46px 60px 40px;
+  }
+  .head .kicker {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    color: #BFD9A8;
+    margin-bottom: 14px;
+  }
+  .head h1 {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .head .sub { font-size: 22px; color: #A9BCA6; }
+  .body { padding: 40px 60px 0; }
+  .step {
+    display: flex;
+    gap: 26px;
+    padding-bottom: 38px;
+    margin-bottom: 38px;
+    border-bottom: 3px dashed #C9BA93;
+  }
+  .step:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .side { flex: none; width: 64px; text-align: center; }
+  .num {
+    width: 56px; height: 56px;
+    background: #2F5D50;
+    color: #F2F0E4;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 32px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .side .word {
+    margin-top: 8px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    color: #8A6D3B;
+  }
+  .main { flex: 1; min-width: 0; }
+  .step-title {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 34px;
+    font-weight: 900;
+    margin: 6px 0 12px;
+  }
+  .step-title .hl {
+    font-family: "Menlo", "Courier New", monospace;
+    color: #B2372A;
+    font-size: 36px;
+  }
+  .step-desc { font-size: 22px; color: #5C5340; line-height: 1.65; margin-bottom: 16px; }
+  .step-desc b { color: #B2372A; font-family: "Menlo", "Courier New", monospace; font-size: 24px; }
+  .shot {
+    border: 3px solid #262117;
+    overflow: hidden;
+  }
+  .shot img { width: 100%; display: block; }
+  .footer {
+    margin: 34px 60px 0;
+    font-size: 19px;
+    color: #9A8E74;
+    border-top: 2px solid #262117;
+    padding-top: 18px;
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="head">
+    <div class="kicker">路线二 · 京东教育价 + 国补</div>
+    <h1>MacBook 和刷剧 iPad，这么买</h1>
+    <div class="sub">适合：买 MacBook、或只买入门 iPad 影音用的人 · 国补按收货地领资格，手慢无</div>
+  </div>
+  <div class="body">
+
+    <div class="step">
+      <div class="side"><div class="num">壹</div><div class="word">领券</div></div>
+      <div class="main">
+        <div class="step-title">认准自营，点绿色「国家补贴」横幅领资格</div>
+        <div class="step-desc">京东搜「iPad Air M4」，选 Apple 产品京东自营旗舰店。商品页顶部绿色横幅点「立即领取」，按收货地领国补资格。页面显示「国补领后价」就是到手价。</div>
+        <div class="shot"><img src="shots/crop/crop-jd-air.png"></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="side"><div class="num">贰</div><div class="word">比价</div></div>
+      <div class="main">
+        <div class="step-title">MacBook 选「教育优惠版」SKU，国补后 <span class="hl">7861.65</span></div>
+        <div class="step-desc">MacBook Air 13（M5，16+512）教育优惠版划线价 9249（与官网教育价同价），叠 15% 国补减 1387.35，<b>到手 7861.65</b>，比官网返校季便宜近 1400。</div>
+        <div class="shot"><img src="shots/crop/crop-jd-mba.png"></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="side"><div class="num">叁</div><div class="word">下单</div></div>
+      <div class="main">
+        <div class="step-title">入门 iPad 国补叠券，3000 不到</div>
+        <div class="step-desc">入门 iPad 11（A16，128G）划线 3799，国补减 500 再叠满 3000 减 300 券，<b>到手 2980.01</b>，比官网教育价（3599）还便宜 600 多。刷剧党直接走这条。</div>
+        <div class="shot"><img src="shots/crop/crop-jd-pad11.png"></div>
+      </div>
+    </div>
+
+    <div class="footer">截图来源：京东商品页实测（重庆收货地）· 2026-08-23 · 国补资格各地发放节奏不同，以实时页面为准</div>
+  </div>
+</div>
+</body>
+</html>

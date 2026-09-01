@@ -127,6 +127,8 @@
 │       ├── zhihu-answer-tracker/  # 知乎回答数据回采 Skill（创作中心五指标 + 排名，喂 scout 5.4 校准回路；快照存 analytics/）
 │       ├── zhihu-haowu-evaluator/ # 知乎好物插入评估 Skill（被 scout 编排，也可独立触发）
 │       ├── zhihu-geo-optimizer/  # 知乎 GEO/SEO 优化 Skill（去 AI 味后做机器可读性审查：标题/正文/结尾；调研证据库在 references/geo-research.md）
+│       ├── zhihu-to-baijiahao/  # 知乎转百家号 Skill（SEO 化改写 + 搜索关键词字段，赚搜索长尾；策略依据转写多平台报告）
+│       ├── gzh-design/         # 公众号排版 Skill（Markdown → 粘贴不掉格式的公众号 HTML，6 套主题 + 主题生成器；skills CLI 安装自 isjiamu/gzh-design-skill）
 │       └── hv-analysis/      # 横纵分析法深度研究 Skill（产出 PDF 研究报告）
 ├── drafts/                   # 进行中的初稿（当前为美版有锁iPhone17咨询答复 v1-v3，定稿后交付长图在 美版有锁iPhone17咨询/）
 ├── outlines/                 # 选题、大纲、素材；选题历史.md 由 zhihu-question-scout 维护，按问题 ID 去重
@@ -159,7 +161,7 @@
 
 ## 3. 可用的 Agent Skills
 
-本项目已配置九个 Skill，Agent 在执行对应任务时应优先加载并遵循：
+本项目已配置十一个 Skill，Agent 在执行对应任务时应优先加载并遵循：
 
 | Skill | 路径 | 触发场景 |
 |-------|------|---------|
@@ -171,6 +173,8 @@
 | `zhihu-answer-tracker` | `.agents/skills/zhihu-answer-tracker/SKILL.md` | 回采自己已发布回答的表现数据（阅读/赞同/评论/收藏/喜欢 + 问题页排名），回写 `outlines/选题历史.md` 复盘行，喂 scout 5.4 校准回路；快照存 `analytics/`（说「回采」「复盘」「看看我的回答表现」时触发） |
 | `zhihu-haowu-evaluator` | `.agents/skills/zhihu-haowu-evaluator/SKILL.md` | 评估问题/已有回答值不值得插好物卡片（说「好物评估」「值不值得插好物」「回填好物」时触发；也被 scout 选题精评调用） |
 | `zhihu-geo-optimizer` | `.agents/skills/zhihu-geo-optimizer/SKILL.md` | 知乎内容 GEO/SEO 审查：标题、正文、结尾的机器可读性优化，让内容被站内搜索、百度、AI 搜索引擎（DeepSeek/豆包/Kimi/知乎直答）优先引用（说「GEO」「SEO」「搜索流量」「被 AI 引用」「关键词布局」时触发；也被 scout 起草流程在去 AI 味之后调用；调研证据库在 `references/geo-research.md`） |
+| `zhihu-to-baijiahao` | `.agents/skills/zhihu-to-baijiahao/SKILL.md` | 把知乎回答/文章转写为百家号版：SEO 化改写（长尾词标题 + 问答式结构 + 搜索关键词字段），赚百度搜索长尾；含合规时序与数据回收（说「转百家号」「百家号版」「同步到百度」时触发；策略依据 `知乎回答转写多平台_横纵分析报告.md`） |
+| `gzh-design` | `.agents/skills/gzh-design/SKILL.md` | 公众号文章排版：Markdown/docx/pdf/纯文本 → 可直接粘贴进公众号编辑器、不掉格式的 HTML（6 套主题 + 主题生成器，自动章节编号、关键词下划线、引言卡与目录；说「公众号排版」「微信排版」「gzh」「一键排版」时触发；由 skills CLI 安装，源仓库 [isjiamu/gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)） |
 | `hv-analysis` | `.agents/skills/hv-analysis/SKILL.md` | 横纵分析法深度研究（纵轴时间叙事 + 横轴竞品对比 + 交汇洞察），产出 PDF 研究报告（说「横纵分析」「深度研究」「调研一下」时触发） |
 
 使用方式：
@@ -305,4 +309,4 @@
 
 ---
 
-**最后更新**：2026-08-29
+**最后更新**：2026-09-01
