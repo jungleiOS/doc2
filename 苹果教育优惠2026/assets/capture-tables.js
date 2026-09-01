@@ -16,7 +16,7 @@ const jobs = [
   for (const job of jobs) {
     const page = await browser.newPage();
     const htmlPath = path.resolve(__dirname, job.html);
-    const outputPath = path.resolve(__dirname, '..', job.out);
+    const outputPath = path.resolve(__dirname, '..', '知乎', job.out);
     await page.goto('file://' + htmlPath, { waitUntil: 'networkidle0' });
     await new Promise(r => setTimeout(r, 400));
     const clip = await page.evaluate(() => {

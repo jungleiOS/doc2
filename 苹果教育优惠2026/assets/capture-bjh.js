@@ -23,7 +23,7 @@ const path = require('path');
       const card = document.querySelector('.receipt').getBoundingClientRect();
       return { x: 0, y: 0, width: rect.width, height: card.bottom + 56 };
     });
-    await page.screenshot({ path: path.resolve(__dirname, '..', png), type: 'png', clip });
+    await page.screenshot({ path: path.resolve(__dirname, '..', '百家号', png), type: 'png', clip });
     console.log('saved:', png);
     await page.close();
   }
@@ -38,7 +38,7 @@ const path = require('path');
     await page.goto('file://' + path.resolve(__dirname, html), { waitUntil: 'networkidle0', timeout: 60000 });
     await new Promise(r => setTimeout(r, 800));
     const sheet = await page.$('.sheet');
-    await sheet.screenshot({ path: path.resolve(__dirname, '..', png) });
+    await sheet.screenshot({ path: path.resolve(__dirname, '..', '百家号', png) });
     console.log('saved:', png);
     await page.close();
   }
@@ -49,7 +49,7 @@ const path = require('path');
   await page.goto('file://' + path.resolve(__dirname, 'cover-bjh.html'), { waitUntil: 'networkidle0', timeout: 60000 });
   await new Promise(r => setTimeout(r, 500));
   await page.screenshot({
-    path: path.resolve(__dirname, '..', '百家号版-苹果返校季2026-封面.png'),
+    path: path.resolve(__dirname, '..', '百家号', '百家号版-苹果返校季2026-封面.png'),
     type: 'png',
     clip: { x: 0, y: 0, width: 900, height: 600 }
   });

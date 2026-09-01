@@ -10,7 +10,7 @@ const path = require('path');
 
   const page = await browser.newPage();
   const htmlPath = path.resolve(__dirname, 'table-science-mac.html');
-  const outputPath = path.resolve(__dirname, '..', 'MacBook理科选购-软件分流卡.png');
+  const outputPath = path.resolve(__dirname, '..', '知乎', 'MacBook理科选购-软件分流卡.png');
   await page.goto('file://' + htmlPath, { waitUntil: 'networkidle0' });
   await new Promise(r => setTimeout(r, 400));
   const clip = await page.evaluate(() => {

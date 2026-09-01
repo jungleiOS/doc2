@@ -46,7 +46,7 @@ const path = require('path');
         await page.evaluate(y => window.scrollTo(0, y), t.scrolls[i]);
         await new Promise(r => setTimeout(r, 1500));
         const suffix = t.scrolls.length > 1 ? `-${i + 1}` : '';
-        const outputPath = path.resolve(__dirname, '..', t.out.replace('.png', `${suffix}.png`));
+        const outputPath = path.resolve(__dirname, '..', '知乎', t.out.replace('.png', `${suffix}.png`));
         await page.screenshot({ path: outputPath, type: 'png', fullPage: false });
         console.log('Screenshot saved:', outputPath);
       }

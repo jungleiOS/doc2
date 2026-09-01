@@ -19,7 +19,7 @@ const path = require('path');
     await page.goto('file://' + path.resolve(__dirname, html), { waitUntil: 'networkidle0', timeout: 60000 });
     await new Promise(r => setTimeout(r, 800));
     const card = await page.$('.card');
-    await card.screenshot({ path: path.resolve(__dirname, '..', png) });
+    await card.screenshot({ path: path.resolve(__dirname, '..', '知乎', png) });
     console.log('saved:', png);
   }
   await browser.close();

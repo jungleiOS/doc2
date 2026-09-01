@@ -36,7 +36,7 @@ const path = require('path');
   console.log('promo section:', JSON.stringify(found));
   await new Promise(r => setTimeout(r, 2000));
   await page.screenshot({
-    path: path.resolve(__dirname, '..', '苹果官网-返校季促销区块.png'),
+    path: path.resolve(__dirname, '..', '知乎', '苹果官网-返校季促销区块.png'),
     type: 'png',
     fullPage: false
   });
@@ -51,7 +51,7 @@ const path = require('path');
   });
   await new Promise(r => setTimeout(r, 2000));
   await page.screenshot({
-    path: path.resolve(__dirname, '..', '苹果官网-教育商店产品区.png'),
+    path: path.resolve(__dirname, '..', '知乎', '苹果官网-教育商店产品区.png'),
     type: 'png',
     fullPage: false
   });

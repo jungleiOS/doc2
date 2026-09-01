@@ -90,23 +90,26 @@
 │       ├── boarding-check-card.html  # 登机决策卡页面
 │       ├── tail-cta.html         # 图片尾巴页面
 │       └── raw/                  # 原始配图（按事件分目录）
-├── 苹果教育优惠2026/            # 2026 苹果返校季教育优惠内容归集目录（知乎长文 + 公众号版 + 知乎想法文案及配图）
-│   ├── 知乎文章-苹果返校季2026精算.md  # 知乎长文：官网 vs 京东国补两条路逐台实算（老文章年度更新稿）
-│   ├── 公众号版-苹果返校季2026.md     # 公众号版长文（卡兹克风格）
-│   ├── 知乎想法文案.txt / 知乎想法-返校季2026引流.txt  # 知乎想法短文案
-│   ├── 苹果返校季2026-抵扣方案表.png   # 849 元配件抵扣方案表格图（HTML 截图）
-│   ├── 苹果返校季2026-资格与机型.png   # 参与资格与机型信息图（HTML 截图）
-│   ├── 苹果返校季2026-官网路线喂饭图.png  # 官网购买四步实操图（feed-official.html 截图）
-│   ├── 苹果返校季2026-京东国补喂饭图.png  # 京东国补三步实操图（feed-jd.html 截图）
-│   ├── 苹果官网-返校季促销区块.png     # 苹果教育商店真实截图：限时特惠区块
-│   ├── 苹果官网-教育商店产品区.png     # 苹果教育商店真实截图：首页 + 产品区
-│   └── assets/                 # 表格 HTML 源文件与截图脚本
-│       ├── table-main.html / table-info.html   # 两张表格图页面
-│       ├── capture-tables.js   # 表格截图脚本（file:// 加载，clip 裁掉留白）
-│       ├── capture-apple-promo.js  # 官网真实截图脚本（定位含「AirTag 四件装」文案的区块）
-│       ├── feed-official.html / feed-jd.html   # 两张喂饭图页面（步骤编号 + 裁切后的实操截图）
-│       ├── capture-feed.js / capture-feed-shots.js   # 喂饭图拼图截图脚本 / 官网素材实拍脚本
-│       └── shots/              # 喂饭图原始截图（京东商品页、官网条款页，crop/ 子目录为 PIL 裁切后的聚焦图）
+├── 苹果教育优惠2026/            # 2026 苹果返校季教育优惠内容归集目录（按平台分文件夹管理，assets 为共享工作区）
+│   ├── 知乎/                   # 知乎平台交付物：长文 + 想法文案 + drafts 回答草稿 + 全部知乎版配图
+│   │   ├── 知乎文章-苹果返校季2026精算.md  # 知乎长文：官网 vs 京东国补两条路逐台实算（老文章年度更新稿）
+│   │   ├── 知乎想法文案.txt / 知乎想法-返校季2026引流.txt  # 知乎想法短文案
+│   │   ├── drafts/             # 衍生知乎回答草稿（含本目录 AGENTS.md 与问题对应表，图片以 ../ 引用知乎/ 根目录配图）
+│   │   └── 苹果返校季2026-*.png / 苹果官网-*.png / iPad*|MacBook*  # 知乎版图表、官网截图与草稿配图
+│   ├── 公众号/                 # 公众号平台交付物
+│   │   └── 公众号版-苹果返校季2026.md     # 公众号版长文（卡兹克风格）
+│   ├── 百家号/                 # 百家号平台交付物：图文 + 排版 HTML + 小票风配图（封面/表格/喂饭图均带「百家号版-」前缀）
+│   ├── 头条号/                 # 预留：头条号版图文
+│   └── assets/                 # 共享工作区：HTML 源文件与截图脚本（输出路径已指向各平台子目录）、shots/ 原始截图
+│       ├── table-main.html / table-info.html / table-*-bjh.html   # 知乎版 / 百家号版表格图页面
+│       ├── capture-tables.js / capture-bjh.js   # 表格截图脚本（输出分别落 知乎/ 与 百家号/）
+│       ├── capture-apple-promo.js / capture-apple.js  # 官网真实截图脚本（输出落 知乎/）
+│       ├── feed-official.html / feed-jd.html / feed-*-bjh.html   # 知乎版 / 百家号版喂饭图页面
+│       ├── capture-feed.js / capture-feed-shots.js   # 喂饭图拼图截图脚本（输出落 知乎/）/ 官网素材实拍脚本
+│       ├── cover-bjh.html / decision-*.html / table-science-mac.html  # 百家号封面页 / 知乎草稿决策卡页面
+│       ├── capture-ipad-size-card.js / capture-macbook-role-card.js / capture-science-mac.js  # 知乎草稿配图脚本（输出落 知乎/）
+│       ├── reprocess-bjh-photos.py  # 百家号实拍图重处理（PIL，须用 .venv-md/bin/python3，输出落 百家号/）
+│       └── shots/              # 喂饭图与实拍图原始截图（京东商品页、官网条款页、店内海报，crop/ 子目录为 PIL 裁切后的聚焦图）
 ├── 美版有锁iPhone17咨询/        # 付费咨询答复长图（HTML 渲染 → 分段截图 → PIL 拼接）
 │   ├── consult-reply.html      # 答复长图页面（冷白纸面 + 中段深色警示面板，Songti SC 标题 + PingFang 正文）
 │   ├── capture-consult.js      # 分段截图脚本（puppeteer-core，按块边界分段以规避 Chrome 16384px 截图高度上限）

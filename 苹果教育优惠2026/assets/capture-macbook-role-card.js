@@ -13,7 +13,7 @@ const path = require('path');
   const el = await page.$('body');
   const box = await el.boundingBox();
   await page.screenshot({
-    path: path.resolve(__dirname, '..', 'MacBook买不买-岗位对照卡.png'),
+    path: path.resolve(__dirname, '..', '知乎', 'MacBook买不买-岗位对照卡.png'),
     type: 'png',
     clip: { x: 0, y: 0, width: 1200, height: Math.ceil(box.height) }
   });

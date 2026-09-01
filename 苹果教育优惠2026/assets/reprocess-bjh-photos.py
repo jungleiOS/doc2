@@ -4,7 +4,7 @@ from PIL import Image, ImageEnhance
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, '..')
+OUT = os.path.join(HERE, '..', '百家号')
 
 def save(im, name):
     path = os.path.join(OUT, name)

@@ -13,7 +13,7 @@ const path = require('path');
   const el = await page.$('body');
   const box = await el.boundingBox();
   await page.screenshot({
-    path: path.resolve(__dirname, '..', 'iPad尺寸决策卡-11vs13.png'),
+    path: path.resolve(__dirname, '..', '知乎', 'iPad尺寸决策卡-11vs13.png'),
     type: 'png',
     clip: { x: 0, y: 0, width: 1200, height: Math.ceil(box.height) }
   });
