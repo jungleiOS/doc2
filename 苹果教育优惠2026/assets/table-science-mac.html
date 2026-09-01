@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1192px;
+    padding: 48px 56px 0;
+    background: #f5f4f0;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: #1c1c1e;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 44px 48px 40px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .sub {
+    font-size: 22px;
+    color: #8a8a8e;
+    margin-bottom: 32px;
+  }
+  .row {
+    display: flex;
+    align-items: stretch;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+  .verdict {
+    width: 168px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    padding: 26px 0;
+  }
+  .verdict .icon { font-size: 34px; margin-bottom: 6px; }
+  .verdict .label { font-size: 26px; }
+  .ok .verdict { background: #2f9e5f; }
+  .warn .verdict { background: #e08e0b; }
+  .no .verdict { background: #d14b43; }
+  .detail { flex: 1; padding: 22px 28px; background: #fafafa; }
+  .majors { font-size: 24px; font-weight: 600; margin-bottom: 8px; }
+  .software { font-size: 21px; color: #4a4a4e; line-height: 1.55; }
+  .software b { color: #1c1c1e; }
+  .foot {
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px dashed #d4d4d8;
+    font-size: 22px;
+    color: #6b6b70;
+    line-height: 1.6;
+  }
+  .foot b { color: #1c1c1e; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>理科买 Mac，先看你专业软件有没有 Mac 版</h1>
+    <div class="sub">按软件生态分三类，对号入座</div>
+
+    <div class="row ok">
+      <div class="verdict"><div class="icon">✓</div><div class="label">闭眼买</div></div>
+      <div class="detail">
+        <div class="majors">数学 / 统计 / 物理（理论方向）/ 生物信息 / 天文</div>
+        <div class="software">主力工具 <b>MATLAB、Mathematica、Python、R、LaTeX</b> 全部有原生 Mac 版；macOS 底层 Unix，连课题组 Linux 服务器天然顺手</div>
+      </div>
+    </div>
+
+    <div class="row warn">
+      <div class="verdict"><div class="icon">!</div><div class="label">留一手</div></div>
+      <div class="detail">
+        <div class="majors">化学 / 材料 / 生物 / 环境（实验方向）</div>
+        <div class="software">文献办公没问题，但数据处理常绕不开 <b>OriginLab Origin</b>——官方只有 Windows 版，Mac 只能常年开 Parallels 虚拟机</div>
+      </div>
+    </div>
+
+    <div class="row no">
+      <div class="verdict"><div class="icon">✗</div><div class="label">直接劝退</div></div>
+      <div class="detail">
+        <div class="majors">物电 / 力学 / 地信测绘 / 电子信息</div>
+        <div class="software"><b>ANSYS、SolidWorks、Keil、Altium Designer、ArcGIS Pro</b> 均无 Mac 版，ANSYS 官方连虚拟机方案都不支持</div>
+      </div>
+    </div>
+
+    <div class="foot">下单前只做一件事：找直系学长问一句 <b>「咱们专业课用什么软件」</b>，对完名单再掏钱。M 系芯片没有 Boot Camp 双系统，虚拟机是创可贴，不是退路。</div>
+  </div>
+</body>
+</html>

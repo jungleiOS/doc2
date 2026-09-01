@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>2026 苹果返校季 · 到手价对账（百家号版）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    background: #E7DEC9;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: #262117;
+    padding: 56px 60px;
+  }
+  .receipt {
+    background: #FBF6E9;
+    box-shadow: 0 10px 34px rgba(62, 50, 28, 0.18);
+    position: relative;
+  }
+  .receipt .pad { padding: 60px 68px 50px; }
+  /* 小票锯齿边 */
+  .zigzag { height: 14px; background:
+      linear-gradient(45deg, transparent 33.333%, #FBF6E9 33.333%, #FBF6E9 66.667%, transparent 66.667%),
+      linear-gradient(-45deg, transparent 33.333%, #FBF6E9 33.333%, #FBF6E9 66.667%, transparent 66.667%);
+    background-size: 28px 28px;
+    background-position: 0 -14px;
+  }
+  .zigzag.top { transform: rotate(180deg); }
+
+  .brand {
+    text-align: center;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.42em;
+    color: #8A6D3B;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 54px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+  }
+  .sub1 {
+    text-align: center;
+    font-size: 25px;
+    color: #6E6350;
+    margin-top: 16px;
+  }
+  .dash {
+    border: none;
+    border-top: 3px dashed #B9A87F;
+    margin: 34px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+  }
+  thead th {
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: #8A6D3B;
+    text-align: left;
+    padding: 0 10px 14px;
+    border-bottom: 2px solid #262117;
+  }
+  thead th.col, td.col { text-align: right; }
+  tbody td {
+    padding: 24px 10px;
+    font-size: 27px;
+    border-bottom: 2px dashed #D5C8A8;
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.name {
+    font-weight: 700;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 30px;
+    white-space: nowrap;
+  }
+  td.name .sub {
+    display: block;
+    font-family: "PingFang SC", sans-serif;
+    font-size: 21px;
+    color: #8A7E66;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+  td.col .price {
+    display: block;
+    font-family: "Menlo", "Courier New", monospace;
+    font-size: 34px;
+    font-weight: 700;
+    color: #262117;
+  }
+  td.col .price.win { color: #B2372A; }
+  td.col .note {
+    display: block;
+    font-size: 20px;
+    color: #8A7E66;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+  .badge {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 21px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border: 2px solid #B2372A;
+    color: #B2372A;
+    background: #F3E3D9;
+  }
+  .badge.tie { border-color: #8A6D3B; color: #8A6D3B; background: #EFE6CF; }
+  .foot {
+    margin-top: 26px;
+    font-size: 22px;
+    color: #8A7E66;
+    line-height: 1.7;
+    text-align: center;
+  }
+  /* 朱红印章 */
+  .stamp {
+    position: absolute;
+    top: 74px;
+    right: 84px;
+    width: 150px; height: 150px;
+    border: 5px solid rgba(178, 55, 42, 0.85);
+    border-radius: 50%;
+    color: rgba(178, 55, 42, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Songti SC", "STSong", serif;
+    font-weight: 900;
+    transform: rotate(12deg);
+    pointer-events: none;
+  }
+  .stamp::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 2px solid rgba(178, 55, 42, 0.85);
+    border-radius: 50%;
+  }
+  .stamp .l1 { font-size: 26px; letter-spacing: 0.14em; }
+  .stamp .l2 { font-size: 34px; letter-spacing: 0.04em; margin-top: 4px; }
+</style>
+</head>
+<body>
+  <div class="receipt">
+    <div class="zigzag top"></div>
+    <div class="pad">
+      <div class="brand">返校季 · 精算小票</div>
+      <h1>到手价对账</h1>
+      <div class="sub1">官网返校季（教育价 + 849 额度） vs 京东国补领后价（裸机）</div>
+      <hr class="dash">
+      <table>
+        <thead>
+          <tr>
+            <th>机型</th>
+            <th class="col">官网返校季</th>
+            <th class="col">京东国补领后价</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">MacBook Air 13<span class="sub">M5 · 16+512</span></td>
+            <td class="col">
+              <span class="price">¥9,249</span>
+              <span class="note">教育价，选 AirTag 实付 9249</span>
+            </td>
+            <td class="col">
+              <span class="price win">¥7,861.65</span>
+              <span class="note">教育价同款；常规自营款 ¥8,456.66</span>
+              <span class="badge">省 ¥1,387.35</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="name">iPad Air 11<span class="sub">M4 · 128G</span></td>
+            <td class="col">
+              <span class="price">¥5,599</span>
+              <span class="note">教育价，选 AirTag 实付 5599</span>
+            </td>
+            <td class="col">
+              <span class="price win">¥4,772.51</span>
+              <span class="note">自营裸机；划线价本身就比官网低 700</span>
+              <span class="badge tie">含笔总价打平</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="name">入门 iPad 11<span class="sub">A16 · 128G</span></td>
+            <td class="col">
+              <span class="price">¥3,599</span>
+              <span class="note">教育价，不参加抵扣</span>
+            </td>
+            <td class="col">
+              <span class="price win">¥2,980 上下</span>
+              <span class="note">自营国补叠券后</span>
+              <span class="badge">省 ¥600+</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr class="dash">
+      <div class="foot">京东价格为 2026 年 8 月 23 日实测（重庆收货地），国补领后价因地区与资格发放节奏而异<br>下单前请以实时页面为准</div>
+      <div class="stamp"><div class="l1">实测</div><div class="l2">8.23</div></div>
+    </div>
+    <div class="zigzag"></div>
+  </div>
+</body>
+</html>

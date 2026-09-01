@@ -12,6 +12,7 @@ const path = require('path');
   const tableJobs = [
     ['table-main-bjh.html', '百家号版-苹果返校季2026-抵扣方案表.png'],
     ['table-info-bjh.html', '百家号版-苹果返校季2026-资格与机型.png'],
+    ['table-price-bjh.html', '百家号版-苹果返校季2026-到手价对账.png'],
   ];
   for (const [html, png] of tableJobs) {
     const page = await browser.newPage();
