@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1192px;
+    padding: 48px 56px 0;
+    background: #f5f4f0;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: #1c1c1e;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 44px 48px 40px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  }
+  h1 { font-size: 38px; font-weight: 700; margin-bottom: 6px; }
+  .sub { font-size: 21px; color: #8a8a8e; margin-bottom: 28px; }
+  /* 等比例轮廓：1mm = 2.1px */
+  .scale-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 48px;
+    padding: 26px 30px;
+    background: #f0f4f8;
+    border-radius: 14px;
+    margin-bottom: 30px;
+  }
+  .outline-box { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .outline {
+    border: 3px solid #3a7bd5;
+    border-radius: 8px;
+    background: rgba(58,123,213,0.08);
+  }
+  .outline.green { border-color: #2f9e5f; background: rgba(47,158,95,0.08); }
+  .outline.purple { border-color: #b25fb9; background: rgba(178,95,185,0.08); }
+  .outline-label { font-size: 19px; font-weight: 600; color: #3a3a3e; }
+  .photos { display: flex; gap: 20px; }
+  .photo-cell { flex: 1; display: flex; flex-direction: column; }
+  .photo-cell img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+  .photo-label { margin-top: 12px; }
+  .photo-label .name { font-size: 23px; font-weight: 700; }
+  .photo-label .spec { font-size: 19px; color: #6b6b70; margin-top: 4px; line-height: 1.5; }
+  .foot {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px dashed #d4d4d8;
+    font-size: 19px;
+    color: #8a8a8e;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>三档尺寸 iPad 实拍对比</h1>
+    <div class="sub">上方轮廓按官网机身尺寸等比例绘制（1 毫米 = 1.2 像素）</div>
+
+    <div class="scale-row">
+      <div class="outline-box">
+        <div class="outline" style="width:235px;height:162px;"></div>
+        <div class="outline-label">8.3 英寸 · 195.4×134.8mm</div>
+      </div>
+      <div class="outline-box">
+        <div class="outline green" style="width:297px;height:214px;"></div>
+        <div class="outline-label">11 英寸 · 247.6×178.5mm</div>
+      </div>
+      <div class="outline-box">
+        <div class="outline purple" style="width:337px;height:258px;"></div>
+        <div class="outline-label">13 英寸 · 280.6×214.9mm</div>
+      </div>
+    </div>
+
+    <div class="photos">
+      <div class="photo-cell">
+        <img src="../知乎/iPad-mini7评测实拍-正面.jpg" alt="iPad mini 7 实拍">
+        <div class="photo-label">
+          <div class="name">iPad mini（8.3 英寸）</div>
+          <div class="spec">293 克 · 单手持握档<br>阅读 / 游戏 / 通勤</div>
+        </div>
+      </div>
+      <div class="photo-cell">
+        <img src="../知乎/iPad-Air-M4评测实拍-正面.jpg" alt="iPad Air 11 实拍">
+        <div class="photo-label">
+          <div class="name">iPad Air 11（M4）</div>
+          <div class="spec">464 克 · 黄金分割档<br>学习 / 网课 / 笔记全兼容</div>
+        </div>
+      </div>
+      <div class="photo-cell">
+        <img src="raw/ipad-air-13-m4/Test_Apple_iPad_Air_13_2026_1.jpg" alt="iPad Air 13 实拍">
+        <div class="photo-label">
+          <div class="name">iPad Air 13（M4）</div>
+          <div class="spec">617 克 · 桌面档<br>分屏 / 整页 PDF / 绘画画布</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">实拍图来源：Notebookcheck 评测（iPad mini 7 / iPad Air 11 M4 / iPad Air 13 M4 评测实拍）</div>
+  </div>
+</body>
+</html>

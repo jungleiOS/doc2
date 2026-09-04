@@ -117,6 +117,15 @@
 │   └── 美版有锁iPhone17咨询-答复长图.png  # 成品长图 1500×18194
 ├── 内容自荐筛选机制/            # 知乎「内容自荐」配额筛选方法（/creator/recommend）
 │   └── 内容自荐筛选机制.md      # 四层漏斗（资格→否决→E×L×V 打分→配额）+ 复盘闭环 + ego-browser 抓取脚本
+├── 通用引导图/                 # 全文章复用的结尾互动引导图（撞色动效版：#BFFF00 撞 #222，6s 无缝循环 WebP；署名「Apple研究生」）
+│   ├── tail-zhihu-anim.html    # 知乎版：赞同/喜欢/收藏/关注四卡（高亮「关注」）
+│   ├── tail-bjh-anim.html      # 百家号版：点赞/收藏/评论三卡（高亮「收藏」）
+│   ├── logo-zhihu.jpg / logo-baidu.jpg  # 官方平台图标（App Store 官方素材 512×512，brand 区以 18px 圆角 img 引用）
+│   ├── capture-webp.js         # 确定性逐帧捕获脚本（node capture-webp.js <页面名>，file:// 直读无需起服务；90 帧 15fps 输出 /tmp/<页面名>-frames/）
+│   ├── 通用引导图-知乎-动效尾巴.webp    # 成品 2400×606，img2webp -loop 0 -d 66 合成
+│   ├── 通用引导图-知乎-动效尾巴.gif     # GIF 版 1200×303（ffmpeg 调色板流程：palettegen + paletteuse bayer 抖动，1.0MB）
+│   ├── 通用引导图-百家号-动效尾巴.webp  # 成品 2400×606，同上
+│   └── 通用引导图-百家号-动效尾巴.gif   # GIF 版 1200×328（同知乎版 GIF 流程，1.1MB；署名「数码研究生」）
 ├── research/知乎转写多平台/     # 转写多平台研究素材（01 纵向平台史、02-04 横向平台、05 转写工作流方法论）
 ├── 知乎回答转写多平台_横纵分析报告.md  # 转写多平台研究报告主稿（hv-analysis 产出，由 research/ 素材汇总）
 ├── Apple研究生-选题与写作角度_横纵分析报告.{md,html,pdf}  # Apple 领域选题研究报告（hv-analysis 产出，三种格式）

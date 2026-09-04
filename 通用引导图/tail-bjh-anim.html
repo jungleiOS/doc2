@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>百家号图片尾巴 · 撞色动效版</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #111;
+      font-family: "Outfit", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    #tail {
+      width: 1200px;
+      background: #222222;
+      border-radius: 20px;
+      padding: 40px 48px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 右上角荧光绿光晕：呼吸，峰值压在 75%（4.5s），高潮过后做余韵 */
+    #tail::before {
+      content: "";
+      position: absolute;
+      top: -110px;
+      right: -70px;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(191, 255, 0, .14) 0%, transparent 70%);
+      animation: haloBreath 6s ease-in-out infinite;
+    }
+
+    @keyframes haloBreath {
+
+      0%,
+      100% {
+        opacity: .7;
+        transform: scale(1);
+      }
+
+      75% {
+        opacity: 1;
+        transform: scale(1.12);
+      }
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      position: relative;
+    }
+
+    .left {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .tag {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #BFFF00;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tag::before {
+      content: "";
+      width: 22px;
+      height: 3px;
+      background: #BFFF00;
+    }
+
+    .headline {
+      margin-top: 14px;
+      font-size: 40px;
+      font-weight: 800;
+      color: #BFFF00;
+      letter-spacing: 2px;
+      line-height: 1.25;
+    }
+
+    .headline span {
+      color: #F5F5F5;
+    }
+
+    .sub {
+      margin-top: 12px;
+      font-size: 15px;
+      color: #9A9A9A;
+      line-height: 1.7;
+    }
+
+    .sub b {
+      color: #F5F5F5;
+      font-weight: 600;
+    }
+
+    /* 右侧三个动作（百家号：点赞/收藏/评论），三卡加宽 */
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    .act {
+      background: #2c2c2c;
+      border: 1px solid #3d3d3d;
+      border-radius: 14px;
+      padding: 18px 14px 14px;
+      text-align: center;
+      width: 140px;
+    }
+
+    .act .symbol {
+      display: inline-flex;
+      line-height: 1;
+    }
+
+    .act .symbol svg {
+      width: 22px;
+      height: 22px;
+      fill: #BFFF00;
+    }
+
+    .act .label {
+      margin-top: 9px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #F5F5F5;
+      letter-spacing: 2px;
+    }
+
+    .act .hint {
+      margin-top: 5px;
+      font-size: 11px;
+      color: #9A9A9A;
+      line-height: 1.4;
+    }
+
+    /* 普通卡轮播点亮：6s 一轮；14% 前必须退场，给高潮清场 */
+    .act {
+      animation: cardPulse 6s ease-in-out infinite;
+    }
+
+    .act .symbol {
+      animation: symbolPop 6s ease-in-out infinite;
+    }
+
+    .act:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .act:nth-child(1) .symbol {
+      animation-delay: 0s;
+    }
+
+    .act:nth-child(3) {
+      animation-delay: 1.1s;
+    }
+
+    .act:nth-child(3) .symbol {
+      animation-delay: 1.1s;
+    }
+
+    @keyframes cardPulse {
+
+      0%,
+      100% {
+        background: #2c2c2c;
+        border-color: #3d3d3d;
+      }
+
+      4%,
+      10% {
+        background: rgba(191, 255, 0, .14);
+        border-color: #BFFF00;
+      }
+
+      14% {
+        background: #2c2c2c;
+        border-color: #3d3d3d;
+      }
+    }
+
+    /* 15fps 友好：只留「过冲-轻微下冲-收敛」三段，极值可读 */
+    @keyframes symbolPop {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      5% {
+        transform: scale(1.32);
+      }
+
+      11% {
+        transform: scale(0.97);
+      }
+
+      18% {
+        transform: scale(1);
+      }
+    }
+
+    /* 高亮卡（收藏）：实心荧光绿 + 黑字；符号 delay 3.0s 使峰值与箱体 3.3s 对齐；
+     68% 后保留低幅余晖缓慢衰减到循环末，消灭死区 */
+    .act.hot {
+      background: #BFFF00;
+      border-color: #BFFF00;
+      animation: hotBreath 6s ease-in-out infinite;
+    }
+
+    .act.hot .symbol svg {
+      fill: #222222;
+    }
+
+    .act.hot .symbol {
+      animation: symbolPop 6s ease-in-out infinite;
+      animation-delay: 3.0s;
+    }
+
+    .act.hot .label {
+      color: #222222;
+    }
+
+    .act.hot .hint {
+      color: rgba(34, 34, 34, .75);
+    }
+
+    @keyframes hotBreath {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 rgba(191, 255, 0, 0);
+        transform: scale(1);
+      }
+
+      40% {
+        box-shadow: 0 0 16px rgba(191, 255, 0, .3);
+        transform: scale(1);
+      }
+
+      55% {
+        box-shadow: 0 0 34px rgba(191, 255, 0, .7);
+        transform: scale(1.07);
+      }
+
+      59% {
+        box-shadow: 0 0 18px rgba(191, 255, 0, .4);
+        transform: scale(0.98);
+      }
+
+      63% {
+        box-shadow: 0 0 22px rgba(191, 255, 0, .45);
+        transform: scale(1.02);
+      }
+
+      68% {
+        box-shadow: 0 0 12px rgba(191, 255, 0, .25);
+        transform: scale(1);
+      }
+
+      85% {
+        box-shadow: 0 0 8px rgba(191, 255, 0, .14);
+        transform: scale(1);
+      }
+    }
+
+    /* 底部金句签名 + 块式闪烁光标 */
+    .foot {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px dashed #3d3d3d;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .motto {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 13px;
+      color: #8a8a8a;
+      letter-spacing: 1px;
+    }
+
+    .motto b {
+      color: #BFFF00;
+      font-weight: 700;
+    }
+
+    .motto .cursor {
+      color: #BFFF00;
+      font-weight: 700;
+      animation: blink 1.2s steps(1) infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      49% {
+        opacity: 1;
+      }
+
+      50%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .brand {
+      font-size: 13px;
+      color: #c9c9c9;
+      letter-spacing: 3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand img {
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="tail">
+    <div class="row">
+      <div class="left">
+        <div class="tag">BEFORE YOU GO</div>
+        <div class="headline">买之前先存下<br><span>下单前对着查一遍</span></div>
+        <div class="sub">觉得有用就点个赞，<b>收藏起来买的时候照着买</b>；<br>有问题评论区直接问，看到都会回。</div>
+      </div>
+      <div class="actions">
+        <div class="act">
+          <div class="symbol"><svg viewBox="0 0 24 24">
+              <path d="M12 4 L22 20 L2 20 Z" />
+            </svg></div>
+          <div class="label">点赞</div>
+          <div class="hint">让更多人看到</div>
+        </div>
+        <div class="act hot">
+          <div class="symbol"><svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg></div>
+          <div class="label">收藏</div>
+          <div class="hint">下单前对着查</div>
+        </div>
+        <div class="act">
+          <div class="symbol"><svg viewBox="0 0 24 24">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+            </svg></div>
+          <div class="label">评论</div>
+          <div class="hint">你用过哪款？说说</div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="motto">// 把参数翻译成体验，<b>把体验写成答案</b><span class="cursor">▌</span></div>
+      <div class="brand"><img src="logo-baidu.jpg" alt="百度">数码研究生</div>
+    </div>
+  </div>
+</body>
+
+</html>

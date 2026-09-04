@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1192px;
+    padding: 48px 56px 0;
+    background: #f5f4f0;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: #1c1c1e;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 44px 48px 40px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  }
+  h1 { font-size: 40px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .sub { font-size: 22px; color: #8a8a8e; margin-bottom: 30px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 17px 18px; font-size: 21px; line-height: 1.5; text-align: left; vertical-align: top; }
+  thead th { font-size: 20px; color: #6b6b70; font-weight: 600; border-bottom: 2px solid #e5e5ea; }
+  thead th.m4 { color: #8a8a8e; }
+  thead th.m5 { color: #0a66c2; }
+  tbody tr { border-bottom: 1px solid #f0f0f2; }
+  tbody tr:last-child { border-bottom: none; }
+  td.dim { width: 132px; font-weight: 700; color: #48484c; }
+  td.m4 { color: #6b6b70; }
+  td.m5 { font-weight: 600; }
+  td.note { color: #8a8a8e; font-size: 20px; }
+  .hl { color: #0a66c2; font-weight: 700; }
+  .flat { color: #b03a2e; font-weight: 700; }
+  .foot {
+    margin-top: 24px; padding-top: 20px; border-top: 1px dashed #d4d4d8;
+    font-size: 20px; color: #6b6b70; line-height: 1.6;
+  }
+  .foot b { color: #1c1c1e; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>M4 vs M5：2400 块差价买到什么</h1>
+    <div class="sub">MacBook Air 13 英寸 · 入门配置对照（2026 年 9 月）</div>
+
+    <table>
+      <thead>
+        <tr><th>维度</th><th class="m4">M4（16+256）</th><th class="m5">M5（16+512）</th><th>差距解读</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="dim">AI 算力</td>
+          <td class="m4">10 核 GPU，无神经加速器</td>
+          <td class="m5">每颗 GPU 核带神经网络加速器</td>
+          <td class="note">官方标称 AI 任务最多 <span class="hl">快 4 倍</span>，但那是提示词处理；生成速度看带宽，只快约 28%</td>
+        </tr>
+        <tr>
+          <td class="dim">内存带宽</td>
+          <td class="m4">120GB/s</td>
+          <td class="m5">153GB/s</td>
+          <td class="note">本地大模型往外蹦字的速度，提升 <span class="hl">约 28%</span></td>
+        </tr>
+        <tr>
+          <td class="dim">存储</td>
+          <td class="m4">256GB 起步，SSD 实测读 2900MB/s</td>
+          <td class="m5">512GB 起步，实测读 6473MB/s</td>
+          <td class="note">容量翻倍 + 速度 <span class="hl">2.2 倍</span>（Notebookcheck 实测）</td>
+        </tr>
+        <tr>
+          <td class="dim">无线</td>
+          <td class="m4">Wi-Fi 6E + 蓝牙 5.3</td>
+          <td class="m5">Wi-Fi 7 + 蓝牙 6（N1 芯片）</td>
+          <td class="note">家里路由器不是 Wi-Fi 7 就无感</td>
+        </tr>
+        <tr>
+          <td class="dim">续航</td>
+          <td class="m4">16 小时 13 分（实测）</td>
+          <td class="m5">16 小时 11 分（实测）</td>
+          <td class="note"><span class="flat">原地踏步</span>，150 尼特 WLAN 下同一家媒体测的</td>
+        </tr>
+        <tr>
+          <td class="dim">Apple 智能</td>
+          <td class="m4">国行不可用</td>
+          <td class="m5">国行不可用</td>
+          <td class="note"><span class="flat">一视同仁</span>，官网小字：推出时间依监管审批而定</td>
+        </tr>
+        <tr>
+          <td class="dim">到手价</td>
+          <td class="m4">全新渠道已关闭，二手/仅拆封约 5800–7000</td>
+          <td class="m5">官网 9999（教育价 9249），京东国补后约 8456 起</td>
+          <td class="note">差价 <span class="hl">约 2400 元</span>，M4 一侧多一道验机门槛</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="foot">结论：<b>有 AI 工作流（本地模型 / Topaz / 渲染）买 M5，纯办公学习买 M4。</b>想玩本地大模型，先把内存加到 24GB，再来纠结芯片——内存决定能不能跑，芯片只决定跑多快。</div>
+  </div>
+</body>
+</html>

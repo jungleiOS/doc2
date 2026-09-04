@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1192px;
+    padding: 48px 56px 0;
+    background: #f5f4f0;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: #1c1c1e;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 44px 48px 40px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  }
+  h1 { font-size: 40px; font-weight: 700; margin-bottom: 8px; }
+  .sub { font-size: 22px; color: #8a8a8e; margin-bottom: 32px; }
+  .row {
+    display: flex;
+    align-items: stretch;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+  .size {
+    width: 190px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    padding: 26px 12px;
+    text-align: center;
+  }
+  .size .inch { font-size: 34px; }
+  .size .weight { font-size: 19px; font-weight: 500; opacity: .92; margin-top: 6px; }
+  .s8 .size { background: #3a7bd5; }
+  .s11 .size { background: #2f9e5f; }
+  .s13 .size { background: #b25fb9; }
+  .detail { flex: 1; padding: 20px 28px; background: #fafafa; }
+  .posture { font-size: 23px; font-weight: 600; margin-bottom: 6px; }
+  .scenes { font-size: 21px; color: #4a4a4e; line-height: 1.55; }
+  .scenes b { color: #1c1c1e; }
+  .foot {
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px dashed #d4d4d8;
+    font-size: 22px;
+    color: #6b6b70;
+    line-height: 1.6;
+  }
+  .foot b { color: #1c1c1e; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>平板尺寸不是规格，是姿势</h1>
+    <div class="sub">重量均为官网 WiFi 版数据（iPad mini 7 / iPad Air M4）</div>
+
+    <div class="row s8">
+      <div class="size"><div class="inch">8 寸档</div><div class="weight">iPad mini 293 克</div></div>
+      <div class="detail">
+        <div class="posture">单手持握，身体的延伸</div>
+        <div class="scenes">通勤单手看、躺床上举着刷、游戏双手握持都成立；<b>短板：分屏、整页 PDF、大屏记笔记都憋屈</b>，它是阅读器兼游戏机，不是学习机</div>
+      </div>
+    </div>
+
+    <div class="row s11">
+      <div class="size"><div class="inch">11 寸档</div><div class="weight">iPad Air 464 克</div></div>
+      <div class="detail">
+        <div class="posture">手持桌面两相宜，容错率最高</div>
+        <div class="scenes">举一节课不酸，躺桌上写字够大，分屏勉强能用，塞进各种小包；<b>不知道自己要什么的人，买这档错不到哪去</b></div>
+      </div>
+    </div>
+
+    <div class="row s13">
+      <div class="size"><div class="inch">13 寸档</div><div class="weight">iPad Air 13 为 617 克</div></div>
+      <div class="detail">
+        <div class="posture">桌面设备，笔记本替代品</div>
+        <div class="scenes">分屏左右都有正经面积、整页 PDF 接近 A4 不用缩放、绘画大画布；<b>前提是你有桌子，举着它看剧手腕会先投降</b></div>
+      </div>
+    </div>
+
+    <div class="foot">下单前的自测只有一题：这台平板，<b>你拿着用多，还是放着用多</b>？拿得多，8 或 11；放得多，才轮到 13。</div>
+  </div>
+</body>
+</html>

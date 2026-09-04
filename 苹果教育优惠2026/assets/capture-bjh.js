@@ -13,6 +13,9 @@ const path = require('path');
     ['table-main-bjh.html', '百家号版-苹果返校季2026-抵扣方案表.png'],
     ['table-info-bjh.html', '百家号版-苹果返校季2026-资格与机型.png'],
     ['table-price-bjh.html', '百家号版-苹果返校季2026-到手价对账.png'],
+    ['table-science-mac-bjh.html', '百家号版-理科买Mac-软件分流卡.png'],
+    ['table-ipad-11vs13-bjh.html', '百家号版-iPad11寸还是13寸-参数对账.png'],
+    ['decision-ipad-11vs13-bjh.html', '百家号版-iPad11寸还是13寸-人群分流卡.png'],
   ];
   for (const [html, png] of tableJobs) {
     const page = await browser.newPage();
