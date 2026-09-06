@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>氮化镓 vs 硅基充电器 · 体积对比</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0c0d0f;
+    font-family: "Outfit", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh; padding: 40px;
+  }
+  #card {
+    width: 1200px;
+    background: linear-gradient(160deg, #141519 0%, #101114 100%);
+    border: 1px solid #26282e;
+    border-radius: 20px;
+    padding: 48px 48px 40px;
+  }
+  .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; letter-spacing: 2px;
+    color: #22d3ee;
+    display: flex; align-items: center; gap: 8px;
+    text-transform: uppercase;
+  }
+  .tag::before { content: ""; width: 22px; height: 2px; background: #22d3ee; }
+  h1 {
+    margin-top: 12px;
+    font-size: 38px; font-weight: 800; color: #f3f4f6;
+    letter-spacing: 1px;
+  }
+  h1 em { font-style: normal; color: #22d3ee; }
+  .sub {
+    margin-top: 8px;
+    font-size: 15px; color: #8b8e98;
+    line-height: 1.6;
+  }
+
+  /* comparison area */
+  .compare {
+    margin-top: 36px;
+    display: flex;
+    align-items: flex-end;
+    gap: 60px;
+    justify-content: center;
+  }
+
+  .charger-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* charger visual */
+  .charger {
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+
+  /* Traditional silicon charger - big brick */
+  .silicon {
+    width: 180px;
+    height: 280px;
+    background: linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 100%);
+    border: 2px solid #4a4a4a;
+    border-radius: 8px;
+  }
+  .silicon .label-top {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 1px;
+    margin-top: 20px;
+  }
+  .silicon .watt {
+    font-family: "Outfit", sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #666;
+    margin-top: 60px;
+  }
+  .silicon .type-label {
+    font-size: 11px;
+    color: #555;
+    margin-top: 8px;
+    letter-spacing: 1px;
+  }
+  /* power brick cable nubs */
+  .silicon::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 8px;
+    background: #333;
+    border-radius: 3px 3px 0 0;
+  }
+  .silicon::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 8px;
+    background: #333;
+    border-radius: 0 0 3px 3px;
+  }
+
+  /* GaN charger - small cube */
+  .gan {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 2px solid #22d3ee;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(34,211,238,0.15), 0 0 0 1px rgba(34,211,238,0.1);
+  }
+  .gan .watt {
+    font-family: "Outfit", sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #22d3ee;
+    margin-top: 8px;
+  }
+  .gan .type-label {
+    font-size: 11px;
+    color: #67e8f9;
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+
+  /* dimension lines */
+  .dim {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: #8b8e98;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .dim .line {
+    width: 40px;
+    height: 1px;
+    background: #4b5563;
+  }
+
+  /* VS badge */
+  .vs {
+    align-self: center;
+    margin-bottom: 80px;
+    font-family: "Outfit", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* charger name labels */
+  .charger-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #e5e7eb;
+    text-align: center;
+  }
+  .charger-name.silicon-label { color: #9ca3af; }
+  .charger-name.gan-label { color: #22d3ee; }
+
+  /* metrics row */
+  .metrics {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .metric {
+    background: #191b1f;
+    border: 1px solid #2a2d33;
+    border-radius: 14px;
+    padding: 20px 24px;
+    text-align: center;
+  }
+  .metric .value {
+    font-family: "Outfit", sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+  }
+  .metric .value.cyan { color: #22d3ee; }
+  .metric .value.amber { color: #f59e0b; }
+  .metric .value.green { color: #34d399; }
+  .metric .desc {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #8b8e98;
+    line-height: 1.5;
+  }
+
+  /* footer note */
+  .note {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 13px;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="tag">GaN CHARGER · SIZE COMPARISON</div>
+  <h1>同样 <em>65W</em>，体积差了快一倍</h1>
+  <p class="sub">氮化镓把开关管从硅换成 GaN，开关频率上去后变压器和散热件都能做小。<br>充电速度没变，变的是你背包里的空间。</p>
+
+  <div class="compare">
+    <!-- Silicon charger -->
+    <div class="charger-box">
+      <div class="charger silicon">
+        <span class="label-top">SILICON</span>
+        <span class="watt">65W</span>
+        <span class="type-label">传统硅基适配器</span>
+      </div>
+      <div class="dim"><span class="line"></span> 约 130×65×30mm <span class="line"></span></div>
+      <div class="dim">约 200g</div>
+      <div class="charger-name silicon-label">笔记本原装大砖头</div>
+    </div>
+
+    <!-- VS -->
+    <div class="vs">VS</div>
+
+    <!-- GaN charger -->
+    <div class="charger-box">
+      <div class="charger gan">
+        <span class="watt">65W</span>
+        <span class="type-label">GaN</span>
+      </div>
+      <div class="dim"><span class="line"></span> 约 50×50×30mm <span class="line"></span></div>
+      <div class="dim">约 120g</div>
+      <div class="charger-name gan-label">氮化镓迷你充电器</div>
+    </div>
+  </div>
+
+  <!-- Key metrics -->
+  <div class="metrics">
+    <div class="metric">
+      <div class="value cyan">↓50%</div>
+      <div class="desc">体积缩小约一半<br>背包空间解放</div>
+    </div>
+    <div class="metric">
+      <div class="value amber">↓40%</div>
+      <div class="desc">重量减轻约 40%<br>200g → 120g</div>
+    </div>
+    <div class="metric">
+      <div class="value green">↑10%</div>
+      <div class="desc">转换效率提升<br>85% → 90%+</div>
+    </div>
+  </div>
+
+  <p class="note">* 数据基于同功率段（65W）典型产品对比，具体因品牌和方案而异</p>
+</div>
+</body>
+</html>
