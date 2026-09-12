@@ -115,6 +115,11 @@
 │   ├── capture-consult.js      # 分段截图脚本（puppeteer-core，按块边界分段以规避 Chrome 16384px 截图高度上限）
 │   ├── stitch.py               # PIL 竖向拼接脚本（须用 .venv-md/bin/python3 运行，系统 python3 无 PIL）
 │   └── 美版有锁iPhone17咨询-答复长图.png  # 成品长图 1500×18194
+├── 平板选购指南2026/            # 2026 平板选购知乎长文归集目录（「5 件事」横切面主线）
+│   ├── 知乎文章-2026平板选购指南-v1.md  # 知乎长文初稿（13 处图片占位，第 13 张尾巴复用 通用引导图/ 成品）
+│   ├── 平板选购指南2026-*.png   # 全套 12 张配图（封面/决策图/插卡清单/配件税/涨价时间线/跑分梯队/护眼对照/大学生对比/宝妈管控/父母追剧/小屏组/速查表，2x 输出）
+│   └── assets/                 # 配图工作区：12 个 HTML 源文件（<图名>.html）+ capture-all.js 一键截图（puppeteer-core + file:// 直读，element 截图 #shot，deviceScaleFactor 2）；设计语言：演算纸方格底 + Songti SC 标题 + 朱砂「待确认」印章
+│       └── raw/                # 真机实拍引用素材（按品牌分目录，含 图源清单.md：每图注明来源媒体/页面URL/原图URL，发布必须标注「图源：XX」；荣耀平板10/MatePad 11.5 2026/REDMI Pad 2 SE 4G 为缺口）
 ├── 内容自荐筛选机制/            # 知乎「内容自荐」配额筛选方法（/creator/recommend）
 │   └── 内容自荐筛选机制.md      # 四层漏斗（资格→否决→E×L×V 打分→配额）+ 复盘闭环 + ego-browser 抓取脚本
 ├── 通用引导图/                 # 全文章复用的结尾互动引导图（撞色动效版：#BFFF00 撞 #222，6s 无缝循环 WebP；署名「Apple研究生」）
@@ -135,7 +140,8 @@
 │       ├── zhihu-viral-answer/  # 知乎高赞回答写作 Skill
 │       ├── neat-freak/       # 知识与规范收尾 Skill
 │       ├── frontend-design/  # 前端视觉设计 Skill
-│       ├── zhihu-question-scout/  # 知乎选题 Skill（references/publish-assist.md 为作答辅助协议）
+│       ├── zhihu-question-scout/  # 知乎选题 Skill（只选题；确认题目后交给 zhihu-answer-drafter）
+│       ├── zhihu-answer-drafter/  # 知乎回答起草 Skill（读题→成稿→配图→去 AI 味→GEO→存档；references/publish-assist.md 为作答辅助协议）
 │       ├── zhihu-answer-tracker/  # 知乎回答数据回采 Skill（创作中心五指标 + 排名，喂 scout 5.4 校准回路；快照存 analytics/）
 │       ├── zhihu-haowu-evaluator/ # 知乎好物插入评估 Skill（被 scout 编排，也可独立触发）
 │       ├── zhihu-geo-optimizer/  # 知乎 GEO/SEO 优化 Skill（去 AI 味后做机器可读性审查：标题/正文/结尾；调研证据库在 references/geo-research.md）
@@ -173,7 +179,7 @@
 
 ## 3. 可用的 Agent Skills
 
-本项目已配置十一个 Skill，Agent 在执行对应任务时应优先加载并遵循：
+本项目已配置十二个 Skill，Agent 在执行对应任务时应优先加载并遵循：
 
 | Skill | 路径 | 触发场景 |
 |-------|------|---------|
@@ -181,10 +187,11 @@
 | `zhihu-viral-answer` | `.agents/skills/zhihu-viral-answer/SKILL.md` | 写知乎回答、知乎体、高赞爆款 |
 | `frontend-design` | `.agents/skills/frontend-design/SKILL.md` | 封面、图集、思维导图等视觉产出 |
 | `neat-freak` | `.agents/skills/neat-freak/SKILL.md` | 文档/规则/残留收尾同步（说「洁癖」或「收尾」时触发） |
-| `zhihu-question-scout` | `.agents/skills/zhihu-question-scout/SKILL.md` | 用 WebBridge 抓知乎邀请回答/推荐问题，结合已有文章每次选 3 个值得答的问题（说「选题」「看看知乎邀请」时触发）；作答辅助协议（判 AI 应对、填编辑器）在 `references/publish-assist.md` |
+| `zhihu-question-scout` | `.agents/skills/zhihu-question-scout/SKILL.md` | 用 WebBridge 抓知乎邀请回答/推荐问题，结合已有文章每次选 3 个值得答的问题（说「选题」「看看知乎邀请」时触发）；确认题目后交给 `zhihu-answer-drafter` 起草 |
+| `zhihu-answer-drafter` | `.agents/skills/zhihu-answer-drafter/SKILL.md` | 把确认的知乎问题写成回答初稿：读问题完整描述 → 按 zhihu-viral-answer 成稿 → 事实核查 → 配图（≥3 张真实图）→ 去 AI 味 → GEO 审查 → 存档登记（说「起草回答」「写这个题」「按选题单起草」时触发；也被 scout 选题确认后调用；作答辅助协议在 `references/publish-assist.md`） |
 | `zhihu-answer-tracker` | `.agents/skills/zhihu-answer-tracker/SKILL.md` | 回采自己已发布回答的表现数据（阅读/赞同/评论/收藏/喜欢 + 问题页排名），回写 `outlines/选题历史.md` 复盘行，喂 scout 5.4 校准回路；快照存 `analytics/`（说「回采」「复盘」「看看我的回答表现」时触发） |
 | `zhihu-haowu-evaluator` | `.agents/skills/zhihu-haowu-evaluator/SKILL.md` | 评估问题/已有回答值不值得插好物卡片（说「好物评估」「值不值得插好物」「回填好物」时触发；也被 scout 选题精评调用） |
-| `zhihu-geo-optimizer` | `.agents/skills/zhihu-geo-optimizer/SKILL.md` | 知乎内容 GEO/SEO 审查：标题、正文、结尾的机器可读性优化，让内容被站内搜索、百度、AI 搜索引擎（DeepSeek/豆包/Kimi/知乎直答）优先引用（说「GEO」「SEO」「搜索流量」「被 AI 引用」「关键词布局」时触发；也被 scout 起草流程在去 AI 味之后调用；调研证据库在 `references/geo-research.md`） |
+| `zhihu-geo-optimizer` | `.agents/skills/zhihu-geo-optimizer/SKILL.md` | 知乎内容 GEO/SEO 审查：标题、正文、结尾的机器可读性优化，让内容被站内搜索、百度、AI 搜索引擎（DeepSeek/豆包/Kimi/知乎直答）优先引用（说「GEO」「SEO」「搜索流量」「被 AI 引用」「关键词布局」时触发；也被 zhihu-answer-drafter 起草流程在去 AI 味之后调用；调研证据库在 `references/geo-research.md`） |
 | `zhihu-to-baijiahao` | `.agents/skills/zhihu-to-baijiahao/SKILL.md` | 把知乎回答/文章转写为百家号版：SEO 化改写（长尾词标题 + 问答式结构 + 搜索关键词字段），赚百度搜索长尾；含合规时序与数据回收（说「转百家号」「百家号版」「同步到百度」时触发；策略依据 `知乎回答转写多平台_横纵分析报告.md`） |
 | `gzh-design` | `.agents/skills/gzh-design/SKILL.md` | 公众号文章排版：Markdown/docx/pdf/纯文本 → 可直接粘贴进公众号编辑器、不掉格式的 HTML（6 套主题 + 主题生成器，自动章节编号、关键词下划线、引言卡与目录；说「公众号排版」「微信排版」「gzh」「一键排版」时触发；由 skills CLI 安装，源仓库 [isjiamu/gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)） |
 | `hv-analysis` | `.agents/skills/hv-analysis/SKILL.md` | 横纵分析法深度研究（纵轴时间叙事 + 横轴竞品对比 + 交汇洞察），产出 PDF 研究报告（说「横纵分析」「深度研究」「调研一下」时触发） |
@@ -321,4 +328,4 @@
 
 ---
 
-**最后更新**：2026-09-01
+**最后更新**：2026-09-10

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 900px; padding: 40px; font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; background: #FAFAFA; }
+.title { font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 24px; text-align: center; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.card-title { font-size: 13px; color: #999; font-weight: 500; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+.card-value { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.card-value .label { font-size: 14px; color: #666; }
+.card-value .air { font-size: 15px; font-weight: 600; color: #16a34a; }
+.card-value .pro { font-size: 15px; font-weight: 600; color: #2563eb; }
+.bar-container { display: flex; gap: 4px; height: 8px; border-radius: 4px; overflow: hidden; }
+.bar-air { background: #16a34a; border-radius: 4px 0 0 4px; }
+.bar-pro { background: #2563eb; border-radius: 0 4px 4px 0; }
+.verdict { margin-top: 12px; font-size: 13px; color: #666; line-height: 1.6; padding-top: 12px; border-top: 1px solid #f0f0f0; }
+.verdict strong { color: #1a1a1a; }
+.badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-left: 6px; }
+.badge-pro { background: #DCFCE7; color: #166534; }
+.badge-tie { background: #FEF9C3; color: #854D0E; }
+.badge-air { background: #EFF6FF; color: #1e40af; }
+.note { font-size: 12px; color: #999; margin-top: 16px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="title">MacBook Air vs Pro · 多花的 3000 块买到了什么</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-title">屏幕</div>
+    <div class="card-value">
+      <span class="label">Air (LCD 60Hz)</span>
+      <span class="air">标准</span>
+    </div>
+    <div class="card-value">
+      <span class="label">Pro (XDR 120Hz)</span>
+      <span class="pro">1600 尼特峰值</span>
+    </div>
+    <div class="bar-container">
+      <div class="bar-air" style="width:35%"></div>
+      <div class="bar-pro" style="width:65%"></div>
+    </div>
+    <div class="verdict">强光下 Pro 能看清，Air 会泛白。滚动文档 Pro 丝滑，Air 有掉帧感。<strong>每天对屏 6h+ 的人，眼睛会替你投票。</strong><span class="badge badge-pro">Pro 胜</span></div>
+  </div>
+  <div class="card">
+    <div class="card-title">散热</div>
+    <div class="card-value">
+      <span class="label">Air (无风扇)</span>
+      <span class="air">安静但会降频</span>
+    </div>
+    <div class="card-value">
+      <span class="label">Pro (主动散热)</span>
+      <span class="pro">持续满血</span>
+    </div>
+    <div class="bar-container">
+      <div class="bar-air" style="width:30%"></div>
+      <div class="bar-pro" style="width:70%"></div>
+    </div>
+    <div class="verdict">日常办公两台一样安静。剪视频/跑编译/导出大文件，<strong>Air 十分钟开始降频，Pro 撑得住。</strong><span class="badge badge-pro">Pro 胜</span></div>
+  </div>
+  <div class="card">
+    <div class="card-title">接口</div>
+    <div class="card-value">
+      <span class="label">Air</span>
+      <span class="air">2×雷雳 + MagSafe</span>
+    </div>
+    <div class="card-value">
+      <span class="label">Pro</span>
+      <span class="pro">3×雷雳 + SD + HDMI</span>
+    </div>
+    <div class="bar-container">
+      <div class="bar-air" style="width:35%"></div>
+      <div class="bar-pro" style="width:65%"></div>
+    </div>
+    <div class="verdict">摄影师的 SD 卡槽、影视的 HDMI，<strong>少买一个转接头就值回几百块。</strong>纯办公用户感知不强。<span class="badge badge-pro">Pro 胜</span></div>
+  </div>
+  <div class="card">
+    <div class="card-title">便携 & 续航</div>
+    <div class="card-value">
+      <span class="label">Air 13"</span>
+      <span class="air">1.23kg / 16h+</span>
+    </div>
+    <div class="card-value">
+      <span class="label">Pro 14"</span>
+      <span class="pro">1.55kg / 14h+</span>
+    </div>
+    <div class="bar-container">
+      <div class="bar-air" style="width:60%"></div>
+      <div class="bar-pro" style="width:40%"></div>
+    </div>
+    <div class="verdict">Air 轻 300g，续航多 2 小时。<strong>天天背去图书馆的人，这 300g 就是差别。</strong><span class="badge badge-air">Air 胜</span></div>
+  </div>
+</div>
+<div class="note">差价 3000-3500 元 · 价格数据来自苹果官网教育商店及京东自营 2026 年 8 月实测</div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>宝妈管控 · 按管控强度排序</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #F5F3EC;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #shot {
+    width: 1560px;
+    background-color: #F5F3EC;
+    background-image:
+      linear-gradient(#E9E5D6 1px, transparent 1px),
+      linear-gradient(90deg, #E9E5D6 1px, transparent 1px);
+    background-size: 26px 26px;
+    border: 1px solid #DDD8C9;
+    border-radius: 14px;
+    padding: 46px 52px 34px;
+  }
+  .eyebrow {
+    font-family: "Menlo", monospace;
+    font-size: 12px; letter-spacing: 2px; color: #5B6875;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 2px; background: #B93A27; }
+  h1 {
+    margin-top: 12px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 36px; font-weight: 900; color: #22303E;
+  }
+  h1 em { font-style: normal; color: #B93A27; }
+  .sub { margin-top: 8px; font-size: 15px; color: #5B6875; line-height: 1.7; }
+  .sub b { color: #22303E; }
+
+  table {
+    margin-top: 24px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 13px 15px;
+    text-align: left;
+    font-size: 13.8px;
+    border-bottom: 1px solid #E8E4D6;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  th { background: #EFECE1; color: #22303E; font-weight: 700; font-size: 13.5px; }
+  td { color: #3D4A57; }
+  tr:last-child td { border-bottom: none; }
+  .rank {
+    font-family: "Songti SC", serif;
+    font-size: 20px; font-weight: 900; color: #2E4E7E;
+    white-space: nowrap;
+  }
+  .model { font-weight: 700; color: #22303E; white-space: nowrap; }
+  .model .brand { display: block; font-weight: 400; font-size: 11.5px; color: #98A0A8; margin-top: 2px; }
+  .price {
+    font-family: "Songti SC", serif;
+    font-size: 18px; font-weight: 900; color: #B93A27;
+    white-space: nowrap;
+  }
+  .price small {
+    display: block;
+    font-family: "Menlo", monospace;
+    font-size: 10px; font-weight: 400; color: #98A0A8;
+    margin-top: 2px; white-space: normal;
+  }
+  .stamp {
+    display: inline-block;
+    font-family: "Songti SC", serif;
+    font-size: 11.5px; font-weight: 700; color: #B93A27;
+    border: 1.5px solid #B93A27;
+    border-radius: 4px;
+    padding: 0 5px;
+    transform: rotate(-2deg);
+    white-space: nowrap;
+  }
+  .hl { color: #3F7355; font-weight: 700; }
+  b { color: #22303E; }
+
+  .ban {
+    margin-top: 22px;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-left: 4px solid #B93A27;
+    border-radius: 12px;
+    padding: 13px 20px;
+    font-size: 14px; color: #3D4A57; line-height: 1.7;
+  }
+
+  .foot {
+    margin-top: 24px;
+    display: flex; justify-content: space-between;
+    font-family: "Menlo", monospace;
+    font-size: 11px; color: #98A0A8;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="eyebrow">图 09 · FOR PARENTS · 宝妈 1000–2500 档</div>
+  <h1>给宝妈：别看品牌排序，<em>看「管控强度」排序</em></h1>
+  <div class="sub">四千块的学习机，硬件打不过一千块的正规平板，卖的其实是「家长管控」四个字。既然管控才是核心，<b>直接按管控强度排</b>。</div>
+
+  <table>
+    <tr>
+      <th style="width:5%">档位</th>
+      <th style="width:15%">型号</th>
+      <th style="width:12%">到手价</th>
+      <th style="width:24%">学习资源</th>
+      <th style="width:26%">家长远程管控</th>
+      <th style="width:18%">护眼</th>
+    </tr>
+    <tr>
+      <td class="rank">壹</td>
+      <td class="model">OPPO Pad SE<span class="brand">OPPO</span></td>
+      <td><span class="price">721.65 起<small>国补 · 2026-09 快照</small></span></td>
+      <td>专属学习空间：<b>小初高新课标教材内置 + 课文点读</b></td>
+      <td><span class="hl">「家庭空间」微信小程序远程</span>控时长、屏蔽网站——千元档唯一远程方案；你上班时，孩子在家的平板在你手里</td>
+      <td>莱茵全局护眼 + 柔光版可选</td>
+    </tr>
+    <tr>
+      <td class="rank">贰</td>
+      <td class="model">荣耀平板 10<span class="brand">荣耀</span></td>
+      <td><span class="price">1274 起<small>国补 · 2026-09 快照</small></span></td>
+      <td>纯净学习空间</td>
+      <td>家长远程管控 + <b>AI 专注眼坐姿检测</b>——官方明示<span class="hl">不生成图像文件</span>，只本地判断，隐私合规</td>
+      <td>莱茵类纸认证柔光版</td>
+    </tr>
+    <tr>
+      <td class="rank">贰</td>
+      <td class="model">REDMI Pad 2 乐学版<span class="brand">小米</span></td>
+      <td><span class="price">1444.15<small>天猫补贴后</small></span></td>
+      <td>AI 精准学：<b>3 亿题库 + 教材同步课</b>，资源量是它的主打</td>
+      <td>限应用时长 / 一键锁屏 / <b>屏蔽拍题搜答案</b>——直接断「一拍就出答案」的后路</td>
+      <td>柔光屏 + 青山护眼</td>
+    </tr>
+    <tr>
+      <td class="rank">叁</td>
+      <td class="model">华为 MatePad 11.5 2026<span class="brand">华为 · 柔光版</span></td>
+      <td><span class="price">≈1698<small>国补后 · 2026-03 行情</small></span> <span class="stamp">需重查</span></td>
+      <td>未成年人模式 + 小艺解题；教育空间 2026-06 起 OTA 推送</td>
+      <td>家长管控（发布会主打）。<span class="hl">独家：全网通版 2799 可插卡</span>，带娃出门不蹭公共 WiFi（制式/通话问客服）</td>
+      <td>云晰柔光屏 + 类自然光</td>
+    </tr>
+    <tr>
+      <td class="rank">肆</td>
+      <td class="model">vivo Pad SE 柔光版<span class="brand">vivo</span></td>
+      <td><span class="price">≈1274<small>柔光 1499 · 国补后</small></span></td>
+      <td>学习中心 App：AI 精准学 + 教材点读</td>
+      <td>「孩子守护」App 远程限额<span class="stamp">佐证偏弱</span>（只有第三方教程佐证）</td>
+      <td>柔光版消眩光</td>
+    </tr>
+    <tr>
+      <td class="rank">伍</td>
+      <td class="model">iPad 11<span class="brand">苹果</span></td>
+      <td><span class="price">≈2999<small>京东国补后 · 2026-09 初</small></span></td>
+      <td>无内置教材资源，靠 App 生态</td>
+      <td>屏幕使用时间 + 引导式访问，<b>业界标杆</b>；家里已是苹果全家桶才推（还能用「查找」定位平板）</td>
+      <td>无柔光屏</td>
+    </tr>
+  </table>
+
+  <div class="ban">
+    <b>一句劝退：</b>别给孩子买拯救者 Y700 这类游戏定位的机器，哪怕亲戚推荐——联想自己的官方定位里都没把它往儿童机上放。
+  </div>
+
+  <div class="foot">
+    <span>2026 平板选购指南 · 宝妈管控对比（调研总览 2.3 / 4.4 节）</span>
+    <span>数据快照：2026-09 · 各品牌官网/电商口径</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>iPhone Duo 核心参数速查（百家号版）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    background: #E7DEC9;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: #262117;
+    padding: 56px 60px;
+  }
+  .receipt {
+    background: #FBF6E9;
+    box-shadow: 0 10px 34px rgba(62, 50, 28, 0.18);
+    position: relative;
+  }
+  .zigzag {
+    height: 14px;
+    background:
+      linear-gradient(45deg, transparent 33.333%, #FBF6E9 33.333%, #FBF6E9 66.667%, transparent 66.667%),
+      linear-gradient(-45deg, transparent 33.333%, #FBF6E9 33.333%, #FBF6E9 66.667%, transparent 66.667%);
+    background-size: 28px 28px;
+    background-position: 0 -14px;
+  }
+  .zigzag.top { transform: rotate(180deg); }
+  .pad { padding: 48px 56px 44px; }
+
+  .brand {
+    text-align: center;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.42em;
+    color: #8A6D3B;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  .price-hero {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 18px;
+    margin: 12px 0 6px;
+  }
+  .price-hero .amount {
+    font-family: "Menlo", "Courier New", monospace;
+    font-size: 96px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #B2372A;
+    line-height: 1;
+  }
+  .price-hero .amount .cur { font-size: 44px; }
+  .price-hero .label {
+    font-size: 22px;
+    color: #6E6350;
+    line-height: 1.5;
+    border-left: 3px solid #B2372A;
+    padding-left: 16px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #6E6350;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+  .dash {
+    border: none;
+    border-top: 3px dashed #B9A87F;
+    margin: 28px 0;
+  }
+  .dash-thin {
+    border: none;
+    border-top: 1px dashed #C8B99A;
+    margin: 0;
+  }
+  .spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px dashed #D8CCAF;
+  }
+  .spec-row:last-child { border-bottom: none; }
+  .spec-label {
+    font-size: 18px;
+    color: #6E6350;
+    font-weight: 600;
+    min-width: 120px;
+  }
+  .spec-value {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: right;
+    flex: 1;
+  }
+  .spec-note {
+    font-size: 14px;
+    color: #8A7D68;
+    font-weight: 400;
+    display: block;
+    margin-top: 2px;
+  }
+  .spec-highlight {
+    color: #B2372A;
+  }
+  .badge {
+    display: inline-block;
+    background: #B2372A;
+    color: #FBF6E9;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .section-title {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #262117;
+    margin-bottom: 8px;
+    padding-left: 14px;
+    border-left: 5px solid #B2372A;
+  }
+  .section { margin-bottom: 8px; }
+
+  .footer {
+    text-align: center;
+    font-size: 14px;
+    color: #8A7D68;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  .stamp {
+    display: inline-block;
+    border: 3px solid #B2372A;
+    color: #B2372A;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    transform: rotate(-2deg);
+    margin-top: 12px;
+    letter-spacing: 0.1em;
+  }
+  .date-badge {
+    display: inline-block;
+    background: #262117;
+    color: #FBF6E9;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="receipt" id="shot">
+  <div class="zigzag top"></div>
+  <div class="pad">
+    <div class="brand">iPhone Duo 参数速查卡</div>
+    <h1>苹果首款折叠屏</h1>
+    <div class="subtitle">史上最薄 5.2mm · 史上最重 254g · 10月23日发售</div>
+
+    <div class="price-hero">
+      <div class="amount"><span class="cur">¥</span>15,999</div>
+      <div class="label">起售价<br>256GB</div>
+    </div>
+
+    <hr class="dash">
+
+    <div class="section">
+      <div class="section-title">屏幕</div>
+      <div class="spec-row">
+        <span class="spec-label">内屏</span>
+        <span class="spec-value">7.6" OLED · 120Hz<span class="spec-note">展开近 iPad mini 大小</span></span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">外屏</span>
+        <span class="spec-value">5.4" OLED · 120Hz<span class="spec-note">折叠态使用，尺寸偏小</span></span>
+      </div>
+    </div>
+
+    <hr class="dash-thin">
+
+    <div class="section">
+      <div class="section-title">性能</div>
+      <div class="spec-row">
+        <span class="spec-label">芯片</span>
+        <span class="spec-value spec-highlight">A20 Pro (2nm) <span class="badge">最新</span><span class="spec-note">与 iPhone 18 Pro 同款</span></span>
+      </div>
+    </div>
+
+    <hr class="dash-thin">
+
+    <div class="section">
+      <div class="section-title">影像</div>
+      <div class="spec-row">
+        <span class="spec-label">后摄</span>
+        <span class="spec-value">48MP 双摄<span class="spec-note">无长焦 · 2x 靠主摄裁切</span></span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">生物识别</span>
+        <span class="spec-value">侧边 Touch ID<span class="spec-note">无 Face ID</span></span>
+      </div>
+    </div>
+
+    <hr class="dash-thin">
+
+    <div class="section">
+      <div class="section-title">机身</div>
+      <div class="spec-row">
+        <span class="spec-label">展开厚度</span>
+        <span class="spec-value spec-highlight">5.2mm <span class="badge">史上最薄</span></span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">折叠厚度</span>
+        <span class="spec-value">11.3mm</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">重量</span>
+        <span class="spec-value spec-highlight">254g <span class="badge">史上最重</span></span>
+      </div>
+    </div>
+
+    <hr class="dash-thin">
+
+    <div class="section">
+      <div class="section-title">续航与充电</div>
+      <div class="spec-row">
+        <span class="spec-label">续航</span>
+        <span class="spec-value">外屏 44h / 内屏 31h<span class="spec-note">视频播放时长</span></span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">快充</span>
+        <span class="spec-value spec-highlight">60W+<span class="spec-note">20 分钟充至 50%</span></span>
+      </div>
+    </div>
+
+    <hr class="dash">
+
+    <div class="footer">
+      <span class="date-badge">数据截至 2026.09.10</span><br>
+      来源：Apple 中国官网 iPhone Duo 产品页<br>
+      价格为官方建议零售价，实际售价以各渠道为准
+    </div>
+    <div style="text-align:center">
+      <div class="stamp">百家号 · 数码精算</div>
+    </div>
+  </div>
+  <div class="zigzag"></div>
+</div>
+</body>
+</html>

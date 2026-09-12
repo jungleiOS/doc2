@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    background: #f5f5f7;
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+    padding: 40px;
+  }
+  .title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d1d1f;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: #86868b;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .card-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  .card-header.air { border-bottom-color: #0071e3; }
+  .card-header.pro { border-bottom-color: #bf4800; }
+  .card-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1d1d1f;
+  }
+  .card-price {
+    font-size: 15px;
+    color: #86868b;
+  }
+  .card-price span {
+    color: #1d1d1f;
+    font-weight: 600;
+  }
+  .spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f7;
+    font-size: 15px;
+  }
+  .spec-row:last-child { border-bottom: none; }
+  .spec-label {
+    color: #86868b;
+    flex-shrink: 0;
+    width: 80px;
+  }
+  .spec-air {
+    color: #0071e3;
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+  }
+  .spec-pro {
+    color: #bf4800;
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+  }
+  .spec-diff {
+    font-size: 12px;
+    color: #bf4800;
+    background: #fff3ee;
+    padding: 2px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    width: 70px;
+    text-align: center;
+  }
+  .spec-diff.equal {
+    color: #86868b;
+    background: #f5f5f7;
+  }
+  .spec-diff.air-wins {
+    color: #0071e3;
+    background: #eef5ff;
+  }
+  .verdict {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .verdict-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .verdict-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .verdict-col h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid;
+  }
+  .verdict-col.air h4 { color: #0071e3; border-color: #0071e3; }
+  .verdict-col.pro h4 { color: #bf4800; border-color: #bf4800; }
+  .verdict-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  .verdict-col li {
+    font-size: 14px;
+    color: #424245;
+    padding: 6px 0;
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .verdict-col.air li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #0071e3;
+    font-weight: 700;
+  }
+  .verdict-col.pro li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #bf4800;
+    font-weight: 700;
+  }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #aeaeb2;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="title">MacBook Air 15 vs Pro 14 快速决策表</div>
+<div class="subtitle">M4 芯片 · 教育优惠价对比 · 2026 年 9 月</div>
+
+<div class="grid">
+  <div class="card">
+    <div class="card-header air">
+      <span class="card-name">MacBook Air 15"</span>
+      <span class="card-price">教育价 <span>¥10,999</span> 起</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">芯片</span>
+      <span class="spec-air">M4</span>
+      <span class="spec-diff equal">相同</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">屏幕</span>
+      <span class="spec-air">LCD 60Hz</span>
+      <span class="spec-diff">Pro 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">散热</span>
+      <span class="spec-air">无风扇</span>
+      <span class="spec-diff">Pro 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">接口</span>
+      <span class="spec-air">2×雷雳+MagSafe</span>
+      <span class="spec-diff">Pro 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">扬声器</span>
+      <span class="spec-air">四扬声器</span>
+      <span class="spec-diff">Pro 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">续航</span>
+      <span class="spec-air">18h</span>
+      <span class="spec-diff air-wins">Air 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">重量</span>
+      <span class="spec-air">1.51 kg</span>
+      <span class="spec-diff air-wins">Air 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">屏幕尺寸</span>
+      <span class="spec-air">15.3"</span>
+      <span class="spec-diff air-wins">Air 胜</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header pro">
+      <span class="card-name">MacBook Pro 14"</span>
+      <span class="card-price">教育价 <span>¥12,999</span> 起</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">芯片</span>
+      <span class="spec-pro">M4</span>
+      <span class="spec-diff equal">相同</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">屏幕</span>
+      <span class="spec-pro">XDR 120Hz</span>
+      <span class="spec-diff">Pro 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">散热</span>
+      <span class="spec-pro">主动风扇</span>
+      <span class="spec-diff">Pro 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">接口</span>
+      <span class="spec-pro">SD+HDMI+3×雷雳</span>
+      <span class="spec-diff">Pro 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">扬声器</span>
+      <span class="spec-pro">六扬声器</span>
+      <span class="spec-diff">Pro 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">续航</span>
+      <span class="spec-pro">17h</span>
+      <span class="spec-diff air-wins">Air 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">重量</span>
+      <span class="spec-pro">1.55 kg</span>
+      <span class="spec-diff air-wins">Air 胜</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label">屏幕尺寸</span>
+      <span class="spec-pro">14.2"</span>
+      <span class="spec-diff air-wins">Air 胜</span>
+    </div>
+  </div>
+</div>
+
+<div class="verdict">
+  <div class="verdict-title">按专业选，不按名字选</div>
+  <div class="verdict-grid">
+    <div class="verdict-col air">
+      <h4>选 Air 15 如果你…</h4>
+      <ul>
+        <li>文科 / 商科 / 法学 / 医学 / 教育专业</li>
+        <li>主要用 Word、PDF、网页、PPT</li>
+        <li>经常带去图书馆，需要长续航</li>
+        <li>喜欢大屏不接外接显示器</li>
+        <li>预算卡在 1 万以内</li>
+      </ul>
+    </div>
+    <div class="verdict-col pro">
+      <h4>选 Pro 14 如果你…</h4>
+      <ul>
+        <li>设计 / 摄影 / 影视 / 计算机 AI 方向</li>
+        <li>需要剪视频、跑编译、本地大模型</li>
+        <li>需要 SD 卡槽或 HDMI 直连</li>
+        <li>对屏幕色准和亮度有专业要求</li>
+        <li>预算 1.3 万以上，追求全能</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer">数据来源：苹果官网教育商店 · 制图：Apple研究生</div>
+
+</body>
+</html>

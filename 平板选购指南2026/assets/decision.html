@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>决策图 · 三步排除法</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #F5F3EC;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #shot {
+    width: 1240px;
+    background-color: #F5F3EC;
+    background-image:
+      linear-gradient(#E9E5D6 1px, transparent 1px),
+      linear-gradient(90deg, #E9E5D6 1px, transparent 1px);
+    background-size: 26px 26px;
+    border: 1px solid #DDD8C9;
+    border-radius: 14px;
+    padding: 46px 52px 34px;
+  }
+  .eyebrow {
+    font-family: "Menlo", monospace;
+    font-size: 12px; letter-spacing: 2px; color: #5B6875;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 2px; background: #B93A27; }
+  h1 {
+    margin-top: 12px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 38px; font-weight: 900; color: #22303E;
+  }
+  h1 em { font-style: normal; color: #B93A27; }
+  .sub { margin-top: 8px; font-size: 15px; color: #5B6875; }
+
+  .steps { margin-top: 34px; position: relative; }
+  .steps::before {
+    content: "";
+    position: absolute; left: 29px; top: 34px; bottom: 34px;
+    width: 2px;
+    background: repeating-linear-gradient(#C9C3B2 0 6px, transparent 6px 12px);
+  }
+  .step { position: relative; display: flex; gap: 22px; padding: 13px 0; }
+  .n {
+    flex: 0 0 60px; height: 60px;
+    border-radius: 12px;
+    background: #FCFBF7;
+    border: 1.5px solid #2E4E7E;
+    color: #2E4E7E;
+    font-family: "Songti SC", serif;
+    font-size: 24px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1;
+  }
+  .card {
+    flex: 1;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-radius: 12px;
+    padding: 18px 24px 16px;
+    box-shadow: 0 2px 0 rgba(34, 48, 62, .05);
+  }
+  .q { font-size: 20px; font-weight: 700; color: #22303E; }
+  .q .tag {
+    font-family: "Menlo", monospace;
+    font-size: 11px; font-weight: 400; color: #5B6875;
+    margin-left: 10px; letter-spacing: 1px;
+  }
+  .branches { margin-top: 12px; display: flex; gap: 14px; }
+  .br {
+    flex: 1;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 14px; line-height: 1.65;
+  }
+  .br .h { font-weight: 700; margin-right: 6px; }
+  .br.yes { background: rgba(185, 58, 39, .06); border: 1px solid rgba(185, 58, 39, .35); color: #6B4A42; }
+  .br.yes .h { color: #B93A27; }
+  .br.no { background: rgba(46, 78, 126, .05); border: 1px solid rgba(46, 78, 126, .28); color: #41566F; }
+  .br.no .h { color: #2E4E7E; }
+  .chips { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .c {
+    font-family: "Menlo", monospace;
+    font-size: 12px; color: #2E4E7E;
+    background: rgba(46, 78, 126, .06);
+    border: 1px solid rgba(46, 78, 126, .3);
+    border-radius: 6px; padding: 3px 10px;
+  }
+  .c.red {
+    color: #B93A27;
+    background: rgba(185, 58, 39, .06);
+    border-color: rgba(185, 58, 39, .35);
+  }
+  .result {
+    margin-top: 26px;
+    border: 1.5px solid #22303E;
+    border-radius: 12px;
+    background: #22303E;
+    color: #F5F3EC;
+    padding: 16px 24px;
+    font-size: 16px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .result .big {
+    font-family: "Songti SC", serif;
+    font-size: 26px; font-weight: 900; color: #F2C14E;
+    white-space: nowrap;
+  }
+  .foot {
+    margin-top: 26px;
+    display: flex; justify-content: space-between;
+    font-family: "Menlo", monospace;
+    font-size: 11px; color: #98A0A8;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="eyebrow">图 02 · DECISION FLOW · 三步排除法</div>
+  <h1>选平板的第一步不是看参数，<em>是先回答三个问题</em></h1>
+  <div class="sub">带货文不会问你的三个问题。答完，26 台候选自己会变少。</div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="n">壹</div>
+      <div class="card">
+        <div class="q">要不要插卡上网？<span class="tag">CELLULAR?</span></div>
+        <div class="branches">
+          <div class="br yes"><span class="h">要 →</span>候选直接从 26 台缩到个位数，只看「能插卡清单」那张表，别在 WiFi 版里比价了。</div>
+          <div class="br no"><span class="h">不要 →</span>随便挑。注意：荣耀、vivo/iQOO 国行全系、小米数字系列本来就没有蜂窝版。</div>
+        </div>
+        <div class="chips">
+          <span class="c red">插卡三要素</span>
+          <span class="c">实体 SIM 还是 eSIM</span>
+          <span class="c">4G 还是 5G</span>
+          <span class="c">能不能打电话</span>
+        </div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">贰</div>
+      <div class="card">
+        <div class="q">配不配手写笔和键盘？<span class="tag">ACCESSORIES?</span></div>
+        <div class="branches">
+          <div class="br yes"><span class="h">配 →</span>只比整机价是耍流氓。必须算「整机 + 笔 + 键盘」三行总价——配件税各品牌 898–3798 元不等。</div>
+          <div class="br no"><span class="h">不配 →</span>看整机到手价即可，跳过配件税那张图。</div>
+        </div>
+        <div class="chips">
+          <span class="c red">全行业均不随机附送</span>
+          <span class="c">限时首销活动除外</span>
+        </div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">叁</div>
+      <div class="card">
+        <div class="q">这台机器在谁手里过一天？<span class="tag">WHO?</span></div>
+        <div class="branches">
+          <div class="br no"><span class="h">大学生 →</span>先算「整机 + 笔」总价，再看屏幕和 T2 档性能。</div>
+          <div class="br no"><span class="h">宝妈 →</span>别看品牌排序，看「管控强度」排序。</div>
+          <div class="br no"><span class="h">父母 →</span>屏大、声大、电池大，外加耳机孔和「家里有没有宽带」。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="result">
+    <span class="big">26 台 → 2–3 台</span>
+    <span>三个问题答完，候选清单自己浮出水面。剩下的钱怎么花，看正文按人群逐台算账。</span>
+  </div>
+
+  <div class="foot">
+    <span>2026 平板选购指南 · 三步排除法</span>
+    <span>数据快照：2026-09 · 口径见正文各章</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>三款折叠屏参数对比（百家号版）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    background: #1A1D23;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: #E8E6E1;
+    padding: 56px 60px;
+  }
+  .card {
+    background: #22262E;
+    border-radius: 16px;
+    padding: 48px 52px 44px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+  .brand {
+    text-align: center;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.42em;
+    color: #8B8680;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 42px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    color: #F5F3EE;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #8B8680;
+    margin-bottom: 36px;
+  }
+  .dash {
+    border: none;
+    border-top: 2px dashed #3A3E48;
+    margin: 28px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 19px;
+    line-height: 1.6;
+  }
+  thead th {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px 12px;
+    border-bottom: 3px solid #3A3E48;
+  }
+  thead th:first-child {
+    text-align: left;
+    color: #8B8680;
+    width: 15%;
+  }
+  thead th:nth-child(2) {
+    color: #FFD600;
+    width: 30%;
+  }
+  thead th:nth-child(3) {
+    color: #A8C8FF;
+    width: 27.5%;
+  }
+  thead th:nth-child(4) {
+    color: #FF9B9B;
+    width: 27.5%;
+  }
+  tbody td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #2E323A;
+    text-align: center;
+    vertical-align: middle;
+  }
+  tbody td:first-child {
+    text-align: left;
+    color: #8B8680;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .price {
+    font-family: "Menlo", "Courier New", monospace;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFD600;
+  }
+  .price-alt {
+    font-family: "Menlo", "Courier New", monospace;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .highlight {
+    color: #FFD600;
+    font-weight: 700;
+  }
+  .tag {
+    display: inline-block;
+    background: #FFD600;
+    color: #1A1D23;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 4px;
+  }
+  .tag-blue {
+    background: #A8C8FF;
+  }
+  .tag-red {
+    background: #FF9B9B;
+  }
+  .winner {
+    position: relative;
+  }
+  .winner::after {
+    content: '✓';
+    color: #4ADE80;
+    font-weight: 700;
+    margin-left: 4px;
+  }
+  .footer {
+    text-align: center;
+    font-size: 15px;
+    color: #5C5F66;
+    margin-top: 28px;
+    line-height: 1.6;
+  }
+  .stamp {
+    display: inline-block;
+    border: 3px solid #B2372A;
+    color: #B2372A;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 4px;
+    transform: rotate(-3deg);
+    margin-top: 16px;
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+<div class="card" id="shot">
+  <div class="brand">2026 折叠屏横评</div>
+  <h1>iPhone Duo vs 三星 Z Fold 8 vs 华为 Pura X Max</h1>
+  <div class="subtitle">三款折叠屏核心参数逐项对照 · 数据截至 2026.09.10</div>
+
+  <hr class="dash">
+
+  <table>
+    <thead>
+      <tr>
+        <th>维度</th>
+        <th>iPhone Duo <span class="tag">iOS</span></th>
+        <th>三星 Z Fold 8 <span class="tag tag-blue">安卓</span></th>
+        <th>华为 Pura X Max <span class="tag tag-red">鸿蒙</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>起售价</td>
+        <td class="price">¥15,999</td>
+        <td class="price-alt" style="color:#A8C8FF">¥12,999</td>
+        <td class="price-alt" style="color:#FF9B9B">~¥12,999</td>
+      </tr>
+      <tr>
+        <td>重量</td>
+        <td>254g</td>
+        <td class="winner">201g</td>
+        <td>229g</td>
+      </tr>
+      <tr>
+        <td>展开厚度</td>
+        <td class="highlight">5.2mm</td>
+        <td class="winner">4.5mm</td>
+        <td>5.2mm</td>
+      </tr>
+      <tr>
+        <td>外屏</td>
+        <td>5.4"</td>
+        <td>5.5"</td>
+        <td>5.4"</td>
+      </tr>
+      <tr>
+        <td>内屏</td>
+        <td>7.6"</td>
+        <td>7.6"</td>
+        <td>7.7"</td>
+      </tr>
+      <tr>
+        <td>后摄</td>
+        <td>48MP 双摄<br><span style="color:#8B8680;font-size:15px">无长焦 · 2x裁切</span></td>
+        <td>50MP 双摄<br><span style="color:#8B8680;font-size:15px">无长焦 · 2x裁切</span></td>
+        <td class="winner">三摄<br><span style="color:#8B8680;font-size:15px">含3.5x潜望长焦</span></td>
+      </tr>
+      <tr>
+        <td>芯片</td>
+        <td class="highlight">A20 Pro (2nm)</td>
+        <td>骁龙8 至尊版</td>
+        <td>未公布</td>
+      </tr>
+      <tr>
+        <td>快充</td>
+        <td class="highlight">60W+</td>
+        <td>45W</td>
+        <td class="winner">66W</td>
+      </tr>
+      <tr>
+        <td>软件生态</td>
+        <td class="highlight">iOS 27<br><span style="color:#8B8680;font-size:15px">深度适配折叠屏</span></td>
+        <td>One UI</td>
+        <td>鸿蒙<br><span style="color:#8B8680;font-size:15px">PC级应用</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr class="dash">
+
+  <div class="footer">
+    数据来源：Apple 中国官网 · 三星中国官网 · 华为官网<br>
+    价格为官方建议零售价，实际售价以各渠道为准
+  </div>
+  <div style="text-align:center">
+    <div class="stamp">百家号 · 数码精算</div>
+  </div>
+</div>
+</body>
+</html>

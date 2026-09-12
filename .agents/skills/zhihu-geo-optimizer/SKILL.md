@@ -1,6 +1,6 @@
 ---
 name: zhihu-geo-optimizer
-description: 知乎内容的 GEO（生成式引擎优化）+ SEO 审查优化。在知乎回答/文章初稿完成、去 AI 味之后调用，从标题、正文、结尾三个环节提升机器可读性——关键词布局、结论前置、信源入句、实体全称、可引用结尾，目标是站内搜索排名靠前、被百度/Google 收录、被 AI 搜索引擎（DeepSeek、豆包、Kimi、知乎直答等）优先引用。当用户说「GEO」「SEO」「搜索流量」「被 AI 引用」「关键词布局」「优化标题」「AI 搜索优化」时触发；也被 zhihu-question-scout 起草流程在去 AI 味之后调用。
+description: 知乎内容的 GEO（生成式引擎优化）+ SEO 审查优化。在知乎回答/文章初稿完成、去 AI 味之后调用，从标题、正文、结尾三个环节提升机器可读性——关键词布局、结论前置、信源入句、实体全称、可引用结尾，目标是站内搜索排名靠前、被百度/Google 收录、被 AI 搜索引擎（DeepSeek、豆包、Kimi、知乎直答等）优先引用。当用户说「GEO」「SEO」「搜索流量」「被 AI 引用」「关键词布局」「优化标题」「AI 搜索优化」时触发；也被 zhihu-answer-drafter 起草流程在去 AI 味之后调用。
 ---
 
 # 知乎 GEO/SEO 优化（zhihu-geo-optimizer）

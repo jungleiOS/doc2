@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 900px; padding: 40px; font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; background: #FAFAFA; }
+.title { font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; text-align: center; }
+.subtitle { font-size: 14px; color: #999; text-align: center; margin-bottom: 32px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.card { background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+.card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.card-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+.mac-icon { background: #F0F0F0; }
+.win-icon { background: #EFF6FF; }
+.card-name { font-size: 18px; font-weight: 700; color: #1a1a1a; }
+.card-sub { font-size: 13px; color: #999; }
+.row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f5f5f5; }
+.row:last-child { border-bottom: none; }
+.row-label { font-size: 14px; color: #666; }
+.row-value { font-size: 16px; font-weight: 600; }
+.cost-high { color: #dc2626; }
+.cost-low { color: #16a34a; }
+.highlight { background: #F0FDF4; border-radius: 12px; padding: 16px; margin-top: 16px; text-align: center; }
+.highlight-label { font-size: 13px; color: #666; margin-bottom: 4px; }
+.highlight-value { font-size: 28px; font-weight: 700; }
+.note { font-size: 12px; color: #999; margin-top: 24px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="title">MacBook vs 同价位 Windows 本 · 两年真实使用成本</div>
+<div class="subtitle">教育价购入 · 使用两年后二手卖出</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon mac-icon">🍎</div>
+      <div>
+        <div class="card-name">MacBook Air M5</div>
+        <div class="card-sub">16GB + 512GB · 教育价</div>
+      </div>
+    </div>
+    <div class="row">
+      <span class="row-label">购入价格</span>
+      <span class="row-value">¥9,249</span>
+    </div>
+    <div class="row">
+      <span class="row-label">两年后二手卖出</span>
+      <span class="row-value cost-low">¥5,500-6,000</span>
+    </div>
+    <div class="row">
+      <span class="row-label">两年使用成本</span>
+      <span class="row-value cost-low">¥3,249-3,749</span>
+    </div>
+    <div class="highlight">
+      <div class="highlight-label">每月成本</div>
+      <div class="highlight-value cost-low">¥135-156</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon win-icon"></div>
+      <div>
+        <div class="card-name">同价位 Windows 轻薄本</div>
+        <div class="card-sub">Dell XPS 13 / ThinkPad X1 Carbon</div>
+      </div>
+    </div>
+    <div class="row">
+      <span class="row-label">购入价格</span>
+      <span class="row-value">¥9,000-9,500</span>
+    </div>
+    <div class="row">
+      <span class="row-label">两年后二手卖出</span>
+      <span class="row-value cost-high">¥3,000-3,500</span>
+    </div>
+    <div class="row">
+      <span class="row-label">两年使用成本</span>
+      <span class="row-value cost-high">¥5,500-6,500</span>
+    </div>
+    <div class="highlight" style="background:#FEF2F2;">
+      <div class="highlight-label">每月成本</div>
+      <div class="highlight-value cost-high">¥229-271</div>
+    </div>
+  </div>
+</div>
+<div class="note">Mac 两年使用成本比 Windows 本低约 40% · 二手数据来自闲鱼 2026 年 8 月成交均价</div>
+</body>
+</html>

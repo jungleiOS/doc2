@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>护眼对照 · 七种叫法一张底牌</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #F5F3EC;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #shot {
+    width: 1440px;
+    background-color: #F5F3EC;
+    background-image:
+      linear-gradient(#E9E5D6 1px, transparent 1px),
+      linear-gradient(90deg, #E9E5D6 1px, transparent 1px);
+    background-size: 26px 26px;
+    border: 1px solid #DDD8C9;
+    border-radius: 14px;
+    padding: 46px 52px 34px;
+  }
+  .eyebrow {
+    font-family: "Menlo", monospace;
+    font-size: 12px; letter-spacing: 2px; color: #5B6875;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 2px; background: #B93A27; }
+  h1 {
+    margin-top: 12px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 36px; font-weight: 900; color: #22303E;
+  }
+  h1 em { font-style: normal; color: #B93A27; }
+  .sub { margin-top: 8px; font-size: 15px; color: #5B6875; line-height: 1.7; }
+  .sub b { color: #22303E; }
+
+  table {
+    margin-top: 24px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 13px 16px;
+    text-align: left;
+    font-size: 14.5px;
+    border-bottom: 1px solid #E8E4D6;
+    vertical-align: top;
+    line-height: 1.55;
+  }
+  th { background: #EFECE1; color: #22303E; font-weight: 700; font-size: 13.5px; }
+  td { color: #3D4A57; }
+  tr:last-child td { border-bottom: none; }
+  .name { font-weight: 700; color: #22303E; }
+  .brand { color: #5B6875; white-space: nowrap; }
+  .ag {
+    font-family: "Menlo", monospace;
+    font-size: 12.5px; font-weight: 700; color: #2E4E7E;
+    background: rgba(46, 78, 126, .07);
+    border: 1px solid rgba(46, 78, 126, .3);
+    border-radius: 5px; padding: 1px 8px;
+    white-space: nowrap;
+  }
+  .rate {
+    font-family: "Songti SC", serif;
+    font-size: 20px; font-weight: 900; color: #2E4E7E;
+    white-space: nowrap;
+  }
+  .rate small { font-size: 12px; color: #98A0A8; font-family: "PingFang SC", sans-serif; font-weight: 400; }
+  .cert { color: #3D4A57; }
+
+  .verdict {
+    margin-top: 24px;
+    display: flex; gap: 14px;
+  }
+  .card {
+    flex: 1;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 14px; color: #3D4A57; line-height: 1.7;
+  }
+  .card b { color: #22303E; }
+  .card .h {
+    font-family: "Songti SC", serif;
+    font-weight: 900; font-size: 15px;
+    display: block; margin-bottom: 4px;
+  }
+  .card.ok .h { color: #3F7355; }
+  .card.warn { border-left: 4px solid #B93A27; }
+  .card.warn .h { color: #B93A27; }
+
+  .foot {
+    margin-top: 26px;
+    display: flex; justify-content: space-between;
+    font-family: "Menlo", monospace;
+    font-size: 11px; color: #98A0A8;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="eyebrow">图 07 · EYE-CARE GLOSSARY · 护眼名词对照</div>
+  <h1>七种叫法，一张底牌：<em>全都是 AG 蚀刻抗眩光</em></h1>
+  <div class="sub">在玻璃表面做纳米级蚀刻，把镜面反射打散成漫反射。<b>技术同源，名字各异</b>——不是纯营销词（都有莱茵认证和量化指标），但差异就在 97% 和 99% 这个量级，日常观感非常接近。</div>
+
+  <table>
+    <tr>
+      <th style="width:19%">各家叫法</th>
+      <th style="width:19%">品牌 / 机型</th>
+      <th style="width:13%">实质</th>
+      <th style="width:17%">干扰光消解率</th>
+      <th style="width:32%">认证 / 指标</th>
+    </tr>
+    <tr>
+      <td class="name">云晰柔光屏（第二代）</td>
+      <td class="brand">华为</td>
+      <td><span class="ag">AG 蚀刻</span></td>
+      <td class="rate">99% <small>反射率 &lt;2%</small></td>
+      <td class="cert">有量化指标，独占卖点</td>
+    </tr>
+    <tr>
+      <td class="name">纳米柔光屏</td>
+      <td class="brand">小米平板 8 系</td>
+      <td><span class="ag">AG 蚀刻</span></td>
+      <td class="rate">99%</td>
+      <td class="cert">莱茵低蓝光 + 青山护眼</td>
+    </tr>
+    <tr>
+      <td class="name">类纸屏（双层 AG 膜）</td>
+      <td class="brand">荣耀平板 20 / 10 柔光版</td>
+      <td><span class="ag">AG 蚀刻</span></td>
+      <td class="rate">98%</td>
+      <td class="cert">莱茵类纸 / 低蓝光 / 无频闪三重认证</td>
+    </tr>
+    <tr>
+      <td class="name">柔光屏</td>
+      <td class="brand">vivo Pad5 Pro / Pad SE</td>
+      <td><span class="ag">AG 蚀刻</span></td>
+      <td class="rate">98%</td>
+      <td class="cert">莱茵低蓝光</td>
+    </tr>
+    <tr>
+      <td class="name">明眸柔光屏</td>
+      <td class="brand">OPPO Pad 6 / Air5</td>
+      <td><span class="ag">AG 蚀刻</span></td>
+      <td class="rate">97%</td>
+      <td class="cert">莱茵智能护眼 4.0</td>
+    </tr>
+    <tr>
+      <td class="name">舒视柔光屏</td>
+      <td class="brand">联想小新 PadPro 12.7</td>
+      <td><span class="ag">AG 蚀刻</span></td>
+      <td class="rate">— <small>官方未给数值</small></td>
+      <td class="cert">莱茵全局护眼</td>
+    </tr>
+    <tr>
+      <td class="name">纳米纹理玻璃</td>
+      <td class="brand">iPad Pro（1TB / 2TB 可选）</td>
+      <td><span class="ag">AG 蚀刻</span></td>
+      <td class="rate">— <small>苹果无「柔光屏」宣传</small></td>
+      <td class="cert">蚀刻抗反射，选配加价</td>
+    </tr>
+  </table>
+
+  <div class="verdict">
+    <div class="card ok">
+      <span class="h">值不值得加钱？</span>
+      长期看网课、看电子书、给孩子用，<b>值</b>。但别为「某家独有的护眼黑科技」这种说法加钱，大家的技术底牌是同一张。
+    </div>
+    <div class="card warn">
+      <span class="h">一个例外，别混着理解</span>
+      荣耀 MagicPad 3 Pro 的「AI 离焦护眼」是<b>芯片算法调节</b>（改内容），和柔光屏的<b>物理防眩光</b>（改玻璃）是两码事。商家巴不得你混着理解，你别混。
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>2026 平板选购指南 · 护眼名词对照（调研总览 4.5 节）</span>
+    <span>数据快照：2026-09 · 各家官方口径，消解率数字均注来源</span>
+  </div>
+</div>
+</body>
+</html>

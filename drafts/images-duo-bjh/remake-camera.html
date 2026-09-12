@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    background: linear-gradient(160deg, #1A1520 0%, #2A1F35 50%, #15101D 100%);
+    font-family: "PingFang SC", sans-serif;
+    padding: 48px 60px;
+    color: #E8E6E1;
+  }
+  .wrap {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .img-box {
+    flex-shrink: 0;
+    width: 480px;
+    height: 360px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.5);
+    position: relative;
+  }
+  .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1.05) contrast(1.05) hue-rotate(-5deg);
+  }
+  .img-box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(26,21,32,0.2) 0%, transparent 30%, transparent 70%, rgba(26,21,32,0.15) 100%);
+    pointer-events: none;
+  }
+  .info { flex: 1; }
+  .tag {
+    display: inline-block;
+    background: #FF9B9B;
+    color: #1A1520;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-family: "Songti SC", serif;
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+  .spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .spec-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .spec-item .val {
+    font-family: "Menlo", monospace;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFD600;
+  }
+  .spec-item .val.warn { color: #FF9B9B; }
+  .spec-item .desc {
+    font-size: 13px;
+    color: #8B8680;
+    margin-top: 4px;
+  }
+  .meta {
+    font-size: 14px;
+    color: #5C5566;
+    margin-top: 16px;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+<div class="wrap">
+  <div class="img-box">
+    <img src="../images-duo/duo-camera.jpg" alt="iPhone Duo 背面双摄">
+  </div>
+  <div class="info">
+    <div class="tag">影像系统</div>
+    <h2>48MP 双摄<br>无长焦的取舍</h2>
+    <div class="spec-grid">
+      <div class="spec-item">
+        <div class="val">48MP</div>
+        <div class="desc">主摄 · ƒ/1.48 可变光圈</div>
+      </div>
+      <div class="spec-item">
+        <div class="val">48MP</div>
+        <div class="desc">超广角</div>
+      </div>
+      <div class="spec-item">
+        <div class="val warn">无长焦</div>
+        <div class="desc">铰链+双电池挤占空间</div>
+      </div>
+      <div class="spec-item">
+        <div class="val">2x</div>
+        <div class="desc">主摄裁切 · 等效52mm</div>
+      </div>
+    </div>
+    <div class="meta">图源：Apple 官网 · 百家号数码精算重制</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

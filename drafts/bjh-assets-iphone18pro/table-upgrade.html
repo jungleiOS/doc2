@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>iPhone 18 Pro 升级要点速查</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+  table.upg td { padding: 18px 24px; }
+  table.upg th { padding: 16px 24px; }
+  .col-item { width: 200px; }
+  .col-old { width: 260px; color: var(--ink-2); }
+  .col-new { width: 320px; }
+  .col-rate { width: 180px; text-align: right !important; }
+
+  .item { display: flex; align-items: center; gap: 12px; }
+  .item .ico {
+    width: 36px; height: 36px;
+    border-radius: 9px;
+    background: var(--amber-soft);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+  .item .txt .name { font-size: 16px; font-weight: 600; color: var(--ink-0); }
+  .item .txt .tag { font-size: 11px; letter-spacing: 1px; color: var(--ink-3); margin-top: 2px; font-family: "JetBrains Mono", "SF Mono", Menlo, monospace; }
+
+  .old {
+    font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+    color: var(--ink-2);
+    font-size: 15px;
+  }
+  .new {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink-0);
+  }
+  .new em { font-style: normal; color: var(--amber); }
+  .new .pill {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-left: 6px;
+    letter-spacing: 0.5px;
+    background: var(--amber-soft);
+    color: var(--amber);
+    border: 1px solid rgba(245, 158, 11, 0.28);
+  }
+
+  .stars {
+    display: inline-flex;
+    gap: 3px;
+    font-size: 15px;
+  }
+  .stars .s { color: var(--amber); }
+  .stars .d { color: var(--ink-3); }
+  .rate-label {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--ink-2);
+    text-transform: uppercase;
+    font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  }
+  tr.warn td { background: rgba(239, 68, 68, 0.04); }
+  tr.warn .new { color: var(--red); }
+  tr.warn .new em { color: var(--red); }
+  tr.warn .item .ico { background: rgba(239, 68, 68, 0.08); border-color: rgba(239, 68, 68, 0.25); }
+
+  .verdict {
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .ver {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  .ver.yes { border-color: rgba(34, 197, 94, 0.35); background: rgba(34, 197, 94, 0.04); }
+  .ver.maybe { border-color: rgba(245, 158, 11, 0.35); background: rgba(245, 158, 11, 0.04); }
+  .ver.wait { border-color: rgba(96, 165, 250, 0.35); background: rgba(96, 165, 250, 0.04); }
+
+  .ver .label {
+    font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+  .ver.yes .label { color: var(--green); }
+  .ver.maybe .label { color: var(--amber); }
+  .ver.wait .label { color: var(--blue); }
+  .ver .who {
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink-0);
+    line-height: 1.4;
+  }
+  .ver .why {
+    margin-top: 6px;
+    font-size: 12.5px;
+    color: var(--ink-2);
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="brand">APPLE RESEARCH · 2026.09</div>
+  <span class="tag">UPGRADE VERDICT · 17 → 18 PRO</span>
+  <h1>iPhone 18 Pro <em>升级要点速查</em></h1>
+  <div class="sub">7 项关键升级逐项打分。<b>⭐⭐⭐ = 质的飞跃</b>，⭐⭐ = 显著升级，⚠ = 降配。</div>
+
+  <table class="upg">
+    <thead>
+      <tr>
+        <th class="col-item">升级项</th>
+        <th class="col-old">iPhone 17 Pro</th>
+        <th class="col-new">iPhone 18 Pro</th>
+        <th class="col-rate">评级</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="item">
+            <div class="ico">📷</div>
+            <div class="txt"><div class="name">主摄光圈</div><div class="tag">MAIN APERTURE</div></div>
+          </div>
+        </td>
+        <td><div class="old">ƒ/1.78 固定</div></td>
+        <td><div class="new"><em>ƒ/1.48 – ƒ/4.0</em> 可变<span class="pill">PHYSICAL</span></div></td>
+        <td class="col-rate"><div class="stars"><span class="s">★</span><span class="s">★</span><span class="s">★</span></div><span class="rate-label">质的飞跃</span></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="item">
+            <div class="ico">🔭</div>
+            <div class="txt"><div class="name">三摄规格</div><div class="tag">TRIPLE CAMERA</div></div>
+          </div>
+        </td>
+        <td><div class="old">48 + 48 + 12MP</div></td>
+        <td><div class="new"><em>全 48MP</em> 三主摄</div></td>
+        <td class="col-rate"><div class="stars"><span class="s">★</span><span class="s">★</span><span class="s">★</span></div><span class="rate-label">无凑数镜头</span></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="item">
+            <div class="ico">⚡</div>
+            <div class="txt"><div class="name">快充</div><div class="tag">FAST CHARGE</div></div>
+          </div>
+        </td>
+        <td><div class="old">27W 固定电压</div></td>
+        <td><div class="new"><em>60W+</em> AVS 协议</div></td>
+        <td class="col-rate"><div class="stars"><span class="s">★</span><span class="s">★</span><span class="s">★</span></div><span class="rate-label">功率翻倍</span></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="item">
+            <div class="ico">🔋</div>
+            <div class="txt"><div class="name">续航（Pro Max 视频）</div><div class="tag">BATTERY LIFE</div></div>
+          </div>
+        </td>
+        <td><div class="old">39 小时</div></td>
+        <td><div class="new"><em>45 小时</em> (+6h)</div></td>
+        <td class="col-rate"><div class="stars"><span class="s">★</span><span class="s">★</span><span class="s">★</span></div><span class="rate-label">历史最大跳跃</span></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="item">
+            <div class="ico">🧠</div>
+            <div class="txt"><div class="name">芯片</div><div class="tag">SILICON</div></div>
+          </div>
+        </td>
+        <td><div class="old">A19 Pro · 3nm</div></td>
+        <td><div class="new"><em>A20 Pro</em> · 2nm</div></td>
+        <td class="col-rate"><div class="stars"><span class="s">★</span><span class="s">★</span><span class="d">★</span></div><span class="rate-label">显著升级</span></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="item">
+            <div class="ico">💰</div>
+            <div class="txt"><div class="name">起售价</div><div class="tag">STARTING PRICE</div></div>
+          </div>
+        </td>
+        <td><div class="old">¥8,999</div></td>
+        <td><div class="new"><em>¥9,999</em> (+¥1,000)</div></td>
+        <td class="col-rate"><div class="stars"><span class="s">★</span><span class="s">★</span><span class="d">★</span></div><span class="rate-label">对得起涨幅</span></td>
+      </tr>
+      <tr class="warn">
+        <td>
+          <div class="item">
+            <div class="ico">🛠</div>
+            <div class="txt"><div class="name">机身材质</div><div class="tag">BODY MATERIAL</div></div>
+          </div>
+        </td>
+        <td><div class="old">钛金属</div></td>
+        <td><div class="new"><em>铝合金</em> 一体成型<span class="pill">DOWNGRADE</span></div></td>
+        <td class="col-rate"><div class="stars"><span class="d">★</span><span class="d">★</span><span class="d">★</span></div><span class="rate-label">⚠ 降级</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="verdict">
+    <div class="ver yes">
+      <div class="label">✓ RECOMMENDED</div>
+      <div class="who">16 Pro 及更早用户</div>
+      <div class="why">跨两代以上，可变光圈 / 60W / +6h 续航每一项都肉眼可见。</div>
+    </div>
+    <div class="ver maybe">
+      <div class="label">△ OPTIONAL</div>
+      <div class="who">17 Pro 用户</div>
+      <div class="why">在意可变光圈和 60W 快充再升级；否则再战一年没问题。</div>
+    </div>
+    <div class="ver wait">
+      <div class="label">⌛ WAIT</div>
+      <div class="who">等便宜版的用户</div>
+      <div class="why">标准版 iPhone 18 / 18 Air 推迟到 2027 年春天。</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="src">SOURCE · Apple 官网规格页 · 截至 2026.09.10</span>
+    <span>7 项升级 · 4 项 ⭐⭐⭐ · 1 项降级</span>
+  </div>
+</div>
+</body>
+</html>

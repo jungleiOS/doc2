@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    background: linear-gradient(160deg, #1A1510 0%, #2A2015 50%, #15120D 100%);
+    font-family: "PingFang SC", sans-serif;
+    padding: 48px 60px;
+    color: #E8E6E1;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .tag {
+    display: inline-block;
+    background: #A8C8FF;
+    color: #1A1510;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-family: "Songti SC", serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.3;
+  }
+  .img-box {
+    width: 100%;
+    height: 420px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.5);
+    position: relative;
+    margin-bottom: 24px;
+  }
+  .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1.06) contrast(1.04) saturate(1.05);
+  }
+  .img-box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(26,21,16,0.1) 0%, transparent 20%, transparent 80%, rgba(26,21,16,0.35) 100%);
+    pointer-events: none;
+  }
+  .label-row {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 2;
+  }
+  .label-item {
+    flex: 1;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(8px);
+    padding: 12px 16px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  .label-item:last-child { border-right: none; }
+  .label-item .name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFD600;
+  }
+  .label-item .desc {
+    font-size: 13px;
+    color: #8B8680;
+    margin-top: 2px;
+  }
+  .features {
+    display: flex;
+    gap: 16px;
+  }
+  .feature-item {
+    flex: 1;
+    background: rgba(168,200,255,0.06);
+    border: 1px solid rgba(168,200,255,0.12);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  .feature-item .title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #A8C8FF;
+    margin-bottom: 6px;
+  }
+  .feature-item .text {
+    font-size: 14px;
+    color: #8B8680;
+    line-height: 1.5;
+  }
+  .meta {
+    text-align: center;
+    font-size: 14px;
+    color: #5A4D3A;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="header">
+    <div class="tag">iOS 27 折叠屏适配</div>
+    <h2>三种形态 · 深度适配折叠屏</h2>
+  </div>
+  <div class="img-box">
+    <img src="../images-duo/duo-ios.jpg" alt="iOS 27 三种形态">
+    <div class="label-row">
+      <div class="label-item">
+        <div class="name">折叠态</div>
+        <div class="desc">外屏 5.4" · StandBy 模式</div>
+      </div>
+      <div class="label-item">
+        <div class="name">展开态</div>
+        <div class="desc">内屏 7.6" · Split View 分屏</div>
+      </div>
+      <div class="label-item">
+        <div class="name">帐篷模式</div>
+        <div class="desc">半折叠 · 上屏显示+下屏键盘</div>
+      </div>
+    </div>
+  </div>
+  <div class="features">
+    <div class="feature-item">
+      <div class="title">Split View 分屏</div>
+      <div class="text">左右同时运行两个 App，iPad 级多任务体验</div>
+    </div>
+    <div class="feature-item">
+      <div class="title">Apple Pencil</div>
+      <div class="text">USB-C 版手写笔，GoodNotes / Notability 大屏书写</div>
+    </div>
+    <div class="feature-item">
+      <div class="title">App 适配</div>
+      <div class="text">iOS 开发者生态跟进苹果适配规范，质量高于安卓折叠屏</div>
+    </div>
+  </div>
+  <div class="meta">图源：Apple 官网 · 百家号数码精算重制</div>
+</div>
+</body>
+</html>

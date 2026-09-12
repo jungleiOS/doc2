@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>配件税 · 笔+键盘总价对照</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #F5F3EC;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #shot {
+    width: 1320px;
+    background-color: #F5F3EC;
+    background-image:
+      linear-gradient(#E9E5D6 1px, transparent 1px),
+      linear-gradient(90deg, #E9E5D6 1px, transparent 1px);
+    background-size: 26px 26px;
+    border: 1px solid #DDD8C9;
+    border-radius: 14px;
+    padding: 46px 52px 34px;
+  }
+  .eyebrow {
+    font-family: "Menlo", monospace;
+    font-size: 12px; letter-spacing: 2px; color: #5B6875;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 2px; background: #B93A27; }
+  h1 {
+    margin-top: 12px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 36px; font-weight: 900; color: #22303E;
+  }
+  h1 em { font-style: normal; color: #B93A27; }
+  .sub { margin-top: 8px; font-size: 15px; color: #5B6875; line-height: 1.7; }
+  .sub b { color: #22303E; }
+
+  .chart { margin-top: 30px; }
+  .row { display: flex; align-items: center; padding: 10px 0; }
+  .row + .row { border-top: 1px dashed #DDD8C9; }
+  .brand {
+    flex: 0 0 300px;
+    font-size: 16px; font-weight: 700; color: #22303E;
+  }
+  .brand .items {
+    display: block;
+    font-size: 12px; font-weight: 400; color: #98A0A8;
+    margin-top: 3px; line-height: 1.5;
+  }
+  .track {
+    flex: 1;
+    position: relative;
+    height: 34px;
+    background: #EFECE1;
+    border-radius: 8px;
+  }
+  .bar {
+    position: absolute; top: 5px; bottom: 5px;
+    border-radius: 6px;
+    background: #2E4E7E;
+  }
+  .bar.apple { background: #B93A27; }
+  .bar .min, .bar .max {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    font-family: "Menlo", monospace;
+    font-size: 12.5px; font-weight: 700;
+    white-space: nowrap;
+  }
+  /* 宽条（苹果）：标签放条内 */
+  .bar .in.min { left: 10px; color: #FCFBF7; }
+  .bar .in.max { right: 10px; color: #FCFBF7; }
+  /* 窄条：标签放条外两侧 */
+  .bar .out.min { right: calc(100% + 8px); color: #2E4E7E; }
+  .bar .out.max { left: calc(100% + 8px); color: #2E4E7E; }
+  .val {
+    flex: 0 0 150px;
+    text-align: right;
+    font-family: "Songti SC", serif;
+    font-weight: 900; font-size: 20px; color: #2E4E7E;
+    white-space: nowrap;
+  }
+  .val.apple { color: #B93A27; }
+
+  .note {
+    margin-top: 26px;
+    display: flex; gap: 14px;
+  }
+  .card {
+    flex: 1;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 14px; color: #3D4A57; line-height: 1.7;
+  }
+  .card b { color: #22303E; }
+  .card .h {
+    font-family: "Songti SC", serif;
+    font-weight: 900; font-size: 15px; color: #3F7355;
+    display: block; margin-bottom: 4px;
+  }
+  .card.warn .h { color: #B93A27; }
+
+  .foot {
+    margin-top: 26px;
+    display: flex; justify-content: space-between;
+    font-family: "Menlo", monospace;
+    font-size: 11px; color: #98A0A8;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="eyebrow">图 04 · ACCESSORY TAX · 配件税</div>
+  <h1>笔和键盘都不送，这笔「配件税」<em>最高能再买一台安卓板</em></h1>
+  <div class="sub">各品牌「手写笔 + 键盘」官网定价合计（最低配–最高配区间）。任何「无纸化学习」的推荐，只看整机价都是耍流氓，<b>必须算整机 + 笔 + 键盘三行总价</b>。</div>
+
+  <div class="chart">
+    <div class="row">
+      <div class="brand">苹果<span class="items">Pencil USB-C 649 / Pro 999 · 妙控键盘双面夹 1999–2799</span></div>
+      <div class="track"><div class="bar apple" style="left:0%;width:100%"><span class="min in">2648</span><span class="max in">3798</span></div></div>
+      <div class="val apple">2648–3798</div>
+    </div>
+    <div class="row">
+      <div class="brand">OPPO<span class="items">Pencil 3 399 / 3 Pro 599 · 键盘 699–1399</span></div>
+      <div class="track"><div class="bar" style="left:28.9%;width:23.7%"><span class="min out">1098</span><span class="max out">1998</span></div></div>
+      <div class="val">1098–1998</div>
+    </div>
+    <div class="row">
+      <div class="brand">华为<span class="items">M-Pencil 第三代 399–599 / Pro 699 · 键盘 399–1099</span></div>
+      <div class="track"><div class="bar" style="left:21.0%;width:26.3%"><span class="min out">798</span><span class="max out">1798</span></div></div>
+      <div class="val">798–1798</div>
+    </div>
+    <div class="row">
+      <div class="brand">小米<span class="items">焦点触控笔 Pro 599 · 悬浮键盘 699 起（7S Pro 键盘 999）</span></div>
+      <div class="track"><div class="bar" style="left:34.2%;width:7.9%"><span class="min out">1298</span><span class="max out">1598</span></div></div>
+      <div class="val">1298–1598</div>
+    </div>
+    <div class="row">
+      <div class="brand">vivo<span class="items">Pencil3 499 · 键盘 599–699（套餐减 100–300）</span></div>
+      <div class="track"><div class="bar" style="left:26.3%;width:7.9%"><span class="min out">998</span><span class="max out">1298</span></div></div>
+      <div class="val">998–1298</div>
+    </div>
+    <div class="row">
+      <div class="brand">联想<span class="items">手写笔 Pro 599 · 键盘 499–699</span></div>
+      <div class="track"><div class="bar" style="left:28.9%;width:5.3%"><span class="min out">1098</span><span class="max out">1298</span></div></div>
+      <div class="val">1098–1298</div>
+    </div>
+    <div class="row">
+      <div class="brand">荣耀<span class="items">Magic-Pencil 4s 399 / 3 代 499 · 智能键盘 499–699</span></div>
+      <div class="track"><div class="bar" style="left:23.6%;width:7.9%"><span class="min out">898</span><span class="max out">1198</span></div></div>
+      <div class="val">898–1198</div>
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="card">
+      <span class="h">全场唯一的例外</span>
+      联想 YOGA Pad Pro 12.7 套装 <b>2799 元整机、笔、键盘全含</b>，是真·全家桶，不在这张图的口径里。
+    </div>
+    <div class="card warn">
+      <span class="h">限时活动别当常态</span>
+      OPPO Pad Air5 首销赠笔、荣耀平板 20 首销 99 元加购笔——赶上了能省一笔，赶不上别当常态。
+    </div>
+    <div class="card warn">
+      <span class="h">怎么读这张图</span>
+      苹果那套 2648–3798 的配件钱，<b>够再买一台不错的安卓板</b>。区间越宽，键盘档位差越大。
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>2026 平板选购指南 · 配件税对照（调研总览 4.2 节）</span>
+    <span>数据快照：2026-09 · 各品牌官网定价</span>
+  </div>
+</div>
+</body>
+</html>

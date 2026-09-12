@@ -1,0 +1,174 @@
+/* 共享视觉：深色科技测评 + 琥珀金强调（百家号 iPhone 18 Pro 系列配图） */
+:root {
+  --bg-0: #0b0d12;
+  --bg-1: #11141b;
+  --bg-2: #171b24;
+  --line: #242936;
+  --ink-0: #f3f4f6;
+  --ink-1: #c9ccd4;
+  --ink-2: #8b8e98;
+  --ink-3: #5b5f6a;
+  --amber: #f59e0b;
+  --amber-soft: rgba(245, 158, 11, 0.12);
+  --red: #ef4444;
+  --green: #22c55e;
+  --blue: #60a5fa;
+  --violet: #a78bfa;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  background: var(--bg-0);
+  color: var(--ink-0);
+  font-family: "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+#shot {
+  width: 1200px;
+  background:
+    radial-gradient(circle at 85% -10%, rgba(245, 158, 11, 0.10) 0%, transparent 55%),
+    radial-gradient(circle at 0% 100%, rgba(96, 165, 250, 0.06) 0%, transparent 55%),
+    linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 100%);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 44px 52px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 右上角 logo 标 */
+.brand {
+  position: absolute;
+  top: 28px; right: 44px;
+  font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--ink-3);
+}
+.brand::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--amber);
+  margin-right: 8px;
+  vertical-align: 2px;
+  box-shadow: 0 0 8px var(--amber);
+}
+
+.tag {
+  font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--amber);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  background: var(--amber-soft);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  border-radius: 4px;
+}
+.tag::before {
+  content: "";
+  width: 18px; height: 2px; background: var(--amber);
+}
+
+h1 {
+  margin-top: 14px;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--ink-0);
+}
+h1 em {
+  font-style: normal;
+  color: var(--amber);
+}
+
+.sub {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+.sub b { color: var(--ink-0); font-weight: 600; }
+
+/* 通用表格 */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 28px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+th, td {
+  padding: 18px 22px;
+  text-align: left;
+  font-size: 17px;
+  border-bottom: 1px solid var(--line);
+}
+th {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: var(--ink-2);
+  font-weight: 600;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.02);
+}
+th:last-child, td:last-child { text-align: right; }
+th:first-child, td:first-child { padding-left: 28px; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: rgba(255, 255, 255, 0.015); }
+
+td .main { color: var(--ink-0); font-weight: 600; font-size: 18px; }
+td .pill {
+  display: inline-block;
+  padding: 3px 9px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-left: 8px;
+  letter-spacing: 0.5px;
+}
+.pill.new { background: var(--amber-soft); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+.pill.up { background: rgba(239, 68, 68, 0.10); color: var(--red); }
+.pill.down { background: rgba(34, 197, 94, 0.10); color: var(--green); }
+
+tr.highlight { background: rgba(245, 158, 11, 0.05); }
+tr.highlight td:first-child { box-shadow: inset 3px 0 0 var(--amber); }
+
+.foot {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  letter-spacing: 1px;
+}
+.foot .src { color: var(--ink-2); }
+
+/* 数值 */
+.num {
+  font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.num.big { font-size: 22px; color: var(--amber); }
+.num.delta { color: var(--red); }
+.num.good { color: var(--green); }

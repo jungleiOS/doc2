@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>跑分梯队 · 两个口径分开排</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #F5F3EC;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #shot {
+    width: 1400px;
+    background-color: #F5F3EC;
+    background-image:
+      linear-gradient(#E9E5D6 1px, transparent 1px),
+      linear-gradient(90deg, #E9E5D6 1px, transparent 1px);
+    background-size: 26px 26px;
+    border: 1px solid #DDD8C9;
+    border-radius: 14px;
+    padding: 46px 52px 34px;
+  }
+  .eyebrow {
+    font-family: "Menlo", monospace;
+    font-size: 12px; letter-spacing: 2px; color: #5B6875;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 2px; background: #B93A27; }
+  h1 {
+    margin-top: 12px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 36px; font-weight: 900; color: #22303E;
+  }
+  h1 em { font-style: normal; color: #B93A27; }
+  .sub { margin-top: 8px; font-size: 15px; color: #5B6875; line-height: 1.7; }
+  .sub b { color: #22303E; }
+
+  .warn {
+    margin-top: 18px;
+    background: rgba(185, 58, 39, .06);
+    border: 1.5px dashed rgba(185, 58, 39, .55);
+    border-radius: 12px;
+    padding: 13px 20px;
+    font-size: 14.5px; color: #6B4A42; line-height: 1.7;
+  }
+  .warn b { color: #B93A27; }
+
+  .zone {
+    margin-top: 24px;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .zhead {
+    display: flex; justify-content: space-between; align-items: baseline;
+    background: #EFECE1;
+    padding: 10px 20px;
+    border-bottom: 1px solid #DDD8C9;
+  }
+  .zhead .zt {
+    font-family: "Songti SC", serif;
+    font-size: 16px; font-weight: 900; color: #22303E;
+  }
+  .zhead .zs {
+    font-family: "Menlo", monospace;
+    font-size: 11.5px; color: #5B6875;
+  }
+  .tier { display: flex; align-items: flex-start; gap: 18px; padding: 14px 20px; }
+  .tier + .tier { border-top: 1px solid #EFECE1; }
+  .badge {
+    flex: 0 0 58px; height: 58px;
+    border-radius: 10px;
+    background: #22303E;
+    color: #F2C14E;
+    font-family: "Songti SC", serif;
+    font-size: 22px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .badge.dim { background: #8B93A0; color: #F5F3EC; }
+  .tbody { flex: 1; }
+  .tline { display: flex; align-items: baseline; gap: 14px; }
+  .tname { font-size: 16.5px; font-weight: 700; color: #22303E; white-space: nowrap; }
+  .trange {
+    font-family: "Menlo", monospace;
+    font-size: 13px; font-weight: 700; color: #2E4E7E;
+  }
+  .tuse { font-size: 12.5px; color: #98A0A8; }
+  .models { margin-top: 5px; font-size: 13.5px; color: #5B6875; line-height: 1.65; }
+  .models b { color: #3D4A57; font-weight: 600; }
+  .tbar {
+    margin-top: 8px;
+    height: 10px; border-radius: 5px;
+    background: linear-gradient(90deg, #2E4E7E, #4A6A9E);
+  }
+  .tbar.dim { background: linear-gradient(90deg, #9AA3AF, #B9C0C9); }
+
+  .fault {
+    margin: 22px 0 0;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .fault .line {
+    flex: 1; height: 0;
+    border-top: 2px dashed #B93A27;
+    opacity: .6;
+  }
+  .fault .lb {
+    font-family: "Songti SC", serif;
+    font-size: 15px; font-weight: 900; color: #B93A27;
+    border: 1.5px solid #B93A27;
+    border-radius: 6px;
+    padding: 4px 14px;
+    transform: rotate(-1.5deg);
+    white-space: nowrap;
+    background: #F5F3EC;
+  }
+
+  .kirin {
+    margin-top: 24px;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-left: 4px solid #3F7355;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 14px; color: #3D4A57; line-height: 1.7;
+  }
+  .kirin b { color: #22303E; }
+
+  .foot {
+    margin-top: 26px;
+    display: flex; justify-content: space-between;
+    font-family: "Menlo", monospace;
+    font-size: 11px; color: #98A0A8;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="eyebrow">图 06 · BENCHMARK TIERS · 跑分梯队</div>
+  <h1>跑分通胀了，<em>450 万不一定比 300 万强</em></h1>
+  <div class="sub">安兔兔 2026 年换了 V11 版本，分数体系和 V10 截然不同。<b>看到跑分先问一句：哪个版本的安兔兔？</b></div>
+
+  <div class="warn">
+    <b>官方明确：V10 与 V11 不可跨版本对比。</b>「这台跑分 450 万吊打那台 300 万」——450 万是 V11 口径，300 万是 V10 口径，根本不是一个刻度，就像拿摄氏度和华氏度比大小。所以下面两个区各有自己的刻度尺，<b>禁止跨区比大小</b>。
+  </div>
+
+  <!-- 口径断层上方：V11 -->
+  <div class="zone">
+    <div class="zhead">
+      <span class="zt">安兔兔 V11 口径</span>
+      <span class="zs">2026 年新旗舰 · 本区刻度上限 453 万</span>
+    </div>
+    <div class="tier">
+      <div class="badge">T0</div>
+      <div class="tbody">
+        <div class="tline">
+          <span class="tname">骁龙 8E Gen5 机型</span>
+          <span class="trange">410 万 – 453 万</span>
+          <span class="tuse">2026 新旗舰，性能溢出档</span>
+        </div>
+        <div class="models">拯救者 Y700 五代 <b>453 万</b>（官方）· OPPO Pad 5 Pro <b>超 447 万</b>（官方）· iQOO Pad6 Pro 官方 <b>444 万+</b> · 荣耀 MagicPad 3 Pro 13.3 安兔兔月榜平均 <b>414 万</b> · Y700 无极 <b>419.8 万</b>（2026-08 官方平板榜）· vivo Pad6 Pro 官方 <b>420 万+</b></div>
+        <div class="tbar" style="width:100%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fault">
+    <span class="line"></span>
+    <span class="lb">口径断层 · V10 与 V11 禁止跨区比大小</span>
+    <span class="line"></span>
+  </div>
+
+  <!-- 口径断层下方：V10 -->
+  <div class="zone">
+    <div class="zhead">
+      <span class="zt">安兔兔 V10 及更早口径</span>
+      <span class="zs">上代旗舰到入门 · 本区刻度上限 309 万</span>
+    </div>
+    <div class="tier">
+      <div class="badge">T1</div>
+      <div class="tbody">
+        <div class="tline">
+          <span class="tname">上代旗舰芯</span>
+          <span class="trange">269 万 – 309 万</span>
+          <span class="tuse">大型游戏全开无压力</span>
+        </div>
+        <div class="models">小米平板 8 Pro（骁龙 8 至尊版）第三方榜平均 <b>309 万</b> · OPPO Pad 6（天玑 9500s）约 <b>306 万</b> · OPPO Pad 5（天玑 9400+）超 <b>305 万</b> · vivo Pad5 Pro（天玑 9400）实测 <b>274–278 万</b> · iQOO Pad5 Pro 实测 <b>269 万</b></div>
+        <div class="tbar" style="width:100%"></div>
+      </div>
+    </div>
+    <div class="tier">
+      <div class="badge">T2</div>
+      <div class="tbody">
+        <div class="tline">
+          <span class="tname">骁龙 8s Gen4 / 8 Gen3 / 8s Gen3</span>
+          <span class="trange">190 万 – 262 万</span>
+          <span class="tuse">畅玩原神没问题</span>
+        </div>
+        <div class="models">联想小新 Pro 13 <b>262 万</b>（官方）· 小新 Pro GT 11.1 <b>201.3 万</b>（官方）· 小米平板 8 约 <b>200 万</b>（爆料口径，非官方实测）· iQOO Pad5e 实测 <b>190 万+</b></div>
+        <div class="tbar" style="width:84.8%"></div>
+      </div>
+    </div>
+    <div class="tier">
+      <div class="badge dim">T3</div>
+      <div class="tbody">
+        <div class="tline">
+          <span class="tname">中端芯</span>
+          <span class="trange">115 万 – 155 万</span>
+          <span class="tuse">网课视频够用，别碰大型游戏</span>
+        </div>
+        <div class="models">荣耀 GT Pro / MagicPad 2 约 <b>140–155 万</b> · 小新 PadPro 12.7 约 <b>130 万</b> · 麒麟 9020 约 <b>125 万</b>（自媒体整理榜）· 麒麟 T82 系（MatePad 11.5 2026）约 <b>115 万</b>量级（弱信源，待复核）</div>
+        <div class="tbar dim" style="width:50.2%"></div>
+      </div>
+    </div>
+    <div class="tier">
+      <div class="badge dim">T4</div>
+      <div class="tbody">
+        <div class="tline">
+          <span class="tname">入门芯</span>
+          <span class="trange">68 万 – 95 万</span>
+          <span class="tuse">看视频、网课、儿童学习够用</span>
+        </div>
+        <div class="models">骁龙 7 Gen3（荣耀平板 20 / 平板 10）约 <b>94.9 万</b> · 天玑 7300 Ultra（OPPO Pad Air5）约 <b>68 万</b></div>
+        <div class="tbar dim" style="width:30.7%"></div>
+      </div>
+    </div>
+    <div class="tier">
+      <div class="badge dim">T5</div>
+      <div class="tbody">
+        <div class="tline">
+          <span class="tname">基础芯</span>
+          <span class="trange">30 万 – 50 万</span>
+          <span class="tuse">看视频网课，仅此而已</span>
+        </div>
+        <div class="models">Helio G100 Ultra（REDMI Pad 2）官方实验室 <b>超 43 万</b> · 骁龙 685/680（华为 SE 11、荣耀 X 系）约 <b>30–50 万</b>量级（估计值，无权威实测）</div>
+        <div class="tbar dim" style="width:16.2%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kirin">
+    <b>麒麟机型单独说一句：</b>华为的平板别拿安兔兔分数跟人拼，那是它的弱项。华为的钱花在屏幕和鸿蒙系统体验上，拼跑分就理解错了它的产品逻辑。跨平台对比建议统一用 Geekbench 6（iPad 端安兔兔参考价值低）。
+  </div>
+
+  <div class="foot">
+    <span>2026 平板选购指南 · 跑分梯队（调研总览第 3 章）</span>
+    <span>数据快照：2026-09 · 安兔兔 V10 / V11 双口径分列，分数均为各文档标注信源</span>
+  </div>
+</div>
+</body>
+</html>

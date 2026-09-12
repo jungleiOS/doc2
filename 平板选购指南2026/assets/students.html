@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>大学生对比 · 六维对照</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #F5F3EC;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #shot {
+    width: 1500px;
+    background-color: #F5F3EC;
+    background-image:
+      linear-gradient(#E9E5D6 1px, transparent 1px),
+      linear-gradient(90deg, #E9E5D6 1px, transparent 1px);
+    background-size: 26px 26px;
+    border: 1px solid #DDD8C9;
+    border-radius: 14px;
+    padding: 46px 52px 34px;
+  }
+  .eyebrow {
+    font-family: "Menlo", monospace;
+    font-size: 12px; letter-spacing: 2px; color: #5B6875;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 2px; background: #B93A27; }
+  h1 {
+    margin-top: 12px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 36px; font-weight: 900; color: #22303E;
+  }
+  h1 em { font-style: normal; color: #B93A27; }
+  .sub { margin-top: 8px; font-size: 15px; color: #5B6875; line-height: 1.7; }
+  .sub b { color: #22303E; }
+
+  table {
+    margin-top: 24px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-radius: 12px;
+    overflow: hidden;
+    table-layout: fixed;
+  }
+  th, td {
+    padding: 13px 16px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #E8E4D6;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  th { background: #EFECE1; color: #22303E; font-weight: 700; }
+  td { color: #3D4A57; }
+  tr:last-child td { border-bottom: none; }
+  th.dim, td.dim {
+    width: 118px;
+    background: #F7F4EA;
+    font-weight: 700; color: #22303E;
+    font-size: 13.5px;
+  }
+  .mname { font-size: 16.5px; font-weight: 800; }
+  .mtag {
+    display: block; margin-top: 5px;
+    font-family: "Menlo", monospace;
+    font-size: 10.5px; font-weight: 400; letter-spacing: 1px;
+  }
+  .mtag.pick { color: #3F7355; }
+  .mtag.warn { color: #B93A27; }
+  .price {
+    font-family: "Songti SC", serif;
+    font-size: 21px; font-weight: 900; color: #B93A27;
+    white-space: nowrap;
+  }
+  .price small {
+    display: block;
+    font-family: "Menlo", monospace;
+    font-size: 10.5px; font-weight: 400; color: #98A0A8;
+    margin-top: 3px; white-space: normal;
+  }
+  .stamp {
+    display: inline-block;
+    font-family: "Songti SC", serif;
+    font-size: 12px; font-weight: 700; color: #B93A27;
+    border: 1.5px solid #B93A27;
+    border-radius: 4px;
+    padding: 0 6px;
+    transform: rotate(-2deg);
+    white-space: nowrap;
+  }
+  .good { color: #3F7355; font-weight: 700; }
+  .bad { color: #B93A27; font-weight: 700; }
+  .verdict { font-size: 13.5px; line-height: 1.65; }
+  .verdict b { color: #22303E; }
+
+  .foot {
+    margin-top: 26px;
+    display: flex; justify-content: space-between;
+    font-family: "Menlo", monospace;
+    font-size: 11px; color: #98A0A8;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="eyebrow">图 08 · FOR STUDENTS · 大学生 2000–3000 档</div>
+  <h1>给大学生：先算「整机 + 笔」的总价，<em>再谈性价比</em></h1>
+  <div class="sub">大学生平板真正重要的就三件事：<b>整机 + 笔的总价、屏幕素质、性能够不够 T2 档</b>。跑分均为安兔兔 V10 口径，爆料/弱信源已标注。</div>
+
+  <table>
+    <colgroup>
+      <col style="width:118px">
+      <col><col><col><col>
+    </colgroup>
+    <tr>
+      <th class="dim">维度</th>
+      <th><span class="mname">小米平板 8</span><span class="mtag pick">本章主推</span></th>
+      <th><span class="mname">华为 MatePad 11.5 2026</span><span class="mtag">预算紧 / 要插卡选它</span></th>
+      <th><span class="mname">荣耀 MagicPad 3 12.5</span><span class="mtag">还要打原神加钱上</span></th>
+      <th><span class="mname">iPad 11</span><span class="mtag warn">只推给认准 iPad 生态的人</span></th>
+    </tr>
+    <tr>
+      <td class="dim">到手价</td>
+      <td><span class="price">≈2124<small>渠道国补后 · 2026-09 快照</small></span></td>
+      <td><span class="price">≈1698<small>国补后 · 2026-03 行情，需重查</small></span> <span class="stamp">旧快照</span></td>
+      <td><span class="price">2699 起<small>官方定价</small></span></td>
+      <td><span class="price">≈2999<small>京东国补后 · 2026-09 初</small></span></td>
+    </tr>
+    <tr>
+      <td class="dim">性能</td>
+      <td>骁龙 8s Gen4，安兔兔 V10 约 <b>200 万</b>（爆料口径）</td>
+      <td>麒麟 T82 系，约 <b>115 万</b>量级（弱信源，别拿它拼跑分）</td>
+      <td>骁龙 8 Gen3（T1 档上代旗舰芯）</td>
+      <td>A16，Geekbench 约 2500 / 6200</td>
+    </tr>
+    <tr>
+      <td class="dim">屏幕</td>
+      <td>11.2″ <b>3.2K 144Hz</b>，345ppi</td>
+      <td>11.5″ 2.5K 120Hz，<b>柔光版可选</b></td>
+      <td>12.5″ <b>3K 165Hz</b></td>
+      <td>11″ <span class="bad">60Hz</span>，无抗反射涂层</td>
+    </tr>
+    <tr>
+      <td class="dim">手写笔</td>
+      <td>焦点触控笔 Pro <b>599</b></td>
+      <td>M-Pencil 第三代 <b>399–599</b></td>
+      <td>Magic-Pencil 3 <b>499</b></td>
+      <td>Pencil USB-C <b>649</b>（体验全系垫底档）</td>
+    </tr>
+    <tr>
+      <td class="dim">插卡</td>
+      <td><span class="bad">无蜂窝版</span></td>
+      <td><span class="good">全网通版 2799 可插实体卡</span>（制式与通话能力下单前问客服）</td>
+      <td><span class="bad">无蜂窝版</span></td>
+      <td>蜂窝版仅 eSIM、仅数据，不能打电话</td>
+    </tr>
+    <tr>
+      <td class="dim">生态 / 软件</td>
+      <td>澎湃 OS，PC 级 WPS 写论文够用</td>
+      <td>HarmonyOS，华为笔记 + 小艺解题</td>
+      <td>MagicOS，AI PPT 免费</td>
+      <td>iPadOS，但 <span class="bad">A16 不支持苹果 AI</span></td>
+    </tr>
+    <tr>
+      <td class="dim">一句话</td>
+      <td class="verdict"><b>性能和屏幕都压同价机型一头</b>，配 599 焦点笔总价 2700 上下搞定全套；前置仅 800 万，网课开摄像头的绕道。</td>
+      <td class="verdict"><b>同档独家：柔光屏 + 可插卡全网通</b>；性能这组垫底，别推给游戏党。</td>
+      <td class="verdict"><b>性能强一档但贵 500+</b>，适合「还要打原神」的学生。</td>
+      <td class="verdict">同价硬件被国产全面包围，<b>赢在软件生态和保值</b>——想清楚自己要哪一头。</td>
+    </tr>
+  </table>
+
+  <div class="foot">
+    <span>2026 平板选购指南 · 大学生对比（调研总览 2.1 节）</span>
+    <span>数据快照：2026-09 · 到手价为快照口径，列内已标注各自日期</span>
+  </div>
+</div>
+</body>
+</html>

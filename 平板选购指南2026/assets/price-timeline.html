@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>涨价时间线 · 发布价已死</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #F5F3EC;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #shot {
+    width: 1360px;
+    background-color: #F5F3EC;
+    background-image:
+      linear-gradient(#E9E5D6 1px, transparent 1px),
+      linear-gradient(90deg, #E9E5D6 1px, transparent 1px);
+    background-size: 26px 26px;
+    border: 1px solid #DDD8C9;
+    border-radius: 14px;
+    padding: 46px 52px 34px;
+  }
+  .eyebrow {
+    font-family: "Menlo", monospace;
+    font-size: 12px; letter-spacing: 2px; color: #5B6875;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 2px; background: #B93A27; }
+  h1 {
+    margin-top: 12px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 36px; font-weight: 900; color: #22303E;
+  }
+  h1 em { font-style: normal; color: #B93A27; }
+  .sub { margin-top: 8px; font-size: 15px; color: #5B6875; line-height: 1.7; }
+
+  .wrap { margin-top: 30px; display: flex; gap: 28px; }
+
+  /* 左：时间线 */
+  .tl { flex: 1; position: relative; padding-left: 34px; }
+  .tl::before {
+    content: "";
+    position: absolute; left: 9px; top: 12px; bottom: 12px;
+    width: 2px; background: #C9C3B2;
+  }
+  .ev { position: relative; padding: 14px 0 18px; }
+  .ev + .ev { border-top: 1px dashed #DDD8C9; }
+  .ev::before {
+    content: "";
+    position: absolute; left: -31px; top: 24px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: #F5F3EC; border: 3px solid #B93A27;
+  }
+  .ev .date {
+    font-family: "Menlo", monospace;
+    font-size: 13px; font-weight: 700; color: #B93A27; letter-spacing: 1px;
+  }
+  .ev .what { margin-top: 6px; font-size: 16.5px; font-weight: 700; color: #22303E; }
+  .ev .detail { margin-top: 5px; font-size: 14px; color: #5B6875; line-height: 1.65; }
+  .ev .detail b { color: #22303E; }
+  .ev .src {
+    margin-top: 6px;
+    font-family: "Menlo", monospace;
+    font-size: 11px; color: #98A0A8;
+  }
+  .delta {
+    display: inline-block;
+    font-family: "Songti SC", serif;
+    font-weight: 900; color: #B93A27;
+    font-size: 17px;
+  }
+
+  /* 右：同机对照卡 */
+  .vs {
+    flex: 0 0 400px;
+    align-self: flex-start;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-radius: 12px;
+    padding: 22px 24px;
+    box-shadow: 0 2px 0 rgba(34, 48, 62, .05);
+  }
+  .vs .cap {
+    font-family: "Menlo", monospace;
+    font-size: 11px; letter-spacing: 2px; color: #5B6875;
+  }
+  .vs .t {
+    margin-top: 8px;
+    font-family: "Songti SC", serif;
+    font-size: 20px; font-weight: 900; color: #22303E;
+  }
+  .vs .rows { margin-top: 14px; }
+  .vs .r {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 10px 0;
+    border-top: 1px dashed #DDD8C9;
+    font-size: 14.5px; color: #3D4A57;
+  }
+  .vs .p {
+    font-family: "Songti SC", serif;
+    font-size: 26px; font-weight: 900;
+  }
+  .vs .p.red { color: #B93A27; }
+  .vs .p.blue { color: #2E4E7E; }
+  .vs .gap {
+    margin-top: 12px;
+    background: rgba(185, 58, 39, .07);
+    border: 1px dashed rgba(185, 58, 39, .5);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13.5px; color: #6B4A42; line-height: 1.6;
+  }
+  .vs .gap b { color: #B93A27; }
+
+  .rule {
+    margin-top: 26px;
+    display: flex; align-items: center; gap: 12px;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-left: 4px solid #2E4E7E;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 14px; color: #3D4A57; line-height: 1.6;
+  }
+  .rule b { color: #22303E; }
+  .rule .tag {
+    font-family: "Menlo", monospace;
+    font-size: 11px; color: #2E4E7E; letter-spacing: 1px;
+    white-space: nowrap;
+    border: 1px solid rgba(46, 78, 126, .35);
+    border-radius: 6px; padding: 3px 10px;
+  }
+
+  .foot {
+    margin-top: 26px;
+    display: flex; justify-content: space-between;
+    font-family: "Menlo", monospace;
+    font-size: 11px; color: #98A0A8;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="eyebrow">图 05 · PRICE TIMELINE · 涨价时间线</div>
+  <h1>发布价已死，2026 年的平板价格<em>一年三变</em></h1>
+  <div class="sub">一篇推荐文如果不写价格快照日期，跟耍流氓没区别。这篇文里每个价格都标了日期。</div>
+
+  <div class="wrap">
+    <div class="tl">
+      <div class="ev">
+        <div class="date">2025-12-16</div>
+        <div class="what">小米平板全系涨价 <span class="delta">+100–200 元</span></div>
+        <div class="detail">官方说法：存储成本上涨。</div>
+        <div class="src">信源：小米官方调价（小米.md）</div>
+      </div>
+      <div class="ev">
+        <div class="date">2026-06-25</div>
+        <div class="what">苹果全球涨价 <span class="delta">+800–1800 元</span></div>
+        <div class="detail">iPad 11 官网价 <b>2999 → 3799</b>。早买的赚到——涨价本身佐证了 iPad 的保值。</div>
+        <div class="src">信源：IT之家（苹果.md）</div>
+      </div>
+      <div class="ev">
+        <div class="date">2026-09 快照</div>
+        <div class="what">华为 MatePad 11.5 S 灵动款 <span class="delta">2099 → 2199</span></div>
+        <div class="detail">首发 2099，现售 2199，悄无声息涨了一百。</div>
+        <div class="src">信源：华为商城（华为.md）</div>
+      </div>
+    </div>
+
+    <div class="vs">
+      <div class="cap">SAME iPad · TWO PRICES</div>
+      <div class="t">同一台 iPad 11，两个渠道差 800</div>
+      <div class="rows">
+        <div class="r"><span>苹果官网（涨价后）</span><span class="p red">3799</span></div>
+        <div class="r"><span>京东券 + 国补后（128G，2026-09 初）</span><span class="p blue">≈2999</span></div>
+      </div>
+      <div class="gap">官网涨了 800，电商渠道把价格又<b>拉回了涨价前的水平</b>。只看「官方定价」永远算不清真实账单。</div>
+    </div>
+  </div>
+
+  <div class="rule">
+    <span class="tag">国补规则</span>
+    <span>3C 数码 <b>15% 直减、单件封顶 500 元、单价 6000 元以内</b>可享——厂商定价开始贴着这条线跳舞：联想 YOGA Pad Pro 14.5 套装定 5999 卡线内，拯救者 Y700 无极 16+512 定 6499 超线 499，国补一分吃不到。定价差几百，到手差上千。</span>
+  </div>
+
+  <div class="foot">
+    <span>2026 平板选购指南 · 涨价时间线（调研总览 4.3 节）</span>
+    <span>数据快照：2026-09 · 电商到手价随国补与促销波动</span>
+  </div>
+</div>
+</body>
+</html>

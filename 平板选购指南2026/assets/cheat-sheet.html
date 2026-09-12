@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>速查表 · 四档预算各一个答案</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #F5F3EC;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #shot {
+    width: 1400px;
+    background-color: #F5F3EC;
+    background-image:
+      linear-gradient(#E9E5D6 1px, transparent 1px),
+      linear-gradient(90deg, #E9E5D6 1px, transparent 1px);
+    background-size: 26px 26px;
+    border: 1px solid #DDD8C9;
+    border-radius: 14px;
+    padding: 46px 52px 34px;
+  }
+  .eyebrow {
+    font-family: "Menlo", monospace;
+    font-size: 12px; letter-spacing: 2px; color: #5B6875;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 2px; background: #B93A27; }
+  h1 {
+    margin-top: 12px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 36px; font-weight: 900; color: #22303E;
+  }
+  h1 em { font-style: normal; color: #B93A27; }
+  .sub { margin-top: 8px; font-size: 15px; color: #5B6875; line-height: 1.7; }
+
+  .rows { margin-top: 26px; display: flex; flex-direction: column; gap: 14px; }
+  .row {
+    display: flex;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .budget {
+    flex: 0 0 190px;
+    background: #22303E;
+    color: #F5F3EC;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 18px 22px;
+  }
+  .budget .b {
+    font-family: "Songti SC", serif;
+    font-size: 23px; font-weight: 900;
+  }
+  .budget .t {
+    font-family: "Menlo", monospace;
+    font-size: 10.5px; letter-spacing: 1.5px; color: #9AA8B8;
+    margin-top: 5px;
+  }
+  .mid { flex: 1; padding: 16px 22px; }
+  .mid .m {
+    font-size: 18px; font-weight: 800; color: #22303E;
+    display: flex; align-items: baseline; gap: 12px;
+  }
+  .mid .m .p {
+    font-family: "Songti SC", serif;
+    font-size: 19px; font-weight: 900; color: #B93A27;
+    white-space: nowrap;
+  }
+  .mid .why { margin-top: 6px; font-size: 13.8px; color: #3D4A57; line-height: 1.65; }
+  .mid .why b { color: #22303E; }
+  .nogo {
+    flex: 0 0 330px;
+    border-left: 1px dashed #C9C3B2;
+    padding: 16px 22px;
+    font-size: 13.2px; color: #6B4A42; line-height: 1.65;
+    background: rgba(185, 58, 39, .04);
+  }
+  .nogo .h {
+    font-family: "Menlo", monospace;
+    font-size: 10.5px; letter-spacing: 1.5px; color: #B93A27;
+    display: block; margin-bottom: 5px;
+  }
+  .nogo b { color: #B93A27; }
+
+  .foot {
+    margin-top: 26px;
+    display: flex; justify-content: space-between;
+    font-family: "Menlo", monospace;
+    font-size: 11px; color: #98A0A8;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="eyebrow">图 12 · CHEAT SHEET · 速查表</div>
+  <h1>不想纠结就抄这页：<em>四档预算，各一个答案</em></h1>
+  <div class="sub">每档只给一两台，附上「不适合谁」。价格均带快照日期，过期了按文末方法自己重查，别按旧数字下单。</div>
+
+  <div class="rows">
+    <div class="row">
+      <div class="budget"><span class="b">1000 元内</span><span class="t">BUDGET · UNDER 1K</span></div>
+      <div class="mid">
+        <div class="m">OPPO Pad SE <span class="p">国补 721.65 起</span></div>
+        <div class="why"><b>大厂最低价</b>，宝妈管控和父母追剧两个场景都能打；四扬声器 + 9340mAh，官方承诺 4 年流畅更新。</div>
+      </div>
+      <div class="nogo"><span class="h">不适合谁</span>要插卡的、要耳机孔的、要玩游戏的。</div>
+    </div>
+    <div class="row">
+      <div class="budget"><span class="b">1000–2000</span><span class="t">BUDGET · 1K–2K</span></div>
+      <div class="mid">
+        <div class="m">REDMI Pad 2 Pro <span class="p">≈1529</span></div>
+        <div class="why">12.1″ 大屏 + <b>12000mAh 大电池</b> + 3.5mm 耳机孔，家庭娱乐的甜点。宝妈这个档位可改选<b>荣耀平板 10</b>（1274 起，坐姿检测 + 纯净学习空间）。</div>
+      </div>
+      <div class="nogo"><span class="h">不适合谁</span>没宽带的家庭——加钱上 REDMI Pad 2 SE 4G 版（1299，能打电话）。</div>
+    </div>
+    <div class="row">
+      <div class="budget"><span class="b">2000–3000</span><span class="t">BUDGET · 2K–3K</span></div>
+      <div class="mid">
+        <div class="m">小米平板 8 <span class="p">≈2124</span></div>
+        <div class="why">骁龙 8s Gen4 + 3.2K 144Hz，<b>性能和屏幕都压同价机型一头</b>；配 599 焦点笔总价 2700 上下搞定全套，学生党和自用党的通用答案。</div>
+      </div>
+      <div class="nogo"><span class="h">不适合谁</span>要插卡的（全系无蜂窝版）、网课重度开摄像头的（前置仅 800 万）。</div>
+    </div>
+    <div class="row">
+      <div class="budget"><span class="b">3000 以上</span><span class="t">BUDGET · 3K+</span></div>
+      <div class="mid">
+        <div class="m">华为 MatePad Mini <span class="p">国补后 3399 起</span></div>
+        <div class="why">8.8″ OLED、255g、<b>能插卡打电话</b>，「能揣兜里的手机平板」这个物种的唯一解。生态党这个价位也可以看 iPad Air M4（京东国补后约 4772），M4 + 12GB 用满四年不亏。</div>
+      </div>
+      <div class="nogo"><span class="h">不适合谁</span>想要大屏的、预算敏感的。</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>2026 平板选购指南 · 速查表（正文第三章）</span>
+    <span>数据快照：2026-09 · 价格随国补与促销波动，下单前重查</span>
+  </div>
+</div>
+</body>
+</html>

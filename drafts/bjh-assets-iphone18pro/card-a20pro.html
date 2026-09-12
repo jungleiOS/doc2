@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>A20 Pro 2nm 芯片与自研全家桶</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+  .hero {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 28px;
+    align-items: stretch;
+  }
+  .chip-card {
+    background: linear-gradient(145deg, #1a1f2b 0%, #121620 100%);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 32px 34px;
+    position: relative;
+    overflow: hidden;
+  }
+  .chip-card::before {
+    content: "";
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, transparent 70%);
+  }
+  .chip-label {
+    font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--amber);
+  }
+  .chip-name {
+    margin-top: 10px;
+    font-size: 54px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--ink-0);
+  }
+  .chip-name em { font-style: normal; color: var(--amber); }
+  .chip-sub {
+    margin-top: 4px;
+    font-size: 15px;
+    color: var(--ink-2);
+  }
+  .chip-sub b { color: var(--amber); font-weight: 600; }
+
+  .specs {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .spec {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .spec .n {
+    font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--ink-0);
+  }
+  .spec .n em { font-style: normal; color: var(--amber); }
+  .spec .l {
+    margin-top: 4px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--ink-2);
+    text-transform: uppercase;
+  }
+
+  /* 右侧：自研全家桶 4 个 chiplet */
+  .bundle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 14px;
+  }
+  .chiplet {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 140px;
+  }
+  .chiplet .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--amber);
+    box-shadow: 0 0 8px var(--amber);
+    margin-bottom: 12px;
+  }
+  .chiplet.cpu .dot { background: var(--amber); box-shadow: 0 0 8px var(--amber); }
+  .chiplet.modem .dot { background: var(--blue); box-shadow: 0 0 8px var(--blue); }
+  .chiplet.wifi .dot { background: var(--violet); box-shadow: 0 0 8px var(--violet); }
+  .chiplet.cool .dot { background: var(--green); box-shadow: 0 0 8px var(--green); }
+
+  .chiplet .name {
+    font-size: 22px; font-weight: 800; color: var(--ink-0);
+    letter-spacing: -0.5px;
+  }
+  .chiplet .name em { font-style: normal; font-weight: 600; font-size: 13px; color: var(--ink-2); letter-spacing: 1px; margin-left: 6px; }
+  .chiplet .desc {
+    font-size: 12.5px; color: var(--ink-2); line-height: 1.5;
+    margin-top: 6px;
+  }
+  .chiplet .big {
+    margin-top: 10px;
+    font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+    font-size: 26px; font-weight: 800;
+    color: var(--ink-0);
+  }
+  .chiplet .big em { font-style: normal; }
+  .chiplet.modem .big em { color: var(--blue); }
+  .chiplet.wifi .big em { color: var(--violet); }
+  .chiplet.cool .big em { color: var(--green); }
+  .chiplet .big .unit { font-size: 12px; color: var(--ink-2); margin-left: 4px; letter-spacing: 1px; font-weight: 600; }
+
+  .foot-note {
+    margin-top: 24px;
+    padding: 14px 18px;
+    background: rgba(96, 165, 250, 0.06);
+    border: 1px solid rgba(96, 165, 250, 0.18);
+    border-radius: 10px;
+    font-size: 13.5px;
+    color: var(--ink-1);
+    line-height: 1.6;
+  }
+  .foot-note b { color: var(--blue); font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="brand">APPLE RESEARCH · 2026.09</div>
+  <span class="tag">SILICON · APPLE CUSTOM STACK</span>
+  <h1>A20 Pro 2nm + <em>自研芯片全家桶</em></h1>
+  <div class="sub">首款量产 <b>2nm 手机芯片</b>，台积电 N2 工艺。苹果在高通、博通之外完成了基带、Wi-Fi 自研闭环。</div>
+
+  <div class="hero">
+    <div class="chip-card">
+      <div class="chip-label">TSMC N2 · 2ND GEN APPLE SILICON MOBILE</div>
+      <div class="chip-name">A20 <em>Pro</em></div>
+      <div class="chip-sub">CPU <b>6 核</b> · GPU <b>7 核</b> · 双 <b>16 核</b> Neural Engine</div>
+
+      <div class="specs">
+        <div class="spec"><div class="n">2<em>nm</em></div><div class="l">PROCESS</div></div>
+        <div class="spec"><div class="n">6<em>C</em></div><div class="l">CPU CORES</div></div>
+        <div class="spec"><div class="n">7<em>C</em></div><div class="l">GPU CORES</div></div>
+      </div>
+
+      <div class="foot-note">
+        首款量产 <b>2nm 手机芯片</b>。能效提升带来约 6 小时续航跳跃，配合 <b>AVS 快充</b> 与蒸汽腔体散热形成完整能耗闭环。
+      </div>
+    </div>
+
+    <div class="bundle">
+      <div class="chiplet cpu">
+        <div class="dot"></div>
+        <div>
+          <div class="name">A20 Pro<em>· APP</em></div>
+          <div class="desc">台积电 N2<br>6C CPU + 7C GPU</div>
+        </div>
+        <div class="big">2<em>nm</em><span class="unit">TSMC N2</span></div>
+      </div>
+      <div class="chiplet modem">
+        <div class="dot"></div>
+        <div>
+          <div class="name">C2<em>· MODEM</em></div>
+          <div class="desc">第二代自研蜂窝基带</div>
+        </div>
+        <div class="big">+50<em>%</em><span class="unit">vs C1X</span></div>
+      </div>
+      <div class="chiplet wifi">
+        <div class="dot"></div>
+        <div>
+          <div class="name">N1<em>· WLAN</em></div>
+          <div class="desc">自研 Wi-Fi 7 芯片</div>
+        </div>
+        <div class="big">Wi-Fi <em>7</em><span class="unit">SELF-DEV</span></div>
+      </div>
+      <div class="chiplet cool">
+        <div class="dot"></div>
+        <div>
+          <div class="name">Vapor<em>· COOL</em></div>
+          <div class="desc">新一代蒸汽腔体散热</div>
+        </div>
+        <div class="big">3<em>×</em><span class="unit">vs GEN-1</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="src">SOURCE · Apple 官网规格页 + TSMC 技术路线图</span>
+    <span>2nm 首发 · 基带自研 · Wi-Fi 自研 · 散热 3 倍</span>
+  </div>
+</div>
+</body>
+</html>

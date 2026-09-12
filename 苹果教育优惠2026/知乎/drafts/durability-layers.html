@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 900px; padding: 40px; font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; background: #FAFAFA; }
+.title { font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; text-align: center; }
+.subtitle { font-size: 14px; color: #999; text-align: center; margin-bottom: 36px; }
+.layers { display: flex; flex-direction: column; gap: 20px; }
+.layer { display: grid; grid-template-columns: 80px 1fr 1fr 1fr; gap: 16px; align-items: start; }
+.layer-num { width: 80px; height: 80px; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 28px; font-weight: 700; color: #fff; }
+.layer-1 { background: linear-gradient(135deg, #667eea, #764ba2); }
+.layer-2 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.layer-3 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.layer-num span { font-size: 11px; font-weight: 400; opacity: 0.9; margin-top: 2px; }
+.layer-content { grid-column: 2 / -1; background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.layer-title { font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.compare-item { padding: 12px; border-radius: 10px; }
+.mac-side { background: #F0FDF4; }
+.win-side { background: #FEF2F2; }
+.compare-label { font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.compare-text { font-size: 14px; color: #333; line-height: 1.6; }
+.compare-text strong { color: #1a1a1a; }
+.arrow { text-align: center; font-size: 24px; color: #ccc; margin: 4px 0; }
+.bottom-note { background: #fff; border-radius: 16px; padding: 24px; margin-top: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center; }
+.bottom-note p { font-size: 15px; color: #666; line-height: 1.8; }
+.bottom-note strong { color: #1a1a1a; }
+</style>
+</head>
+<body>
+<div class="title">Mac「耐用」的三层逻辑</div>
+<div class="subtitle">每一层 Windows 都输一截，叠加起来差距就大了</div>
+<div class="layers">
+  <div class="layer">
+    <div class="layer-num layer-1">01<span>硬件</span></div>
+    <div class="layer-content">
+      <div class="layer-title">硬件本身能撑多久</div>
+      <div class="compare">
+        <div class="compare-item mac-side">
+          <div class="compare-label">MacBook</div>
+          <div class="compare-text">整块铝合金铣削外壳，<strong>无接缝无卡扣</strong>。Air 电池 500 次循环，Pro 1000 次循环至 80% 容量</div>
+        </div>
+        <div class="compare-item win-side">
+          <div class="compare-label">同价位 Windows 本</div>
+          <div class="compare-text">大量塑料机身或塑料底壳。电池循环寿命多数 500 次，<strong>衰减速度因厂商而异</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="arrow">↓</div>
+  <div class="layer">
+    <div class="layer-num layer-2">02<span>系统</span></div>
+    <div class="layer-content">
+      <div class="layer-title">系统能给你更新多久</div>
+      <div class="compare">
+        <div class="compare-item mac-side">
+          <div class="compare-label">macOS</div>
+          <div class="compare-text">更新支持周期约 <strong>7 年</strong>。2026 年 macOS Tahoe 支持至 2020 年机型。芯片+系统+驱动一家控</div>
+        </div>
+        <div class="compare-item win-side">
+          <div class="compare-label">Windows</div>
+          <div class="compare-text">Windows 11 硬件门槛挡住 2018 年前电脑。<strong>驱动碎片化</strong>，OEM 老机型维护优先级靠后</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="arrow">↓</div>
+  <div class="layer">
+    <div class="layer-num layer-3">03<span>保值</span></div>
+    <div class="layer-content">
+      <div class="layer-title">不想用了，能卖多少钱</div>
+      <div class="compare">
+        <div class="compare-item mac-side">
+          <div class="compare-label">MacBook Air M5</div>
+          <div class="compare-text">教育价 9249 入手，两年后二手 <strong>5500-6000</strong>。月成本 ¥135-156</div>
+        </div>
+        <div class="compare-item win-side">
+          <div class="compare-label">同价位 Windows 本</div>
+          <div class="compare-text">同价 9000-9500 入手，两年后二手 <strong>3000-3500</strong>。月成本 ¥229-271</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bottom-note">
+  <p>「用了好几年都不卡」不是魔法，是<strong>硬件扎实 + 系统有人管 + 卖掉不亏钱</strong>三件事叠加的结果。<br>Windows 本一年一小卡三年一大卡，卡的不是硬件，是系统生态的维护周期到了。</p>
+</div>
+</body>
+</html>

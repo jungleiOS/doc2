@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>5.2mm 有多薄？厚度对决卡</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    background: #1A1D23;
+    font-family: "PingFang SC", sans-serif;
+    padding: 52px 60px;
+    color: #E8E6E1;
+  }
+  .card {
+    background: #22262E;
+    border-radius: 16px;
+    padding: 48px 52px 44px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+  .brand {
+    text-align: center;
+    font-family: "Songti SC", serif;
+    font-size: 20px;
+    color: #5C5F66;
+    letter-spacing: 0.42em;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-family: "Songti SC", serif;
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+  h1 .hl { color: #4ADE80; }
+  .subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #6E6B63;
+    margin-bottom: 36px;
+  }
+  .dash {
+    border: none;
+    border-top: 2px dashed #3A3E48;
+    margin: 32px 0;
+  }
+
+  /* 厚度条 */
+  .bar-group { margin-bottom: 20px; }
+  .bar-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .bar-label .name {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .bar-label .val {
+    font-family: "Menlo", monospace;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .bar-track {
+    height: 36px;
+    background: #2E323A;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.7);
+    transition: width 0.3s;
+  }
+
+  /* 5.2mm = thinnest → green */
+  .bar-duo .bar-fill { background: linear-gradient(90deg, #4ADE80, #22C55E); width: 52%; }
+  .bar-duo .name { color: #4ADE80; }
+  .bar-duo .val { color: #4ADE80; }
+
+  /* iPhone Air 5.5mm */
+  .bar-air .bar-fill { background: linear-gradient(90deg, #A8C8FF, #7BA8E8); width: 55%; }
+  .bar-air .name { color: #A8C8FF; }
+  .bar-air .val { color: #A8C8FF; }
+
+  /* Z Fold 8 4.5mm → actually thinner */
+  .bar-samsung .bar-fill { background: linear-gradient(90deg, #FFD600, #E8C200); width: 45%; }
+  .bar-samsung .name { color: #FFD600; }
+  .bar-samsung .val { color: #FFD600; }
+
+  /* iPhone 18 Pro 8.25mm */
+  .bar-18pro .bar-fill { background: linear-gradient(90deg, #8B8680, #6E6B63); width: 82.5%; }
+  .bar-18pro .name { color: #8B8680; }
+  .bar-18pro .val { color: #8B8680; }
+
+  /* iPhone 18 Pro Max 8.25mm */
+  .bar-18pm .bar-fill { background: linear-gradient(90deg, #8B8680, #6E6B63); width: 82.5%; }
+  .bar-18pm .name { color: #8B8680; }
+  .bar-18pm .val { color: #8B8680; }
+
+  .note {
+    text-align: center;
+    font-size: 16px;
+    color: #6E6B63;
+    line-height: 1.6;
+    margin-top: 8px;
+  }
+  .note strong { color: #FFD600; }
+
+  .stamp {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .stamp span {
+    display: inline-block;
+    border: 3px solid #B2372A;
+    color: #B2372A;
+    font-family: "Songti SC", serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 4px;
+    transform: rotate(-2deg);
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+<div class="card" id="shot">
+  <div class="brand">2026 厚度对决</div>
+  <h1>iPhone Duo 展开 <span class="hl">5.2mm</span><br>有多薄？</h1>
+  <div class="subtitle">展开厚度横向对比 · 越短越薄</div>
+
+  <hr class="dash">
+
+  <div class="bar-group bar-samsung">
+    <div class="bar-label">
+      <span class="name">三星 Z Fold 8</span>
+      <span class="val">4.5mm ✓ 最薄</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill">4.5mm</div></div>
+  </div>
+
+  <div class="bar-group bar-duo">
+    <div class="bar-label">
+      <span class="name">iPhone Duo</span>
+      <span class="val">5.2mm</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill">5.2mm</div></div>
+  </div>
+
+  <div class="bar-group bar-air">
+    <div class="bar-label">
+      <span class="name">iPhone Air</span>
+      <span class="val">5.5mm</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill">5.5mm</div></div>
+  </div>
+
+  <div class="bar-group bar-18pro">
+    <div class="bar-label">
+      <span class="name">iPhone 18 Pro</span>
+      <span class="val">8.25mm</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill">8.25mm</div></div>
+  </div>
+
+  <div class="bar-group bar-18pm">
+    <div class="bar-label">
+      <span class="name">iPhone 18 Pro Max</span>
+      <span class="val">8.25mm</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill">8.25mm</div></div>
+  </div>
+
+  <hr class="dash">
+
+  <div class="note">
+    Duo 展开 5.2mm 比 iPhone Air 还薄 0.3mm<br>
+    但折叠态 <strong>11.3mm</strong> 比常规手机厚一倍——这是折叠屏的物理宿命
+  </div>
+
+  <div class="stamp"><span>百家号 · 数码精算</span></div>
+</div>
+</body>
+</html>

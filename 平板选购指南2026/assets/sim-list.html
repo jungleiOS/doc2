@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>插卡清单 · 全网可插卡型号</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #F5F3EC;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #shot {
+    width: 1440px;
+    background-color: #F5F3EC;
+    background-image:
+      linear-gradient(#E9E5D6 1px, transparent 1px),
+      linear-gradient(90deg, #E9E5D6 1px, transparent 1px);
+    background-size: 26px 26px;
+    border: 1px solid #DDD8C9;
+    border-radius: 14px;
+    padding: 46px 52px 34px;
+  }
+  .eyebrow {
+    font-family: "Menlo", monospace;
+    font-size: 12px; letter-spacing: 2px; color: #5B6875;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 2px; background: #B93A27; }
+  h1 {
+    margin-top: 12px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 36px; font-weight: 900; color: #22303E;
+  }
+  h1 em { font-style: normal; color: #B93A27; }
+  .sub { margin-top: 8px; font-size: 15px; color: #5B6875; line-height: 1.7; }
+  .sub b { color: #22303E; }
+
+  .keys { margin-top: 16px; display: flex; gap: 8px; }
+  .k {
+    font-family: "Menlo", monospace;
+    font-size: 12.5px; color: #2E4E7E;
+    background: rgba(46, 78, 126, .06);
+    border: 1px solid rgba(46, 78, 126, .3);
+    border-radius: 6px; padding: 4px 12px;
+  }
+
+  .grp {
+    margin-top: 26px;
+    font-family: "Songti SC", serif;
+    font-size: 19px; font-weight: 900; color: #22303E;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .grp .line { flex: 1; height: 1px; background: #DDD8C9; }
+  .grp .cnt {
+    font-family: "Menlo", monospace;
+    font-size: 12px; font-weight: 400; color: #B93A27;
+    border: 1px solid rgba(185, 58, 39, .4);
+    border-radius: 6px; padding: 2px 10px;
+  }
+  .grp.esim .cnt { color: #2E4E7E; border-color: rgba(46, 78, 126, .35); }
+
+  table {
+    margin-top: 12px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 13px 16px;
+    text-align: left;
+    font-size: 14.5px;
+    border-bottom: 1px solid #E8E4D6;
+    vertical-align: top;
+    line-height: 1.55;
+  }
+  th {
+    background: #EFECE1;
+    color: #22303E;
+    font-weight: 700;
+    font-size: 13.5px;
+  }
+  td { color: #3D4A57; }
+  tr:last-child td { border-bottom: none; }
+  .model { font-weight: 700; color: #22303E; white-space: nowrap; }
+  .model .brand { display: block; font-weight: 400; font-size: 12px; color: #98A0A8; margin-top: 2px; }
+  .price { font-family: "Songti SC", serif; font-weight: 700; font-size: 17px; color: #B93A27; white-space: nowrap; }
+  .yes { color: #3F7355; font-weight: 700; }
+  .no { color: #B93A27; font-weight: 700; }
+  .mut { color: #98A0A8; }
+  .stamp {
+    display: inline-block;
+    font-family: "Songti SC", serif;
+    font-size: 12px; font-weight: 700; color: #B93A27;
+    border: 1.5px solid #B93A27;
+    border-radius: 4px;
+    padding: 0 6px;
+    margin-left: 6px;
+    transform: rotate(-2deg);
+    white-space: nowrap;
+  }
+
+  .ban {
+    margin-top: 26px;
+    background: #FCFBF7;
+    border: 1px solid #DDD8C9;
+    border-left: 4px solid #B93A27;
+    border-radius: 12px;
+    padding: 16px 22px;
+    font-size: 14.5px; color: #3D4A57; line-height: 1.7;
+  }
+  .ban b { color: #22303E; }
+  .ban .chips { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .ban .c {
+    font-size: 13px; color: #6B4A42;
+    background: rgba(185, 58, 39, .06);
+    border: 1px solid rgba(185, 58, 39, .3);
+    border-radius: 6px; padding: 3px 10px;
+  }
+
+  .foot {
+    margin-top: 26px;
+    display: flex; justify-content: space-between;
+    font-family: "Menlo", monospace;
+    font-size: 11px; color: #98A0A8;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="eyebrow">图 03 · CELLULAR CHECKLIST · 插卡清单</div>
+  <h1>想插卡？你的选择比你以为的<em>少得多</em></h1>
+  <div class="sub">26 款在售平板里，能插实体 SIM 卡打电话的不到 6 款。「能不能插卡」要拆成三个问题——插卡三要素：</div>
+  <div class="keys">
+    <span class="k">① 实体 SIM 还是 eSIM</span>
+    <span class="k">② 4G 还是 5G</span>
+    <span class="k">③ 能不能打电话（大部分只能上网）</span>
+  </div>
+
+  <div class="grp">能插实体 SIM 的完整清单<span class="cnt">按价位排 · 共 6 台</span><span class="line"></span></div>
+  <table>
+    <tr>
+      <th style="width:24%">型号</th>
+      <th style="width:20%">形态</th>
+      <th style="width:14%">制式</th>
+      <th style="width:26%">能否打电话</th>
+      <th style="width:16%">到手价</th>
+    </tr>
+    <tr>
+      <td class="model">REDMI Pad 2 SE 4G 版<span class="brand">小米</span></td>
+      <td>实体 SIM，双卡双待</td>
+      <td>4G</td>
+      <td><span class="yes">能</span>，可通话+短信（官方定位「大号手机」）</td>
+      <td class="price">1299</td>
+    </tr>
+    <tr>
+      <td class="model">OPPO Pad Air5 5G 版<span class="brand">OPPO · 8+128</span></td>
+      <td>实体 SIM</td>
+      <td>5G</td>
+      <td><span class="yes">支持 5G 通话</span>（快科技口径）</td>
+      <td class="price">2399</td>
+    </tr>
+    <tr>
+      <td class="model">REDMI Pad 2 Pro 5G 版<span class="brand">小米 · 8+256</span></td>
+      <td>实体 SIM（海外版佐证，国内形态信息不一致<span class="stamp">待确认</span>）</td>
+      <td>5G</td>
+      <td><span class="stamp">待确认</span> 下单前问客服</td>
+      <td class="price">2599</td>
+    </tr>
+    <tr>
+      <td class="model">华为 MatePad 11.5 2026 全网通版<span class="brand">华为 · 8+256</span></td>
+      <td>实体 Nano-SIM</td>
+      <td>第三方标 5G，官网未标注<span class="stamp">待确认</span></td>
+      <td>可插卡上网；通话能力官网没写清<span class="stamp">待确认</span></td>
+      <td class="price">2799</td>
+    </tr>
+    <tr>
+      <td class="model">华为 MatePad Mini 全系<span class="brand">华为</span></td>
+      <td>实体 Nano-SIM</td>
+      <td>渠道标 5G，官网未标注</td>
+      <td><span class="yes">能</span>（灵犀通信，官方口径）</td>
+      <td class="price">国补后 3399 起</td>
+    </tr>
+    <tr>
+      <td class="model">联想拯救者 Y700 无极<span class="brand">联想</span></td>
+      <td>实体 SIM</td>
+      <td>5G 全网通（含 N79）</td>
+      <td><span class="yes">能</span>，可插卡通话上网</td>
+      <td class="price">国补后 4299–4499</td>
+    </tr>
+  </table>
+
+  <div class="grp esim">仅 eSIM，无实体卡槽<span class="cnt">有运营商门槛</span><span class="line"></span></div>
+  <table>
+    <tr>
+      <th style="width:24%">型号</th>
+      <th style="width:20%">形态</th>
+      <th style="width:14%">制式</th>
+      <th style="width:26%">能否打电话</th>
+      <th style="width:16%">到手价</th>
+    </tr>
+    <tr>
+      <td class="model">OPPO Pad Mini<span class="brand">OPPO</span></td>
+      <td>仅 eSIM</td>
+      <td><span class="mut">官方未说明<span class="stamp">待确认</span></span></td>
+      <td>eSIM 独立联网；通话靠「通信共享」调用手机</td>
+      <td class="price">国补 3199 起</td>
+    </tr>
+    <tr>
+      <td class="model">iPad 11 / mini 7 / Air / Pro 蜂窝版<span class="brand">苹果</span></td>
+      <td>仅 eSIM</td>
+      <td>5G（sub-6）</td>
+      <td><span class="no">仅数据，不能打电话</span>；国内仅部分运营商和城市支持开通</td>
+      <td class="price">蜂窝版加价约 1300（Air 档）</td>
+    </tr>
+  </table>
+
+  <div class="ban">
+    <b>这些品牌不用问了——国行全系没有蜂窝版</b>（两家官网均明示）：
+    <div class="chips">
+      <span class="c">荣耀 全系无插卡</span>
+      <span class="c">vivo / iQOO 全系无插卡</span>
+      <span class="c">小米数字系列（平板 7 / 8 全系）无蜂窝</span>
+      <span class="c">联想主线仅 Y700 无极一款 5G</span>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>2026 平板选购指南 · 插卡清单（调研总览 2.5 节）</span>
+    <span>数据快照：2026-09 · 各品牌官网/京东口径，下单前以页面为准</span>
+  </div>
+</div>
+</body>
+</html>

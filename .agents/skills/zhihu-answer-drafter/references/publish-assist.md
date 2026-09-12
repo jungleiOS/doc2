@@ -1,6 +1,6 @@
 # 知乎作答辅助协议（publish-assist）
 
-由 zhihu-question-scout 第 7 步（起草回答）引用；也适用于任何「把知乎草稿填进编辑器」的场景，与选题流程无关。
+由 zhihu-answer-drafter 引用；也适用于任何「把知乎草稿填进编辑器」的场景，与选题流程无关。
 
 ## 1. 平台判 AI 创作（限流/制裁）的应对协议
 
@@ -16,6 +16,7 @@
 
 - 打开问题页 → 点「写回答」：按钮 innerText 带零宽字符（如 `​\n写回答`），用 `includes('写回答')` 匹配，别用 startsWith。
 - 知乎编辑器是 **Draft.js**（`.public-DraftEditor-content[contenteditable=true]`）。注入富文本的唯一可靠姿势：构造 `new DataTransfer()`，setData `text/html` + `text/plain`，再 `new ClipboardEvent('paste',{clipboardData:dt,bubbles:true,cancelable:true})` 派发到编辑器。
-- markdown → HTML 转换规则：段落转 `<p>`，`**加粗**` 转 `<b>`，链接转 `<a>`；`---` 分割线跳过；图片行转成加粗占位段「【此处上传图片：…本地文件 xx】」，提醒用户手动上传。
+- markdown → HTML 转换规则：段落转 `<p>`，`**加粗**` 转 `<b>`，链接转 `<a>`；`---` 分割线跳过；图片行转成加粗占位段「【此处上传图片：…本地文件 xx】」——占位段只作定位锚点，随后按下面的「图片插入」流程用知乎编辑器的导入图片替换成真实图片，**不留占位给用户手动上传**。
 - 注入后必须验证：innerText 字数、`<a>` 链接列表、加粗数（Draft.js 里加粗渲染为 span，查 `getComputedStyle(e).fontWeight>=600` 的叶子节点）、开头句出现次数 = 1（防重复注入）。
+- **图片插入（必做：通过知乎编辑器的「导入图片」把草稿里的本地图片插进正文）**：文本注入验证通过后，逐个处理图片占位段——光标定位到占位段 → 触发编辑器工具栏的「图片」按钮 → 上传占位段标注的本地文件（草稿相对路径转绝对路径）→ 上传成功后删除占位段。程序化做法：图片按钮背后是一个隐藏的 `<input type="file" accept="image/*">`，用 `new DataTransfer()` 构造 `File` 列表赋给 `input.files` 再 dispatch `change` 事件即可绕过系统文件框（该选择器尚未实测校准，失效就先 snapshot 找实际的 input；再不行退化为点击「图片」按钮让系统文件框弹出，请用户手选对应文件）。每张图插入后必须验证：编辑器内出现 `<img>` 且 src 已是知乎图床域名（`*.zhimg.com`），不是 blob 占位；全部图片插完后再整体数一遍 `<img>` 数量与草稿图片数一致。
 - **改稿时的全量替换是个大坑（2026-08-22 实战）**：`execCommand('selectAll')+delete` 只动 DOM，Draft.js 会从内部模型把旧内容渲染回来；selectAll 后直接 paste 也无效（粘贴发生在 Draft.js 内部光标处，变成追加）。唯一实测可行的清空法：循环派发 Backspace 键事件（keyCode 8）逐字符往回删，删不动了就说明内部光标到了文档头，换 Delete 键（keyCode 46）清剩余部分，直到 innerText 只剩换行再粘贴。单次 `js()` 调用里循环别超过几百次（Runtime.evaluate 会超时），分多批删。**小改动优先让用户在编辑器里手动改，别走全量替换。**

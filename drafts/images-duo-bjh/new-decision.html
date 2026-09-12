@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>iPhone Duo 还是 18 Pro Max？决策分流卡</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    background: #1A1D23;
+    font-family: "PingFang SC", sans-serif;
+    padding: 52px 60px;
+    color: #E8E6E1;
+  }
+  .card {
+    background: #22262E;
+    border-radius: 16px;
+    padding: 48px 52px 44px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+  .brand {
+    text-align: center;
+    font-family: "Songti SC", serif;
+    font-size: 20px;
+    color: #5C5F66;
+    letter-spacing: 0.42em;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-family: "Songti SC", serif;
+    font-size: 44px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #6E6B63;
+    margin-bottom: 36px;
+  }
+  .dash { border: none; border-top: 2px dashed #3A3E48; margin: 32px 0; }
+
+  .vs-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  .vs-card {
+    flex: 1;
+    border-radius: 14px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .vs-card.duo {
+    background: linear-gradient(160deg, rgba(255,214,0,0.08), rgba(255,214,0,0.02));
+    border: 2px solid rgba(255,214,0,0.25);
+  }
+  .vs-card.pro {
+    background: linear-gradient(160deg, rgba(168,200,255,0.08), rgba(168,200,255,0.02));
+    border: 2px solid rgba(168,200,255,0.25);
+  }
+  .vs-card .product-name {
+    font-family: "Songti SC", serif;
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 4px;
+  }
+  .vs-card.duo .product-name { color: #FFD600; }
+  .vs-card.pro .product-name { color: #A8C8FF; }
+  .vs-card .product-price {
+    font-family: "Menlo", monospace;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .vs-card.duo .product-price { color: #FFD600; }
+  .vs-card.pro .product-price { color: #A8C8FF; }
+  .vs-card .product-price .cur { font-size: 18px; }
+  .vs-card .divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin: 16px 0;
+  }
+  .vs-card .pros-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+  .vs-card.duo .pros-title { color: #FFD600; }
+  .vs-card.pro .pros-title { color: #A8C8FF; }
+  .vs-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .vs-card li {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 4px 0;
+    color: #C8C5BD;
+  }
+  .vs-card li::before {
+    margin-right: 8px;
+    font-weight: 700;
+  }
+  .vs-card.duo li::before { content: '✓'; color: #4ADE80; }
+  .vs-card.pro li::before { content: '✓'; color: #4ADE80; }
+  .vs-card .cons { color: #FF9B9B !important; }
+  .vs-card .cons::before { content: '✗'; color: #FF9B9B !important; }
+
+  .vs-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #22262E;
+    border: 3px solid #3A3E48;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Songti SC", serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: #6E6B63;
+    z-index: 2;
+  }
+
+  .decision {
+    display: flex;
+    gap: 20px;
+  }
+  .decision-item {
+    flex: 1;
+    border-radius: 10px;
+    padding: 18px 20px;
+    text-align: center;
+  }
+  .decision-item.buy-duo {
+    background: rgba(255,214,0,0.06);
+    border: 1px solid rgba(255,214,0,0.15);
+  }
+  .decision-item.buy-pro {
+    background: rgba(168,200,255,0.06);
+    border: 1px solid rgba(168,200,255,0.15);
+  }
+  .decision-item.skip {
+    background: rgba(255,155,155,0.06);
+    border: 1px solid rgba(255,155,155,0.15);
+  }
+  .decision-item .who {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .decision-item.buy-duo .who { color: #FFD600; }
+  .decision-item.buy-pro .who { color: #A8C8FF; }
+  .decision-item.skip .who { color: #FF9B9B; }
+  .decision-item .desc {
+    font-size: 14px;
+    color: #8B8680;
+    line-height: 1.5;
+  }
+
+  .stamp {
+    text-align: center;
+    margin-top: 24px;
+  }
+  .stamp span {
+    display: inline-block;
+    border: 3px solid #B2372A;
+    color: #B2372A;
+    font-family: "Songti SC", serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 4px;
+    transform: rotate(-2deg);
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+<div class="card" id="shot">
+  <div class="brand">选购分流</div>
+  <h1>iPhone Duo 还是 18 Pro Max？</h1>
+  <div class="subtitle">差价 5000 元 · 两种完全不同的产品方向</div>
+
+  <hr class="dash">
+
+  <div style="position:relative">
+    <div class="vs-row">
+      <div class="vs-card duo">
+        <div class="product-name">iPhone Duo</div>
+        <div class="product-price"><span class="cur">¥</span>15,999</div>
+        <hr class="divider">
+        <div class="pros-title">核心优势</div>
+        <ul>
+          <li>7.6" 折叠大屏 ≈ iPad mini</li>
+          <li>5.2mm 展开 · 史上最薄</li>
+          <li>iOS 27 折叠屏深度适配</li>
+          <li>Apple Pencil 手写批注</li>
+        </ul>
+        <hr class="divider">
+        <div class="pros-title" style="color:#FF9B9B">取舍</div>
+        <ul>
+          <li class="cons">无长焦 · 拍照弱于 Pro</li>
+          <li class="cons">254g 史上最重</li>
+          <li class="cons">无 Face ID</li>
+        </ul>
+      </div>
+      <div class="vs-card pro">
+        <div class="product-name">iPhone 18 Pro Max</div>
+        <div class="product-price"><span class="cur">¥</span>10,999</div>
+        <hr class="divider">
+        <div class="pros-title">核心优势</div>
+        <ul>
+          <li>全 48MP 三摄 · 4x 光学长焦</li>
+          <li>Face ID · 百万分之一误解锁</li>
+          <li>249g · 比 Duo 轻 5g</li>
+          <li>45h 视频续航</li>
+        </ul>
+        <hr class="divider">
+        <div class="pros-title" style="color:#FF9B9B">不足</div>
+        <ul>
+          <li class="cons">6.9" 屏幕 · 非折叠</li>
+          <li class="cons">无大屏多任务</li>
+          <li class="cons">无 Apple Pencil</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="dash">
+
+  <div class="decision">
+    <div class="decision-item buy-duo">
+      <div class="who">买 Duo 的人</div>
+      <div class="desc">苹果生态深度用户<br>需要大屏办公/阅读<br>不在乎拍照极致</div>
+    </div>
+    <div class="decision-item buy-pro">
+      <div class="who">买 18 Pro Max 的人</div>
+      <div class="desc">拍照是第一优先级<br>对重量敏感<br>不需要折叠大屏</div>
+    </div>
+    <div class="decision-item skip">
+      <div class="who">都别碰的人</div>
+      <div class="desc">预算敏感型用户<br>安卓折叠 8000 起步<br>华为还有长焦</div>
+    </div>
+  </div>
+
+  <div class="stamp"><span>百家号 · 数码精算</span></div>
+</div>
+</body>
+</html>
