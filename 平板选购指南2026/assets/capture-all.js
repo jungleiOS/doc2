@@ -18,6 +18,8 @@ const jobs = [
   { html: 'parents.html',          out: '平板选购指南2026-父母追剧.png' },
   { html: 'small-screen.html',     out: '平板选购指南2026-小屏组.png' },
   { html: 'cheat-sheet.html',      out: '平板选购指南2026-速查表.png' },
+  { html: 'cover-sim.html',        out: '知乎文章-平板插卡篇-封面.png' },
+  { html: 'ipad-pro-price.html',   out: 'assets/raw/ipad-pro-price/iPadPro11寸历代起售价-自制.png' },
 ];
 
 const filter = process.argv[2];

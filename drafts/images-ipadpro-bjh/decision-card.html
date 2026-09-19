@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>iPad Pro 换不换 · 分流卡</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #FAFAF7;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #shot {
+    width: 1000px;
+    background: #FAFAF7;
+    background-image:
+      linear-gradient(#ECEAE2 1px, transparent 1px),
+      linear-gradient(90deg, #ECEAE2 1px, transparent 1px);
+    background-size: 24px 24px;
+    border: 1px solid #E2DFD5;
+    border-radius: 12px;
+    padding: 42px 46px 34px;
+  }
+  h1 {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 34px; font-weight: 900; color: #1E1E1E;
+    text-align: center;
+  }
+  .sub {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px; color: #6B6B66;
+  }
+  .cols { margin-top: 30px; display: flex; gap: 22px; }
+  .col {
+    flex: 1;
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1.5px solid;
+    box-shadow: 0 2px 0 rgba(30, 30, 30, .04);
+  }
+  .col.go   { border-color: #0F7B3D; }
+  .col.stop { border-color: #C0392B; }
+  .col-head {
+    padding: 13px 20px;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 21px; font-weight: 900;
+    color: #FFFFFF;
+  }
+  .col.go .col-head   { background: #0F7B3D; }
+  .col.stop .col-head { background: #C0392B; }
+  .col ul { list-style: none; padding: 8px 0 12px; }
+  .col li {
+    position: relative;
+    padding: 9px 20px 9px 40px;
+    font-size: 16px; color: #2A2A26;
+    line-height: 1.5;
+    border-bottom: 1px dashed #EEEBE2;
+  }
+  .col li:last-child { border-bottom: none; }
+  .col li::before {
+    position: absolute; left: 20px; top: 16px;
+    width: 8px; height: 8px; border-radius: 2px;
+    content: "";
+  }
+  .col.go li::before   { background: #0F7B3D; }
+  .col.stop li::before { background: #C0392B; }
+  .foot {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 14px; color: #6B6B66;
+  }
+  .foot em {
+    font-style: normal;
+    font-family: "Songti SC", "STSong", serif;
+    font-weight: 700;
+    color: #1E1E1E;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <h1>iPad Pro 换不换？先圈出你的断点</h1>
+  <div class="sub">把「能不能替代电脑」换成一个更具体的问题：你每周撞几次墙？</div>
+
+  <div class="cols">
+    <div class="col go">
+      <div class="col-head">这些人可以换</div>
+      <ul>
+        <li>图文内容为主</li>
+        <li>短视频中视频剪辑</li>
+        <li>工具链在主流 App 内</li>
+        <li>家里有电脑兜底</li>
+      </ul>
+    </div>
+    <div class="col stop">
+      <div class="col-head">这些人别换</div>
+      <ul>
+        <li>长片与团队协作</li>
+        <li>印刷流程修图</li>
+        <li>常用 NTFS 移动硬盘拷素材</li>
+        <li>依赖桌面专业软件</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot"><em>断点每周都出现的人，iPad Pro 是负担；断点圈不出来的人，它是解放。</em></div>
+</div>
+</body>
+</html>

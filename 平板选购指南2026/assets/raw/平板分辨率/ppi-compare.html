@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>手机2K vs 平板3.2K · PPI 与观看距离</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  #shot {
+    width: 1200px;
+    padding: 48px 52px 44px;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: #2b2b2b;
+    background:
+      linear-gradient(rgba(190,190,190,.28) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(190,190,190,.28) 1px, transparent 1px),
+      #faf9f5;
+    background-size: 28px 28px;
+  }
+  h1 {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 44px; font-weight: 900; letter-spacing: 2px;
+    text-align: center; color: #1a1a1a;
+  }
+  .sub {
+    text-align: center; font-size: 18px; color: #6b6b6b; margin-top: 10px;
+    letter-spacing: 1px;
+  }
+  .cards { display: flex; gap: 36px; margin-top: 38px; }
+  .card {
+    flex: 1; background: #fff; border: 2px solid #2b2b2b; border-radius: 14px;
+    padding: 26px 28px 24px; position: relative;
+    box-shadow: 6px 6px 0 rgba(43,43,43,.12);
+  }
+  .card .tag {
+    display: inline-block; font-size: 15px; font-weight: 700;
+    padding: 3px 12px; border-radius: 999px; color: #fff;
+    background: #2b2b2b; letter-spacing: 2px;
+  }
+  .card.tablet .tag { background: #b3402a; }
+  .card h2 {
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 30px; margin-top: 12px; color: #1a1a1a;
+  }
+  .spec { margin-top: 14px; font-size: 18px; line-height: 2.05; color: #3a3a3a; }
+  .spec b { color: #b3402a; }
+  .ppi {
+    margin-top: 14px; padding: 12px 16px; background: #f3efe6;
+    border-left: 5px solid #2b2b2b; font-size: 20px; font-weight: 700;
+  }
+  .card.tablet .ppi { border-left-color: #b3402a; }
+  .formula {
+    margin-top: 30px; background: #2b2b2b; color: #f5f2ea;
+    border-radius: 12px; padding: 22px 30px; font-size: 18px; line-height: 1.9;
+  }
+  .formula .f { font-family: "Songti SC", serif; font-size: 21px; color: #ffd98a; }
+  .conclusion {
+    margin-top: 26px; text-align: center;
+    font-family: "Songti SC", "STSong", serif;
+    font-size: 27px; font-weight: 900; color: #b3402a; letter-spacing: 1px;
+  }
+  .note { margin-top: 14px; text-align: center; font-size: 14px; color: #8a8a8a; }
+  .seal {
+    position: absolute; top: 20px; right: 22px;
+    width: 58px; height: 58px; border: 3px solid #b3402a; border-radius: 8px;
+    color: #b3402a; font-family: "Songti SC", serif; font-weight: 900;
+    font-size: 15px; line-height: 1.25; text-align: center;
+    display: flex; align-items: center; justify-content: center;
+    transform: rotate(8deg); opacity: .85;
+  }
+</style>
+</head>
+<body>
+<div id="shot">
+  <h1>手机 2K vs 平板 3.2K：比的从来不是分辨率数字</h1>
+  <div class="sub">分辨率 ÷ 屏幕尺寸 = PPI，PPI × 观看距离 = 你实际看到的细腻度</div>
+
+  <div class="cards">
+    <div class="card phone">
+      <span class="tag">手机 · 标称 2K</span>
+      <h2>3200 × 1440</h2>
+      <div class="spec">
+        屏幕尺寸　约 6.7 英寸<br>
+        标称口径　「2K」<br>
+        典型观看距离　<b>约 30 cm</b>（拿在手里）
+      </div>
+      <div class="ppi">PPI ≈ 520</div>
+      <div class="seal">示意<br>自制</div>
+    </div>
+    <div class="card tablet">
+      <span class="tag">平板 · 标称 3.2K</span>
+      <h2>3200 × 2136</h2>
+      <div class="spec">
+        屏幕尺寸　约 11.2 英寸<br>
+        标称口径　「3.2K」<br>
+        典型观看距离　<b>约 45 cm</b>（放桌上 / 抱在手里）
+      </div>
+      <div class="ppi">PPI ≈ 345（官方口径）</div>
+      <div class="seal">示意<br>自制</div>
+    </div>
+  </div>
+
+  <div class="formula">
+    <span class="f">PPI</span> = 屏幕对角线像素 ÷ 屏幕对角线英寸（横向 3200 相同，屏幕一大，PPI 就被摊薄）<br>
+    <span class="f">像素角尺寸</span> = 3438 ÷（PPI × 观看距离 cm）→ 数值越小越细腻，人眼极限 ≈ 1 角分
+  </div>
+
+  <div class="conclusion">同样「3200 像素宽」：手机 0.56 角分/像素，平板 0.56 角分/像素 —— 在各自的使用距离上，细腻度几乎一样</div>
+  <div class="note">“2K / 3.2K”只是厂商按横向像素约数起的营销名，K 数大不代表更清晰 · 数据按公开规格计算</div>
+</div>
+</body>
+</html>

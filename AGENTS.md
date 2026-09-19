@@ -147,7 +147,8 @@
 │       ├── zhihu-geo-optimizer/  # 知乎 GEO/SEO 优化 Skill（去 AI 味后做机器可读性审查：标题/正文/结尾；调研证据库在 references/geo-research.md）
 │       ├── zhihu-to-baijiahao/  # 知乎转百家号 Skill（SEO 化改写 + 搜索关键词字段，赚搜索长尾；策略依据转写多平台报告）
 │       ├── gzh-design/         # 公众号排版 Skill（Markdown → 粘贴不掉格式的公众号 HTML，6 套主题 + 主题生成器；skills CLI 安装自 isjiamu/gzh-design-skill）
-│       └── hv-analysis/      # 横纵分析法深度研究 Skill（产出 PDF 研究报告）
+│       ├── hv-analysis/      # 横纵分析法深度研究 Skill（产出 PDF 研究报告）
+│       └── image-host-upload/  # 文章本地图片一键传临时图床 Skill（生成 -hosted.md 外链版稿 + 文尾「本地路径→图床URL」溯源映射块；图床仅几小时有效，平台转存后过期无妨；缓存本地溯源）
 ├── drafts/                   # 进行中的初稿（当前为美版有锁iPhone17咨询答复 v1-v3，定稿后交付长图在 美版有锁iPhone17咨询/）
 ├── outlines/                 # 选题、大纲、素材；选题历史.md 由 zhihu-question-scout 维护，按问题 ID 去重
 ├── published/                # 已发布/定稿文章（建议目录）
@@ -179,7 +180,7 @@
 
 ## 3. 可用的 Agent Skills
 
-本项目已配置十二个 Skill，Agent 在执行对应任务时应优先加载并遵循：
+本项目已配置十三个 Skill，Agent 在执行对应任务时应优先加载并遵循：
 
 | Skill | 路径 | 触发场景 |
 |-------|------|---------|
@@ -195,6 +196,7 @@
 | `zhihu-to-baijiahao` | `.agents/skills/zhihu-to-baijiahao/SKILL.md` | 把知乎回答/文章转写为百家号版：SEO 化改写（长尾词标题 + 问答式结构 + 搜索关键词字段），赚百度搜索长尾；含合规时序与数据回收（说「转百家号」「百家号版」「同步到百度」时触发；策略依据 `知乎回答转写多平台_横纵分析报告.md`） |
 | `gzh-design` | `.agents/skills/gzh-design/SKILL.md` | 公众号文章排版：Markdown/docx/pdf/纯文本 → 可直接粘贴进公众号编辑器、不掉格式的 HTML（6 套主题 + 主题生成器，自动章节编号、关键词下划线、引言卡与目录；说「公众号排版」「微信排版」「gzh」「一键排版」时触发；由 skills CLI 安装，源仓库 [isjiamu/gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)） |
 | `hv-analysis` | `.agents/skills/hv-analysis/SKILL.md` | 横纵分析法深度研究（纵轴时间叙事 + 横轴竞品对比 + 交汇洞察），产出 PDF 研究报告（说「横纵分析」「深度研究」「调研一下」时触发） |
+| `image-host-upload` | `.agents/skills/image-host-upload/SKILL.md` | 把文章里的本地图片一键上传到国外免费临时图床（几小时自动过期），生成 `-hosted.md` 外链版稿 + 文尾图片溯源映射块供知乎/百家号编辑器转存（说「传图床」「外链版图稿」「临时图床」时触发；也被 zhihu-answer-drafter 配图完成后和 zhihu-to-baijiahao 定稿后调用） |
 
 使用方式：
 
@@ -328,4 +330,4 @@
 
 ---
 
-**最后更新**：2026-09-10
+**最后更新**：2026-09-12

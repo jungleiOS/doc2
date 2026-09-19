@@ -1,3 +1,4 @@
 node_modules/
 AppleIntelligence国行实测/dev-demo/.build
 .aider*
+.image-host-cache.json
