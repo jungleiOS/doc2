@@ -37,137 +37,86 @@
 
 ## 2. 文件组织
 
+项目采用 **话题 → 问题 → 文稿与资源** 的归集结构。每个话题一个目录，话题内每个问题一个子目录，问题目录里文稿和配图平铺（不分子目录），平台靠文件名前缀区分（`知乎回答-` / `百家号版-` / `公众号版-`）。
+
 ```
 .
-├── AGENTS.md                 # 本文件：项目级 Agent 指令
-├── 多口充电器选购指南/        # 一篇长文及其全部衍生内容的归集目录（文章 + 衍生文 + 配图 + 截图代码）
-│   ├── 多口充电器选购指南.md     # 知乎长文主稿（场景选购 + 决策图，原理部分已拆为系列文并互链）
-│   ├── 知乎文章-充电协议篇.md    # 系列拆文 A：协议原理（主文第一章导读互链，文末三篇互链）
-│   ├── 知乎文章-功率分配与验货篇.md # 系列拆文 B：功率分配原理 + 下单/收货验货清单
-│   ├── 知乎文章-充电线篇.md      # 系列拆文 C：MFi、3A/5A、EPR 线材选购
-│   ├── drafts/                   # 衍生知乎回答草稿 24 篇（素材均取自长文及三篇拆文）
-│   │   ├── AGENTS.md             # 草稿目录专属约定（排版、引流链接、AI 检测教训）
-│   │   ├── 问题对应表.md          # 草稿 ↔ 知乎问题唯一登记处，新增草稿必须追加一行
-│   │   ├── 知乎回答-iPad平替充电器.md / 知乎回答-120W充电器给65W电脑充电.md  # 结构完整的成稿（可作模板）
-│   │   └── zhihu-<主题>-v1.md    # 其余按问题逐篇对应，状态见问题对应表
-│   ├── 多口充电器选购指南-思维导图.html  # 交互式思维导图（D3.js，树数据内嵌，需与文章标题结构同步）
-│   ├── 多口充电器选购指南-封面.png       # 知乎封面 690×280（由思维导图截图生成）
-│   ├── 多口充电器选购指南-案例图.png     # 四宫格案例图集（由 HTML 拼图截图生成）
-│   ├── 多口充电器选购指南-决策图.png     # 五步决策流程图（由 HTML 截图生成）
-│   ├── 多口充电器选购指南-图片尾巴.png   # 文末点赞收藏引导图（由 tail-cta.html 截图生成；另有左版变体，由 capture-tail-left.js 生成）
-│   ├── 知乎文章-充电协议篇-封面.png       # 拆文 A 封面 2760×1120（由 cover-protocol.html 截图生成）
-│   ├── 知乎文章-功率分配与验货篇-封面.png  # 拆文 B 封面（由 cover-power.html 截图生成）
-│   ├── 知乎文章-充电线篇-封面.png        # 拆文 C 封面（由 cover-cable.html 截图生成）
-│   ├── capture-cover.js          # 封面截图脚本（Puppeteer + Chrome）
-│   └── cover-assets/             # 配图素材与截图工作区
-│       ├── case-collage.html     # 案例图集拼图页（改图改字都在这里）
-│       ├── decision-flow.html    # 决策链流程图页面
-│       ├── tail-cta.html         # 图片尾巴（点赞收藏引导）页面
-│       ├── cover-protocol.html   # 拆文 A 封面页（100W→5W + 协议徽章）
-│       ├── cover-power.html      # 拆文 B 封面页（功率条对比 + 验货清单）
-│       ├── cover-cable.html      # 拆文 C 封面页（线材三档 + MFi 印章）
-│       ├── capture-cases.js      # 案例图截图脚本
-│       ├── capture-decision.js   # 决策图截图脚本
-│       ├── capture-tail.js / capture-tail-left.js  # 图片尾巴截图脚本（右版 / 左版）
-│       ├── capture-cover-protocol.js / capture-cover-power.js / capture-cover-cable.js  # 三篇拆文封面截图脚本
-│       └── raw/                  # 从源文下载的原始配图（按事件分目录）
-├── 充电宝3C新规选购指南/        # 3C 新规 + 民航禁令 + 召回潮后的充电宝知乎长文归集目录（与多口充电器选购指南相互独立、可互链）
-│   ├── 知乎文章-充电宝3C新规选购指南.md  # 知乎专栏主稿：合规自查 + 旧机处置 + 按场景选购
-│   ├── drafts/                   # 衍生知乎回答草稿
-│   │   ├── AGENTS.md             # 草稿目录专属约定（引流、好物卡带链接、AI 检测教训沿用多口充电器草稿）
-│   │   └── 知乎回答-<主题>-v1.md  # 按具体问题对应，状态登记在「问题对应表.md」
-│   ├── 充电宝3C新规选购指南-封面.png     # 知乎封面 690×280（由 cover-main.html 截图生成）
-│   ├── 充电宝3C新规选购指南-3C自查流程图.png  # 3C 认证自查流程图（由 3c-check-flow.html 截图生成）
-│   ├── 充电宝3C新规选购指南-登机决策卡.png    # Wh 计算 + 能带/不能带对照卡（由 boarding-check-card.html 截图生成）
-│   ├── 充电宝3C新规选购指南-图片尾巴.png      # 文末点赞收藏引导图（由 tail-cta.html 截图生成）
-│   ├── capture-cover.js          # 封面截图脚本
-│   ├── capture-3c-check.js       # 3C 自查流程图截图脚本
-│   ├── capture-boarding-card.js  # 登机决策卡截图脚本
-│   ├── capture-tail.js           # 图片尾巴截图脚本
-│   └── cover-assets/             # 配图素材与截图工作区
-│       ├── cover-main.html       # 封面页
-│       ├── 3c-check-flow.html    # 3C 自查流程图页面
-│       ├── boarding-check-card.html  # 登机决策卡页面
-│       ├── tail-cta.html         # 图片尾巴页面
-│       └── raw/                  # 原始配图（按事件分目录）
-├── 苹果教育优惠2026/            # 2026 苹果返校季教育优惠内容归集目录（按平台分文件夹管理，assets 为共享工作区）
-│   ├── 知乎/                   # 知乎平台交付物：长文 + 想法文案 + drafts 回答草稿 + 全部知乎版配图
-│   │   ├── 知乎文章-苹果返校季2026精算.md  # 知乎长文：官网 vs 京东国补两条路逐台实算（老文章年度更新稿）
-│   │   ├── 知乎想法文案.txt / 知乎想法-返校季2026引流.txt  # 知乎想法短文案
-│   │   ├── drafts/             # 衍生知乎回答草稿（含本目录 AGENTS.md 与问题对应表，图片以 ../ 引用知乎/ 根目录配图）
-│   │   └── 苹果返校季2026-*.png / 苹果官网-*.png / iPad*|MacBook*  # 知乎版图表、官网截图与草稿配图
-│   ├── 公众号/                 # 公众号平台交付物
-│   │   └── 公众号版-苹果返校季2026.md     # 公众号版长文（卡兹克风格）
-│   ├── 百家号/                 # 百家号平台交付物：图文 + 排版 HTML + 小票风配图（封面/表格/喂饭图均带「百家号版-」前缀）
-│   ├── 头条号/                 # 预留：头条号版图文
-│   └── assets/                 # 共享工作区：HTML 源文件与截图脚本（输出路径已指向各平台子目录）、shots/ 原始截图
-│       ├── table-main.html / table-info.html / table-*-bjh.html   # 知乎版 / 百家号版表格图页面
-│       ├── capture-tables.js / capture-bjh.js   # 表格截图脚本（输出分别落 知乎/ 与 百家号/）
-│       ├── capture-apple-promo.js / capture-apple.js  # 官网真实截图脚本（输出落 知乎/）
-│       ├── feed-official.html / feed-jd.html / feed-*-bjh.html   # 知乎版 / 百家号版喂饭图页面
-│       ├── capture-feed.js / capture-feed-shots.js   # 喂饭图拼图截图脚本（输出落 知乎/）/ 官网素材实拍脚本
-│       ├── cover-bjh.html / decision-*.html / table-science-mac.html  # 百家号封面页 / 知乎草稿决策卡页面
-│       ├── capture-ipad-size-card.js / capture-macbook-role-card.js / capture-science-mac.js  # 知乎草稿配图脚本（输出落 知乎/）
-│       ├── reprocess-bjh-photos.py  # 百家号实拍图重处理（PIL，须用 .venv-md/bin/python3，输出落 百家号/）
-│       └── shots/              # 喂饭图与实拍图原始截图（京东商品页、官网条款页、店内海报，crop/ 子目录为 PIL 裁切后的聚焦图）
-├── 美版有锁iPhone17咨询/        # 付费咨询答复长图（HTML 渲染 → 分段截图 → PIL 拼接）
-│   ├── consult-reply.html      # 答复长图页面（冷白纸面 + 中段深色警示面板，Songti SC 标题 + PingFang 正文）
-│   ├── capture-consult.js      # 分段截图脚本（puppeteer-core，按块边界分段以规避 Chrome 16384px 截图高度上限）
-│   ├── stitch.py               # PIL 竖向拼接脚本（须用 .venv-md/bin/python3 运行，系统 python3 无 PIL）
-│   └── 美版有锁iPhone17咨询-答复长图.png  # 成品长图 1500×18194
-├── 平板选购指南2026/            # 2026 平板选购知乎长文归集目录（「5 件事」横切面主线）
-│   ├── 知乎文章-2026平板选购指南-v1.md  # 知乎长文初稿（13 处图片占位，第 13 张尾巴复用 通用引导图/ 成品）
-│   ├── 平板选购指南2026-*.png   # 全套 12 张配图（封面/决策图/插卡清单/配件税/涨价时间线/跑分梯队/护眼对照/大学生对比/宝妈管控/父母追剧/小屏组/速查表，2x 输出）
-│   └── assets/                 # 配图工作区：12 个 HTML 源文件（<图名>.html）+ capture-all.js 一键截图（puppeteer-core + file:// 直读，element 截图 #shot，deviceScaleFactor 2）；设计语言：演算纸方格底 + Songti SC 标题 + 朱砂「待确认」印章
-│       └── raw/                # 真机实拍引用素材（按品牌分目录，含 图源清单.md：每图注明来源媒体/页面URL/原图URL，发布必须标注「图源：XX」；荣耀平板10/MatePad 11.5 2026/REDMI Pad 2 SE 4G 为缺口）
-├── 内容自荐筛选机制/            # 知乎「内容自荐」配额筛选方法（/creator/recommend）
-│   └── 内容自荐筛选机制.md      # 四层漏斗（资格→否决→E×L×V 打分→配额）+ 复盘闭环 + ego-browser 抓取脚本
-├── 通用引导图/                 # 全文章复用的结尾互动引导图（撞色动效版：#BFFF00 撞 #222，6s 无缝循环 WebP；署名「Apple研究生」）
-│   ├── tail-zhihu-anim.html    # 知乎版：赞同/喜欢/收藏/关注四卡（高亮「关注」）
-│   ├── tail-bjh-anim.html      # 百家号版：点赞/收藏/评论三卡（高亮「收藏」）
-│   ├── logo-zhihu.jpg / logo-baidu.jpg  # 官方平台图标（App Store 官方素材 512×512，brand 区以 18px 圆角 img 引用）
-│   ├── capture-webp.js         # 确定性逐帧捕获脚本（node capture-webp.js <页面名>，file:// 直读无需起服务；90 帧 15fps 输出 /tmp/<页面名>-frames/）
-│   ├── 通用引导图-知乎-动效尾巴.webp    # 成品 2400×606，img2webp -loop 0 -d 66 合成
-│   ├── 通用引导图-知乎-动效尾巴.gif     # GIF 版 1200×303（ffmpeg 调色板流程：palettegen + paletteuse bayer 抖动，1.0MB）
-│   ├── 通用引导图-百家号-动效尾巴.webp  # 成品 2400×606，同上
-│   └── 通用引导图-百家号-动效尾巴.gif   # GIF 版 1200×328（同知乎版 GIF 流程，1.1MB；署名「数码研究生」）
-├── research/知乎转写多平台/     # 转写多平台研究素材（01 纵向平台史、02-04 横向平台、05 转写工作流方法论）
-├── 知乎回答转写多平台_横纵分析报告.md  # 转写多平台研究报告主稿（hv-analysis 产出，由 research/ 素材汇总）
-├── Apple研究生-选题与写作角度_横纵分析报告.{md,html,pdf}  # Apple 领域选题研究报告（hv-analysis 产出，三种格式）
-├── .agents/
-│   └── skills/
-│       ├── khazix-writer/    # 公众号长文写作 Skill
-│       ├── zhihu-viral-answer/  # 知乎高赞回答写作 Skill
-│       ├── neat-freak/       # 知识与规范收尾 Skill
-│       ├── frontend-design/  # 前端视觉设计 Skill
-│       ├── zhihu-question-scout/  # 知乎选题 Skill（只选题；确认题目后交给 zhihu-answer-drafter）
-│       ├── zhihu-answer-drafter/  # 知乎回答起草 Skill（读题→成稿→配图→去 AI 味→GEO→存档；references/publish-assist.md 为作答辅助协议）
-│       ├── zhihu-answer-tracker/  # 知乎回答数据回采 Skill（创作中心五指标 + 排名，喂 scout 5.4 校准回路；快照存 analytics/）
-│       ├── zhihu-haowu-evaluator/ # 知乎好物插入评估 Skill（被 scout 编排，也可独立触发）
-│       ├── zhihu-geo-optimizer/  # 知乎 GEO/SEO 优化 Skill（去 AI 味后做机器可读性审查：标题/正文/结尾；调研证据库在 references/geo-research.md）
-│       ├── zhihu-to-baijiahao/  # 知乎转百家号 Skill（SEO 化改写 + 搜索关键词字段，赚搜索长尾；策略依据转写多平台报告）
-│       ├── gzh-design/         # 公众号排版 Skill（Markdown → 粘贴不掉格式的公众号 HTML，6 套主题 + 主题生成器；skills CLI 安装自 isjiamu/gzh-design-skill）
-│       ├── hv-analysis/      # 横纵分析法深度研究 Skill（产出 PDF 研究报告）
-│       └── image-host-upload/  # 文章本地图片一键传临时图床 Skill（生成 -hosted.md 外链版稿 + 文尾「本地路径→图床URL」溯源映射块；图床仅几小时有效，平台转存后过期无妨；缓存本地溯源）
-├── drafts/                   # 进行中的初稿（当前为美版有锁iPhone17咨询答复 v1-v3，定稿后交付长图在 美版有锁iPhone17咨询/）
-├── outlines/                 # 选题、大纲、素材；选题历史.md 由 zhihu-question-scout 维护，按问题 ID 去重
-├── published/                # 已发布/定稿文章（建议目录）
-└── references/               # 参考资料、数据、截图（建议目录）
-    ├── 好物决策卡模板.md      # 好物推荐商品决策卡（写稿前填卡，含选题判断）
-    └── iPhone锁机制全解.md    # 运营商锁/激活锁/监管锁/双重认证机制辨析 + 账号弃用换绑实操（咨询员自用，含信源）
+├── AGENTS.md
+│
+│  ── 话题归集目录 ──
+│
+├── 多口充电器选购指南/          # 充电器长文 + 3 篇拆文 + 31 个衍生问题
+│   ├── _主稿/                  # 主稿文章 + 配图 + 截图脚本 + cover-assets/
+│   ├── 问题对应表.md / 好物决策卡.md
+│   └── <问题名>/               # 每个问题一个目录，内含知乎稿 + 百家号稿 + 配图（平铺）
+│       ├── 知乎回答-xxx.md / zhihu-xxx-v1.md
+│       ├── 百家号版-xxx.md     # 有百家号版时才存在
+│       └── *.png / *.jpg       # 配图、截图脚本、HTML 源文件，全部散放
+│
+├── 充电宝3C新规选购指南/        # 3C 新规长文 + 8 个衍生问题
+│   ├── _主稿/
+│   └── <问题名>/
+│
+├── 平板选购指南2026/            # 平板长文 + 插卡篇 + 6 个衍生问题
+│   ├── _主稿/                  # 含 assets/（HTML 源 + capture-all.js + raw/ 实拍素材）
+│   └── <问题名>/
+│
+├── 苹果教育优惠2026/            # 返校季精算（知乎/公众号/百家号三平台主稿）+ 19 个衍生问题
+│   ├── _主稿/                  # 三平台主稿 + 配图 + assets/（截图脚本、HTML 源、shots/）
+│   └── <问题名>/
+│
+├── 联想平板选购指南/            # 联想平板横评 + 6 个衍生问题
+│   ├── _主稿/                  # 含 assets/（商品卡 HTML/PNG、分档表、user-shots/ 实拍）
+│   └── <问题名>/
+│
+├── 苹果折叠屏/                  # 折叠屏 4 个问题 + 素材/
+│   └── <问题名>/
+│
+├── iPhone18Pro/                # iPhone 18 Pro 4 个问题（涨价/全球售价/国行AI/价格爆料）
+│   └── <问题名>/
+│
+├── iOS功能/                    # iOS 功能 2 个问题（接力功能/调休闹钟）
+│   └── <问题名>/
+│
+├── AppleIntelligence国行实测/   # 测试项目（非 Q&A），保留原结构
+│   ├── availability-log.md / test-cases.md
+│   ├── baseline-domestic-ai/ / baseline-overseas/ / launch-day/
+│   └── dev-demo/
+│
+├── 美版有锁iPhone17咨询/        # 付费咨询答复长图
+│   └── 美版有锁iPhone17国内使用/  # consult-reply.html + 答复长图 + 草稿 v1-v3
+│
+├── 内容自荐筛选机制/            # 知乎「内容自荐」配额筛选方法
+│
+│  ── 共享基础设施 ──
+│
+├── outlines/                   # 选题过程：选题历史.md、调研笔记、大纲
+├── analytics/                  # 数据回采：回答表现 JSON、带货数据采集
+├── research/                   # 跨话题研究：横纵分析报告、转写多平台研究素材
+├── references/                 # 可复用参考：好物决策卡模板、iPhone锁机制全解
+├── 通用引导图/                  # 全文章复用的结尾互动引导图（WebP + GIF）
+└── .agents/skills/             # Agent Skills（13 个）
 ```
+
+### 2.0 话题目录内部约定
+
+- **`_主稿/`**：下划线前缀排最前，存放主稿文章、主稿配图、截图脚本和 `assets/`（HTML 源 + `cover-assets/` + `raw/`）。
+- **`<问题名>/`**：每个衍生问题一个目录，目录名用问题核心关键词。目录内文稿和配图**平铺散放**，不建 `images/` 或平台子目录。平台靠文件名前缀区分：`知乎回答-` / `zhihu-` / `百家号版-` / `公众号版-`。
+- **`问题对应表.md`**：话题级，登记所有问题的草稿文件、链接、发布状态。放在话题根目录。
+- **`-hosted.md`**：图床外链版，与原稿同目录。
+- **`图源清单.md`**：配图信源溯源，跟配图放在同一问题目录。
 
 ### 2.1 文件命名规范
 
 - 文章文件使用中文标题，不加日期前缀。
-- 草稿文件名格式：` drafts/<平台>-<主题>-v<版本号>.md `，例如 `drafts/zhihu-充电器-v1.md`。
+- 草稿文件名格式：`<话题>/<问题名>/<平台前缀>-<主题>-v<版本号>.md`，例如 `多口充电器选购指南/充电线老是坏/zhihu-充电线老是坏-v1.md`。
 - 大纲文件名格式：`outlines/<主题>-outline.md`。
-- 已发布文件直接放在根目录或 `published/` 下，保持标题简洁。
+- 已发布文件不移动，留在问题目录内，通过问题对应表标记发布状态。
 
-知乎封面/图集采用「HTML 渲染 → Puppeteer 截图」工作流（以《多口充电器选购指南》为例，所有命令在其归集目录内执行）：
+知乎封面/图集采用「HTML 渲染 → Puppeteer 截图」工作流（以《多口充电器选购指南》为例，所有命令在 `_主稿/` 内执行）：
 
-1. 进入目录并启动本地服务：`cd 多口充电器选购指南 && python3 -m http.server 8766`（8765 被其他服务占用）
-2. 封面：`node capture-cover.js`；案例图：`node cover-assets/capture-cases.js`；决策图：`node cover-assets/capture-decision.js`；图片尾巴：`node cover-assets/capture-tail.js`；三篇拆文封面：`node cover-assets/capture-cover-protocol.js` / `capture-cover-power.js` / `capture-cover-cable.js`（截图脚本里的页面 URL 和输出路径都相对于该目录）
+1. 进入目录并启动本地服务：`cd 多口充电器选购指南/_主稿 && python3 -m http.server 8766`（8765 被其他服务占用）
+2. 封面：`node capture-cover.js`；案例图：`node cover-assets/capture-cases.js`；决策图：`node cover-assets/capture-decision.js`；图片尾巴：`node cover-assets/capture-tail.js`；三篇拆文封面：`node cover-assets/capture-cover-protocol.js` / `capture-cover-power.js` / `capture-cover-cable.js`（截图脚本里的页面 URL 和输出路径都相对于 `_主稿/`）
 3. 成品用 ReadMediaFile 工具回看校验后再交付
 
 ### 2.2 Markdown 格式约定
@@ -236,9 +185,9 @@
 
 ### 4.5 定稿与归档
 
-- 定稿后移动到 `published/` 或保留在根目录。
-- 文件名保持简洁，不再带版本号。
-- 如内容有后续修订，在 `drafts/` 中保留修改版本。
+- 定稿后文件留在问题目录内，不移动。通过话题的 `问题对应表.md` 标记发布状态。
+- 文件名保持简洁，版本号只在有多版时保留。
+- 如内容有后续修订，在问题目录内保留修改版本（如 `-v2.md`）。
 
 ---
 
@@ -330,4 +279,4 @@
 
 ---
 
-**最后更新**：2026-09-12
+**最后更新**：2026-09-19
