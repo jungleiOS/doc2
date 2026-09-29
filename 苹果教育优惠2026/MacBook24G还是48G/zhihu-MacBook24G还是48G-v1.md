@@ -55,5 +55,5 @@ cover-assets/raw/MacBook内存选择/MacBook内存选择-活动监视器-24GB内
 cover-assets/raw/MacBook内存选择/MacBook内存选择-Parallels-Win11虚拟机官方图.jpg -> https://litter.catbox.moe/xkjyre.jpg
 cover-assets/raw/MacBook内存选择/MacBook内存选择-苹果官网配置页-内存选配.png -> https://litter.catbox.moe/dpy86x.png
 cover-assets/raw/MacBook内存选择/MacBook内存选择-NBC评测实拍-MBP14-M4Pro.webp -> https://litter.catbox.moe/wso60y.webp
-裂图重传：node .agents/skills/image-host-upload/upload.js 苹果教育优惠2026/知乎/drafts/zhihu-MacBook24G还是48G-v1.md --force
+裂图重传：node .agents/skills/image-host-upload/upload.js 苹果教育优惠2026/MacBook24G还是48G/zhihu-MacBook24G还是48G-v1.md --force
 -->

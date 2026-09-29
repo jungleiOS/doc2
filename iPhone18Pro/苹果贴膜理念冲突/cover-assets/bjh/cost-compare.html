@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>iPhone贴膜成本账</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f6f2ea;
+    font-family: "Outfit", "PingFang SC", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #chart {
+    width: 860px;
+    background: #fffdf8;
+    border: 1px solid #e4dccb;
+    border-radius: 22px;
+    padding: 42px 46px 34px;
+    box-shadow: 0 12px 40px rgba(60, 48, 20, .08);
+  }
+  .kicker {
+    font-size: 13px; letter-spacing: 3px; color: #b3541e;
+    display: flex; align-items: center; gap: 10px; font-weight: 700;
+  }
+  .kicker::before { content: ""; width: 26px; height: 3px; background: #b3541e; border-radius: 2px; }
+  h1 {
+    margin-top: 12px;
+    font-family: "Noto Serif SC", serif;
+    font-size: 36px; font-weight: 900; color: #221d14;
+  }
+  h1 em { font-style: normal; color: #b3541e; }
+  .sub { margin-top: 8px; font-size: 15px; color: #8d8371; }
+
+  .vs { margin-top: 30px; display: flex; gap: 22px; align-items: stretch; }
+  .pane {
+    flex: 1; border-radius: 18px; padding: 26px 28px 22px;
+    position: relative;
+  }
+  .pane.a { background: #221d14; color: #f6f2ea; }
+  .pane.b { background: #fdf3e3; border: 2px solid #e8b04b; color: #221d14; }
+  .label { font-size: 14px; letter-spacing: 1px; opacity: .75; font-weight: 600; }
+  .big {
+    margin-top: 10px;
+    font-family: "Outfit", sans-serif;
+    font-size: 64px; font-weight: 800; letter-spacing: -1px;
+    line-height: 1;
+  }
+  .pane.a .big { color: #ff8a5c; }
+  .pane.b .big { color: #b3541e; }
+  .unit { font-size: 22px; font-weight: 700; margin-left: 4px; }
+  .desc { margin-top: 14px; font-size: 14.5px; line-height: 1.75; opacity: .85; }
+  .desc b { font-weight: 700; }
+  .badge {
+    position: absolute; top: 22px; right: 24px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
+    padding: 4px 10px; border-radius: 999px;
+  }
+  .pane.a .badge { background: rgba(255,138,92,.18); color: #ff8a5c; border: 1px solid rgba(255,138,92,.4); }
+  .pane.b .badge { background: rgba(179,84,30,.1); color: #b3541e; border: 1px solid rgba(179,84,30,.35); }
+
+  .mid {
+    align-self: center; flex: 0 0 64px; height: 64px; border-radius: 50%;
+    background: #e8b04b; color: #221d14;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    box-shadow: 0 6px 18px rgba(232,176,75,.4);
+  }
+
+  .formula {
+    margin-top: 26px;
+    background: #f3eee2; border: 1px dashed #d8cdb2;
+    border-radius: 14px; padding: 16px 22px;
+    font-size: 15.5px; color: #4a4231; line-height: 1.8;
+  }
+  .formula b { color: #b3541e; }
+  .foot {
+    margin-top: 22px;
+    display: flex; justify-content: space-between;
+    font-size: 12px; color: #a89e88; letter-spacing: .5px;
+  }
+</style>
+</head>
+<body>
+<div id="chart">
+  <div class="kicker">COST CHECK · 贴膜成本账</div>
+  <h1>换屏 <em>2698 元</em>，贴膜几十元：这道选择题怎么算</h1>
+  <div class="sub">iPhone 18 Pro 苹果官方保外换屏报价 vs 主流 AR 钢化膜价格（2026年9月数据）</div>
+
+  <div class="vs">
+    <div class="pane a">
+      <div class="badge">风险敞口</div>
+      <div class="label">裸机刮花 / 摔碎后</div>
+      <div class="big">2698<span class="unit">元</span></div>
+      <div class="desc">iPhone 18 Pro <b>官方保外换屏报价</b>。苹果没有为「裸机也耐刮」提供任何划痕赔付承诺，费用全额自己掏。</div>
+    </div>
+    <div class="mid">VS</div>
+    <div class="pane b">
+      <div class="badge">保险成本</div>
+      <div class="label">贴一张 AR 钢化膜</div>
+      <div class="big">30<span class="unit">元起</span></div>
+      <div class="desc">主流品牌 AR 增透膜约 <b>30-80 元</b>，疏油层磨花了半年一换，一年成本不过一两百元。</div>
+    </div>
+  </div>
+
+  <div class="formula">
+    一道简单的算术题：<b>一次换屏钱 ≈ 连续贴膜 30 年</b>。苹果把耐用性讲成信仰，但信仰碎了的维修费，是用户掏。
+  </div>
+
+  <div class="foot">
+    <span>iPhone 贴膜成本对比 · 2026</span>
+    <span>数据来源：苹果官方维修报价 / 主流电商 AR 膜售价</span>
+  </div>
+</div>
+</body>
+</html>

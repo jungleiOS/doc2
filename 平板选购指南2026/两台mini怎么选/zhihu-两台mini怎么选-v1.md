@@ -61,5 +61,5 @@ iPad mini 7 的蜂窝版完全不是这么回事。它插不了实体卡，国�
 ../assets/raw/mini-vs-minipad/ipad-mini7-正面-苹果官网.png -> https://d.uguu.se/cNgEBEUn.png
 ../assets/raw/mini-vs-minipad/随航Sidecar-Mac与iPad协同-苹果官网.jpg -> https://d.uguu.se/cyszoEsx.jpg
 ../assets/raw/华为/matepad-mini-vs-ipad-mini-同框2-快科技.jpg -> https://d.uguu.se/zOQPgtke.jpg
-重传命令：node .agents/skills/image-host-upload/upload.js 平板选购指南2026/drafts/zhihu-两台mini怎么选-v1.md --force（先把正文 URL 换回本地相对路径）
+重传命令：node .agents/skills/image-host-upload/upload.js 平板选购指南2026/两台mini怎么选/zhihu-两台mini怎么选-v1.md --force（先把正文 URL 换回本地相对路径）
 -->

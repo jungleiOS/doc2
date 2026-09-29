@@ -59,5 +59,5 @@ cover-assets/raw/苹果手机好用吗/05-苹果官网-接力Handoff-iPhone与Ma
 cover-assets/raw/苹果手机好用吗/07-iPhone与安卓折旧率对比图-BankMyCell.png -> https://litter.catbox.moe/oecc3q.png
 cover-assets/raw/苹果手机好用吗/08-iPhone17ProMax充电全程功率曲线-POWERZ实测.jpg -> https://litter.catbox.moe/1yxa95.jpg
 cover-assets/raw/苹果手机好用吗/01-iPhone17ProMax真机手持背面实拍.jpeg -> https://litter.catbox.moe/m291jg.jpeg
-裂图重传：node .agents/skills/image-host-upload/upload.js 苹果教育优惠2026/知乎/drafts/zhihu-苹果手机好用吗-v1.md --force
+裂图重传：node .agents/skills/image-host-upload/upload.js 苹果教育优惠2026/苹果手机好用吗/zhihu-苹果手机好用吗-v1.md --force
 -->

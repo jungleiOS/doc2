@@ -60,5 +60,5 @@ iPhone Duo 的定价把行业的真实分工摆在了台面上：15999 元买一
 ../assets/raw/foldable-ultimate/surface-duo2-full.png -> https://s41.ax1x.com/2026/09/19/pnMG9hD.png
 ../assets/raw/foldable-ultimate/samsung-zfold7-hinge-mydrivers.jpg -> https://s41.ax1x.com/2026/09/19/pnMGSAK.jpg
 ../assets/raw/foldable-ultimate/huawei-mate-xts-entertainment-2x.jpg -> https://s41.ax1x.com/2026/09/19/pnMGptO.jpg
-重传命令：node .agents/skills/image-host-upload/upload.js 平板选购指南2026/drafts/zhihu-折叠屏终极形态-v1.md --force（先把正文 URL 换回本地相对路径）
+重传命令：node .agents/skills/image-host-upload/upload.js 平板选购指南2026/折叠屏终极形态/zhihu-折叠屏终极形态-v1.md --force（先把正文 URL 换回本地相对路径）
 -->

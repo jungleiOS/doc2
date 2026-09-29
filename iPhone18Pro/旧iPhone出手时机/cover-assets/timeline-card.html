@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #17181d; font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+  #card {
+    width: 1000px;
+    padding: 56px 52px 48px;
+    background: linear-gradient(160deg, #1d1f26 0%, #17181d 55%, #1f1a1e 100%);
+    color: #f2f0ea;
+  }
+  .kicker { font-size: 22px; letter-spacing: 6px; color: #c9a35c; margin-bottom: 14px; font-weight: 600; }
+  h1 { font-size: 52px; font-weight: 800; margin-bottom: 10px; }
+  h1 .em { color: #e0483f; }
+  .sub { font-size: 22px; color: #9a9cA6; margin-bottom: 44px; }
+  .timeline { position: relative; padding-left: 34px; }
+  .timeline::before {
+    content: ""; position: absolute; left: 8px; top: 12px; bottom: 12px;
+    width: 4px; border-radius: 2px;
+    background: linear-gradient(180deg, #e0483f 0%, #e0483f 33%, #c9a35c 33%, #c9a35c 72%, #4fae6d 72%, #4fae6d 100%);
+  }
+  .phase { position: relative; margin-bottom: 40px; }
+  .phase:last-child { margin-bottom: 0; }
+  .dot {
+    position: absolute; left: -34px; top: 8px; width: 22px; height: 22px; border-radius: 50%;
+    border: 4px solid #17181d;
+  }
+  .dot.red { background: #e0483f; }
+  .dot.amber { background: #c9a35c; }
+  .dot.green { background: #4fae6d; }
+  .phase-head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 10px; }
+  .phase-date { font-size: 30px; font-weight: 800; }
+  .tag {
+    font-size: 19px; font-weight: 700; padding: 5px 16px; border-radius: 999px;
+  }
+  .tag.red { background: rgba(224,72,63,.16); color: #ff7a72; border: 1px solid rgba(224,72,63,.5); }
+  .tag.amber { background: rgba(201,163,92,.14); color: #e3c284; border: 1px solid rgba(201,163,92,.5); }
+  .tag.green { background: rgba(79,174,109,.14); color: #7fd39a; border: 1px solid rgba(79,174,109,.5); }
+  .phase-desc { font-size: 24px; line-height: 1.65; color: #cfcdc6; }
+  .phase-desc b { color: #f2f0ea; }
+  .foot {
+    margin-top: 44px; padding-top: 22px; border-top: 1px dashed #3a3c46;
+    font-size: 18px; color: #7d7f89; line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="kicker">2026 换机回收 · 决策卡</div>
+  <h1>旧 iPhone 出手<span class="em">时间线</span></h1>
+  <div class="sub">iPhone 18 Pro 已于 9 月 18 日开售，三个阶段对号入座</div>
+  <div class="timeline">
+    <div class="phase">
+      <div class="dot red"></div>
+      <div class="phase-head">
+        <span class="phase-date">9 月下旬</span>
+        <span class="tag red">跳水期 · 急卖早卖</span>
+      </div>
+      <div class="phase-desc">开售后回收价处于<b>快速下探段</b>：16 Pro 256GB 三天跌约 500 元。越拖越亏，<b>现在出手比月底多回几百元</b>。</div>
+    </div>
+    <div class="phase">
+      <div class="dot amber"></div>
+      <div class="phase-head">
+        <span class="phase-date">10 月 – 11 月中</span>
+        <span class="tag amber">磨底期 · 按需出手</span>
+      </div>
+      <div class="phase-desc">价格<b>低位磨底</b>，按惯例波动不大。着急用钱随时卖，不急就捂一捂，别指望这期间大涨。</div>
+    </div>
+    <div class="phase">
+      <div class="dot green"></div>
+      <div class="phase-head">
+        <span class="phase-date">11 月中下旬</span>
+        <span class="tag green">企稳期 · 可等回弹</span>
+      </div>
+      <div class="phase-desc">按往年节奏<b>企稳小幅回弹</b>。不着急的用户，这是年内第二个相对舒服的出手窗口。</div>
+    </div>
+  </div>
+  <div class="foot">行情依据：上游新闻采访回收商（2026-09）+ SellCell 追踪数据（美国市场）。「2 个月企稳」为市场惯例节奏，非权威统计，具体以各平台实时估价为准。</div>
+</div>
+</body>
+</html>

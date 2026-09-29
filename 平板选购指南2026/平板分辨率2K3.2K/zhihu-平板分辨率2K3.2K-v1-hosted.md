@@ -62,5 +62,5 @@
 ../assets/raw/平板分辨率/小米Pad9系列-参数表-3.2K-快科技.jpg -> https://s41.ax1x.com/2026/09/16/pnuga9A.jpg
 ../assets/raw/平板分辨率/PPI与观看距离对比-自制示意.png -> https://s41.ax1x.com/2026/09/16/pnugttH.png
 ../assets/raw/平板分辨率/小米平板7Pro-子像素微距-Notebookcheck.png -> https://d.uguu.se/uzuVYVzQ.png（约3h过期，其余为 imgchr 无过期声明）
-2026-09-16 重传；裂图再重传：node .agents/skills/image-host-upload/upload.js 平板选购指南2026/drafts/zhihu-平板分辨率2K3.2K-v1.md --force
+2026-09-16 重传；裂图再重传：node .agents/skills/image-host-upload/upload.js 平板选购指南2026/平板分辨率2K3.2K/zhihu-平板分辨率2K3.2K-v1.md --force
 -->

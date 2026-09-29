@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>iPhone贴膜人群分流卡</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #eef1f4;
+    font-family: "Outfit", "PingFang SC", sans-serif;
+    display: flex; justify-content: center; padding: 40px;
+  }
+  #card {
+    width: 860px;
+    background: #ffffff;
+    border: 1px solid #dde3e9;
+    border-radius: 22px;
+    padding: 42px 46px 34px;
+    box-shadow: 0 12px 40px rgba(20, 40, 60, .08);
+  }
+  .kicker {
+    font-size: 13px; letter-spacing: 3px; color: #1f5fa8;
+    display: flex; align-items: center; gap: 10px; font-weight: 700;
+  }
+  .kicker::before { content: ""; width: 26px; height: 3px; background: #1f5fa8; border-radius: 2px; }
+  h1 {
+    margin-top: 12px;
+    font-family: "Noto Serif SC", serif;
+    font-size: 34px; font-weight: 900; color: #15202b;
+  }
+  h1 em { font-style: normal; color: #1f5fa8; }
+
+  .grid { margin-top: 28px; display: flex; gap: 18px; }
+  .col {
+    flex: 1; border-radius: 16px; padding: 22px 22px 20px;
+    border: 1.5px solid;
+  }
+  .col.yes { background: #eaf3ff; border-color: #a9c8ec; }
+  .col.no  { background: #eef7ef; border-color: #b3d8b8; }
+  .col.mid { background: #fdf4e7; border-color: #eccf9a; }
+  .head { display: flex; align-items: center; gap: 10px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .col.yes .dot { background: #1f5fa8; }
+  .col.no .dot { background: #2e8b47; }
+  .col.mid .dot { background: #d99114; }
+  .head .t {
+    font-family: "Noto Serif SC", serif;
+    font-size: 21px; font-weight: 900; color: #15202b;
+  }
+  .verdict { margin-top: 4px; font-size: 13px; font-weight: 700; }
+  .col.yes .verdict { color: #1f5fa8; }
+  .col.no .verdict { color: #2e8b47; }
+  .col.mid .verdict { color: #b57a0d; }
+  ul { margin-top: 14px; list-style: none; }
+  li {
+    font-size: 14px; color: #3d4a57; line-height: 1.7;
+    padding: 7px 0 7px 18px; position: relative;
+    border-top: 1px dashed rgba(60, 80, 100, .15);
+  }
+  li:first-child { border-top: none; }
+  li::before {
+    content: ""; position: absolute; left: 2px; top: 15px;
+    width: 7px; height: 7px; border-radius: 2px;
+    background: currentColor; opacity: .55;
+  }
+  li b { color: #15202b; }
+
+  .note {
+    margin-top: 24px;
+    background: #f2f5f8; border-left: 4px solid #1f5fa8;
+    border-radius: 0 12px 12px 0;
+    padding: 14px 20px;
+    font-size: 14.5px; color: #3d4a57; line-height: 1.8;
+  }
+  .note b { color: #1f5fa8; }
+  .foot {
+    margin-top: 20px;
+    display: flex; justify-content: space-between;
+    font-size: 12px; color: #9aa7b2; letter-spacing: .5px;
+  }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="kicker">WHO &amp; WHY · 人群分流</div>
+  <h1>2026 年了，<em>你的 iPhone 到底要不要贴膜</em>？对号入座</h1>
+
+  <div class="grid">
+    <div class="col yes">
+      <div class="head"><span class="dot"></span><span class="t">建议贴</span></div>
+      <div class="verdict">✓ 风险敏感型用户</div>
+      <ul>
+        <li>手机<b>裸奔摔过一次</b>、换屏肉疼过的人</li>
+        <li>经常和钥匙、硬币<b>同口袋混放</b>的通勤党</li>
+        <li>工地、户外、沙滩等<b>高沙尘环境</b>使用者</li>
+        <li>准备<b>两年后换机出二手</b>、在意成色的用户</li>
+      </ul>
+    </div>
+    <div class="col mid">
+      <div class="head"><span class="dot"></span><span class="t">纠结党</span></div>
+      <div class="verdict">◐ 折中方案</div>
+      <ul>
+        <li>贴 <b>AR 增透膜</b>：抗反射接近裸屏观感，还顺手修复反光痛点</li>
+        <li>买 <b>AppleCare+</b>：把不确定性转移给保险，屏幕随便造</li>
+        <li>新机<b>第一年裸用</b>，疏油层磨花后再贴，两头都占</li>
+      </ul>
+    </div>
+    <div class="col no">
+      <div class="head"><span class="dot"></span><span class="t">可以裸</span></div>
+      <div class="verdict">✓ 体验优先型用户</div>
+      <ul>
+        <li>超瓷晶面板 2 <b>3 倍耐刮</b> + 加速老化测试已够用</li>
+        <li>动手少、常放桌面、<b>使用环境干净</b>的办公室党</li>
+        <li>本来就<b>年年换机</b>、不在乎细微划痕的人</li>
+        <li>追求<b>原厂抗反射涂层</b>观感和裸机滑动手感的人</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note">
+    一句话：<b>设计是厂商的信仰，风险是自己的钱包。</b>在「换屏 2698 元」和「贴膜 30 元」之间选后者，谈不上不懂设计，只能说太懂生活。
+  </div>
+
+  <div class="foot">
+    <span>iPhone 贴膜人群分流卡 · 2026</span>
+    <span>超瓷晶面板 2 时代的选择逻辑</span>
+  </div>
+</div>
+</body>
+</html>

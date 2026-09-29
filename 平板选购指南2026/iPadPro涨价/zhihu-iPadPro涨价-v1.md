@@ -80,5 +80,5 @@ iPhone 的价格是安卓旗舰定死的，iPad Pro 的价格是苹果自己定�
 ../assets/raw/ipad-pro-price/IT之家-iPadPro2021-miniLED光晕对比.jpg -> https://s41.ax1x.com/2026/09/18/pnME38K.jpg
 ../assets/raw/ipad-pro-price/IT之家-2024款iPadPro-13英寸侧面厚度实拍.webp -> https://n.uguu.se/wUXyGYOg.webp
 ../assets/raw/ipad-pro-price/Apple官网-iPadAir-11与13英寸官方图.jpg -> https://s41.ax1x.com/2026/09/18/pnMEYKe.jpg
-裂图重传：node .agents/skills/image-host-upload/upload.js 平板选购指南2026/drafts/zhihu-iPadPro涨价-v1.md --force
+裂图重传：node .agents/skills/image-host-upload/upload.js 平板选购指南2026/iPadPro涨价/zhihu-iPadPro涨价-v1.md --force
 -->
