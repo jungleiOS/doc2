@@ -130,7 +130,7 @@
 
 ## 3. 可用的 Agent Skills
 
-本项目已配置十三个 Skill，Agent 在执行对应任务时应优先加载并遵循：
+本项目已配置十四个 Skill，Agent 在执行对应任务时应优先加载并遵循：
 
 | Skill | 路径 | 触发场景 |
 |-------|------|---------|
@@ -140,6 +140,7 @@
 | `neat-freak` | `.agents/skills/neat-freak/SKILL.md` | 文档/规则/残留收尾同步（说「洁癖」或「收尾」时触发） |
 | `zhihu-question-scout` | `.agents/skills/zhihu-question-scout/SKILL.md` | 用 WebBridge 抓知乎邀请回答/推荐问题，结合已有文章每次选 3 个值得答的问题（说「选题」「看看知乎邀请」时触发）；确认题目后交给 `zhihu-answer-drafter` 起草 |
 | `zhihu-answer-drafter` | `.agents/skills/zhihu-answer-drafter/SKILL.md` | 把确认的知乎问题写成回答初稿：读问题完整描述 → 按 zhihu-viral-answer 成稿 → 事实核查 → 配图（≥3 张真实图）→ 去 AI 味 → GEO 审查 → 存档登记（说「起草回答」「写这个题」「按选题单起草」时触发；也被 scout 选题确认后调用；作答辅助协议在 `references/publish-assist.md`） |
+| `zhihu-comment-replier` | `.agents/skills/zhihu-comment-replier/SKILL.md` | 用 ego-browser 批处理知乎回复：抓当天收到的评论 → 定位来源 → 按策略筛选 → 生成草稿逐条经用户审核后代发（说「回复评论」「看看谁回复了我」「批处理回复」「清评论」时触发；批次日志存 `zhihu-auto-reply/`） |
 | `zhihu-answer-tracker` | `.agents/skills/zhihu-answer-tracker/SKILL.md` | 回采自己已发布回答的表现数据（阅读/赞同/评论/收藏/喜欢 + 问题页排名），回写 `outlines/选题历史.md` 复盘行，喂 scout 5.4 校准回路；快照存 `analytics/`（说「回采」「复盘」「看看我的回答表现」时触发） |
 | `zhihu-haowu-evaluator` | `.agents/skills/zhihu-haowu-evaluator/SKILL.md` | 评估问题/已有回答值不值得插好物卡片（说「好物评估」「值不值得插好物」「回填好物」时触发；也被 scout 选题精评调用） |
 | `zhihu-geo-optimizer` | `.agents/skills/zhihu-geo-optimizer/SKILL.md` | 知乎内容 GEO/SEO 审查：标题、正文、结尾的机器可读性优化，让内容被站内搜索、百度、AI 搜索引擎（DeepSeek/豆包/Kimi/知乎直答）优先引用（说「GEO」「SEO」「搜索流量」「被 AI 引用」「关键词布局」时触发；也被 zhihu-answer-drafter 起草流程在去 AI 味之后调用；调研证据库在 `references/geo-research.md`） |
