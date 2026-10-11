@@ -53,3 +53,11 @@
 
 - `知乎回答-iPad平替充电器.md`：iPad 平替充电器选购（结构完整，可作为同类回答的参考模板）
 - `知乎回答-120W充电器给65W电脑充电.md`：大功率给小功率设备充电（文末引流至长文）
+
+## 封面/图集截图工作流
+
+知乎封面/图集采用「HTML 渲染 → Puppeteer 截图」工作流，所有命令在 `_主稿/` 内执行：
+
+1. 进入目录并启动本地服务：`cd 多口充电器选购指南/_主稿 && python3 -m http.server 8766`
+2. 封面：`node capture-cover.js`；案例图：`node cover-assets/capture-cases.js`；决策图：`node cover-assets/capture-decision.js`；图片尾巴：`node cover-assets/capture-tail.js`；三篇拆文封面：`node cover-assets/capture-cover-protocol.js` / `capture-cover-power.js` / `capture-cover-cable.js`；此外还有 `capture-tail-left.js` / `capture-dod-chart.js` / `capture-gan-vs-silicon.js` 三个脚本（截图脚本里的页面 URL 和输出路径都相对于 `_主稿/`）
+3. 成品用 ReadMediaFile 工具回看校验后再交付

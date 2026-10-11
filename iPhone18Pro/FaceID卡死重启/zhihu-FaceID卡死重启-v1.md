@@ -14,11 +14,11 @@
 
 9 月 18 日首发，首批用户很快集中反馈一个诡异现象：**刷脸认证失败之后，手机直接卡死，几秒后黑屏、出苹果 logo、自动重启**，正在聊的微信、付到一半的款、拍了一半的照全部清零。高发场景高度一致——暗光环境、手机拿歪了的角度、认证失败后反复重试。9to5Mac 在内多家媒体做了独立复现（[IT之家 9 月 22 日报道](https://www.ithome.com/1/005/491.htm)）。
 
-![ithome-首批用户反馈1.jpg](ithome-首批用户反馈1.jpg)
+![ithome-首批用户反馈1.jpg](https://s41.ax1x.com/2026/10/07/pntBN8O.jpg)
 
 *图源：IT之家，iPhone 18 Pro 首批用户 Face ID 故障报道配图*
 
-![ithome-首批用户反馈2.jpg](ithome-首批用户反馈2.jpg)
+![ithome-首批用户反馈2.jpg](https://s41.ax1x.com/2026/10/07/pntBtPK.jpg)
 
 *图源：9to5Mac 复现截图，Face ID 认证失败后重试界面，IT之家转引*
 
@@ -32,11 +32,11 @@
 
 9 月 29 日，iOS 27.0.1（版本号 24A446，更新包约 1.21GB）推送，苹果官方更新说明白纸黑字列了第一条修复项：**iPhone 18 Pro 和 Pro Max 可能在 Face ID 认证失败时意外重启**（[快科技](https://news.mydrivers.com/1/1154/1154516.htm)、[太平洋电脑网](https://news.pconline.com.cn/2182/21829525.html)）。顺带它还修了两个首发 Bug：相机在 f/1.48 光圈 2 倍变焦下的色彩伪影，和同时拉出通知中心与控制中心时的屏幕卡死。
 
-![mydrivers-2701修复-a.png](mydrivers-2701修复-a.png)
+![mydrivers-2701修复-a.png](https://s41.ax1x.com/2026/10/07/pntBaxe.png)
 
 *图源：快科技，iOS 27.0.1 官方更新说明截图，首条即 Face ID 认证失败意外重启修复*
 
-![mydrivers-2701修复-b.png](mydrivers-2701修复-b.png)
+![mydrivers-2701修复-b.png](https://s41.ax1x.com/2026/10/07/pntBwKH.png)
 
 *图源：快科技，iOS 27.0.1 与 iPhone 18 Pro 报道配图*
 
@@ -59,3 +59,11 @@
 我的建议是：修复已经推送、官方已定性，普通用户走到「升级系统」这一步就够了，后面三步是给升级后仍中招的极少数人准备的。<!-- 判断句 --> 真走到那一步，拿着日志和复现路径去官方渠道，14 天退换期内该退退该换换，不用替苹果省这个钱。
 
 我在持续跟踪 iPhone 18 全系上市后的质量表现，Face ID 这关算是过去了，接下来还有别的线索，关注我不迷路。
+
+<!-- 图片溯源映射（发布前删除本段）
+iPhone18Pro/FaceID卡死重启/ithome-首批用户反馈1.jpg -> https://s41.ax1x.com/2026/10/07/pntBN8O.jpg
+iPhone18Pro/FaceID卡死重启/ithome-首批用户反馈2.jpg -> https://s41.ax1x.com/2026/10/07/pntBtPK.jpg
+iPhone18Pro/FaceID卡死重启/mydrivers-2701修复-a.png -> https://s41.ax1x.com/2026/10/07/pntBaxe.png
+iPhone18Pro/FaceID卡死重启/mydrivers-2701修复-b.png -> https://s41.ax1x.com/2026/10/07/pntBwKH.png
+重传命令：node .agents/skills/image-host-upload/upload.js --force "iPhone18Pro/FaceID卡死重启/zhihu-FaceID卡死重启-v1.md"
+-->

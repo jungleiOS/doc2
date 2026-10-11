@@ -4,7 +4,9 @@
  *
  * 用法：node upload.js <文章.md> [--time 12h] [--force]
  *
- * - 输出 <原名去掉.md>-hosted.md（与原稿同目录），不改动原稿
+ * - 原地改稿：直接把草稿里的本地图片路径替换为图床 URL，并在文尾追加
+ *   「图片溯源映射」HTML 注释块（本地路径 -> 图床URL + --force 重传命令），
+ *   不生成 -hosted.md 副本
  * - 缓存：项目根目录 .image-host-cache.json（绝对路径::大小::mtimeMs -> 图床URL）
  *   缓存永久保留，即使图床过期也能据此找回本地原图，不要删
  * - 图床链：imgchr 路过图床（国内主）→ uguu → litterbox → tmpfiles（后三个境外，兜底）
@@ -361,15 +363,26 @@ async function main() {
     for (const f of failures) console.log(`- ${f.displayPath}：${f.reason}`);
   }
 
-  // 无论是否有失败都生成 -hosted.md，成功的替换为图床 URL，失败的保留本地路径
+  // 原地写回草稿：成功的替换为图床 URL，失败的保留本地路径；文尾追加图片溯源映射块
   const replacements = rows
     .map((r, i) => ({ r, ref: refs[i] }))
     .filter(({ r }) => r.status !== '失败')
     .map(({ r, ref }) => ({ raw: ref.raw, url: r.url }));
-  const newContent = replaceRefs(content, replacements);
-  const outPath = mdPath.replace(/\.md$/i, '') + '-hosted.md';
-  fs.writeFileSync(outPath, newContent, 'utf8');
-  console.log(`\n已生成：${outPath}`);
+  let newContent = replaceRefs(content, replacements);
+
+  const mappingLines = rows
+    .map((r, i) => ({ r, ref: refs[i] }))
+    .filter(({ r }) => r.status !== '失败')
+    .map(({ r, ref }) => `${path.relative(PROJECT_ROOT, ref.absPath)} -> ${r.url}`);
+  const relFile = path.relative(PROJECT_ROOT, mdPath);
+  if (mappingLines.length > 0) {
+    // 幂等：先剥掉旧的溯源映射块再追加新的；本次无新成功映射时保留旧块不动
+    newContent = newContent.replace(/\n*<!-- 图片溯源映射（发布前删除本段）[\s\S]*?-->\s*$/, '\n');
+    const mappingBlock = `<!-- 图片溯源映射（发布前删除本段）\n${mappingLines.join('\n')}\n重传命令：node .agents/skills/image-host-upload/upload.js --force "${relFile}"\n-->\n`;
+    newContent = newContent.replace(/\s*$/, '\n\n') + mappingBlock;
+  }
+  fs.writeFileSync(mdPath, newContent, 'utf8');
+  console.log(`\n已原地更新：${mdPath}`);
   console.log('提示：图床仅几小时有效，发布到知乎/百家号后请确认平台已转存图片（以实际显示为准）。');
 
   process.exit(failures.length > 0 ? 1 : 0);
