@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f7f9; }
+  #chart { width: 920px; padding: 32px 36px 36px; box-sizing: border-box; }
+  h2 { font-size: 24px; margin: 0 0 6px; color: #1a1a1a; }
+  .sub { font-size: 13px; color: #888; margin-bottom: 24px; }
+  .q { background: #fff; border-radius: 12px; padding: 16px 20px; font-size: 16px; font-weight: 600; color: #111; box-shadow: 0 1px 4px rgba(0,0,0,.06); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .split { display: flex; gap: 24px; position: relative; }
+  .branch { flex: 1; border-radius: 12px; padding: 18px 20px; }
+  .yes { background: #e8f1fd; }
+  .no { background: #fdeee0; }
+  .branch h3 { font-size: 15px; margin: 0 0 10px; }
+  .yes h3 { color: #1d4ed8; } .no h3 { color: #b45309; }
+  .item { display: flex; gap: 8px; font-size: 14px; line-height: 1.6; color: #333; margin-bottom: 8px; }
+  .dot { flex: none; width: 7px; height: 7px; border-radius: 50%; margin-top: 8px; }
+  .yes .dot { background: #2563eb; } .no .dot { background: #d97706; }
+  .act { margin-top: 12px; padding: 9px 12px; border-radius: 8px; font-size: 14px; font-weight: 600; }
+  .yes .act { background: #fff; color: #1d4ed8; }
+  .no .act { background: #fff; color: #b45309; }
+  .foot { margin-top: 20px; font-size: 13px; color: #888; }
+</style>
+</head>
+<body>
+<div id="chart">
+  <h2>手机出问题了，重启还是关机再开机？</h2>
+  <div class="sub">iPhone 没有「重启」按钮，关机再开就是它；只有安卓才有真正的二选一</div>
+  <div class="q">👉 遇到的是哪类问题？</div>
+  <div class="split">
+    <div class="branch yes">
+      <h3>软件层面的毛病</h3>
+      <div class="item"><span class="dot"></span><span>某个 App 卡死、闪退</span></div>
+      <div class="item"><span class="dot"></span><span>用久了有点卡、动画掉帧</span></div>
+      <div class="item"><span class="dot"></span><span>后台程序抽风、手机发烫</span></div>
+      <div class="act">重启就够了：重新加载整个系统，速度快还省电</div>
+    </div>
+    <div class="branch no">
+      <h3>硬件 / 网络层面的毛病</h3>
+      <div class="item"><span class="dot"></span><span>信号莫名变差、断流（先试开关飞行模式）</span></div>
+      <div class="item"><span class="dot"></span><span>Wi-Fi、蓝牙连接反复抽风</span></div>
+      <div class="item"><span class="dot"></span><span>重启也治不好的顽固毛病</span></div>
+      <div class="act">关机再开机：整机真正断电，带电保持的硬件状态清零，更彻底但更慢、更费电</div>
+    </div>
+  </div>
+  <div class="foot">日常维护：一周重启一两次就够，不必天天关机（国内厂商客服的通行建议；苹果无公开官方口径）</div>
+</div>
+</body>
+</html>

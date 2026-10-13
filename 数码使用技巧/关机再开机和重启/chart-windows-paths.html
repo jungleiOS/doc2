@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f7f9; }
+  #chart { width: 980px; padding: 32px 36px 36px; box-sizing: border-box; }
+  h2 { font-size: 24px; margin: 0 0 6px; color: #1a1a1a; }
+  .sub { font-size: 13px; color: #888; margin-bottom: 24px; }
+  .row { display: flex; gap: 24px; }
+  .col { flex: 1; background: #fff; border-radius: 12px; padding: 20px 22px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .col h3 { font-size: 17px; margin: 0 0 4px; }
+  .tag { display: inline-block; font-size: 12px; padding: 2px 10px; border-radius: 999px; margin-bottom: 14px; }
+  .blue { background: #e8f1fd; color: #2563eb; }
+  .orange { background: #fdeee0; color: #d97706; }
+  .step { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 14px; line-height: 1.55; color: #333; }
+  .num { flex: none; width: 20px; height: 20px; border-radius: 50%; background: #2563eb; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+  .col.orangeC .num { background: #d97706; }
+  .result { margin-top: 14px; padding: 10px 12px; border-radius: 8px; font-size: 14px; font-weight: 600; }
+  .r-blue { background: #e8f1fd; color: #1d4ed8; }
+  .r-orange { background: #fdeee0; color: #b45309; }
+  .foot { margin-top: 20px; font-size: 13px; color: #888; }
+  b.hl { color: #111; }
+</style>
+</head>
+<body>
+<div id="chart">
+  <h2>Windows：「关机」和「重启」走的根本不是同一条路</h2>
+  <div class="sub">Windows 8 起默认开启「快速启动」，两条路径的区别从按下按钮那一刻就开始了</div>
+  <div class="row">
+    <div class="col">
+      <h3>关机再开机</h3>
+      <span class="tag blue">混合关机（默认）</span>
+      <div class="step"><span class="num">1</span><span>关闭所有应用、注销用户</span></div>
+      <div class="step"><span class="num">2</span><span>操作系统内核和已加载的驱动<b class="hl">不关闭</b>，整包存进硬盘的 <b class="hl">hiberfil.sys</b> 休眠文件</span></div>
+      <div class="step"><span class="num">3</span><span>下次开机直接把这个内核快照读回来，<b class="hl">跳过内核初始化和驱动重载</b></span></div>
+      <div class="result r-blue">开机快，但内核状态是「上次的老底子」——有些系统毛病被一起带回来了</div>
+    </div>
+    <div class="col orangeC">
+      <h3>重启</h3>
+      <span class="tag orange">完整重载</span>
+      <div class="step"><span class="num">1</span><span>关闭所有应用、注销用户</span></div>
+      <div class="step"><span class="num">2</span><span>内核会话<b class="hl">彻底结束</b>，不存任何快照</span></div>
+      <div class="step"><span class="num">3</span><span>从头到尾重新初始化、重新加载内核和全部驱动</span></div>
+      <div class="result r-orange">反而更慢，但系统状态是从零开始——所以「重启治百病」</div>
+    </div>
+  </div>
+  <div class="foot">想真正关机：命令行运行 shutdown /s /t 0（微软支持文档的官方写法；微软不建议永久关闭快速启动）</div>
+</div>
+</body>
+</html>

@@ -54,7 +54,7 @@
 
 ## 3. 可用的 Agent Skills
 
-本项目已配置 14 个 Skill，执行对应任务时优先加载并遵循：`khazix-writer`、`zhihu-viral-answer`、`frontend-design`、`neat-freak`、`zhihu-question-scout`、`zhihu-answer-drafter`、`zhihu-comment-replier`、`zhihu-answer-tracker`、`zhihu-haowu-evaluator`、`zhihu-geo-optimizer`、`zhihu-to-baijiahao`、`gzh-design`、`hv-analysis`、`image-host-upload`。
+本项目已配置 15 个 Skill，执行对应任务时优先加载并遵循：`khazix-writer`、`zhihu-viral-answer`、`frontend-design`、`neat-freak`、`zhihu-question-scout`、`zhihu-hot-scout`、`zhihu-answer-drafter`、`zhihu-comment-replier`、`zhihu-answer-tracker`、`zhihu-haowu-evaluator`、`zhihu-geo-optimizer`、`zhihu-to-baijiahao`、`gzh-design`、`hv-analysis`、`image-host-upload`。
 
 各 Skill 的路径与详细触发场景见 `.agents/skills/README.md`；使用时先读对应 `SKILL.md` 全文，按其流程、模板、禁忌执行，完成后按其质量清单自检。
 

@@ -1,6 +1,6 @@
 # Agent Skills 索引
 
-> 本仓库已配置 14 个 Skill。执行对应任务时先读取对应 `SKILL.md` 的完整内容，按其中的流程、模板、禁忌执行，并在写作完成后按其中的质量检查清单自检。
+> 本仓库已配置 15 个 Skill。执行对应任务时先读取对应 `SKILL.md` 的完整内容，按其中的流程、模板、禁忌执行，并在写作完成后按其中的质量检查清单自检。
 
 | Skill | 路径 | 触发场景 |
 |-------|------|---------|
@@ -9,6 +9,7 @@
 | `frontend-design` | `.agents/skills/frontend-design/SKILL.md` | 封面、图集、思维导图等视觉产出 |
 | `neat-freak` | `.agents/skills/neat-freak/SKILL.md` | 文档/规则/残留收尾同步（说「洁癖」或「收尾」时触发） |
 | `zhihu-question-scout` | `.agents/skills/zhihu-question-scout/SKILL.md` | 用 ego-browser 抓知乎关注的问题/邀请回答/推荐问题（优先级：关注 > 邀请 > 推荐），结合已有文章每次选 3 个值得答的问题（说「选题」「看看知乎邀请」时触发）；确认题目后交给 `zhihu-answer-drafter` 起草 |
+| `zhihu-hot-scout` | `.agents/skills/zhihu-hot-scout/SKILL.md` | 热榜速报：抓全站热榜+数码话题榜，领域速滤后只给「抢/弃」二元判断（不打分），点头后交 `zhihu-answer-drafter` 热点快车道（说「看看热榜」「今天热榜」「抢热点」时触发；每日「抢」上限 2 条） |
 | `zhihu-answer-drafter` | `.agents/skills/zhihu-answer-drafter/SKILL.md` | 把确认的知乎问题写成回答初稿：读问题完整描述 → 按 zhihu-viral-answer 成稿 → 事实核查 → 配图（≥4 张真实图）→ 去 AI 味 → 数据准确性校验 → GEO 审查 → 存档登记（说「起草回答」「写这个题」「按选题单起草」时触发；也被 scout 选题确认后调用；作答辅助协议在 `references/publish-assist.md`） |
 | `zhihu-comment-replier` | `.agents/skills/zhihu-comment-replier/SKILL.md` | 用 ego-browser 批处理知乎回复：抓当天收到的评论 → 定位来源 → 按策略筛选 → 生成草稿逐条经用户审核后代发（说「回复评论」「看看谁回复了我」「批处理回复」「清评论」时触发；批次日志存 `zhihu-auto-reply/`） |
 | `zhihu-answer-tracker` | `.agents/skills/zhihu-answer-tracker/SKILL.md` | 回采自己已发布回答的表现数据（阅读/赞同/评论/收藏/喜欢 + 问题页排名），回写 `outlines/选题历史.md` 复盘行，喂 scout 5.4 校准回路；快照存 `analytics/`（说「回采」「复盘」「看看我的回答表现」时触发） |
