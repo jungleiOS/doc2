@@ -1,6 +1,6 @@
 # Agent Skills 索引
 
-> 本仓库已配置 15 个 Skill。执行对应任务时先读取对应 `SKILL.md` 的完整内容，按其中的流程、模板、禁忌执行，并在写作完成后按其中的质量检查清单自检。
+> 本仓库已配置 16 个 Skill。执行对应任务时先读取对应 `SKILL.md` 的完整内容，按其中的流程、模板、禁忌执行，并在写作完成后按其中的质量检查清单自检。
 
 | Skill | 路径 | 触发场景 |
 |-------|------|---------|
@@ -18,4 +18,5 @@
 | `zhihu-to-baijiahao` | `.agents/skills/zhihu-to-baijiahao/SKILL.md` | 把知乎回答/文章转写为百家号版：SEO 化改写（长尾词标题 + 问答式结构 + 搜索关键词字段），赚百度搜索长尾；含合规时序与数据回收（说「转百家号」「百家号版」「同步到百度」时触发；策略依据 `知乎回答转写多平台_横纵分析报告.md`） |
 | `gzh-design` | `.agents/skills/gzh-design/SKILL.md` | 公众号文章排版：Markdown/docx/pdf/纯文本 → 可直接粘贴进公众号编辑器、不掉格式的 HTML（6 套主题 + 主题生成器，自动章节编号、关键词下划线、引言卡与目录；说「公众号排版」「微信排版」「gzh」「一键排版」时触发；由 skills CLI 安装，源仓库 [isjiamu/gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)） |
 | `hv-analysis` | `.agents/skills/hv-analysis/SKILL.md` | 横纵分析法深度研究（纵轴时间叙事 + 横轴竞品对比 + 交汇洞察），产出 PDF 研究报告（说「横纵分析」「深度研究」「调研一下」时触发） |
+| `fact-checker` | `.agents/skills/fact-checker/SKILL.md` | 文稿事实核查（代码 review 式）：抽取可证伪声明 → 分级 → 逐项核查 → 出审校报告供人工仲裁；只做裁判不改正文（说「审校这篇」「核查事实」「fact check」时触发；应由各写作 skill 成稿后、去 AI 味之前调用；核查过的事实落盘 `references/事实库.md`） |
 | `image-host-upload` | `.agents/skills/image-host-upload/SKILL.md` | 把文章里的本地图片一键上传到免费临时图床（几小时自动过期），原地替换为外链 URL + 文尾自动追加图片溯源映射块，供知乎/百家号编辑器转存（说「传图床」「图片换外链」「临时图床」时触发；也被 zhihu-answer-drafter 配图完成后和 zhihu-to-baijiahao 定稿后调用） |

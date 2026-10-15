@@ -76,24 +76,40 @@ EOF
 - **控制台模式**：一次最多把 10 条的决定攒成 1-2 轮 AskUserQuestion，每条展示 `[n/10] 来源《标题》| 对方：评论摘要 | 判定：必回 | 草稿：…`，选项：发送 / 修改（用户给意见后改一版再问）/ 跳过；
 - **草稿文件模式（2026-10-03 实测用户偏好）**：先把全部文案写入 `zhihu-auto-reply/batch-<YYYY-MM-DD>.md`（逐条标 ⏳ 待发送 / ⏭️ 跳过，**每条必须附原文回答链接**），用户自己审完文件后再下一轮执行发送；此模式下 `processed.log` 在真正发送后才追加。
 
-## 4.1 实测校准记录（2026-10-03，可用脚本不要重测）
+## 4.1 实测校准记录（发布评论的坑全部已由 `reply.js` 固化，**不要重测、不要改用手动流程**）
 
-- 入口：`https://www.zhihu.com/notifications`，无独立「回复我的」URL（`/notifications/reply`、`/comment` 均空白页）；
-- 筛选：点「全部通知」按钮开下拉 → 点「评论与回复」。注意按钮文本带零宽字符（`全部通知\u200b`），`text=`/`role=` 定位器会失配，**用 page.evaluate 里按去零宽后的 textContent 精确匹配再 `.click()`**；
-- 提取：`document.querySelectorAll("article.NotificationList-Item")`，字段选择器 `.NotificationList-Item-header a`（评论者）、`.NotificationList-Item-verb`（动作，如「评论了你的回答」）、`time[datetime]`、`..Item-content a`（来源标题，纯按钮无 href）、`.NotificationList-Item-extendText`（评论摘要）；
-- 通知项里**没有评论 URL**：去重键用 `来源标题 + 评论者 + datetime`；
-- **来源回答 URL 的获取**（通知里的来源标题是纯按钮、点击经常不跳转，别硬点）：按标题关键词去 `outlines/选题历史.md` / 话题 `问题对应表.md` 查问题 ID 拿 `https://www.zhihu.com/question/<id>`，开问题页取第一个回答的 `/answer/<id>` 链接，再用作者名（Apple 研究生）核实是不是自己的回答；已验证的映射：死机=2085637806781642585/2086227761451090442，插卡平板=2833008199/2088261099854602944，自动断电=23691052/2087665282592551534，Mac耐用=2053805488924578044/2080787251789815954，充电头=1883710952018526535/2088046888767447311；
-- 跳过 `该内容被删除` 的条目。
-- **文章评论区发送按钮文本是「发布」不是「发送」**（2026-10-11 实测）；回复按钮是「回复」，粘贴后「发布」按钮直接可点，评论计数（N 条评论）可作为发布成功验证信号；
-- **编辑已发布回答（2026-10-03 实测血泪）**：知乎编辑器是 Lexical 类模型驱动——直接改 DOM、`execCommand("insertText")`、JS 构造的 Selection 粘贴全部无效或插入错位，且会静默保存失败/截断。**唯一可靠姿势**：`scrollIntoView` 后等 1 秒重新取坐标（滚动动画会让第一次坐标失效）→ `mouse.click` 放置光标 → `keyboard.paste({text})` 在光标处插入 → 提交后必须 `reload` 验证线上文本，发现截断立即修复再提交一次。
+**通知抓取**（2026-10-03）：
+
+- 入口 `https://www.zhihu.com/notifications`，无独立「回复我的」URL（`/notifications/reply` 空白页）；筛选：点「全部通知」开下拉 → 点「评论与回复」。按钮文本带零宽字符（`全部通知\u200b`），`text=` 定位器会失配，**用 page.evaluate 按去零宽后的 textContent 精确匹配再 `.click()`**；
+- 提取：`document.querySelectorAll("article.NotificationList-Item")`；字段：`.NotificationList-Item-header a`（评论者）、`.NotificationList-Item-verb`（动作）、`time[datetime]`、`.NotificationList-Item-content a`（来源标题，**纯按钮无 href 不跳转**）、`.NotificationList-Item-extendText`（评论摘要）；
+- 通知项里**没有评论 URL**：去重键用 `来源标题 + 评论者 + datetime`；跳过 `该内容被删除` 的条目；
+- 来源回答 URL 按标题关键词去 `outlines/选题历史.md` / 话题 `问题对应表.md` 查问题 ID 拿 `/question/<id>`，开问题页取回答链接并用作者名（Apple 研究生）核实是自己；已验证映射：死机=2085637806781642585/2086227761451090442，插卡平板=2833008199/2088261099854602944，自动断电=23691052/2087665282592551534，Mac耐用=2053805488924578044/2080787251789815954，充电头=1883710952018526535/2088046888767447311。
+
+**历史坑（教训已被 reply.js 吸收）**：评论区是 Draft.js，`keyboard.paste` 静默失败且积压底层 model 会拼出 N 遍重复文本；「祖先含对方文本」的校验太松会回复错人；删自己评论用 `page.fetch("/api/v4/comments/<id>", {method:"DELETE"})`（204 成功），删前必须用 `child_comments`/`root_comments` 两个接口核实 id 归属。
+
+**其他场景**：
+
+- 文章评论区发送按钮文本是「发布」不是「发送」（2026-10-11）；
+- 编辑已发布回答（编辑器是 Lexical）：直接改 DOM、`execCommand("insertText")`、JS 构造 Selection 粘贴全部无效或错位，且会静默保存截断。唯一可靠姿势：`scrollIntoView` 后等 1 秒重新取坐标 → `mouse.click` 放光标 → `keyboard.paste({text})` 插入 → 提交后 `reload` 验证线上文本，截断立即修复重提。
 
 ## 5. 代为发布
 
-用户确认后，回到评论页：
+**首选：用配套脚本 `reply.js`，已固化上述全部校验，无需每次重新推理**（2026-10-14 KenZN 批验证通过）：
 
-1. 定位该评论的「回复」按钮 → 点击 → 等输入框出现；
-2. `keyboard.paste({text: 最终回复})` 填入（macOS 富文本编辑器推荐 paste，不用 type）；
-3. 点击发送 → `waitForFunction` 等评论出现在线程里 → snapshot 或 evaluate 确认发布成功；
+```bash
+# 参数写入 .reply-args.json（仓库根目录）：["<回答URL>", "<评论匹配关键词>", "<回复文本>"]
+cat .agents/skills/zhihu-comment-replier/reply.js | ego-browser nodejs
+```
+
+注意：ego nodejs 不支持 `脚本文件 + 位置参数` 的调用方式（报 "at most one source argument"），且脚本内相对路径不落在仓库根目录——必须用 stdin 喂脚本 + 根目录参数文件（脚本已内置绝对路径回退，参数文件用后即删）。
+
+脚本按评论关键词定位 `div[data-id]` 评论块，全部操作限定在块内，任何校验失败立即 abort。`SPACE_ID` 默认 32（zhihu-comment-replier space），可用环境变量 `EGO_SPACE_ID` 覆盖。
+
+手动流程（脚本不可用时的兜底）：
+
+1. 锁定对方评论块（`div[data-id]`），点块内「回复」→ 等输入框出现在该块内；
+2. `keyboard.insertText({text: 最终回复})` 填入（**不能用 paste**，Draft.js 会静默积压）；写入后读 `textContent` 校验单份完整；
+3. 点**块内**「发布」→ 用 `GET /api/v4/comments/<对方评论id>/child_comments` 复核回复在子级；
 4. 成功后在批次日志补记「已发送 + 回复内容」，把评论 URL 追加进 `processed.log`；
 5. 发送失败（风控提示、按钮不可用）如实记录并跳过本条，不反复重试；连续 2 条失败则停止整个批次并告知用户。
 
