@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1100px; padding: 48px 56px;
+    font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #fbfbfd; color: #1d1d1f;
+  }
+  h2 { font-size: 30px; font-weight: 700; margin-bottom: 6px; }
+  .sub { font-size: 15px; color: #6e6e73; margin-bottom: 36px; }
+  .axis {
+    position: relative; height: 4px; background: linear-gradient(90deg, #d2d2d7, #86868b);
+    border-radius: 2px; margin: 150px 0 0 0;
+  }
+  .node { position: absolute; top: -8px; transform: translateX(-50%); text-align: center; width: 200px; }
+  .dot {
+    width: 20px; height: 20px; border-radius: 50%; background: #fff;
+    border: 5px solid #0071e3; margin: 0 auto;
+  }
+  .node.hot .dot { border-color: #ff3b30; }
+  .date { font-size: 16px; font-weight: 700; margin-top: 12px; }
+  .node.hot .date { color: #ff3b30; }
+  .label { font-size: 14px; color: #3a3a3c; margin-top: 6px; line-height: 1.5; }
+  .up { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); }
+  .down { position: absolute; top: 28px; left: 50%; transform: translateX(-50%); }
+  .node .up .label, .node .up .date { text-align: center; }
+  .foot { margin-top: 160px; font-size: 12px; color: #86868b; }
+</style>
+</head>
+<body>
+  <h2>「苹果税」中国监管压力时间线</h2>
+  <div class="sub">从 30% 到 25%，从被动应诉到主动递报告</div>
+  <div class="axis">
+    <div class="node" style="left:9%">
+      <div class="dot"></div>
+      <div class="up"><div class="date">2024.05</div><div class="label">上海知产法院一审：苹果有市场支配地位，但未滥用，金某败诉</div></div>
+    </div>
+    <div class="node" style="left:29%">
+      <div class="dot"></div>
+      <div class="down"><div class="date">2024.07</div><div class="label">苹果上诉至最高人民法院</div></div>
+    </div>
+    <div class="node" style="left:49%">
+      <div class="dot"></div>
+      <div class="up"><div class="date">2026.03</div><div class="label">中国区佣金首次下调：30% → 25%</div></div>
+    </div>
+    <div class="node" style="left:69%">
+      <div class="dot"></div>
+      <div class="down"><div class="date">2026.06</div><div class="label">田某诉苹果案在上海知产法院开庭，截至 10 月未见宣判</div></div>
+    </div>
+    <div class="node hot" style="left:90%">
+      <div class="dot"></div>
+      <div class="up"><div class="date">2026.10.08</div><div class="label">反垄断专家执笔的《中国 App Store 生态系统报告》发布，仅中国区官网可见；两天后库克卸任 CEO 后首次访华</div></div>
+    </div>
+  </div>
+  <div class="foot">据上海知产法院公开判决、财新、GameLook、澎湃新闻等公开报道整理｜2026-10-16</div>
+</body>
+</html>
