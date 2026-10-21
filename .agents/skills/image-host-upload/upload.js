@@ -135,6 +135,84 @@ async function uploadToImgchr(buf, filename) {
   }
 }
 
+/** 兜底图床 0：imgloc.com（国内图床，免注册，直链 i.imgs.ovh）。
+ *  自研接口：先从 upload.php?action=token 取一次性 token（TTL 3600，配 Cookie），
+ *  再 POST upload.php（字段 token + image）。2026-10-18 实测可用，网络抖动大需重试。 */
+let imglocCookie = null;
+
+async function uploadToImglocOnce(buf, filename) {
+  const common = { 'User-Agent': UA, Referer: 'https://imgloc.com/' };
+  if (!imglocCookie) {
+    const home = await fetch('https://imgloc.com/', { headers: common });
+    if (!home.ok) throw new Error(`imgloc 首页 HTTP ${home.status}`);
+    await home.text();
+    const setCookies = typeof home.headers.getSetCookie === 'function'
+      ? home.headers.getSetCookie()
+      : [home.headers.get('set-cookie')].filter(Boolean);
+    imglocCookie = setCookies.map((c) => c.split(';')[0]).join('; ');
+  }
+  const rt = await fetch('https://imgloc.com/upload.php?action=token', {
+    headers: { ...common, Cookie: imglocCookie, 'X-Requested-With': 'XMLHttpRequest' },
+  });
+  const tj = await rt.json().catch(() => ({}));
+  if (!tj.token) throw new Error(`imgloc token HTTP ${rt.status}：${JSON.stringify(tj).slice(0, 100)}`);
+  const fd = makeForm({ token: tj.token }, 'image', buf, filename, mimeOf(filename));
+  const res = await fetch('https://imgloc.com/upload.php', {
+    method: 'POST',
+    headers: { ...common, Cookie: imglocCookie },
+    body: fd,
+  });
+  const json = await res.json().catch(() => ({}));
+  if (!json.ok || !json.url) {
+    throw new Error(`imgloc 上传 HTTP ${res.status}：${JSON.stringify(json).slice(0, 100)}`);
+  }
+  return json.url;
+}
+
+async function uploadToImgloc(buf, filename) {
+  let lastErr = null;
+  for (let i = 0; i < 4; i++) {
+    try {
+      const url = await uploadToImglocOnce(buf, filename);
+      return { url, host: 'imgloc', expiresIn: 'none' };
+    } catch (err) {
+      lastErr = err;
+      if (/token/.test(err.message)) imglocCookie = null;
+      await new Promise((r) => setTimeout(r, 2000));
+    }
+  }
+  throw lastErr;
+}
+
+/** 兜底图床 1：freeimage.host（Chevereto，境外但本网络直连可达，免注册、无过期）。
+ *  2026-10-18 实测可用，直链域名 iili.io。imgchr 日额度（8张）耗尽时优先走这里。 */
+async function uploadToFreeimage(buf, filename) {
+  const res = await fetch('https://freeimage.host/', { headers: { 'User-Agent': UA } });
+  if (!res.ok) throw new Error(`freeimage 首页 HTTP ${res.status}`);
+  const html = await res.text();
+  const m = /auth_token\s*=\s*"([a-f0-9]{32,64})"/.exec(html);
+  if (!m) throw new Error('freeimage 首页未找到 auth_token');
+  const cookie = typeof res.headers.getSetCookie === 'function'
+    ? res.headers.getSetCookie().map((c) => c.split(';')[0]).join('; ')
+    : '';
+  const fd = makeForm(
+    { auth_token: m[1], type: 'file', action: 'upload' },
+    'source', buf, filename, mimeOf(filename),
+  );
+  const r = await fetch('https://freeimage.host/json', {
+    method: 'POST',
+    headers: { 'User-Agent': UA, Cookie: cookie },
+    body: fd,
+  });
+  const json = await r.json().catch(() => ({}));
+  const url = json && json.image && json.image.url;
+  if (json.status_code !== 200 || !url) {
+    const msg = (json.error && json.error.message) || JSON.stringify(json).slice(0, 120);
+    throw new Error(`freeimage HTTP ${r.status}：${msg}`);
+  }
+  return { url, host: 'freeimage', expiresIn: 'none' };
+}
+
 /** 兜底图床：litterbox.catbox.moe（境外，免注册，1h/12h/24h/72h 自动过期。
  *  2026-09-12 实测本网络返回 HTTP 500，仅作链尾兜底） */
 async function uploadToLitterbox(buf, filename, time) {
@@ -186,6 +264,8 @@ async function uploadToUguu(buf, filename) {
 
 const HOSTS = [
   (buf, filename) => uploadToImgchr(buf, filename),
+  (buf, filename) => uploadToImgloc(buf, filename),
+  (buf, filename) => uploadToFreeimage(buf, filename),
   (buf, filename) => uploadToUguu(buf, filename),
   (buf, filename, time) => uploadToLitterbox(buf, filename, time),
   (buf, filename) => uploadToTmpfiles(buf, filename),
