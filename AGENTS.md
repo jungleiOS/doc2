@@ -54,7 +54,7 @@
 
 ## 3. 可用的 Agent Skills
 
-本项目已配置 15 个 Skill，执行对应任务时优先加载并遵循：`khazix-writer`、`zhihu-viral-answer`、`frontend-design`、`neat-freak`、`zhihu-question-scout`、`zhihu-hot-scout`、`zhihu-answer-drafter`、`zhihu-comment-replier`、`zhihu-answer-tracker`、`zhihu-haowu-evaluator`、`zhihu-geo-optimizer`、`zhihu-to-baijiahao`、`gzh-design`、`hv-analysis`、`image-host-upload`。
+本项目已配置 18 个 Skill，执行对应任务时优先加载并遵循：`khazix-writer`、`zhihu-viral-answer`、`frontend-design`、`fact-checker`、`neat-freak`、`zhihu-question-scout`（流量选题）、`zhihu-haowu-scout`（带货选题，公共流程见 `zhihu-question-scout/scout-common.md`）、`zhihu-hot-scout`、`zhihu-answer-drafter`、`zhihu-comment-replier`、`zhihu-answer-tracker`、`zhihu-haowu-drafter`（带货起草，公共流程见 `zhihu-answer-drafter/drafter-common.md`，商品级选品插卡并入自原 haowu-evaluator）、`zhihu-geo-optimizer`、`zhihu-to-baijiahao`、`gzh-design`、`hv-analysis`、`image-host-upload`、`zhihu`（知乎开放平台官方 CLI）。
 
 各 Skill 的路径与详细触发场景见 `.agents/skills/README.md`；使用时先读对应 `SKILL.md` 全文，按其流程、模板、禁忌执行，完成后按其质量清单自检。
 
@@ -104,4 +104,4 @@
 - 当新增平台、调整风格、改变文件结构时，及时更新本文件。
 - 如果某个写作任务反复出错，把修正规则补充进本文件或对应 Skill。
 
-**最后更新**：2026-10-09
+**最后更新**：2026-10-22

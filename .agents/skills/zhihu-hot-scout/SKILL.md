@@ -13,40 +13,40 @@ description: 热榜速报：抓知乎全站热榜 + 数码话题热榜，领域�
 
 ## 工作流程
 
-### 1. 浏览器通道检查（同 zhihu-question-scout §1）
+### 1. 通道检查
 
-用 **ego-browser**（taskSpace 名用 `zhihu-hot-scout`），先开 `https://www.zhihu.com/hot` 确认登录态。
+先用官方 CLI 验证通道：`"$HOME/Library/Application Support/zhihu-cli/current/zhihu-cli" hot --limit 1`，返回 `Code:0` 即主通道就绪（凭证在 Keychain，无需浏览器登录态）。只有当需要抓数码话题榜或 CLI 降级为浏览器模式时，才用 **ego-browser**（taskSpace 名 `zhihu-hot-scout`）开 `https://www.zhihu.com/hot` 确认登录态。
 
-### 2. 抓榜（2026-10-12 实测校准）
+### 2. 抓榜（2026-10-22 切换：全站榜走官方 CLI）
 
 两个榜单，各抓前 30 条（30 名开外基本没有爆发红利）：
 
-1. **全站热榜**：`https://www.zhihu.com/hot`
-2. **数码话题热榜**：数码话题页的热榜区（`https://www.zhihu.com/topic/19550517/hot`，话题 ID 如失效先 navigate 话题页再找热榜入口；只作补充，全站榜为主）
+1. **全站热榜**：知乎官方 CLI（skill `zhihu`），`CLI="$HOME/Library/Application Support/zhihu-cli/current/zhihu-cli"`，`"$CLI" hot --limit 30`。返回每条含 `title`/`url`/`summary`，从 url 中正则 `/question/(\d+)` 取 qid（非问题条目丢弃）。**注意：官方返回没有热度数值**，速报改引「全站第 N 名」替代原「x 万热度」。CLI 走开放平台额度（`hot_list` 100 次/日），不受页面改版和登录态影响，作为唯一主通道；CLI 不可用（网络/凭证故障）时才降级用下面的浏览器脚本。
+   降级脚本（ego-browser 现版 API——`taskSpace()/task.page()/page.evaluate()`）：
 
-**实测可用的提取脚本**（ego-browser 现版 API——`taskSpace()/task.page()/page.evaluate()`；旧版 `useOrCreateTaskSpace/openOrReuseTab/js()` 已失效，勿抄旧 skill 示例）：
+   ```bash
+   ego-browser nodejs <<'EOF'
+   const task = await taskSpace("zhihu-hot-scout");
+   const page = task.page("p1");
+   await page.goto("https://www.zhihu.com/hot");
+   await page.waitForTimeout(3500);
+   const data = await page.evaluate(() => {
+     return [...document.querySelectorAll(".HotItem")].slice(0, 30).map((el, i) => {
+       const a = el.querySelector("a[href]");
+       const title = (el.querySelector(".HotItem-title")?.textContent || "").trim();
+       const metrics = (el.querySelector(".HotItem-metrics")?.textContent || "").trim();
+       const href = a ? a.getAttribute("href") : "";
+       const m = href.match(/\/question\/(\d+)/);
+       return { rank: i + 1, title, qid: m ? m[1] : null, metrics };
+     });
+   });
+   console.log(JSON.stringify({spaceId: task.spaceId, data}));
+   EOF
+   ```
 
-```bash
-ego-browser nodejs <<'EOF'
-const task = await taskSpace("zhihu-hot-scout");
-const page = task.page("p1");
-await page.goto("https://www.zhihu.com/hot");
-await page.waitForTimeout(3500);
-const data = await page.evaluate(() => {
-  return [...document.querySelectorAll(".HotItem")].slice(0, 30).map((el, i) => {
-    const a = el.querySelector("a[href]");
-    const title = (el.querySelector(".HotItem-title")?.textContent || "").trim();
-    const metrics = (el.querySelector(".HotItem-metrics")?.textContent || "").trim();
-    const href = a ? a.getAttribute("href") : "";
-    const m = href.match(/\/question\/(\d+)/);
-    return { rank: i + 1, title, qid: m ? m[1] : null, metrics };
-  });
-});
-console.log(JSON.stringify({spaceId: task.spaceId, data}));
-EOF
-```
+2. **数码话题热榜**：官方 API 未覆盖话题榜，仍用 ego-browser 抓 `https://www.zhihu.com/topic/19550517/hot`（话题 ID 如失效先 navigate 话题页再找热榜入口；只作补充，全站榜为主）。
 
-注意：热榜条目不全是问题（可能是专栏/视频），`qid` 为 null 的丢弃；`metrics` 里的热度值保留原文（如「277 万热度」）供速报引用。问题页统计（关注/浏览/回答数/前 5 赞数）抓取脚本同 zhihu-question-scout §5.2 的 `body.innerText` 正则法，在同一轮 goto 里顺手完成。
+注意：热榜条目不全是问题（可能是专栏/视频），`qid` 为 null 的丢弃；CLI 通道无热度数值，速报引用「全站第 N 名」，降级浏览器通道抓到 `metrics` 时仍保留原文（如「277 万热度」）。问题页统计（关注/浏览/回答数/前 5 赞数）抓取脚本同 zhihu-question-scout §5.2 的 `body.innerText` 正则法，在同一轮 goto 里顺手完成。
 
 ### 3. 领域速滤（秒弃级）
 
@@ -67,7 +67,7 @@ EOF
 - 链接：https://www.zhihu.com/question/xxxx（完整裸 URL，显式列出）
 - 榜单位置 / 题龄 / 回答数 / 涌入速度：……
 - 判定：**抢**——理由一句话 + 建议立场方向；或 **弃**——理由一句话
-- 好物评估：顺带按 zhihu-haowu-evaluator 给三档结论（热榜题大多是观点型，多数结论会是「不插」）
+- 好物评估：顺带按 zhihu-haowu-scout 的三档口径给结论（热榜题大多是观点型，多数结论会是「不插」）
 ```
 
 然后问用户：对哪条点头？确认后调用 **zhihu-answer-drafter**（告知其走热点快车道），决策卡照常做但允许整体提速。

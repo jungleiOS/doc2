@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-21",
+  "limits": {
+    "maxUsers": 15,
+    "maxVotesPerUser": 2,
+    "minReadMs": 20000,
+    "maxReadMs": 40000,
+    "minGapMs": 60000,
+    "maxGapMs": 180000,
+    "minAnswersToCheck": 1
+  },
+  "truncated": false,
+  "results": [
+    {
+      "token": "ta-mi-er-43",
+      "name": "数码委伪局长",
+      "grade": "A",
+      "fromSeen": false,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2184830772",
+          "title": "双十一想要买一个平板有什么推荐的吗？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2184787952",
+          "title": "2021年「双十一」有哪些性价比高的平板电脑推荐？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "yang-wei-li-35-67",
+      "name": "羊薇梨",
+      "grade": "B",
+      "fromSeen": false,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2095612632124475145",
+          "title": "日本独立游戏遭国内破解汉化并修改，如何看待此事？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2094602255651677843",
+          "title": "华为为什么不限制下余承东，调整下网络的舆论？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    }
+  ]
+}
