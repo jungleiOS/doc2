@@ -1,6 +1,6 @@
 # Agent Skills 索引
 
-> 本仓库已配置 18 个 Skill。执行对应任务时先读取对应 `SKILL.md` 的完整内容，按其中的流程、模板、禁忌执行，并在写作完成后按其中的质量检查清单自检。
+> 本仓库已配置 19 个 Skill。执行对应任务时先读取对应 `SKILL.md` 的完整内容，按其中的流程、模板、禁忌执行，并在写作完成后按其中的质量检查清单自检。
 
 | Skill | 路径 | 触发场景 |
 |-------|------|---------|
@@ -11,10 +11,11 @@
 | `zhihu-question-scout` | `.agents/skills/zhihu-question-scout/SKILL.md` | 流量向选题：用 ego-browser 抓知乎关注的问题/邀请回答/推荐问题（优先级：关注 > 邀请 > 推荐），按 D×O×M×Q 模型每次选 7 个值得答的问题（说「选题」「帮我选问题」「看看知乎邀请」「今天答什么」时触发）；公共流程见同目录 `scout-common.md`；确认题目后交给 `zhihu-answer-drafter` 起草 |
 | `zhihu-haowu-scout` | `.agents/skills/zhihu-haowu-scout/SKILL.md` | 带货向选题：抓同一批问题来源，按 D×O×M×P（购买意图乘数）模型筛能挂好物卡的题，阶段 B 强制检查前排好物卡竞争，逐题给好物三档结论与插卡时机（说「带货选题」「能挂好物的题」「好物选题」「带货答什么」时触发；公共流程见 `zhihu-question-scout/scout-common.md`） |
 | `zhihu-hot-scout` | `.agents/skills/zhihu-hot-scout/SKILL.md` | 热榜速报：抓全站热榜+数码话题榜，领域速滤后只给「抢/弃」二元判断（不打分），点头后交 `zhihu-answer-drafter` 热点快车道（说「看看热榜」「今天热榜」「抢热点」时触发；每日「抢」上限 2 条） |
-| `zhihu-answer-drafter` | `.agents/skills/zhihu-answer-drafter/SKILL.md` | 把确认的知乎问题写成回答初稿：读问题完整描述 → 按 zhihu-viral-answer 成稿 → 事实核查 → 配图（≥4 张真实图）→ 去 AI 味 → 数据准确性校验 → GEO 审查 → 存档登记（说「起草回答」「写这个题」「按选题单起草」时触发；也被 scout 选题确认后调用；作答辅助协议在 `references/publish-assist.md`） |
+| `zhihu-answer-drafter` | `.agents/skills/zhihu-answer-drafter/SKILL.md` | 把确认的知乎问题写成回答初稿：读问题完整描述 → 按 zhihu-viral-answer 成稿 → 事实核查 → 配图（≥4 张真实图）→ 去 AI 味 → 数据准确性校验 → GEO 审查 → 成稿打分（zhihu-draft-scorer 流量向权重）→ 存档登记（说「起草回答」「写这个题」「按选题单起草」时触发；也被 scout 选题确认后调用；作答辅助协议在 `references/publish-assist.md`） |
 | `zhihu-comment-replier` | `.agents/skills/zhihu-comment-replier/SKILL.md` | 用 ego-browser 批处理知乎回复：抓当天收到的评论 → 定位来源 → 按策略筛选 → 生成草稿逐条经用户审核后代发（说「回复评论」「看看谁回复了我」「批处理回复」「清评论」时触发；批次日志存 `zhihu-auto-reply/`） |
 | `zhihu-answer-tracker` | `.agents/skills/zhihu-answer-tracker/SKILL.md` | 回采自己已发布回答的表现数据（阅读/赞同/评论/收藏/喜欢 + 问题页排名），回写 `outlines/选题历史.md` 复盘行，喂 scout 5.4 校准回路；快照存 `analytics/`（说「回采」「复盘」「看看我的回答表现」时触发） |
 | `zhihu-haowu-drafter` | `.agents/skills/zhihu-haowu-drafter/SKILL.md` | 起草带货向知乎回答：骨架同 zhihu-answer-drafter（公共流程见 `zhihu-answer-drafter/drafter-common.md`），差异在决策卡以带货适配为主轴、成稿执行好物选品与插卡（原 haowu-evaluator 商品级职责并入；问题级评估归属 zhihu-haowu-scout）（说「起草带货回答」「写好物回答」「插卡怎么写」「选品」时触发） |
+| `zhihu-draft-scorer` | `.agents/skills/zhihu-draft-scorer/SKILL.md` | 知乎成稿发布前质量打分：六维 0-10（事实红线一票打回、信息增量低置信）、双权重（流量/带货）、每分附证据+低分附改法（说「打分」「成稿质检」「质量分」「评一下这篇」时触发；通常由 zhihu-answer-drafter / zhihu-haowu-drafter 在 GEO 审查后自动调用） |
 | `zhihu-geo-optimizer` | `.agents/skills/zhihu-geo-optimizer/SKILL.md` | 知乎内容 GEO/SEO 审查：标题、正文、结尾的机器可读性优化，让内容被站内搜索、百度、AI 搜索引擎（DeepSeek/豆包/Kimi/知乎直答）优先引用（说「GEO」「SEO」「搜索流量」「被 AI 引用」「关键词布局」时触发；也被 zhihu-answer-drafter 起草流程在去 AI 味之后调用；调研证据库在 `references/geo-research.md`） |
 | `zhihu-to-baijiahao` | `.agents/skills/zhihu-to-baijiahao/SKILL.md` | 把知乎回答/文章转写为百家号版：SEO 化改写（长尾词标题 + 问答式结构 + 搜索关键词字段），赚百度搜索长尾；含合规时序与数据回收（说「转百家号」「百家号版」「同步到百度」时触发；策略依据 `知乎回答转写多平台_横纵分析报告.md`） |
 | `gzh-design` | `.agents/skills/gzh-design/SKILL.md` | 公众号文章排版：Markdown/docx/pdf/纯文本 → 可直接粘贴进公众号编辑器、不掉格式的 HTML（6 套主题 + 主题生成器，自动章节编号、关键词下划线、引言卡与目录；说「公众号排版」「微信排版」「gzh」「一键排版」时触发；由 skills CLI 安装，源仓库 [isjiamu/gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)） |

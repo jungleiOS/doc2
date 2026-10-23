@@ -1,0 +1,954 @@
+{
+  "collectedAt": "2026-10-22",
+  "channel": "zhihu-cli official API (me contents + content-stats)",
+  "items": [
+    {
+      "questionTitle": "大学生有必要购买iPad吗？",
+      "answerUrl": "https://www.zhihu.com/answer/2096380286925854628",
+      "publishedAt": "2026-10-21",
+      "reads": 58,
+      "upvotes": 6,
+      "comments": 1,
+      "favorites": 0,
+      "likes": 0,
+      "positiveRate": "12.07%",
+      "source": {
+        "App-推荐": 0.4,
+        "PC": 0.4,
+        "APP-消息": 0.2
+      }
+    },
+    {
+      "questionTitle": "OpenCode 遭攻击致部分用户 API 密钥外泄，这暴露了哪些安全隐患？",
+      "answerUrl": "https://www.zhihu.com/answer/2096369801056759994",
+      "publishedAt": "2026-10-21",
+      "reads": 39,
+      "upvotes": 5,
+      "comments": 0,
+      "favorites": 0,
+      "likes": 0,
+      "positiveRate": "12.82%",
+      "source": {
+        "App-推荐": 0.692,
+        "PC": 0.231,
+        "App-搜索": 0.077
+      }
+    },
+    {
+      "questionTitle": "多款 3A 老游戏被 AI 光速反编译并移植网页端，将对游戏行业带来哪些冲击？",
+      "answerUrl": "https://www.zhihu.com/answer/2096011286106714474",
+      "publishedAt": "2026-10-20",
+      "reads": 14810,
+      "upvotes": 21,
+      "comments": 3,
+      "favorites": 5,
+      "likes": 1,
+      "positiveRate": "0.24%",
+      "source": {
+        "PC": 0.833,
+        "App-推荐": 0.143,
+        "其他": 0.015,
+        "APP-消息": 0.005,
+        "App-搜索": 0.002,
+        "App-关注": 0.002
+      }
+    },
+    {
+      "questionTitle": "我到底适合要不要买平板？",
+      "answerUrl": "https://www.zhihu.com/answer/2096001862365341541",
+      "publishedAt": "2026-10-20",
+      "reads": 23,
+      "upvotes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "likes": 0,
+      "positiveRate": "0.00%",
+      "source": {
+        "PC": 0.63,
+        "APP-消息": 0.259,
+        "App-搜索": 0.074,
+        "App-关注": 0.037
+      }
+    },
+    {
+      "questionTitle": "iPhone Duo 溢价从超5万元跌至3000元，首销价格为什么会快速回落？",
+      "answerUrl": "https://www.zhihu.com/answer/2095652786117547603",
+      "publishedAt": "2026-10-19",
+      "reads": 1482,
+      "upvotes": 15,
+      "comments": 2,
+      "favorites": 2,
+      "likes": 1,
+      "positiveRate": "1.42%",
+      "source": {
+        "App-推荐": 0.504,
+        "PC": 0.448,
+        "其他": 0.014,
+        "App-热榜": 0.013,
+        "App-搜索": 0.012,
+        "App-关注": 0.005,
+        "APP-消息": 0.003
+      }
+    },
+    {
+      "questionTitle": "AI 项目是真牛还是吹牛？为什么网上吹得天花乱坠，真用起来却不是一回事？",
+      "answerUrl": "https://www.zhihu.com/answer/2095199385613354508",
+      "publishedAt": "2026-10-18",
+      "reads": 228,
+      "upvotes": 9,
+      "comments": 0,
+      "favorites": 1,
+      "likes": 0,
+      "positiveRate": "4.39%",
+      "source": {
+        "PC": 0.793,
+        "App-推荐": 0.162,
+        "APP-消息": 0.036,
+        "其他": 0.004,
+        "App-关注": 0.002,
+        "App-搜索": 0.002
+      }
+    },
+    {
+      "questionTitle": "怎么看 Anthropic 发布称 AI agent 的工时是员工的 6 倍，初级技术岗位占比下降？",
+      "answerUrl": "https://www.zhihu.com/answer/2095144873745826527",
+      "publishedAt": "2026-10-18",
+      "reads": 240,
+      "upvotes": 5,
+      "comments": 3,
+      "favorites": 1,
+      "likes": 0,
+      "positiveRate": "3.75%",
+      "source": {
+        "PC": 0.82,
+        "App-推荐": 0.155,
+        "App-搜索": 0.008,
+        "App-关注": 0.008,
+        "APP-消息": 0.008,
+        "其他": 0.003
+      }
+    },
+    {
+      "questionTitle": "澳洲一公司用AI假扮受害者接听诈骗电话以提前套取诈骗犯信息，这项技术值得在我国推广以解决诈骗问题吗？",
+      "answerUrl": "https://www.zhihu.com/answer/2095117688083424757",
+      "publishedAt": "2026-10-18",
+      "reads": 1623,
+      "upvotes": 20,
+      "comments": 3,
+      "favorites": 7,
+      "likes": 0,
+      "positiveRate": "2.28%",
+      "source": {
+        "App-推荐": 0.603,
+        "PC": 0.245,
+        "App-热榜": 0.115,
+        "其他": 0.015,
+        "App-搜索": 0.014,
+        "App-推送": 0.005,
+        "APP-消息": 0.004
+      }
+    },
+    {
+      "questionTitle": "官方拟修订《中国禁止出口限制出口技术目录》，增列部分人工智能、生物医药、光伏技术，背后有哪些考量？",
+      "answerUrl": "https://www.zhihu.com/answer/2094935568941695355",
+      "publishedAt": "2026-10-17",
+      "reads": 1569,
+      "upvotes": 24,
+      "comments": 1,
+      "favorites": 5,
+      "likes": 2,
+      "positiveRate": "2.17%",
+      "source": {
+        "App-推荐": 0.628,
+        "PC": 0.338,
+        "App-搜索": 0.017,
+        "其他": 0.01,
+        "App-关注": 0.003,
+        "APP-消息": 0.002,
+        "App-热榜": 0.001
+      }
+    },
+    {
+      "questionTitle": "全球智能手机出货量第三季度同比降 22% ，创有纪录以来最大降幅，背后是什么原因？",
+      "answerUrl": "https://www.zhihu.com/answer/2094924712019236190",
+      "publishedAt": "2026-10-17",
+      "reads": 173,
+      "upvotes": 4,
+      "comments": 0,
+      "favorites": 0,
+      "likes": 0,
+      "positiveRate": "2.89%",
+      "source": {
+        "App-推荐": 0.75,
+        "PC": 0.153,
+        "其他": 0.069,
+        "APP-消息": 0.021,
+        "App-关注": 0.007
+      }
+    },
+    {
+      "questionTitle": "荣耀 WIN2 12+512 国补 5499，直接比同平台竞品便宜 1000 元，算不算掀桌子？",
+      "answerUrl": "https://www.zhihu.com/answer/2094919019996386171",
+      "publishedAt": "2026-10-17",
+      "reads": 217,
+      "upvotes": 5,
+      "comments": 1,
+      "favorites": 0,
+      "likes": 0,
+      "positiveRate": "2.76%",
+      "source": {
+        "App-推荐": 0.545,
+        "PC": 0.248,
+        "App-搜索": 0.182,
+        "App-关注": 0.012,
+        "APP-消息": 0.012
+      }
+    },
+    {
+      "questionTitle": "如何评价苹果官方报告称网易、米哈游等中国头部游戏公司会绕过所谓「苹果税」？",
+      "answerUrl": "https://www.zhihu.com/answer/2094563922921706826",
+      "publishedAt": "2026-10-16",
+      "reads": 8351,
+      "upvotes": 136,
+      "comments": 25,
+      "favorites": 25,
+      "likes": 2,
+      "positiveRate": "2.28%",
+      "source": {
+        "App-推荐": 0.877,
+        "PC": 0.095,
+        "其他": 0.015,
+        "App-搜索": 0.007,
+        "APP-消息": 0.004,
+        "App-热榜": 0.002,
+        "App-关注": 0.001
+      }
+    },
+    {
+      "questionTitle": "如何看待海外研究人员曝光「运行在腾讯云上 AI 智能体为查询高德地图，自主利用泄露密钥、绕过反爬」？",
+      "answerUrl": "https://www.zhihu.com/answer/2094202270971966928",
+      "publishedAt": "2026-10-15",
+      "reads": 2976,
+      "upvotes": 25,
+      "comments": 0,
+      "favorites": 8,
+      "likes": 3,
+      "positiveRate": "1.28%",
+      "source": {
+        "PC": 0.591,
+        "App-推荐": 0.214,
+        "App-热榜": 0.154,
+        "App-搜索": 0.017,
+        "其他": 0.014,
+        "App-关注": 0.006,
+        "APP-消息": 0.004
+      }
+    },
+    {
+      "questionTitle": "双 11 促销规则越来越简单，为啥电商平台开始放弃复杂的满减玩法？电商大促正在发生哪些变化？",
+      "answerUrl": "https://www.zhihu.com/answer/2093857170647421912",
+      "publishedAt": "2026-10-14",
+      "reads": 12896,
+      "upvotes": 38,
+      "comments": 3,
+      "favorites": 6,
+      "likes": 3,
+      "positiveRate": "0.40%",
+      "source": {
+        "PC": 0.688,
+        "App-热榜": 0.252,
+        "App-推荐": 0.03,
+        "其他": 0.015,
+        "App-搜索": 0.009,
+        "APP-消息": 0.006
+      }
+    },
+    {
+      "questionTitle": "Meta 推出闭源 AI 模型 MuseWonder，将对行业格局产生哪些影响？",
+      "answerUrl": "https://www.zhihu.com/answer/2093851624942970842",
+      "publishedAt": "2026-10-14",
+      "reads": 532,
+      "upvotes": 5,
+      "comments": 2,
+      "favorites": 4,
+      "likes": 0,
+      "positiveRate": "3.01%",
+      "source": {
+        "App-推荐": 0.68,
+        "PC": 0.199,
+        "App-搜索": 0.071,
+        "App-推送": 0.029,
+        "App-关注": 0.022
+      }
+    },
+    {
+      "questionTitle": "2026Q3国内手机市场华为登顶，小米、OV、荣耀同比大幅下滑，国产手机增长逻辑发生了什么改变？",
+      "answerUrl": "https://www.zhihu.com/answer/2093842850115077257",
+      "publishedAt": "2026-10-14",
+      "reads": 394,
+      "upvotes": 4,
+      "comments": 0,
+      "favorites": 1,
+      "likes": 0,
+      "positiveRate": "1.27%",
+      "source": {
+        "PC": 0.711,
+        "App-推荐": 0.249,
+        "App-搜索": 0.023,
+        "其他": 0.014,
+        "APP-消息": 0.002,
+        "App-热榜": 0.001
+      }
+    },
+    {
+      "questionTitle": "如何看待华为要求酷安关停安卓版与鸿蒙版不同步的特性？",
+      "answerUrl": "https://www.zhihu.com/answer/2093834907609055316",
+      "publishedAt": "2026-10-14",
+      "reads": 11285,
+      "upvotes": 61,
+      "comments": 22,
+      "favorites": 24,
+      "likes": 2,
+      "positiveRate": "1.18%",
+      "source": {
+        "App-推荐": 0.743,
+        "PC": 0.203,
+        "其他": 0.025,
+        "App-搜索": 0.017,
+        "APP-消息": 0.004,
+        "App-热榜": 0.004,
+        "App-关注": 0.003
+      }
+    },
+    {
+      "questionTitle": "苹果「欢迎回家」新品发布会召开，推出品牌首款智能家庭中枢  HomeView 等，有哪些亮点值得关注？",
+      "answerUrl": "https://www.zhihu.com/answer/2093489367117570187",
+      "publishedAt": "2026-10-13",
+      "reads": 2259,
+      "upvotes": 18,
+      "comments": 1,
+      "favorites": 2,
+      "likes": 2,
+      "positiveRate": "1.02%",
+      "source": {
+        "PC": 0.565,
+        "App-推荐": 0.321,
+        "App-搜索": 0.062,
+        "App-热榜": 0.036,
+        "其他": 0.007,
+        "App-关注": 0.006,
+        "APP-消息": 0.004
+      }
+    },
+    {
+      "questionTitle": "如何看待千问将推出Personal Agent，AI真的能帮人干活了？",
+      "answerUrl": "https://www.zhihu.com/answer/2093483171807547858",
+      "publishedAt": "2026-10-13",
+      "reads": 158,
+      "upvotes": 2,
+      "comments": 0,
+      "favorites": 1,
+      "likes": 0,
+      "positiveRate": "1.90%",
+      "source": {
+        "PC": 0.7,
+        "App-推荐": 0.289,
+        "APP-消息": 0.007,
+        "其他": 0.004
+      }
+    },
+    {
+      "questionTitle": "如何看待由 Opus 5.5 生成的各类科普视频爆火？AI 正在改变科普内容的创作方式吗？",
+      "answerUrl": "https://www.zhihu.com/answer/2093466682278818568",
+      "publishedAt": "2026-10-13",
+      "reads": 847,
+      "upvotes": 12,
+      "comments": 0,
+      "favorites": 17,
+      "likes": 1,
+      "positiveRate": "4.01%",
+      "source": {
+        "PC": 0.537,
+        "App-推荐": 0.399,
+        "App-搜索": 0.041,
+        "APP-消息": 0.013,
+        "其他": 0.005,
+        "App-关注": 0.003,
+        "App-推送": 0.002
+      }
+    },
+    {
+      "questionTitle": "关机再开机和重启有什么区别？",
+      "answerUrl": "https://www.zhihu.com/answer/2093139198215709723",
+      "publishedAt": "2026-10-12",
+      "reads": 1500,
+      "upvotes": 12,
+      "comments": 1,
+      "favorites": 4,
+      "likes": 1,
+      "positiveRate": "1.20%",
+      "source": {
+        "PC": 0.663,
+        "App-推荐": 0.225,
+        "App-热榜": 0.093,
+        "APP-消息": 0.009,
+        "其他": 0.005,
+        "App-搜索": 0.004,
+        "App-关注": 0.002
+      }
+    },
+    {
+      "questionTitle": "AI 逆向工程项目 REA 爆火，闭源软件是否都要被迫开源？",
+      "answerUrl": "https://www.zhihu.com/answer/2093130411388020709",
+      "publishedAt": "2026-10-12",
+      "reads": 4516,
+      "upvotes": 41,
+      "comments": 13,
+      "favorites": 94,
+      "likes": 2,
+      "positiveRate": "3.81%",
+      "source": {
+        "PC": 0.494,
+        "App-推荐": 0.434,
+        "App-搜索": 0.027,
+        "App-热榜": 0.019,
+        "其他": 0.017,
+        "APP-消息": 0.005,
+        "App-关注": 0.003
+      }
+    },
+    {
+      "questionTitle": "如何看待每月薪资6K多却用着最新版苹果的新一代00后？",
+      "answerUrl": "https://www.zhihu.com/answer/2093124047659865465",
+      "publishedAt": "2026-10-12",
+      "reads": 580,
+      "upvotes": 5,
+      "comments": 0,
+      "favorites": 1,
+      "likes": 0,
+      "positiveRate": "1.03%",
+      "source": {
+        "App-推荐": 0.627,
+        "PC": 0.27,
+        "App-搜索": 0.061,
+        "其他": 0.022,
+        "APP-消息": 0.013,
+        "App-热榜": 0.005,
+        "App-推送": 0.002
+      }
+    },
+    {
+      "questionTitle": "如何评价国产手机价格飚到了六七千的价格甚至超越了iPhone手机？",
+      "answerUrl": "https://www.zhihu.com/answer/2093111671514517540",
+      "publishedAt": "2026-10-12",
+      "reads": 759,
+      "upvotes": 7,
+      "comments": 0,
+      "favorites": 2,
+      "likes": 0,
+      "positiveRate": "1.32%",
+      "source": {
+        "PC": 0.891,
+        "App-推荐": 0.084,
+        "其他": 0.012,
+        "App-搜索": 0.008,
+        "APP-消息": 0.003,
+        "App-关注": 0.001
+      }
+    },
+    {
+      "questionTitle": "媒体曝46岁「数学家」用AI炒股登上富豪榜，年赚642亿，如何看待这一造富神话？对普通人有借鉴意义吗？",
+      "answerUrl": "https://www.zhihu.com/answer/2092744076558972514",
+      "publishedAt": "2026-10-11",
+      "reads": 4437,
+      "upvotes": 37,
+      "comments": 1,
+      "favorites": 12,
+      "likes": 0,
+      "positiveRate": "1.28%",
+      "source": {
+        "PC": 0.766,
+        "App-推荐": 0.124,
+        "App-热榜": 0.085,
+        "App-搜索": 0.01,
+        "其他": 0.008,
+        "APP-消息": 0.006
+      }
+    },
+    {
+      "questionTitle": "2026年手机一夜涨价，现在谁换手机谁是“大冤种”吗？",
+      "answerUrl": "https://www.zhihu.com/answer/2092701916518269019",
+      "publishedAt": "2026-10-11",
+      "reads": 2064,
+      "upvotes": 16,
+      "comments": 3,
+      "favorites": 6,
+      "likes": 1,
+      "positiveRate": "1.31%",
+      "source": {
+        "App-推荐": 0.534,
+        "PC": 0.306,
+        "App-搜索": 0.095,
+        "其他": 0.058,
+        "APP-消息": 0.005,
+        "App-关注": 0.002
+      }
+    },
+    {
+      "questionTitle": "AI 编程普及到底是替代程序员，还是把创造力平权给普通人？",
+      "answerUrl": "https://www.zhihu.com/answer/2092687245971042668",
+      "publishedAt": "2026-10-11",
+      "reads": 150,
+      "upvotes": 4,
+      "comments": 0,
+      "favorites": 1,
+      "likes": 0,
+      "positiveRate": "3.33%",
+      "source": {
+        "PC": 0.888,
+        "App-推荐": 0.072,
+        "APP-消息": 0.034,
+        "App-搜索": 0.004,
+        "App-热榜": 0.002
+      }
+    },
+    {
+      "questionTitle": "大学生的平板可以用来干啥（不包括泡面盖）？可以用平板替代笔记本电脑吗？",
+      "answerUrl": "https://www.zhihu.com/answer/2092386285814129886",
+      "publishedAt": "2026-10-10",
+      "reads": 107,
+      "upvotes": 5,
+      "comments": 0,
+      "favorites": 5,
+      "likes": 0,
+      "positiveRate": "9.35%",
+      "source": {
+        "App-推荐": 0.505,
+        "PC": 0.316,
+        "APP-消息": 0.084,
+        "App-搜索": 0.074,
+        "App-关注": 0.011,
+        "其他": 0.011
+      }
+    },
+    {
+      "questionTitle": "小米 17 Ultra 全系涨价千元，华为 nova16 最高涨价 400 元，安卓机要全面涨价了吗？",
+      "answerUrl": "https://www.zhihu.com/answer/2092029300354635647",
+      "publishedAt": "2026-10-09",
+      "reads": 745,
+      "upvotes": 6,
+      "comments": 4,
+      "favorites": 2,
+      "likes": 0,
+      "positiveRate": "1.74%",
+      "source": {
+        "PC": 0.55,
+        "App-推荐": 0.393,
+        "App-搜索": 0.04,
+        "APP-消息": 0.007,
+        "App-关注": 0.006,
+        "其他": 0.003
+      }
+    },
+    {
+      "questionTitle": "MacBook Air全身没有开孔，如何还能保证较好的扬声和散热？",
+      "answerUrl": "https://www.zhihu.com/answer/2091670336307721993",
+      "publishedAt": "2026-10-08",
+      "reads": 1697,
+      "upvotes": 10,
+      "comments": 2,
+      "favorites": 2,
+      "likes": 1,
+      "positiveRate": "0.88%",
+      "source": {
+        "App-推荐": 0.52,
+        "PC": 0.43,
+        "App-搜索": 0.025,
+        "其他": 0.023,
+        "APP-消息": 0.002
+      }
+    },
+    {
+      "questionTitle": "用 AI 编程写完功能后，你们会如何检查代码，才不至于上线后返工？",
+      "answerUrl": "https://www.zhihu.com/answer/2091291978239571015",
+      "publishedAt": "2026-10-07",
+      "reads": 195,
+      "upvotes": 7,
+      "comments": 0,
+      "favorites": 6,
+      "likes": 0,
+      "positiveRate": "7.18%",
+      "source": {
+        "App-推荐": 0.521,
+        "PC": 0.393,
+        "App-搜索": 0.047,
+        "APP-消息": 0.033,
+        "App-热榜": 0.005
+      }
+    },
+    {
+      "questionTitle": "iPhone 18 在 Face ID 验证时偶发卡死，甚至自动重启，可能是什么问题？",
+      "answerUrl": "https://www.zhihu.com/answer/2091258271147599702",
+      "publishedAt": "2026-10-07",
+      "reads": 180,
+      "upvotes": 4,
+      "comments": 0,
+      "favorites": 2,
+      "likes": 0,
+      "positiveRate": "4.44%",
+      "source": {
+        "PC": 0.629,
+        "App-推荐": 0.268,
+        "App-搜索": 0.085,
+        "其他": 0.011,
+        "App-关注": 0.004,
+        "App-推送": 0.004
+      }
+    },
+    {
+      "questionTitle": "苹果称部分美版iPhone18 Pro Max蜂窝故障，将免费换新，为何会出现这种问题？国行有风险吗？",
+      "answerUrl": "https://www.zhihu.com/answer/2091182592271835671",
+      "publishedAt": "2026-10-07",
+      "reads": 506,
+      "upvotes": 3,
+      "comments": 0,
+      "favorites": 0,
+      "likes": 0,
+      "positiveRate": "0.79%",
+      "source": {
+        "PC": 0.551,
+        "App-推荐": 0.365,
+        "App-搜索": 0.046,
+        "其他": 0.016,
+        "App-推送": 0.009,
+        "APP-消息": 0.009,
+        "App-关注": 0.004
+      }
+    },
+    {
+      "questionTitle": "大学生有没有必要买平板？",
+      "answerUrl": "https://www.zhihu.com/answer/2090205728120235473",
+      "publishedAt": "2026-10-04",
+      "reads": 112,
+      "upvotes": 4,
+      "comments": 0,
+      "favorites": 2,
+      "likes": 0,
+      "positiveRate": "6.25%",
+      "source": {
+        "App-推荐": 0.519,
+        "PC": 0.163,
+        "App-搜索": 0.154,
+        "APP-消息": 0.115,
+        "App-关注": 0.048
+      }
+    },
+    {
+      "questionTitle": "为什么iPhone手机的屏幕看起来比安卓的更好更细腻？",
+      "answerUrl": "https://www.zhihu.com/answer/2089836414959670171",
+      "publishedAt": "2026-10-03",
+      "reads": 1300,
+      "upvotes": 14,
+      "comments": 0,
+      "favorites": 6,
+      "likes": 2,
+      "positiveRate": "1.77%",
+      "source": {
+        "App-推荐": 0.694,
+        "App-搜索": 0.131,
+        "PC": 0.128,
+        "其他": 0.029,
+        "APP-消息": 0.01,
+        "App-我的": 0.005,
+        "App-热榜": 0.003
+      }
+    },
+    {
+      "questionTitle": "现在手机电池都干到9000mAh了，但为什么续航焦虑反而越来越严重？",
+      "answerUrl": "https://www.zhihu.com/answer/2088766536907542711",
+      "publishedAt": "2026-09-30",
+      "reads": 368,
+      "upvotes": 6,
+      "comments": 1,
+      "favorites": 4,
+      "likes": 0,
+      "positiveRate": "2.99%",
+      "source": {
+        "App-推荐": 0.706,
+        "PC": 0.169,
+        "App-搜索": 0.079,
+        "App-推送": 0.017,
+        "App-我的": 0.015,
+        "其他": 0.012,
+        "App-关注": 0.003
+      }
+    },
+    {
+      "questionTitle": "找不到一台可插卡、可通话的平板，想问问为什么国产的几家主流厂商完全放弃了这一块呢？",
+      "answerUrl": "https://www.zhihu.com/answer/2088261099854602944",
+      "publishedAt": "2026-09-29",
+      "reads": 1929,
+      "upvotes": 14,
+      "comments": 6,
+      "favorites": 9,
+      "likes": 1,
+      "positiveRate": "1.66%",
+      "source": {
+        "App-推荐": 0.718,
+        "PC": 0.226,
+        "App-搜索": 0.026,
+        "其他": 0.023,
+        "APP-消息": 0.004,
+        "App-关注": 0.002,
+        "App-热榜": 0.001
+      }
+    },
+    {
+      "questionTitle": "为什么苹果敢打着环保的旗号，公然不送充电头？",
+      "answerUrl": "https://www.zhihu.com/answer/2088046888767447311",
+      "publishedAt": "2026-09-28",
+      "reads": 999,
+      "upvotes": 6,
+      "comments": 2,
+      "favorites": 0,
+      "likes": 0,
+      "positiveRate": "0.80%",
+      "source": {
+        "App-推荐": 0.843,
+        "App-搜索": 0.077,
+        "PC": 0.059,
+        "其他": 0.014,
+        "App-关注": 0.003,
+        "App-热榜": 0.002,
+        "APP-消息": 0.001
+      }
+    },
+    {
+      "questionTitle": "面对安卓阵营的激烈竞争，苹果 iPhone 的优势还能维持多久？",
+      "answerUrl": "https://www.zhihu.com/answer/2087677176090998515",
+      "publishedAt": "2026-09-27",
+      "reads": 264,
+      "upvotes": 3,
+      "comments": 0,
+      "favorites": 0,
+      "likes": 0,
+      "positiveRate": "1.52%",
+      "source": {
+        "App-推荐": 0.634,
+        "App-搜索": 0.252,
+        "PC": 0.08,
+        "APP-消息": 0.025,
+        "其他": 0.008
+      }
+    },
+    {
+      "questionTitle": "为什么现在的手机越来越先进，却没有一款有充满电后自动断电不再充电的功能？",
+      "answerUrl": "https://www.zhihu.com/answer/2087665282592551534",
+      "publishedAt": "2026-09-27",
+      "reads": 2070,
+      "upvotes": 13,
+      "comments": 19,
+      "favorites": 18,
+      "likes": 0,
+      "positiveRate": "2.56%",
+      "source": {
+        "App-推荐": 0.669,
+        "PC": 0.282,
+        "其他": 0.024,
+        "App-搜索": 0.015,
+        "APP-消息": 0.006,
+        "App-热榜": 0.002,
+        "App-关注": 0.002
+      }
+    },
+    {
+      "questionTitle": "苹果的ios系统是牢不可破的护城河金身吗？",
+      "answerUrl": "https://www.zhihu.com/answer/2087313615816757516",
+      "publishedAt": "2026-09-26",
+      "reads": 452,
+      "upvotes": 5,
+      "comments": 0,
+      "favorites": 2,
+      "likes": 0,
+      "positiveRate": "1.55%",
+      "source": {
+        "App-推荐": 0.732,
+        "PC": 0.119,
+        "App-搜索": 0.101,
+        "APP-消息": 0.031,
+        "App-推送": 0.011,
+        "其他": 0.004,
+        "App-关注": 0.002
+      }
+    },
+    {
+      "questionTitle": "苹果公司为什么倾向于同时设计硬件和操作系统？",
+      "answerUrl": "https://www.zhihu.com/answer/2086944738217931043",
+      "publishedAt": "2026-09-25",
+      "reads": 2791,
+      "upvotes": 39,
+      "comments": 2,
+      "favorites": 45,
+      "likes": 2,
+      "positiveRate": "3.33%",
+      "source": {
+        "App-推荐": 0.799,
+        "PC": 0.149,
+        "其他": 0.031,
+        "App-搜索": 0.008,
+        "APP-消息": 0.006,
+        "App-我的": 0.005,
+        "App-关注": 0.002
+      }
+    },
+    {
+      "questionTitle": "苹果高管称iPhone无需贴膜，实验室的抗刮是上代 3 倍，为什么放到日常使用就不一样？",
+      "answerUrl": "https://www.zhihu.com/answer/2086577507042645955",
+      "publishedAt": "2026-09-24",
+      "reads": 2758,
+      "upvotes": 28,
+      "comments": 4,
+      "favorites": 12,
+      "likes": 2,
+      "positiveRate": "1.70%",
+      "source": {
+        "App-推荐": 0.553,
+        "PC": 0.411,
+        "App-搜索": 0.028,
+        "其他": 0.005,
+        "App-推送": 0.002,
+        "App-热榜": 0.001,
+        "APP-消息": 0.001
+      }
+    },
+    {
+      "questionTitle": "如何看待iOS 27.2 Beta2国区新增功能，可限制App获取运动传感器数据，或应对摇一摇广告？",
+      "answerUrl": "https://www.zhihu.com/answer/2086235490890655600",
+      "publishedAt": "2026-09-23",
+      "reads": 1562,
+      "upvotes": 8,
+      "comments": 2,
+      "favorites": 3,
+      "likes": 0,
+      "positiveRate": "1.02%",
+      "source": {
+        "PC": 0.64,
+        "App-搜索": 0.151,
+        "App-热榜": 0.132,
+        "App-推荐": 0.068,
+        "其他": 0.006,
+        "APP-消息": 0.003
+      }
+    },
+    {
+      "questionTitle": "iPhone18Pro 上市即「破发」，苹果回应称正常，这反映了高端手机市场哪些变化？",
+      "answerUrl": "https://www.zhihu.com/answer/2085866561664042588",
+      "publishedAt": "2026-09-22",
+      "reads": 412,
+      "upvotes": 2,
+      "comments": 0,
+      "favorites": 1,
+      "likes": 0,
+      "positiveRate": "0.73%",
+      "source": {
+        "App-推荐": 0.51,
+        "PC": 0.403,
+        "App-搜索": 0.058,
+        "App-推送": 0.013,
+        "App-关注": 0.007,
+        "其他": 0.007,
+        "APP-消息": 0.002
+      }
+    },
+    {
+      "questionTitle": "努比亚NaviX Ultra手机是AI 新物种还是普通手机？同事说两码事，我觉得没差别， 谁对？",
+      "answerUrl": "https://www.zhihu.com/answer/2085854362291779092",
+      "publishedAt": "2026-09-22",
+      "reads": 27,
+      "upvotes": 5,
+      "comments": 0,
+      "favorites": 0,
+      "likes": 0,
+      "positiveRate": "18.52%",
+      "source": {
+        "PC": 0.847,
+        "App-推荐": 0.111,
+        "App-搜索": 0.028,
+        "APP-消息": 0.014
+      }
+    },
+    {
+      "questionTitle": "iPhone18 Pro 系列发布后，旧 iPhone 是现在卖还是过段时间再卖？",
+      "answerUrl": "https://www.zhihu.com/answer/2085851251099619795",
+      "publishedAt": "2026-09-22",
+      "reads": 173,
+      "upvotes": 3,
+      "comments": 0,
+      "favorites": 0,
+      "likes": 0,
+      "positiveRate": "1.73%",
+      "source": {
+        "PC": 0.493,
+        "App-推荐": 0.392,
+        "App-搜索": 0.093,
+        "APP-消息": 0.018,
+        "App-推送": 0.004
+      }
+    },
+    {
+      "questionTitle": "iPhone Duo 整机组装良率仅六成多，供应链在等苹果决定是否放宽质量要求，哪些信息值得关注？",
+      "answerUrl": "https://www.zhihu.com/answer/2085502694689720223",
+      "publishedAt": "2026-09-21",
+      "reads": 18455,
+      "upvotes": 33,
+      "comments": 11,
+      "favorites": 6,
+      "likes": 5,
+      "positiveRate": "0.30%",
+      "source": {
+        "PC": 0.969,
+        "App-热榜": 0.023,
+        "App-推荐": 0.006
+      }
+    },
+    {
+      "questionTitle": "用户反映iPhone 18 Pro多次死机重启，官方称存在系统漏洞，你遇到过吗？为什么会出现这种漏洞？",
+      "answerUrl": "https://www.zhihu.com/answer/2086227761451090442",
+      "publishedAt": "2026-09-23",
+      "reads": 19742,
+      "upvotes": 50,
+      "comments": 26,
+      "favorites": 20,
+      "likes": 0,
+      "positiveRate": "0.52%",
+      "source": {
+        "PC": 0.634,
+        "App-热榜": 0.269,
+        "App-推荐": 0.062,
+        "App-搜索": 0.014,
+        "App-推送": 0.011,
+        "其他": 0.01
+      }
+    },
+    {
+      "questionTitle": "苹果硬件负责人称看到 iPhone 贴膜就浑身不自在，这反映了厂商与用户之间怎样的理念冲突？",
+      "answerUrl": "https://www.zhihu.com/answer/2085507839716602487",
+      "publishedAt": "2026-09-21",
+      "reads": 203,
+      "upvotes": 2,
+      "comments": 0,
+      "favorites": 0,
+      "likes": 0,
+      "positiveRate": "0.99%",
+      "source": {
+        "App-推荐": 0.597,
+        "PC": 0.267,
+        "App-搜索": 0.053,
+        "App-热榜": 0.029,
+        "其他": 0.025,
+        "APP-消息": 0.016,
+        "App-关注": 0.012
+      }
+    }
+  ]
+}

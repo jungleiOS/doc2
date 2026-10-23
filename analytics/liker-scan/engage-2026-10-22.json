@@ -1,0 +1,323 @@
+{
+  "date": "2026-10-22",
+  "limits": {
+    "maxUsers": 15,
+    "minReadMs": 20000,
+    "maxReadMs": 40000,
+    "minGapMs": 60000,
+    "maxGapMs": 180000,
+    "minAnswersToCheck": 1
+  },
+  "truncated": true,
+  "results": [
+    {
+      "token": "chenalliang-ge-wei-du",
+      "name": "Bike Man",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096584353052635645",
+          "title": "在职场中，学历更重要 还是能力更重要?",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096401951869101718",
+          "title": "印度 CA 机构 eMudhra 私钥存严重缺陷遭各大厂商阻断，将带来哪些影响？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "wang-zhu-jiang-85",
+      "name": "王宁江",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2094019066298118252",
+          "title": "垃圾焚烧发电后还可以做砖瓦吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2085149286879196020",
+          "title": "我想问一下村里面要在我们承包地上堆放垃圾，一年给一千的租金。这个合不合规，能不能签。？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "Sean-63-73",
+      "name": "Sean",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096372690055648111",
+          "title": "山东一医院招聘后勤人员要求博士学历，院方回应是博士专场招聘，后续会放出硕本岗位，后勤也需要博士学历吗？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096349048034824286",
+          "title": "重庆一中学上演现实版「英语是体育老师教的」，你怎么看？双语课堂的建设还有哪些经验值得推广？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "zhang-si-cheng-24",
+      "name": "心思方成",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2095410049367667603",
+          "title": "土豆在你们那地方的方言叫啥？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2094821310069224393",
+          "title": "你们老家方言怎么夸一个女孩漂亮?",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "ztc-38-61",
+      "name": "ztc",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096507007494894496",
+          "title": "有了AI，程序员是不是一天只要干一小时的活？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096137868209022688",
+          "title": "FastAPI框架持续火爆，未来会在Python 后端web生态中占据第一吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "63-95-64-40",
+      "name": "发光中",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096354242705597876",
+          "title": "你有什么对快要上大学的女孩子都忠告?",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2095970612506372052",
+          "title": "为什么所有知识点都在书本上却还是要做笔记整理？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "lt-6-36",
+      "name": "龙腾虎跃LT",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096490137748234806",
+          "title": "您认为最值得推崇的诗词家是谁？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096125835447214522",
+          "title": "古代感叹时光的诗词有哪些？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "li-wencao",
+      "name": "李文操",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096699614711780082",
+          "title": "如果说统一是历史的必然趋势，那么当今的世界各国会不会有被统一的一天？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096665761620162456",
+          "title": "求简洁的时间轴，解释古生代中生代侏罗纪白垩纪的逻辑关系，并列出代表性的肉食性植食性恐龙。？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "yang-yang-56-46-63",
+      "name": "优典",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096560692866430386",
+          "title": "现实生活中，真的会有孩子考试成绩倒数第一，不发火的父母吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096181907126068068",
+          "title": "为什么家长很难接受孩子的平庸？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "rou-bao-zi-41-41",
+      "name": "建筑从业人员",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096713039030629109",
+          "title": "失业真的是一件很可怕的事吗？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096712891936269352",
+          "title": "为什么你干得越快，活反而越多？职场中干得快为何总被安排更多活？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "gqw-28-25",
+      "name": "知乎用户GQW",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2093770604063283019",
+          "title": "预算100-150万，兼顾商务和家用，卡宴、迈巴赫、电车MPV该怎么选？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2085236285661253961",
+          "title": "如何评价工人高空作业安全绳被楼下老人剪断，老人称想剪下来当晾衣绳，最终仅赔偿400元安全绳费用？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "tao-li-bu-yan-70-80",
+      "name": "方方放下",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096660663418593597",
+          "title": "《王者万象棋》中选择主c有哪些技巧呢？可以根据对方阵容调整主c吗？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096570242273113246",
+          "title": "有没有女主脑子清醒的文?",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "han-wen-cheng",
+      "name": "转场码农",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/714873812",
+          "title": "为什么杭州总是灰蒙蒙的？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/702101725",
+          "title": "你为什么最终没有留在杭州？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "san-xie-32-92",
+      "name": "战忽局华中局五号",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/678219145",
+          "title": "有什么让你一看就泪眼朦胧的诗句？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "80-13-72-60",
+      "name": "白川漱玉",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2092762548647024160",
+          "title": "《星布谷地》终测21天，从「持续运营」的角度看，目前的设计有哪些值得聊的地方？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2089362697469039876",
+          "title": "玩家对游戏公司的正面评价，通常基于哪些具体理由？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    }
+  ]
+}
