@@ -1,0 +1,531 @@
+{
+  "date": "2026-10-23",
+  "limits": {
+    "maxUsers": 30,
+    "skipUsers": 15,
+    "minReadMs": 20000,
+    "maxReadMs": 40000,
+    "minGapMs": 60000,
+    "maxGapMs": 180000,
+    "minAnswersToCheck": 1
+  },
+  "truncated": true,
+  "results": [
+    {
+      "token": "80-13-72-60",
+      "name": "白川漱玉",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096948199776851722",
+          "title": "如何评价《绝区零》代理人档案丨挽昼？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2092762548647024160",
+          "title": "《星布谷地》终测21天，从「持续运营」的角度看，目前的设计有哪些值得聊的地方？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "liujlthu",
+      "name": "liujl09",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "touchmimi",
+      "name": "touchmimi",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2095014380165514407",
+          "title": "你是怎么看待年轻人活在当下不交社保的?",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2093217481242550718",
+          "title": "曝某大厂员工当众掌掴领导，疑因遭领导拒绝批假，其企微个签「研究国法企规」获1万同事点赞，具体啥情况？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "tata-94-78-36",
+      "name": "tata",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "timothy-cao-71",
+      "name": "cranberry",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "jian-xia-44-98",
+      "name": "兼蕸",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2030261847966925000",
+          "title": "为什么两个人谈恋爱就是到处去吃？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/1971278655289287864",
+          "title": "为什么猫不让摸肚子？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "da-fan-40-41",
+      "name": "大凡",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/1901592001054474768",
+          "title": "你在知乎收到过哪些非常奇怪的私信？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/3426770704",
+          "title": "你尝试过戒烟吗？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "winter-48-94",
+      "name": "Winter",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/3599166763",
+          "title": "不许作弊，不许网上下载，能发一张你手机里的天空吗？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/3519849967",
+          "title": "陌生的朋友，能不能给我说一声中考加油？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "dc2btliz",
+      "name": "小看山dc2Btliz",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "yang-jun-60-32",
+      "name": "臭臭羊",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2082765964953784358",
+          "title": "NBA收视率现在为啥只有NFL的零头？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2009565928887711145",
+          "title": "商家称 36 斤活羊烤完变 6.9 斤正常，这种重量流失合理吗？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "12-21-87-20-72",
+      "name": "海海动漫",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "zhi-hu-shu-ma",
+      "name": "知乎数码",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2092283782522827984",
+          "title": "手机快充头怎么选才不踩坑，除了充电速度，还应该关注什么？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2080981043444540249",
+          "title": "苹果发布会定档北京时间 9 月 10 日，首款折叠屏 iPhone 将亮相，有哪些信息值得特别关注？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "yang-da-xian-71-96",
+      "name": "Zoeyang",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2372260324",
+          "title": "北京MetaApp（名为展力展心公司）公司怎么样、996？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "44-5-94-78",
+      "name": "阿白",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/78473566378",
+          "title": "现在的个人信息泄露有多严重？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "night_owl1998",
+      "name": "法的投资人",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2030657395718877796",
+          "title": "为什么世界不感谢中国的自我克制？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2017304597207742231",
+          "title": "中国有哪些海岛县（整个县都是或大半是海岛组成）？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "jiang-hai-6",
+      "name": "江海",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2095523731854595663",
+          "title": "如何评价新中国的前三十年？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2093991586845685372",
+          "title": "立场重要，还是是非重要？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "1-94-2-54",
+      "name": "烧冻鸡翅鸭",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/1982871375967453991",
+          "title": "如何看待《鸣潮》获得2025 TGA的玩家之声大奖（最能体现全球玩家意愿的大奖）？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "xiao-bei-57-42",
+      "name": "小北",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/1225437635",
+          "title": "如何看待肖战全球后援会就粉丝争议发公告，表示道歉并将整改？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/932883834",
+          "title": "王力宏代言费20年不涨价为什么还被解约了？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "33-37-87-63-33",
+      "name": "海伦敦",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "chu-cheng-xie-94",
+      "name": "储成协",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "zhou-yang-sen-72",
+      "name": "周杨森",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "mou-bu-zhi-ming-de-cua",
+      "name": "某不知名的CUA",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/1903975502777131974",
+          "title": "感时花溅泪，下一句你知道是什么吗？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/1903975128485827018",
+          "title": "为什么高中生要把书放到桌子上?",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "guo-jin-yu-67-24",
+      "name": "学生2775",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2093967811643286168",
+          "title": "C++ 标准为什么以目标年份命名版本，C++26 这个名称如何确定？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2028771236533081184",
+          "title": "这是甚？这还是计算机语言吗？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "jyw2018",
+      "name": "jyw2018",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/3407959599",
+          "title": "钱会是你的底气吗？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/1112999594",
+          "title": "宝马导航怎样选择高速优先？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "ta-mi-er-43",
+      "name": "数码委伪局长",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2184830772",
+          "title": "双十一想要买一个平板有什么推荐的吗？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2184787952",
+          "title": "2021年「双十一」有哪些性价比高的平板电脑推荐？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "he-fei-55-77",
+      "name": "无知是福",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2095141173904007445",
+          "title": "华为余承东就“三部门联合调查刹车踏板支架断裂问题”表态：正义可能会迟到，但永远不会缺席！，你怎么看？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2094550372882956671",
+          "title": "怎么看特朗普宣布进口俄罗斯柴油？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "liao-yu-38-53",
+      "name": "宇城飞",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096156822004679968",
+          "title": "炒股亏损的原因，你知道哪些？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2094364085240468006",
+          "title": "投资理财时，对方说“保本保息、稳赚不赔”，这种情况可信吗？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "gu-yi-71-30",
+      "name": "请叫我菜dog",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/1970242161418155199",
+          "title": "如何看待李新野说的“舔狗都是小人”？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/1969555886390351405",
+          "title": "孩子上大学为什么不能听我的剃平头？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "yang-wei-li-35-67",
+      "name": "羊薇梨",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2095612632124475145",
+          "title": "日本独立游戏遭国内破解汉化并修改，如何看待此事？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2094602255651677843",
+          "title": "华为为什么不限制下余承东，调整下网络的舆论？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "26-57-68-28-35",
+      "name": "奶龙严父",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096329014302466080",
+          "title": "如何评价荣耀WIN2系列？双风扇、全系万级电池、2K 185Hz+满血骁龙芯，是否拉高了性能手机标准？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2080403362701210590",
+          "title": "为什么手机越买越大，存储焦虑却越来越严重？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "shou-you-yu-xiang-40",
+      "name": "手有余香",
+      "tier": "常客",
+      "votesTarget": 0,
+      "voted": [],
+      "skipped": "新入列（观察一天）"
+    }
+  ]
+}

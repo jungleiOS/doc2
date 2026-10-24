@@ -1,0 +1,331 @@
+{
+  "date": "2026-10-23",
+  "limits": {
+    "maxUsers": 15,
+    "minReadMs": 20000,
+    "maxReadMs": 40000,
+    "minGapMs": 60000,
+    "maxGapMs": 180000,
+    "minAnswersToCheck": 1
+  },
+  "truncated": true,
+  "results": [
+    {
+      "token": "wang-zhu-jiang-85",
+      "name": "王宁江",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2094019066298118252",
+          "title": "垃圾焚烧发电后还可以做砖瓦吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2085149286879196020",
+          "title": "我想问一下村里面要在我们承包地上堆放垃圾，一年给一千的租金。这个合不合规，能不能签。？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "chenalliang-ge-wei-du",
+      "name": "Bike Man",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096584353052635645",
+          "title": "在职场中，学历更重要 还是能力更重要?",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096401951869101718",
+          "title": "印度 CA 机构 eMudhra 私钥存严重缺陷遭各大厂商阻断，将带来哪些影响？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "Sean-63-73",
+      "name": "Sean",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097009285469362056",
+          "title": "人民日报批「一有分歧家长就举报」，暴露了哪些问题？家校信任危机该如何破解？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097005347261114024",
+          "title": "多所高校发文严禁教师授课全程依赖 PPT，能否切实提升大学课堂质量？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "63-95-64-40",
+      "name": "发光中",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097066732288467492",
+          "title": "为什么在大学里什么都学不到，如果只听老师讲课的话，大学老师到底有什么存在的必要的价值？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096354242705597876",
+          "title": "你有什么对快要上大学的女孩子都忠告?",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "ztc-38-61",
+      "name": "ztc",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097067582285145091",
+          "title": "如何评价特朗普发文痛批詹姆斯在奏国歌时做「高尔夫挥杆动作」，并要求其道歉？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096861559788134452",
+          "title": "AI 写代码太快，Review 不过来，要不要违背祖训放弃 Review？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "zhang-si-cheng-24",
+      "name": "心思方成",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096992581951534307",
+          "title": "“傻子”，你们那的方言有哪些常用说法？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2095410049367667603",
+          "title": "土豆在你们那地方的方言叫啥？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "yang-yang-56-46-63",
+      "name": "优典",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096910564157145981",
+          "title": "现在教育这么卷，家长如何帮助孩子疏导压力，拥有良好心态?",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096560692866430386",
+          "title": "现实生活中，真的会有孩子考试成绩倒数第一，不发火的父母吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "li-wencao",
+      "name": "李文操",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097039695377179063",
+          "title": "人类的恶是如何产生的？本质和起源？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097001877275726795",
+          "title": "侏罗纪的气候适合人类生存吗？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "lt-6-36",
+      "name": "龙腾虎跃LT",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096853975790310915",
+          "title": "最近有没有读到让你特别心动的诗词？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096490137748234806",
+          "title": "您认为最值得推崇的诗词家是谁？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "rou-bao-zi-41-41",
+      "name": "建筑从业人员",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096882454447629298",
+          "title": "为什么现在年轻人，尤其80以后的人，不愿意讨好领导了？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096881663494075237",
+          "title": "在公司里最累的，是不是永远是那几个“靠谱”的人？你们公司是这样的吗？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "gqw-28-25",
+      "name": "知乎用户GQW",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2093770604063283019",
+          "title": "预算100-150万，兼顾商务和家用，卡宴、迈巴赫、电车MPV该怎么选？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2085236285661253961",
+          "title": "如何评价工人高空作业安全绳被楼下老人剪断，老人称想剪下来当晾衣绳，最终仅赔偿400元安全绳费用？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "tao-li-bu-yan-70-80",
+      "name": "方方放下",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096660663418593597",
+          "title": "《王者万象棋》中选择主c有哪些技巧呢？可以根据对方阵容调整主c吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096570242273113246",
+          "title": "有没有女主脑子清醒的文?",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "han-wen-cheng",
+      "name": "转场码农",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/714873812",
+          "title": "为什么杭州总是灰蒙蒙的？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/702101725",
+          "title": "你为什么最终没有留在杭州？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "hu-kun-bing",
+      "name": "冰昆湖",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096635037139715546",
+          "title": "录制视频用的麦克风有哪些好的推荐?",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096634643005101306",
+          "title": "有哪些性价比高的适合新入门的小白的麦克风？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "san-xie-32-92",
+      "name": "战忽局华中局五号",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/678219145",
+          "title": "有什么让你一看就泪眼朦胧的诗句？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "shou-you-yu-xiang-40",
+      "name": "手有余香",
+      "tier": "常客",
+      "votesTarget": 0,
+      "voted": [],
+      "skipped": "新入列（观察一天）"
+    }
+  ]
+}

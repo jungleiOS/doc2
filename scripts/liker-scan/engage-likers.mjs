@@ -2,7 +2,8 @@
 // 对当日 report「常点赞用户（R 级）」区块里的人模拟真人阅读后回赞（只点赞，不回关）。
 // 名单按互动亲密度挑选（累计点赞/点赞天数），不再看对方是否大号。
 // 用法：
-//   node scripts/liker-scan/engage-likers.mjs [日期，默认今天]
+//   node scripts/liker-scan/engage-likers.mjs [日期，默认今天] [--append] [--skip N] [--max N]
+//   --skip/--max：追加轮次用，跳过名单前 N 个要回赞的人、本轮最多处理 N 人；--append 结果写入 engage-日期-extra.json
 // 输出 analytics/liker-scan/engage-YYYY-MM-DD.json；成功的用户会回写 seen-users.json 的 lastEngaged。
 import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
@@ -15,11 +16,19 @@ const date = process.argv[2] && !process.argv[2].startsWith("-") ? process.argv[
 const dir = path.join(repoRoot, "analytics", "liker-scan");
 const reportFile = path.join(dir, `report-${date}.md`);
 const seenFile = path.join(dir, "seen-users.json");
-const outFile = path.join(dir, `engage-${date}.json`);
+// 追加轮次输出到独立文件，避免覆盖当日常规轮结果
+const suffix = process.argv.includes("--append") ? "-extra" : "";
+const outFile = path.join(dir, `engage-${date}${suffix}.json`);
+
+function argNum(flag) {
+  const i = process.argv.indexOf(flag);
+  return i >= 0 && process.argv[i + 1] ? Number(process.argv[i + 1]) : null;
+}
 
 // ---- 可调参数 ----
 const LIMITS = {
-  maxUsers: 15,          // 单轮总用户上限
+  maxUsers: argNum("--max") ?? 15,   // 单轮总用户上限
+  skipUsers: argNum("--skip") ?? 0,  // 跳过名单前 N 个要回赞的人（用于追加轮次捞后面的人）
   minReadMs: 20000,      // 单篇最短停留
   maxReadMs: 40000,      // 单篇最长停留
   minGapMs: 60000,       // 用户之间最短间隔
@@ -54,13 +63,15 @@ function parseReportR(file) {
 
 const seen = JSON.parse(fs.readFileSync(seenFile, "utf-8"));
 const allUsers = parseReportR(reportFile);
-// 15 人上限只作用于真正要回赞的人；新入列的不占名额但也记录进输出
-const actionable = allUsers.filter((u) => u.votesTarget > 0);
+// 上限只作用于真正要回赞的人；新入列的不占名额但也记录进输出
+const allActionable = allUsers.filter((u) => u.votesTarget > 0);
+const actionable = allActionable.slice(LIMITS.skipUsers);
 let truncated = false;
 if (actionable.length > LIMITS.maxUsers) {
   actionable.length = LIMITS.maxUsers;
   truncated = true;
 }
+if (LIMITS.skipUsers > 0 && allActionable.length > LIMITS.skipUsers) truncated = true;
 const users = actionable.concat(allUsers.filter((u) => u.votesTarget === 0));
 
 // ---- 浏览器端脚本（在 ego-browser nodejs 环境内运行） ----
