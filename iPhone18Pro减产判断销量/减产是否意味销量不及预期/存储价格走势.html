@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1000px; height: 600px; font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #fafbfc; }
+  #chart { width: 1000px; height: 600px; padding: 40px 48px 20px; }
+  .title { font-size: 28px; font-weight: 700; color: #1a2233; margin-bottom: 6px; }
+  .subtitle { font-size: 15px; color: #667085; margin-bottom: 18px; }
+</style>
+</head>
+<body>
+<div id="chart">
+  <div class="title">存储芯片合约价：一年涨到近三倍，还在涨</div>
+  <div class="subtitle">DRAM 合约价相对指数（2025Q2 = 100）· 移动端 12GB LPDDR5X 为观察样本</div>
+  <svg width="904" height="440" viewBox="0 0 904 440">
+    <!-- 网格 -->
+    <g stroke="#e4e7ec" stroke-width="1">
+      <line x1="70" y1="60"  x2="880" y2="60"/>
+      <line x1="70" y1="130" x2="880" y2="130"/>
+      <line x1="70" y1="200" x2="880" y2="200"/>
+      <line x1="70" y1="270" x2="880" y2="270"/>
+      <line x1="70" y1="340" x2="880" y2="340"/>
+      <line x1="70" y1="370" x2="880" y2="370" stroke="#98a2b3"/>
+    </g>
+    <!-- Y 轴刻度 -->
+    <g font-size="13" fill="#98a2b3" text-anchor="end">
+      <text x="60" y="345">100</text>
+      <text x="60" y="275">150</text>
+      <text x="60" y="205">200</text>
+      <text x="60" y="135">250</text>
+      <text x="60" y="65">300</text>
+    </g>
+    <text x="18" y="200" font-size="13" fill="#98a2b3" transform="rotate(-90 18 200)" text-anchor="middle">相对价格指数</text>
+
+    <!-- 数据线（虚线连接锚点） -->
+    <path d="M 120 340 L 590 81.5" stroke="#d92d20" stroke-width="3" stroke-dasharray="7 5" fill="none"/>
+    <path d="M 590 81.5 L 830 55" stroke="#d92d20" stroke-width="3" stroke-dasharray="7 5" fill="none" opacity="0.55"/>
+
+    <!-- 置信带 Q4 -->
+    <path d="M 590 81.5 L 830 46 L 830 64 Z" fill="#fecdca" opacity="0.7"/>
+
+    <!-- 数据点 -->
+    <circle cx="120" cy="340" r="7" fill="#d92d20"/>
+    <circle cx="590" cy="81.5" r="7" fill="#d92d20"/>
+    <circle cx="830" cy="55" r="7" fill="#f97066" stroke="#d92d20" stroke-width="2" stroke-dasharray="3 2"/>
+
+    <!-- 点标注 -->
+    <text x="120" y="375" font-size="14" fill="#1a2233" text-anchor="middle" font-weight="600">2025Q2</text>
+    <text x="120" y="393" font-size="12" fill="#667085" text-anchor="middle">基期 = 100</text>
+
+    <text x="590" y="375" font-size="14" fill="#1a2233" text-anchor="middle" font-weight="600">2026Q2</text>
+    <text x="590" y="393" font-size="12" fill="#667085" text-anchor="middle">≈ 275（约 145 美元 / 12GB）</text>
+
+    <text x="830" y="375" font-size="14" fill="#1a2233" text-anchor="middle" font-weight="600">2026Q4（E）</text>
+    <text x="830" y="393" font-size="12" fill="#667085" text-anchor="middle">预计环比再涨 10–15%</text>
+
+    <!-- 涨幅标注 -->
+    <g>
+      <rect x="255" y="150" rx="8" width="215" height="46" fill="#fee4e2"/>
+      <text x="362" y="179" font-size="19" fill="#b42318" text-anchor="middle" font-weight="700">同比 +175%</text>
+    </g>
+    <g>
+      <rect x="690" y="100" rx="8" width="196" height="42" fill="#fff4ed" stroke="#fda29b" stroke-dasharray="4 3"/>
+      <text x="788" y="126" font-size="15" fill="#b42318" text-anchor="middle" font-weight="600">涨势未止（预测）</text>
+    </g>
+  </svg>
+  <div style="font-size:12.5px;color:#98a2b3;margin-top:6px;">
+    数据：TrendForce 集邦咨询，经快科技、金融界转引 · 虚线为锚点间示意连接，非逐季实测 · 自制示意图
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f7f9; }
+  #chart { width: 880px; padding: 32px 36px 36px; box-sizing: border-box; }
+  h2 { font-size: 26px; margin: 0 0 6px; color: #1a1a1a; }
+  .sub { font-size: 13px; color: #888; margin-bottom: 24px; }
+  .split { display: flex; gap: 24px; position: relative; }
+  .col { flex: 1; border-radius: 12px; padding: 18px 20px; }
+  .adult { background: #e8f1fd; }
+  .kid { background: #fdeee0; }
+  .col h3 { font-size: 16px; margin: 0 0 12px; }
+  .adult h3 { color: #1d4ed8; } .kid h3 { color: #b45309; }
+  .flow { display: flex; flex-direction: column; gap: 8px; }
+  .node { background: #fff; border-radius: 8px; padding: 9px 12px; font-size: 14px; color: #333; }
+  .mid { flex: none; width: 200px; display: flex; flex-direction: column; justify-content: center; }
+  .concl { background: #111827; color: #fff; border-radius: 14px; padding: 20px 18px; text-align: center; }
+  .concl .big { font-size: 20px; font-weight: 700; line-height: 1.5; }
+  .concl .small { font-size: 13px; color: #9ca3af; margin-top: 8px; line-height: 1.6; }
+  .foot { margin-top: 20px; font-size: 13px; color: #888; }
+</style>
+</head>
+<body>
+<div id="chart">
+  <h2>大人自己都管不住手机，凭什么指望孩子？</h2>
+  <div class="sub">同一个诱惑，两套硬件：前额叶要到 25 岁左右才发育成熟，孩子的「刹车」本来就还没装好</div>
+  <div class="split">
+    <div class="col adult">
+      <h3>🧑 大人（前额叶已成熟）</h3>
+      <div class="flow">
+        <div class="node">正在干活 / 写方案</div>
+        <div class="node">手机在旁边亮了一下</div>
+        <div class="node">忍不住偷瞄一眼 → 一刷十分钟</div>
+        <div class="node">心流被切碎，自己也后悔</div>
+      </div>
+    </div>
+    <div class="mid">
+      <div class="concl">
+        <div class="big">别指望自控<br>要靠约定</div>
+        <div class="small">承认人会输给诱惑，然后用规则把诱惑隔开</div>
+      </div>
+    </div>
+    <div class="col kid">
+      <h3>🧒 孩子（刹车还没发育好）</h3>
+      <div class="flow">
+        <div class="node">作业摊在桌上</div>
+        <div class="node">平板就在手边，游戏图标在招手</div>
+        <div class="node">想摸一下 → 一玩停不下来</div>
+        <div class="node">不是故意的，是大脑还没长好</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">示意图 · 依据：行为神经科学共识——前额叶皮层约 25 岁才成熟，负责自控、计划与延迟满足</div>
+</div>
+</body>
+</html>

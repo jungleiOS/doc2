@@ -1,0 +1,338 @@
+{
+  "date": "2026-10-25",
+  "limits": {
+    "maxUsers": 15,
+    "skipUsers": 0,
+    "minReadMs": 20000,
+    "maxReadMs": 40000,
+    "minGapMs": 60000,
+    "maxGapMs": 180000,
+    "minAnswersToCheck": 1
+  },
+  "truncated": true,
+  "results": [
+    {
+      "token": "wang-zhu-jiang-85",
+      "name": "王宁江",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2094019066298118252",
+          "title": "垃圾焚烧发电后还可以做砖瓦吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2085149286879196020",
+          "title": "我想问一下村里面要在我们承包地上堆放垃圾，一年给一千的租金。这个合不合规，能不能签。？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "chenalliang-ge-wei-du",
+      "name": "Bike Man",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097700024536785111",
+          "title": "男孩偷超市饮料，被父亲拿着戒尺送到派出所「自首」，感受手铐重量后向店主道歉，你支持这种教育方式吗？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097406545365559176",
+          "title": "如果未来的知乎充满着由 DeepSeek 这种 AI 生成的答案，你还愿意逛知乎吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "63-95-64-40",
+      "name": "发光中",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097066732288467492",
+          "title": "为什么在大学里什么都学不到，如果只听老师讲课的话，大学老师到底有什么存在的必要的价值？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096354242705597876",
+          "title": "你有什么对快要上大学的女孩子都忠告?",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "ztc-38-61",
+      "name": "ztc",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097590014393717516",
+          "title": "为什么 Markdown 成了 AI 时代知识管理的默认格式？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097375217144352828",
+          "title": "如何评价Artificial Analysis推出AI活人感排名？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "Sean-63-73",
+      "name": "Sean",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097009285469362056",
+          "title": "人民日报批「一有分歧家长就举报」，暴露了哪些问题？家校信任危机该如何破解？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097005347261114024",
+          "title": "多所高校发文严禁教师授课全程依赖 PPT，能否切实提升大学课堂质量？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "zhang-si-cheng-24",
+      "name": "心思方成",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097621164017435983",
+          "title": "“干嘛”在你们那里的方言是什么？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097187965701305911",
+          "title": "螳螂在干越方言中称“苦螂螂”，在你们老家的方言中叫什么？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "yang-yang-56-46-63",
+      "name": "优典",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097753434816517743",
+          "title": "为什么小学四年级后，许多家长发现亲自辅导孩子不如培训班有效？是教育方法问题还是家长能力局限？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097340608910188892",
+          "title": "有些家长总说“孩子只要快乐就好”，但当孩子真的只想玩不想学习，为什么立刻不快乐了？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "li-wencao",
+      "name": "李文操",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097750440830154143",
+          "title": "为什么统治了地球一亿六千万年的恐龙没有诞生文明？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097669723802563770",
+          "title": "除了三体，还有哪些硬核科幻小说值得推荐？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "rou-bao-zi-41-41",
+      "name": "建筑从业人员",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097602649642293002",
+          "title": "工作记忆怎么提高？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097602498072728289",
+          "title": "三线城市，中年失业，躺平需要什么条件！？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "lt-6-36",
+      "name": "龙腾虎跃LT",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097585182270304815",
+          "title": "有哪些让人耳目一新的小众诗词？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097214444711497925",
+          "title": "哪些古诗词最能体现人生百态？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "gqw-28-25",
+      "name": "知乎用户GQW",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2093770604063283019",
+          "title": "预算100-150万，兼顾商务和家用，卡宴、迈巴赫、电车MPV该怎么选？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2085236285661253961",
+          "title": "如何评价工人高空作业安全绳被楼下老人剪断，老人称想剪下来当晾衣绳，最终仅赔偿400元安全绳费用？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "tao-li-bu-yan-70-80",
+      "name": "方方放下",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097492974645014755",
+          "title": "如何评价肖战在电视剧《小城良方》里的演技？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097456037662025300",
+          "title": "王者万象棋最新动态有哪些？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "shou-you-yu-xiang-40",
+      "name": "手有余香",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2785449615",
+          "title": "为什么有的人说挺俄的其实是就是挺中派，挺乌的其实就是亲西方派？他们的逻辑到底是什么？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2785447742",
+          "title": "你是如何看待网上\"政治正确\"式的“孝乌”的认知战浪潮的？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "hu-kun-bing",
+      "name": "冰昆湖",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096635037139715546",
+          "title": "录制视频用的麦克风有哪些好的推荐?",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096634643005101306",
+          "title": "有哪些性价比高的适合新入门的小白的麦克风？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "han-wen-cheng",
+      "name": "转场码农",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/714873812",
+          "title": "为什么杭州总是灰蒙蒙的？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/702101725",
+          "title": "你为什么最终没有留在杭州？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "zhi0ynrcm",
+      "name": "空林照月",
+      "tier": "铁粉",
+      "votesTarget": 0,
+      "voted": [],
+      "skipped": "新入列（观察一天）"
+    }
+  ]
+}

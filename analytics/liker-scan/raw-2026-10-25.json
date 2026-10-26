@@ -1,0 +1,1621 @@
+{
+  "date": "2026-10-25",
+  "windowDays": 2,
+  "total": 87,
+  "fetched": 30,
+  "skippedSeen": 57,
+  "fetchFailed": 0,
+  "thanked": 0,
+  "thankFailed": 0,
+  "thankedTokens": [],
+  "users": [
+    {
+      "token": "ztc-38-61",
+      "name": "ztc",
+      "url": "https://www.zhihu.com/people/ztc-38-61",
+      "firstSeenDate": "2026-10-19",
+      "liked": [
+        "赞同了你的回答 20:34",
+        "赞同了你的回答 17:47",
+        "赞同了你的回答 09:24",
+        "赞同了你的回答 04:53",
+        "赞同了你的回答 07:36"
+      ],
+      "likeDays": [
+        "2026-10-25",
+        "2026-10-24",
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "di-chu-guo",
+      "name": "递出国",
+      "url": "https://www.zhihu.com/people/di-chu-guo",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 20:30"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 3,
+      "voteups": 3,
+      "answers": 16,
+      "headline": "集运转运零食火锅底料留学行李到欧美日韩澳",
+      "hasAvatar": true,
+      "ip": "IP 属地广东"
+    },
+    {
+      "token": "song-han-26",
+      "name": "gamer",
+      "url": "https://www.zhihu.com/people/song-han-26",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 20:30"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 7,
+      "voteups": 0,
+      "answers": 0,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地未知"
+    },
+    {
+      "token": "daxong.y",
+      "name": "calm",
+      "url": "https://www.zhihu.com/people/daxong.y",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 20:30"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 201,
+      "voteups": 3061,
+      "answers": 934,
+      "headline": "非正式客服人员",
+      "hasAvatar": true,
+      "ip": "IP 属地湖南"
+    },
+    {
+      "token": "wang-zhu-jiang-85",
+      "name": "王宁江",
+      "url": "https://www.zhihu.com/people/wang-zhu-jiang-85",
+      "firstSeenDate": "2026-10-20",
+      "liked": [
+        "赞同了你的回答 19:32",
+        "赞同了你的想法 19:17",
+        "赞同了你的回答 09:24",
+        "赞同了你的想法 09:06",
+        "赞同了你的回答 04:53",
+        "赞同了你的想法 23:38",
+        "赞同了你的回答 22:41",
+        "赞同了你的想法 22:41",
+        "赞同了你的回答 06:24",
+        "赞同了你的想法 00:18",
+        "赞同了你的想法 00:18"
+      ],
+      "likeDays": [
+        "2026-10-25",
+        "2026-10-24",
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "33-91-77-73",
+      "name": "耶耶耶耶耶耶耶",
+      "url": "https://www.zhihu.com/people/33-91-77-73",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 19:32"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 0,
+      "voteups": 0,
+      "answers": 2,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地四川"
+    },
+    {
+      "token": "jiu-zu-fan-bao-23",
+      "name": "酒足饭饱",
+      "url": "https://www.zhihu.com/people/jiu-zu-fan-bao-23",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 19:32"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 29,
+      "voteups": 570,
+      "answers": 67,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地浙江"
+    },
+    {
+      "token": "yi-ge-ren-de-wu-lin-27-21",
+      "name": "一个人的武林",
+      "url": "https://www.zhihu.com/people/yi-ge-ren-de-wu-lin-27-21",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 18:47"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 601,
+      "voteups": 526,
+      "answers": 173,
+      "headline": "安禅意如水，灭却心中火。打爆手机存储无人机Ai，人形机器人三个不听话的手机厂商乱涨价",
+      "hasAvatar": true,
+      "ip": "IP 属地贵州"
+    },
+    {
+      "token": "chenalliang-ge-wei-du",
+      "name": "Bike Man",
+      "url": "https://www.zhihu.com/people/chenalliang-ge-wei-du",
+      "firstSeenDate": "2026-10-19",
+      "liked": [
+        "赞同了你的想法 18:16",
+        "赞同了你的想法 18:16",
+        "赞同了你的回答 18:15",
+        "赞同了你的回答 16:49",
+        "赞同了你的想法 13:46",
+        "赞同了你的想法 13:45"
+      ],
+      "likeDays": [
+        "2026-10-25",
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "zhi0ynrcm",
+      "name": "空林照月",
+      "url": "https://www.zhihu.com/people/zhi0ynrcm",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 17:58",
+        "赞同了你的回答 17:58",
+        "赞同了你的回答 17:58",
+        "赞同了你的回答 17:58"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 569,
+      "voteups": 5415,
+      "answers": 40,
+      "headline": "但见长江送流水",
+      "hasAvatar": true,
+      "ip": "IP 属地中国香港"
+    },
+    {
+      "token": "da-shuai-shuai-shuai-shuai-shuai-7",
+      "name": "大帅帅帅帅帅",
+      "url": "https://www.zhihu.com/people/da-shuai-shuai-shuai-shuai-shuai-7",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 17:46"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 26,
+      "voteups": 6,
+      "answers": 4,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地广东"
+    },
+    {
+      "token": "wo-men-du-bian-liao-20",
+      "name": "魔方数码",
+      "url": "https://www.zhihu.com/people/wo-men-du-bian-liao-20",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的想法 17:44",
+        "赞同了你的想法 23:38"
+      ],
+      "likeDays": [
+        "2026-10-25",
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "A"
+    },
+    {
+      "token": "iqqmak",
+      "name": "Jungle",
+      "url": "https://www.zhihu.com/people/iqqmak",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的想法 17:06"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 6,
+      "voteups": 18,
+      "answers": 10,
+      "headline": "前某大厂员工\n现独立开发\n目前上架一款app：Momi记账",
+      "hasAvatar": true,
+      "ip": "IP 属地广东"
+    },
+    {
+      "token": "zheyang-li",
+      "name": "zheyang li",
+      "url": "https://www.zhihu.com/people/zheyang-li",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 17:06"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 341,
+      "voteups": 11698,
+      "answers": 1339,
+      "headline": "自由主义者 丰田皇冠车主 GenesusG80准车主",
+      "hasAvatar": true,
+      "ip": "IP 属地中国香港"
+    },
+    {
+      "token": "tai-ji-lao-yao-79",
+      "name": "太极老妖",
+      "url": "https://www.zhihu.com/people/tai-ji-lao-yao-79",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 16:17"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 2,
+      "voteups": 0,
+      "answers": 0,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地未知"
+    },
+    {
+      "token": "31-14-24-83-98",
+      "name": "宇宙浪子",
+      "url": "https://www.zhihu.com/people/31-14-24-83-98",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 15:45"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 0,
+      "voteups": 0,
+      "answers": 0,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地广东"
+    },
+    {
+      "token": "fei-long-zai-tian-26-15",
+      "name": "年华的情愫",
+      "url": "https://www.zhihu.com/people/fei-long-zai-tian-26-15",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 15:45"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 405,
+      "voteups": 1178,
+      "answers": 87,
+      "headline": "将最新的诈骗案例和手段分享给大家，防范电信网络诈骗和赌博诈骗",
+      "hasAvatar": true,
+      "ip": "IP 属地安徽"
+    },
+    {
+      "token": "yeats-14-38",
+      "name": "yeats",
+      "url": "https://www.zhihu.com/people/yeats-14-38",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 15:45"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 22,
+      "voteups": 0,
+      "answers": 0,
+      "headline": "机床销售维修人士",
+      "hasAvatar": true,
+      "ip": "IP 属地辽宁"
+    },
+    {
+      "token": "yu-xing-13-33",
+      "name": "玉行",
+      "url": "https://www.zhihu.com/people/yu-xing-13-33",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 13:15"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 403,
+      "voteups": 28520,
+      "answers": 514,
+      "headline": "封评论区是知乎授予的最高荣誉勋章 ️ ️ ️ ️",
+      "hasAvatar": true,
+      "ip": "IP 属地广东"
+    },
+    {
+      "token": "wu-wei-de-dao-shi",
+      "name": "无畏的道士",
+      "url": "https://www.zhihu.com/people/wu-wei-de-dao-shi",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 12:22"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 77,
+      "voteups": 2046,
+      "answers": 170,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地上海"
+    },
+    {
+      "token": "coco-38-86-5",
+      "name": "coco",
+      "url": "https://www.zhihu.com/people/coco-38-86-5",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的想法 12:18"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 26,
+      "voteups": 0,
+      "answers": 0,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地未知"
+    },
+    {
+      "token": "ke-ji-82-28",
+      "name": "就将计就计",
+      "url": "https://www.zhihu.com/people/ke-ji-82-28",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的想法 12:18"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 172,
+      "voteups": 2430,
+      "answers": 822,
+      "headline": "拥抱艺术",
+      "hasAvatar": true,
+      "ip": "IP 属地广东"
+    },
+    {
+      "token": "16-64-15-91-27",
+      "name": "知乎用户林",
+      "url": "https://www.zhihu.com/people/16-64-15-91-27",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的想法 10:59"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 0,
+      "voteups": 0,
+      "answers": 0,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地吉林"
+    },
+    {
+      "token": "vmware-16",
+      "name": "kde-yyds",
+      "url": "https://www.zhihu.com/people/vmware-16",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 09:26"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 33,
+      "voteups": 61,
+      "answers": 3,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地上海"
+    },
+    {
+      "token": "-ucps",
+      "name": "夏阳_uCpS",
+      "url": "https://www.zhihu.com/people/-ucps",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 09:26"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 51,
+      "voteups": 0,
+      "answers": 0,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地广东"
+    },
+    {
+      "token": "zhang-si-cheng-24",
+      "name": "心思方成",
+      "url": "https://www.zhihu.com/people/zhang-si-cheng-24",
+      "firstSeenDate": "2026-10-20",
+      "liked": [
+        "赞同了你的回答 09:24",
+        "赞同了你的回答 04:53",
+        "赞同了你的回答 06:24",
+        "赞同了你的回答 06:24"
+      ],
+      "likeDays": [
+        "2026-10-25",
+        "2026-10-24",
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "yuki-49-91-59",
+      "name": "Yuki",
+      "url": "https://www.zhihu.com/people/yuki-49-91-59",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的回答 09:24"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 0,
+      "voteups": 7,
+      "answers": 17,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地安徽"
+    },
+    {
+      "token": "cherubinxxx",
+      "name": "Cherubinxxx",
+      "url": "https://www.zhihu.com/people/cherubinxxx",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的想法 09:06"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 4,
+      "voteups": 0,
+      "answers": 0,
+      "headline": "熊猫一枚",
+      "hasAvatar": true,
+      "ip": "IP 属地未知"
+    },
+    {
+      "token": "jiang-you-jie-mo",
+      "name": "酱油芥末",
+      "url": "https://www.zhihu.com/people/jiang-you-jie-mo",
+      "firstSeenDate": "2026-10-21",
+      "liked": [
+        "赞同了你的想法 08:24"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "meng-xian-mang-zhao-zai-si-kao",
+      "name": "梦仙忙着在思考",
+      "url": "https://www.zhihu.com/people/meng-xian-mang-zhao-zai-si-kao",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的想法 08:24"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 8373,
+      "voteups": 288707,
+      "answers": 2596,
+      "headline": " 新闻，IT，摄影，数码，拍妹，微电影",
+      "hasAvatar": true,
+      "ip": "IP 属地天津"
+    },
+    {
+      "token": "air-13-57-48",
+      "name": "知乎用户air",
+      "url": "https://www.zhihu.com/people/air-13-57-48",
+      "firstSeenDate": "2026-10-25",
+      "liked": [
+        "赞同了你的想法 03:03"
+      ],
+      "likeDays": [
+        "2026-10-25"
+      ],
+      "followers": 0,
+      "voteups": 0,
+      "answers": 0,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地未知"
+    },
+    {
+      "token": "v0lly",
+      "name": "V0lly",
+      "url": "https://www.zhihu.com/people/v0lly",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 23:23"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": 55,
+      "voteups": 0,
+      "answers": 0,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地江苏"
+    },
+    {
+      "token": "kuang-bao-xiu-luo",
+      "name": "狂暴修罗",
+      "url": "https://www.zhihu.com/people/kuang-bao-xiu-luo",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 23:14"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": 9,
+      "voteups": 160,
+      "answers": 10,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地湖北"
+    },
+    {
+      "token": "han-bo-yuan-97",
+      "name": "韩博源",
+      "url": "https://www.zhihu.com/people/han-bo-yuan-97",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 22:49"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": 4,
+      "voteups": 0,
+      "answers": 0,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地新西兰"
+    },
+    {
+      "token": "liu-ke-44-33",
+      "name": "南國",
+      "url": "https://www.zhihu.com/people/liu-ke-44-33",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 22:43"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": 53,
+      "voteups": 102,
+      "answers": 13,
+      "headline": "",
+      "hasAvatar": true,
+      "ip": "IP 属地福建"
+    },
+    {
+      "token": "zi-mei-xing-yi",
+      "name": "商自新",
+      "url": "https://www.zhihu.com/people/zi-mei-xing-yi",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 22:43"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": 7,
+      "voteups": 1,
+      "answers": 1,
+      "headline": "常惺常照",
+      "hasAvatar": true,
+      "ip": "IP 属地新疆"
+    },
+    {
+      "token": "chen-peng-fei-81-29",
+      "name": "巽兑离",
+      "url": "https://www.zhihu.com/people/chen-peng-fei-81-29",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 21:55"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "zhe-ke-neng-bu-shi-ge-xiao-nan-hai",
+      "name": "这可能不是个小男孩",
+      "url": "https://www.zhihu.com/people/zhe-ke-neng-bu-shi-ge-xiao-nan-hai",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 21:55"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "zhang-ming-yang",
+      "name": "张名扬",
+      "url": "https://www.zhihu.com/people/zhang-ming-yang",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 21:55"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "k-87-38-74",
+      "name": "知乎用户K神",
+      "url": "https://www.zhihu.com/people/k-87-38-74",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 20:29"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "yun-61-79",
+      "name": "Yun",
+      "url": "https://www.zhihu.com/people/yun-61-79",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 18:19"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "81-30-65-59-62",
+      "name": "走向新时代",
+      "url": "https://www.zhihu.com/people/81-30-65-59-62",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 17:58"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "70-57-33-97",
+      "name": "几何格子的样子",
+      "url": "https://www.zhihu.com/people/70-57-33-97",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 16:49"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "ctai-ira",
+      "name": "ukelele prince",
+      "url": "https://www.zhihu.com/people/ctai-ira",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 16:49"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "qmqy",
+      "name": "Sam80975",
+      "url": "https://www.zhihu.com/people/qmqy",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "喜欢了你的回答 16:42",
+        "赞同了你的回答 16:42"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "qwqchu-xin-jiang",
+      "name": "qwq初心酱",
+      "url": "https://www.zhihu.com/people/qwqchu-xin-jiang",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "喜欢了你的回答 16:42",
+        "赞同了你的回答 16:42"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "B"
+    },
+    {
+      "token": "56-94-51-36",
+      "name": "遊戲玩家",
+      "url": "https://www.zhihu.com/people/56-94-51-36",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 15:34"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "64-5-76-90-36",
+      "name": "闲逛爱好者",
+      "url": "https://www.zhihu.com/people/64-5-76-90-36",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 15:34"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "303-25-82",
+      "name": "基里曼波",
+      "url": "https://www.zhihu.com/people/303-25-82",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 15:34"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "B"
+    },
+    {
+      "token": "wo-wo-94-56",
+      "name": "喔喔",
+      "url": "https://www.zhihu.com/people/wo-wo-94-56",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的想法 14:39"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "lamar-lui",
+      "name": "La Lamer",
+      "url": "https://www.zhihu.com/people/lamar-lui",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的想法 13:46"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "gang-gang-40-14-39",
+      "name": "我是小晨",
+      "url": "https://www.zhihu.com/people/gang-gang-40-14-39",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 11:22"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "52-18-30-6-96",
+      "name": "执笔之梦",
+      "url": "https://www.zhihu.com/people/52-18-30-6-96",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 10:46"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "li-duo-26-38-52",
+      "name": "李多",
+      "url": "https://www.zhihu.com/people/li-duo-26-38-52",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的想法 09:37"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "feng-qing-yun-dan-43-27",
+      "name": "风轻云淡",
+      "url": "https://www.zhihu.com/people/feng-qing-yun-dan-43-27",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 07:09"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "B"
+    },
+    {
+      "token": "strawbear-51",
+      "name": "Strawbear",
+      "url": "https://www.zhihu.com/people/strawbear-51",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 04:53"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "long-shui-75-93",
+      "name": "泷水",
+      "url": "https://www.zhihu.com/people/long-shui-75-93",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 00:50"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "zhangyx-4",
+      "name": "zhangyx",
+      "url": "https://www.zhihu.com/people/zhangyx-4",
+      "firstSeenDate": "2026-10-24",
+      "liked": [
+        "赞同了你的回答 00:12"
+      ],
+      "likeDays": [
+        "2026-10-24"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "xuan-wang-30",
+      "name": "gyan",
+      "url": "https://www.zhihu.com/people/xuan-wang-30",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 23:52"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "--47-54-36-60",
+      "name": "阿白",
+      "url": "https://www.zhihu.com/people/--47-54-36-60",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的想法 23:34"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "Sean-63-73",
+      "name": "Sean",
+      "url": "https://www.zhihu.com/people/Sean-63-73",
+      "firstSeenDate": "2026-10-19",
+      "liked": [
+        "赞同了你的回答 22:41",
+        "赞同了你的想法 00:18"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "lang-ji-tian-ya-7-82",
+      "name": "浪跡天涯",
+      "url": "https://www.zhihu.com/people/lang-ji-tian-ya-7-82",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 22:32"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "boomingshina",
+      "name": "老王",
+      "url": "https://www.zhihu.com/people/boomingshina",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的想法 22:20"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "lan-mao-bu-hui-fei-72",
+      "name": "懒猫不会飞",
+      "url": "https://www.zhihu.com/people/lan-mao-bu-hui-fei-72",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的文章 21:16"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "87-63-75-21-3",
+      "name": "深漾",
+      "url": "https://www.zhihu.com/people/87-63-75-21-3",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 21:09"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "wai-xing-pang-pang-55",
+      "name": "外星胖胖",
+      "url": "https://www.zhihu.com/people/wai-xing-pang-pang-55",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 21:09"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "wu-nian-92-96-13",
+      "name": "吾念",
+      "url": "https://www.zhihu.com/people/wu-nian-92-96-13",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的想法 20:00"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "shou-you-yu-xiang-40",
+      "name": "手有余香",
+      "url": "https://www.zhihu.com/people/shou-you-yu-xiang-40",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "喜欢了你的评论 19:51",
+        "赞同了你的回答 19:50"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "alex-xie-40",
+      "name": "Alex Xie",
+      "url": "https://www.zhihu.com/people/alex-xie-40",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的想法 19:42"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "56-62-12-16",
+      "name": "贺峻霖",
+      "url": "https://www.zhihu.com/people/56-62-12-16",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 17:46"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "zzmxqsm-25",
+      "name": "zzmxqsm",
+      "url": "https://www.zhihu.com/people/zzmxqsm-25",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 17:46"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "64-76-71-85",
+      "name": "張子墨",
+      "url": "https://www.zhihu.com/people/64-76-71-85",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 17:46"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "yang-yang-56-46-63",
+      "name": "优典",
+      "url": "https://www.zhihu.com/people/yang-yang-56-46-63",
+      "firstSeenDate": "2026-10-18",
+      "liked": [
+        "赞同了你的回答 17:11"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "2ogsje",
+      "name": "知乎用户2ogsjE",
+      "url": "https://www.zhihu.com/people/2ogsje",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 17:11"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "zhidztcycdx",
+      "name": "zhiDztCYCdx",
+      "url": "https://www.zhihu.com/people/zhidztcycdx",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的想法 15:27"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "7-53-81-36-73",
+      "name": "何异味",
+      "url": "https://www.zhihu.com/people/7-53-81-36-73",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 13:42"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "mrp-17-31",
+      "name": "MrP企鹅君",
+      "url": "https://www.zhihu.com/people/mrp-17-31",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 13:42"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "xi-long-38-47-9",
+      "name": "喜龙",
+      "url": "https://www.zhihu.com/people/xi-long-38-47-9",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 13:42"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "huo-huo-huo-29-47",
+      "name": "momo",
+      "url": "https://www.zhihu.com/people/huo-huo-huo-29-47",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 13:30"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "60-98-88-59-9",
+      "name": "流浪花",
+      "url": "https://www.zhihu.com/people/60-98-88-59-9",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 12:44"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "luo-jia-ying-35-48",
+      "name": "费瓦",
+      "url": "https://www.zhihu.com/people/luo-jia-ying-35-48",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 11:09"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "B"
+    },
+    {
+      "token": "thor-97-67",
+      "name": "知乎用户",
+      "url": "https://www.zhihu.com/people/thor-97-67",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的文章 10:46"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "wang-jian-li-37",
+      "name": "王建立",
+      "url": "https://www.zhihu.com/people/wang-jian-li-37",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "喜欢了你的评论 10:44"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "90-84-8-36",
+      "name": "迷途小书童",
+      "url": "https://www.zhihu.com/people/90-84-8-36",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 10:28"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "mu-zi-chao-qun",
+      "name": "木子SuJu",
+      "url": "https://www.zhihu.com/people/mu-zi-chao-qun",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "赞同了你的回答 10:04"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    },
+    {
+      "token": "63-95-64-40",
+      "name": "发光中",
+      "url": "https://www.zhihu.com/people/63-95-64-40",
+      "firstSeenDate": "2026-10-19",
+      "liked": [
+        "赞同了你的回答 06:24",
+        "赞同了你的想法 00:18",
+        "赞同了你的想法 00:18",
+        "赞同了你的想法 00:18",
+        "赞同了你的想法 00:18"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "D"
+    },
+    {
+      "token": "xu-noir-60",
+      "name": "旭Noir",
+      "url": "https://www.zhihu.com/people/xu-noir-60",
+      "firstSeenDate": "2026-10-23",
+      "liked": [
+        "喜欢了你的评论 01:16"
+      ],
+      "likeDays": [
+        "2026-10-23"
+      ],
+      "followers": null,
+      "voteups": null,
+      "answers": null,
+      "headline": null,
+      "seenBefore": true,
+      "lastGrade": "C"
+    }
+  ]
+}

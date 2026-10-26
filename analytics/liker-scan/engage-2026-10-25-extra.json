@@ -1,0 +1,267 @@
+{
+  "date": "2026-10-25",
+  "limits": {
+    "maxUsers": 15,
+    "skipUsers": 16,
+    "minReadMs": 20000,
+    "maxReadMs": 40000,
+    "minGapMs": 60000,
+    "maxGapMs": 180000,
+    "minAnswersToCheck": 1
+  },
+  "truncated": true,
+  "results": [
+    {
+      "token": "qmqy",
+      "name": "Sam80975",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/1338728889",
+          "title": "现在什么浏览器比较好？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/1338615123",
+          "title": "「帮助好友提问」2020届准备出国毕业生目前还没有工作应该家里蹲磨练技术还是先随便找个工作上手再说?",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "qwqchu-xin-jiang",
+      "name": "qwq初心酱",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2093652694934341605",
+          "title": "什么是人生的最顶级享受？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2084065221874803285",
+          "title": "大家如何看待“大狗叫”梗已经被彻底解构？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "wo-men-du-bian-liao-20",
+      "name": "魔方数码",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097722188182962642",
+          "title": "在什么样的家庭里，「扫地机器人」真的能用回本？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2097673048803562973",
+          "title": "1000元左右的人体工学椅哪个比较好（考虑二手）？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "san-xie-32-92",
+      "name": "战忽局华中局五号",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/678219145",
+          "title": "有什么让你一看就泪眼朦胧的诗句？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "80-13-72-60",
+      "name": "白川漱玉",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096948199776851722",
+          "title": "如何评价《绝区零》代理人档案丨挽昼？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2092762548647024160",
+          "title": "《星布谷地》终测21天，从「持续运营」的角度看，目前的设计有哪些值得聊的地方？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "liujlthu",
+      "name": "liujl09",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "touchmimi",
+      "name": "touchmimi",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2097759138755392269",
+          "title": "如何看待问界回应神木起火事故？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2095014380165514407",
+          "title": "你是怎么看待年轻人活在当下不交社保的?",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "tata-94-78-36",
+      "name": "tata",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "timothy-cao-71",
+      "name": "cranberry",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "jian-xia-44-98",
+      "name": "兼蕸",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2030261847966925000",
+          "title": "为什么两个人谈恋爱就是到处去吃？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/1971278655289287864",
+          "title": "为什么猫不让摸肚子？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "da-fan-40-41",
+      "name": "大凡",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/1901592001054474768",
+          "title": "你在知乎收到过哪些非常奇怪的私信？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/3426770704",
+          "title": "你尝试过戒烟吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "winter-48-94",
+      "name": "Winter",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/3599166763",
+          "title": "不许作弊，不许网上下载，能发一张你手机里的天空吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/3519849967",
+          "title": "陌生的朋友，能不能给我说一声中考加油？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "dc2btliz",
+      "name": "小看山dc2Btliz",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "yang-jun-60-32",
+      "name": "臭臭羊",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2082765964953784358",
+          "title": "NBA收视率现在为啥只有NFL的零头？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2009565928887711145",
+          "title": "商家称 36 斤活羊烤完变 6.9 斤正常，这种重量流失合理吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "12-21-87-20-72",
+      "name": "海海动漫",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "zhi0ynrcm",
+      "name": "空林照月",
+      "tier": "铁粉",
+      "votesTarget": 0,
+      "voted": [],
+      "skipped": "新入列（观察一天）"
+    }
+  ]
+}
