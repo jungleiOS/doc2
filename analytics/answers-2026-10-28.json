@@ -1,0 +1,2116 @@
+[
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2098896840934561317",
+    "publishedAt": "2026-10-28",
+    "reads": 7,
+    "upvotes": 0,
+    "comments": 0,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "0.00%",
+    "audience": null
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2098563812010075350",
+    "publishedAt": "2026-10-27",
+    "reads": 1084,
+    "upvotes": 9,
+    "comments": 2,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "1.11%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 1,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2098554007451185359",
+    "publishedAt": "2026-10-27",
+    "reads": 681,
+    "upvotes": 6,
+    "comments": 3,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "1.91%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.78125,
+        "Count": 25
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.1875,
+        "Count": 6
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.03125,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2098550497896671138",
+    "publishedAt": "2026-10-27",
+    "reads": 215,
+    "upvotes": 4,
+    "comments": 0,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "2.79%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.5625,
+        "Count": 9
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.1875,
+        "Count": 3
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.125,
+        "Count": 2
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.125,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2098546109383759327",
+    "publishedAt": "2026-10-27",
+    "reads": 92,
+    "upvotes": 0,
+    "comments": 0,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "2.17%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.5,
+        "Count": 4
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.25,
+        "Count": 2
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.125,
+        "Count": 1
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.125,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2098206381224485329",
+    "publishedAt": "2026-10-26",
+    "reads": 3311,
+    "upvotes": 26,
+    "comments": 4,
+    "favorites": 4,
+    "likes": 1,
+    "positiveRate": "1.12%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.8398576512455516,
+        "Count": 3776
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.09608540925266904,
+        "Count": 432
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.035142348754448396,
+        "Count": 158
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.022019572953736653,
+        "Count": 99
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.004448398576512456,
+        "Count": 20
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.002224199288256228,
+        "Count": 10
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2098196396545406386",
+    "publishedAt": "2026-10-26",
+    "reads": 4862,
+    "upvotes": 22,
+    "comments": 2,
+    "favorites": 4,
+    "likes": 0,
+    "positiveRate": "0.68%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.9409894898743911,
+        "Count": 18354
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.02245578056908485,
+        "Count": 438
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.022045629325813894,
+        "Count": 430
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.012201999487310947,
+        "Count": 238
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.0016918738784926942,
+        "Count": 33
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2098185289906778908",
+    "publishedAt": "2026-10-26",
+    "reads": 865,
+    "upvotes": 10,
+    "comments": 1,
+    "favorites": 2,
+    "likes": 0,
+    "positiveRate": "1.50%",
+    "audience": [
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.3982947624847747,
+        "Count": 327
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.2862362971985384,
+        "Count": 235
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.27649208282582216,
+        "Count": 227
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.02192448233861145,
+        "Count": 18
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.007308160779537149,
+        "Count": 6
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.007308160779537149,
+        "Count": 6
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.00243605359317905,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2097786725481313761",
+    "publishedAt": "2026-10-25",
+    "reads": 63,
+    "upvotes": 4,
+    "comments": 2,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": null,
+    "audience": null
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2097783270658273674",
+    "publishedAt": "2026-10-25",
+    "reads": 235,
+    "upvotes": 4,
+    "comments": 0,
+    "favorites": 1,
+    "likes": 0,
+    "positiveRate": "2.13%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.43272727272727274,
+        "Count": 119
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.4,
+        "Count": 110
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.14545454545454545,
+        "Count": 40
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.014545454545454545,
+        "Count": 4
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.007272727272727273,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2097743525068785650",
+    "publishedAt": "2026-10-25",
+    "reads": 764,
+    "upvotes": 9,
+    "comments": 0,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "1.18%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.4908869987849332,
+        "Count": 404
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.33900364520048604,
+        "Count": 279
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.15674362089914945,
+        "Count": 129
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.004860267314702308,
+        "Count": 4
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0036452004860267314,
+        "Count": 3
+      },
+      {
+        "Name": "App-推送",
+        "Ratio": 0.002430133657351154,
+        "Count": 2
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.002430133657351154,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2097473380987553149",
+    "publishedAt": "2026-10-24",
+    "reads": 1415,
+    "upvotes": 10,
+    "comments": 1,
+    "favorites": 4,
+    "likes": 0,
+    "positiveRate": "1.06%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.8514234875444839,
+        "Count": 957
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.06405693950177936,
+        "Count": 72
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.051601423487544484,
+        "Count": 58
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.02491103202846975,
+        "Count": 28
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0035587188612099642,
+        "Count": 4
+      },
+      {
+        "Name": "App-推送",
+        "Ratio": 0.0026690391459074734,
+        "Count": 3
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.0017793594306049821,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2097096675777065581",
+    "publishedAt": "2026-10-23",
+    "reads": 4145,
+    "upvotes": 24,
+    "comments": 16,
+    "favorites": 7,
+    "likes": 0,
+    "positiveRate": "1.16%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.8577429291514982,
+        "Count": 3063
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.06888826659199104,
+        "Count": 246
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.039764771772612714,
+        "Count": 142
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.017362083450014002,
+        "Count": 62
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.009241108933071968,
+        "Count": 33
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.0036404368524222907,
+        "Count": 13
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0033604032483898066,
+        "Count": 12
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2097086138599134419",
+    "publishedAt": "2026-10-23",
+    "reads": 2272,
+    "upvotes": 20,
+    "comments": 0,
+    "favorites": 2,
+    "likes": 0,
+    "positiveRate": "1.01%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.5180513266637669,
+        "Count": 1191
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.29317094388864723,
+        "Count": 674
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.13527620704654197,
+        "Count": 311
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.04088734232274902,
+        "Count": 94
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.008264462809917356,
+        "Count": 19
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.0034797738147020443,
+        "Count": 8
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2096746473656533144",
+    "publishedAt": "2026-10-22",
+    "reads": 500,
+    "upvotes": 8,
+    "comments": 0,
+    "favorites": 1,
+    "likes": 0,
+    "positiveRate": null,
+    "audience": null
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2096742734392452792",
+    "publishedAt": "2026-10-22",
+    "reads": 126,
+    "upvotes": 4,
+    "comments": 0,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "3.17%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.44360902255639095,
+        "Count": 59
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.3684210526315789,
+        "Count": 49
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.14285714285714285,
+        "Count": 19
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.03759398496240601,
+        "Count": 5
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.007518796992481203,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2096380286925854628",
+    "publishedAt": "2026-10-21",
+    "reads": 108,
+    "upvotes": 7,
+    "comments": 1,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "7.41%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.5963302752293578,
+        "Count": 65
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.28440366972477066,
+        "Count": 31
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.06422018348623854,
+        "Count": 7
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.027522935779816515,
+        "Count": 3
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.027522935779816515,
+        "Count": 3
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2096369801056759994",
+    "publishedAt": "2026-10-21",
+    "reads": 54,
+    "upvotes": 5,
+    "comments": 0,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "9.26%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.5072463768115942,
+        "Count": 35
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.2463768115942029,
+        "Count": 17
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.2318840579710145,
+        "Count": 16
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.014492753623188406,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2096011286106714474",
+    "publishedAt": "2026-10-20",
+    "reads": 17247,
+    "upvotes": 52,
+    "comments": 8,
+    "favorites": 17,
+    "likes": 5,
+    "positiveRate": null,
+    "audience": null
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2096001862365341541",
+    "publishedAt": "2026-10-20",
+    "reads": 43,
+    "upvotes": 2,
+    "comments": 0,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "4.65%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.5789473684210527,
+        "Count": 22
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.18421052631578946,
+        "Count": 7
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.18421052631578946,
+        "Count": 7
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.02631578947368421,
+        "Count": 1
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.02631578947368421,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2095652786117547603",
+    "publishedAt": "2026-10-19",
+    "reads": 1622,
+    "upvotes": 16,
+    "comments": 2,
+    "favorites": 2,
+    "likes": 1,
+    "positiveRate": "1.36%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.479129923574368,
+        "Count": 815
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.4626690182245738,
+        "Count": 787
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.023515579071134628,
+        "Count": 40
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.014697236919459141,
+        "Count": 25
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.012345679012345678,
+        "Count": 21
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.005291005291005291,
+        "Count": 9
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.0023515579071134627,
+        "Count": 4
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2095199385613354508",
+    "publishedAt": "2026-10-18",
+    "reads": 631,
+    "upvotes": 10,
+    "comments": 0,
+    "favorites": 2,
+    "likes": 0,
+    "positiveRate": "1.90%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.7493036211699164,
+        "Count": 807
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.22841225626740946,
+        "Count": 246
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.014856081708449397,
+        "Count": 16
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.002785515320334262,
+        "Count": 3
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0018570102135561746,
+        "Count": 2
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.0018570102135561746,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2095144873745826527",
+    "publishedAt": "2026-10-18",
+    "reads": 282,
+    "upvotes": 5,
+    "comments": 3,
+    "favorites": 1,
+    "likes": 0,
+    "positiveRate": "3.19%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.8702290076335878,
+        "Count": 798
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.11123227917121047,
+        "Count": 102
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0054525627044711015,
+        "Count": 5
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.0054525627044711015,
+        "Count": 5
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.0054525627044711015,
+        "Count": 5
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.0021810250817884407,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2095117688083424757",
+    "publishedAt": "2026-10-18",
+    "reads": 1634,
+    "upvotes": 21,
+    "comments": 3,
+    "favorites": 7,
+    "likes": 0,
+    "positiveRate": "2.33%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.5916619074814392,
+        "Count": 1036
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.25870930896630495,
+        "Count": 453
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.11193603655054254,
+        "Count": 196
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.014277555682467162,
+        "Count": 25
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.014277555682467162,
+        "Count": 25
+      },
+      {
+        "Name": "App-推送",
+        "Ratio": 0.005139920045688178,
+        "Count": 9
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.003997715591090805,
+        "Count": 7
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2094935568941695355",
+    "publishedAt": "2026-10-17",
+    "reads": 1608,
+    "upvotes": 26,
+    "comments": 1,
+    "favorites": 6,
+    "likes": 2,
+    "positiveRate": "2.30%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.6206896551724138,
+        "Count": 1188
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.34221525600835945,
+        "Count": 655
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.019331243469174503,
+        "Count": 37
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.009926854754440962,
+        "Count": 19
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0041797283176593526,
+        "Count": 8
+      },
+      {
+        "Name": "App-推送",
+        "Ratio": 0.0020898641588296763,
+        "Count": 4
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.001567398119122257,
+        "Count": 3
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2094924712019236190",
+    "publishedAt": "2026-10-17",
+    "reads": 188,
+    "upvotes": 4,
+    "comments": 0,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "2.66%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.6942675159235668,
+        "Count": 109
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.19745222929936307,
+        "Count": 31
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.06369426751592357,
+        "Count": 10
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.01910828025477707,
+        "Count": 3
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.01910828025477707,
+        "Count": 3
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.006369426751592357,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2094919019996386171",
+    "publishedAt": "2026-10-17",
+    "reads": 253,
+    "upvotes": 6,
+    "comments": 1,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "2.77%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.43478260869565216,
+        "Count": 90
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.32367149758454106,
+        "Count": 67
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.2222222222222222,
+        "Count": 46
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.00966183574879227,
+        "Count": 2
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.00966183574879227,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2094563922921706826",
+    "publishedAt": "2026-10-16",
+    "reads": 8363,
+    "upvotes": 136,
+    "comments": 25,
+    "favorites": 25,
+    "likes": 2,
+    "positiveRate": "2.27%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.8750174361835681,
+        "Count": 6273
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.09541079648486539,
+        "Count": 684
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.015064862602873484,
+        "Count": 108
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.007392941832891617,
+        "Count": 53
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.003626726182173246,
+        "Count": 26
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.002092342028176873,
+        "Count": 15
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0013948946854512485,
+        "Count": 10
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2094202270971966928",
+    "publishedAt": "2026-10-15",
+    "reads": 2978,
+    "upvotes": 25,
+    "comments": 0,
+    "favorites": 8,
+    "likes": 3,
+    "positiveRate": "1.28%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.5918300653594771,
+        "Count": 1811
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.21405228758169934,
+        "Count": 655
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.15359477124183007,
+        "Count": 470
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.01699346405228758,
+        "Count": 52
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.013725490196078431,
+        "Count": 42
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.005555555555555556,
+        "Count": 17
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.004248366013071895,
+        "Count": 13
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2093857170647421912",
+    "publishedAt": "2026-10-14",
+    "reads": 12898,
+    "upvotes": 38,
+    "comments": 3,
+    "favorites": 6,
+    "likes": 3,
+    "positiveRate": "0.40%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.6880173927585919,
+        "Count": 8228
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.2516932853917552,
+        "Count": 3010
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.030437327535747138,
+        "Count": 364
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.014967806672798728,
+        "Count": 179
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.008529141232544528,
+        "Count": 102
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.006020570281796137,
+        "Count": 72
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2093851624942970842",
+    "publishedAt": "2026-10-14",
+    "reads": 549,
+    "upvotes": 5,
+    "comments": 2,
+    "favorites": 4,
+    "likes": 0,
+    "positiveRate": "2.91%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.6645833333333333,
+        "Count": 319
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.21041666666666667,
+        "Count": 101
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.06666666666666667,
+        "Count": 32
+      },
+      {
+        "Name": "App-推送",
+        "Ratio": 0.0375,
+        "Count": 18
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.020833333333333332,
+        "Count": 10
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2093842850115077257",
+    "publishedAt": "2026-10-14",
+    "reads": 407,
+    "upvotes": 4,
+    "comments": 0,
+    "favorites": 1,
+    "likes": 0,
+    "positiveRate": "1.23%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.7275675675675676,
+        "Count": 673
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.2281081081081081,
+        "Count": 211
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.02810810810810811,
+        "Count": 26
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.012972972972972972,
+        "Count": 12
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.002162162162162162,
+        "Count": 2
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.001081081081081081,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2093834907609055316",
+    "publishedAt": "2026-10-14",
+    "reads": 11397,
+    "upvotes": 62,
+    "comments": 22,
+    "favorites": 24,
+    "likes": 2,
+    "positiveRate": "1.18%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.7346127750315014,
+        "Count": 7579
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.20180284966560047,
+        "Count": 2082
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.027527381990888826,
+        "Count": 284
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.025201124357855965,
+        "Count": 260
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.003877096055054764,
+        "Count": 40
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.003683241252302026,
+        "Count": 38
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0032955316467965495,
+        "Count": 34
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2093489367117570187",
+    "publishedAt": "2026-10-13",
+    "reads": 2268,
+    "upvotes": 18,
+    "comments": 1,
+    "favorites": 2,
+    "likes": 2,
+    "positiveRate": "1.01%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.5641155600608211,
+        "Count": 1113
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.3193106943740497,
+        "Count": 630
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.06436898124683224,
+        "Count": 127
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.03598580841358338,
+        "Count": 71
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.006588950836289914,
+        "Count": 13
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.005575266092245312,
+        "Count": 11
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.0040547389761784085,
+        "Count": 8
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2093483171807547858",
+    "publishedAt": "2026-10-13",
+    "reads": 160,
+    "upvotes": 2,
+    "comments": 0,
+    "favorites": 1,
+    "likes": 0,
+    "positiveRate": "1.88%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.7003610108303249,
+        "Count": 194
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.2888086642599278,
+        "Count": 80
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.007220216606498195,
+        "Count": 2
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.0036101083032490976,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2093466682278818568",
+    "publishedAt": "2026-10-13",
+    "reads": 881,
+    "upvotes": 12,
+    "comments": 0,
+    "favorites": 18,
+    "likes": 1,
+    "positiveRate": "3.97%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.5571895424836601,
+        "Count": 682
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.37663398692810457,
+        "Count": 461
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.04411764705882353,
+        "Count": 54
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.012254901960784314,
+        "Count": 15
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.004901960784313725,
+        "Count": 6
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0032679738562091504,
+        "Count": 4
+      },
+      {
+        "Name": "App-推送",
+        "Ratio": 0.0016339869281045752,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2093139198215709723",
+    "publishedAt": "2026-10-12",
+    "reads": 1578,
+    "upvotes": 12,
+    "comments": 1,
+    "favorites": 4,
+    "likes": 1,
+    "positiveRate": "1.14%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.6493987049028677,
+        "Count": 702
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.23774283071230343,
+        "Count": 257
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.09065679925994449,
+        "Count": 98
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.009250693802035153,
+        "Count": 10
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.0074005550416281225,
+        "Count": 8
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.0037002775208140612,
+        "Count": 4
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0018501387604070306,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2093130411388020709",
+    "publishedAt": "2026-10-12",
+    "reads": 4564,
+    "upvotes": 41,
+    "comments": 13,
+    "favorites": 95,
+    "likes": 2,
+    "positiveRate": "3.79%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.5013653741125068,
+        "Count": 2754
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.4269069725104679,
+        "Count": 2345
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.02785363189513927,
+        "Count": 153
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.019115237575095576,
+        "Count": 105
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.016930638995084655,
+        "Count": 93
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.004915346805024577,
+        "Count": 27
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0029127981066812306,
+        "Count": 16
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2093124047659865465",
+    "publishedAt": "2026-10-12",
+    "reads": 640,
+    "upvotes": 5,
+    "comments": 0,
+    "favorites": 1,
+    "likes": 0,
+    "positiveRate": "0.94%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.5875542691751086,
+        "Count": 406
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.2575976845151954,
+        "Count": 178
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.11577424023154848,
+        "Count": 80
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.020260492040520984,
+        "Count": 14
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.011577424023154847,
+        "Count": 8
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.004341534008683068,
+        "Count": 3
+      },
+      {
+        "Name": "App-推送",
+        "Ratio": 0.002894356005788712,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2093111671514517540",
+    "publishedAt": "2026-10-12",
+    "reads": 778,
+    "upvotes": 7,
+    "comments": 0,
+    "favorites": 2,
+    "likes": 0,
+    "positiveRate": "1.29%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.8953182535507628,
+        "Count": 3404
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.08100999473961074,
+        "Count": 308
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.011835875854813256,
+        "Count": 45
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.007627564439768543,
+        "Count": 29
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.0026301946344029457,
+        "Count": 10
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0013150973172014729,
+        "Count": 5
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2092744076558972514",
+    "publishedAt": "2026-10-11",
+    "reads": 4477,
+    "upvotes": 37,
+    "comments": 1,
+    "favorites": 14,
+    "likes": 0,
+    "positiveRate": "1.32%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.7634955216654563,
+        "Count": 3154
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.12345679012345678,
+        "Count": 510
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.08472524812394093,
+        "Count": 350
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.013798111837327523,
+        "Count": 57
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.007746308399903171,
+        "Count": 32
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.005809731299927378,
+        "Count": 24
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2092701916518269019",
+    "publishedAt": "2026-10-11",
+    "reads": 2323,
+    "upvotes": 17,
+    "comments": 7,
+    "favorites": 9,
+    "likes": 1,
+    "positiveRate": "1.55%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.5194539249146758,
+        "Count": 1522
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.31569965870307165,
+        "Count": 925
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.10546075085324232,
+        "Count": 309
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.051194539249146756,
+        "Count": 150
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.00477815699658703,
+        "Count": 14
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0020477815699658703,
+        "Count": 6
+      },
+      {
+        "Name": "App-推送",
+        "Ratio": 0.0013651877133105802,
+        "Count": 4
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2092687245971042668",
+    "publishedAt": "2026-10-11",
+    "reads": 150,
+    "upvotes": 4,
+    "comments": 0,
+    "favorites": 1,
+    "likes": 0,
+    "positiveRate": "3.33%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.8860759493670886,
+        "Count": 420
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.07383966244725738,
+        "Count": 35
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.03375527426160337,
+        "Count": 16
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.004219409282700422,
+        "Count": 2
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.002109704641350211,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2092386285814129886",
+    "publishedAt": "2026-10-10",
+    "reads": 116,
+    "upvotes": 5,
+    "comments": 0,
+    "favorites": 5,
+    "likes": 0,
+    "positiveRate": "8.62%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.49107142857142855,
+        "Count": 55
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.33035714285714285,
+        "Count": 37
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.08928571428571429,
+        "Count": 10
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.07142857142857142,
+        "Count": 8
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.008928571428571428,
+        "Count": 1
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.008928571428571428,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2092029300354635647",
+    "publishedAt": "2026-10-09",
+    "reads": 755,
+    "upvotes": 6,
+    "comments": 4,
+    "favorites": 2,
+    "likes": 0,
+    "positiveRate": "1.99%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.5531224655312247,
+        "Count": 682
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.38929440389294406,
+        "Count": 480
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.040551500405515,
+        "Count": 50
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.0072992700729927005,
+        "Count": 9
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0056772100567721,
+        "Count": 7
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.0032441200324412004,
+        "Count": 4
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2091670336307721993",
+    "publishedAt": "2026-10-08",
+    "reads": 1770,
+    "upvotes": 10,
+    "comments": 3,
+    "favorites": 2,
+    "likes": 1,
+    "positiveRate": "0.90%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.5112462006079027,
+        "Count": 841
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.43039513677811553,
+        "Count": 708
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.03404255319148936,
+        "Count": 56
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.022492401215805473,
+        "Count": 37
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.00182370820668693,
+        "Count": 3
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2091291978239571015",
+    "publishedAt": "2026-10-07",
+    "reads": 229,
+    "upvotes": 7,
+    "comments": 0,
+    "favorites": 6,
+    "likes": 0,
+    "positiveRate": "6.11%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.46564885496183206,
+        "Count": 122
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.4580152671755725,
+        "Count": 120
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.04580152671755725,
+        "Count": 12
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.026717557251908396,
+        "Count": 7
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.003816793893129771,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2091258271147599702",
+    "publishedAt": "2026-10-07",
+    "reads": 184,
+    "upvotes": 4,
+    "comments": 0,
+    "favorites": 2,
+    "likes": 0,
+    "positiveRate": "4.35%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.6350877192982456,
+        "Count": 181
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.256140350877193,
+        "Count": 73
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.0912280701754386,
+        "Count": 26
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.010526315789473684,
+        "Count": 3
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0035087719298245615,
+        "Count": 1
+      },
+      {
+        "Name": "App-推送",
+        "Ratio": 0.0035087719298245615,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2091182592271835671",
+    "publishedAt": "2026-10-07",
+    "reads": 513,
+    "upvotes": 3,
+    "comments": 0,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "0.78%",
+    "audience": [
+      {
+        "Name": "PC",
+        "Ratio": 0.5604075691411936,
+        "Count": 385
+      },
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.35662299854439594,
+        "Count": 245
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.04512372634643377,
+        "Count": 31
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.01601164483260553,
+        "Count": 11
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.008733624454148471,
+        "Count": 6
+      },
+      {
+        "Name": "App-推送",
+        "Ratio": 0.008733624454148471,
+        "Count": 6
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.004366812227074236,
+        "Count": 3
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2090205728120235473",
+    "publishedAt": "2026-10-04",
+    "reads": 117,
+    "upvotes": 4,
+    "comments": 0,
+    "favorites": 2,
+    "likes": 0,
+    "positiveRate": "5.98%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.4789915966386555,
+        "Count": 57
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.24369747899159663,
+        "Count": 29
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.13445378151260504,
+        "Count": 16
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.10084033613445378,
+        "Count": 12
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.04201680672268908,
+        "Count": 5
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2089836414959670171",
+    "publishedAt": "2026-10-03",
+    "reads": 1381,
+    "upvotes": 14,
+    "comments": 0,
+    "favorites": 6,
+    "likes": 2,
+    "positiveRate": "1.67%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.6561014263074485,
+        "Count": 828
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.17115689381933438,
+        "Count": 216
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.12836767036450078,
+        "Count": 162
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.0277337559429477,
+        "Count": 35
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.009508716323296355,
+        "Count": 12
+      },
+      {
+        "Name": "App-我的",
+        "Ratio": 0.004754358161648178,
+        "Count": 6
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.002377179080824089,
+        "Count": 3
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2088766536907542711",
+    "publishedAt": "2026-09-30",
+    "reads": 385,
+    "upvotes": 6,
+    "comments": 1,
+    "favorites": 4,
+    "likes": 0,
+    "positiveRate": "2.86%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.6873239436619718,
+        "Count": 244
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.19154929577464788,
+        "Count": 68
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.07605633802816901,
+        "Count": 27
+      },
+      {
+        "Name": "App-推送",
+        "Ratio": 0.016901408450704224,
+        "Count": 6
+      },
+      {
+        "Name": "App-我的",
+        "Ratio": 0.014084507042253521,
+        "Count": 5
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.011267605633802818,
+        "Count": 4
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0028169014084507044,
+        "Count": 1
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2088261099854602944",
+    "publishedAt": "2026-09-29",
+    "reads": 2017,
+    "upvotes": 14,
+    "comments": 6,
+    "favorites": 9,
+    "likes": 1,
+    "positiveRate": "1.59%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.7055245818550431,
+        "Count": 1392
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.2321338063862139,
+        "Count": 458
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.03395843892549417,
+        "Count": 67
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.021794221996958945,
+        "Count": 43
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.0040547389761784085,
+        "Count": 8
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.0015205271160669033,
+        "Count": 3
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.0010136847440446021,
+        "Count": 2
+      }
+    ]
+  },
+  {
+    "answerUrl": "https://www.zhihu.com/answer/2088046888767447311",
+    "publishedAt": "2026-09-28",
+    "reads": 1028,
+    "upvotes": 6,
+    "comments": 2,
+    "favorites": 0,
+    "likes": 0,
+    "positiveRate": "0.78%",
+    "audience": [
+      {
+        "Name": "App-推荐",
+        "Ratio": 0.8152400835073069,
+        "Count": 781
+      },
+      {
+        "Name": "App-搜索",
+        "Ratio": 0.08768267223382047,
+        "Count": 84
+      },
+      {
+        "Name": "PC",
+        "Ratio": 0.07724425887265135,
+        "Count": 74
+      },
+      {
+        "Name": "其他",
+        "Ratio": 0.013569937369519834,
+        "Count": 13
+      },
+      {
+        "Name": "App-关注",
+        "Ratio": 0.003131524008350731,
+        "Count": 3
+      },
+      {
+        "Name": "App-热榜",
+        "Ratio": 0.0020876826722338203,
+        "Count": 2
+      },
+      {
+        "Name": "APP-消息",
+        "Ratio": 0.0010438413361169101,
+        "Count": 1
+      }
+    ]
+  }
+]

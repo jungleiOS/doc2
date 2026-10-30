@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+body{font-family:-apple-system,"PingFang SC",sans-serif;background:#fff;margin:0;padding:36px;width:920px;box-sizing:border-box}
+h2{font-size:26px;margin:0 0 6px}
+.sub{color:#888;font-size:14px;margin-bottom:28px}
+.row{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.tag{width:120px;font-size:15px;font-weight:600;text-align:right;color:#333}
+.box{background:#f2f5fa;border-radius:10px;padding:16px 18px;font-size:14px;line-height:1.9;flex:1}
+.box b{color:#1a53c0}
+.arrow{color:#999;font-size:20px}
+.demo{background:#fff6e8;border-color:#f0d9b0}
+.note{font-size:12.5px;color:#999;margin-top:24px;line-height:1.8}
+</style></head><body>
+<h2>「超分超帧并发」在手机上到底发生了什么</h2>
+<div class="sub">以 Neo12 打《穿越火线手游》2K+185帧模式为例（按官方描述简化）</div>
+<div class="row"><div class="tag">游戏原生输出</div><div class="box">骁龙 8E5 实际渲染 <b>1080P · 92 帧</b><br>负载只有满血 2K185 的大约 1/4，温度可控</div></div>
+<div class="row"><div class="tag"></div><div class="arrow">↓ Q3 芯片接管</div></div>
+<div class="row"><div class="tag">超分（画面放大）</div><div class="box">把 1080P 画面用算法放大到 <b>2K 分辨率</b>，补足清晰度</div></div>
+<div class="row"><div class="tag">超帧（中间插帧）</div><div class="box">在每两帧之间算出过渡帧，92 帧插成 <b>185 帧</b></div></div>
+<div class="row"><div class="tag">你眼睛看到的</div><div class="box demo"><b>2K · 185Hz 画面</b><br>流畅度和清晰度是真的，但其中一部分帧和像素是 Q3「算」出来的，不是 SoC「跑」出来的</div></div>
+<div class="note">示意图，数值为示意用途。原生 185 帧目前仅限发布会点名的几款游戏（如《使命召唤手游》原生185帧模式），多数游戏走的是上面这条「低负载渲染 + Q3 后期加工」路线。来源：iQOO 发布会公开信息。</div>
+</body></html>

@@ -27,7 +27,7 @@ function argNum(flag) {
 
 // ---- 可调参数 ----
 const LIMITS = {
-  maxUsers: argNum("--max") ?? 15,   // 单轮总用户上限
+  maxUsers: argNum("--max") ?? 25,   // 单轮总用户上限
   skipUsers: argNum("--skip") ?? 0,  // 跳过名单前 N 个要回赞的人（用于追加轮次捞后面的人）
   minReadMs: 20000,      // 单篇最短停留
   maxReadMs: 40000,      // 单篇最长停留

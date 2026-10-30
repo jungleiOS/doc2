@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; font-family: -apple-system, "PingFang SC", sans-serif; background: #f5f6f8; padding: 48px; }
+  .card { background: #fff; border-radius: 24px; padding: 44px 48px; box-shadow: 0 4px 24px rgba(0,0,0,.06); }
+  h1 { font-size: 40px; color: #1d1d1f; margin-bottom: 8px; }
+  .sub { font-size: 22px; color: #6e6e73; margin-bottom: 32px; }
+  .cols { display: flex; gap: 24px; }
+  .col { flex: 1; border-radius: 18px; padding: 28px; }
+  .ok { background: #e8f7ee; border: 2px solid #34a853; }
+  .no { background: #fdeeee; border: 2px solid #d93025; }
+  .col h2 { font-size: 28px; margin-bottom: 20px; }
+  .ok h2 { color: #1e8e3e; }
+  .no h2 { color: #d93025; }
+  .item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; font-size: 22px; color: #1d1d1f; line-height: 1.4; }
+  .mark { flex: none; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; margin-top: 2px; }
+  .ok .mark { background: #34a853; color: #fff; }
+  .no .mark { background: #d93025; color: #fff; }
+  .note { margin-top: 28px; padding: 20px 24px; background: #fff7e0; border-radius: 14px; font-size: 21px; color: #5f4400; line-height: 1.5; }
+  .src { margin-top: 20px; font-size: 18px; color: #8e8e93; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>iPad mini 8 的 IP67，到底防什么、不防什么</h1>
+  <div class="sub">IP67 = IEC 60529 标准：6 级防尘（尘密）+ 7 级防水（清水 1 米、30 分钟）</div>
+  <div class="cols">
+    <div class="col ok">
+      <h2>能扛住的</h2>
+      <div class="item"><span class="mark">✓</span>下雨天通勤，掏出来回消息、看文档</div>
+      <div class="item"><span class="mark">✓</span>厨房台面上的水点、油星泼溅</div>
+      <div class="item"><span class="mark">✓</span>沙滩、露营地的沙尘环境（尘密级）</div>
+      <div class="item"><span class="mark">✓</span>孩子手滑打翻的水杯、果汁</div>
+      <div class="item"><span class="mark">✓</span>掉进洗菜池、马桶，快速捞起来</div>
+    </div>
+    <div class="col no">
+      <h2>防不住的</h2>
+      <div class="item"><span class="mark">✗</span>热水澡、桑拿的蒸汽（测试用常温清水）</div>
+      <div class="item"><span class="mark">✗</span>海水、泳池（盐蚀和消毒药剂腐蚀）</div>
+      <div class="item"><span class="mark">✗</span>水龙头下直冲、高压水枪冲洗</div>
+      <div class="item"><span class="mark">✗</span>长时间泡在水里刷剧</div>
+      <div class="item"><span class="mark">✗</span>机身摔过之后，密封性能打折扣</div>
+    </div>
+  </div>
+  <div class="note">苹果官网脚注原文口径：防溅、抗水、防尘并非永久状态，防护性能可能因正常磨损而下降；<b>液体损坏不在保修范围内</b>。</div>
+  <div class="src">依据：苹果官网 iPad mini 技术规格页、IEC 60529 标准定义</div>
+</div>
+</body>
+</html>

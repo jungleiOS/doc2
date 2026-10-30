@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-29",
+  "limits": {
+    "maxUsers": 5,
+    "skipUsers": 20,
+    "minReadMs": 20000,
+    "maxReadMs": 40000,
+    "minGapMs": 60000,
+    "maxGapMs": 180000,
+    "minAnswersToCheck": 1
+  },
+  "truncated": true,
+  "results": [
+    {
+      "token": "wo-men-du-bian-liao-20",
+      "name": "魔方数码",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2099093058344244938",
+          "title": "2024 年你都入手了哪些实用的数码外设，显著提升了你的游戏体验？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2098753286690059498",
+          "title": "预算400，2026双十一有没有性价比高的开放式耳机推荐？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "han-wen-cheng",
+      "name": "转场码农",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/714873812",
+          "title": "为什么杭州总是灰蒙蒙的？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/702101725",
+          "title": "你为什么最终没有留在杭州？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "yi-ge-a-tui",
+      "name": "一个阿颓",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2059992951741272884",
+          "title": "有没有一种「落后」的生活方式，仔细想后竟让人有点羡慕？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2044854278716748528",
+          "title": "如何评价 6 月 1 日华为发布路由 Q7 电线版？搭载的 PLC3.0 技术如何实现全屋跑满千兆？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "wang-yang-12-13-84",
+      "name": "汪洋",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2034036189418745874",
+          "title": "中国人想要休息，真的只有辞职吗？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2003243442084528501",
+          "title": "大年30，加班10000，别说谎你去吗？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "san-xie-32-92",
+      "name": "战忽局华中局五号",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/678219145",
+          "title": "有什么让你一看就泪眼朦胧的诗句？",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        }
+      ],
+      "skipped": null
+    }
+  ]
+}
