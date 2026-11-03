@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin:0; padding:40px; background:#fafafa; font-family:-apple-system,"PingFang SC","Hiragino Sans GB",sans-serif; width:960px; box-sizing:border-box; }
+  h2 { font-size:24px; color:#1a1a1a; margin:0 0 6px; }
+  .sub { font-size:13px; color:#888; margin-bottom:28px; }
+  .flow { display:flex; flex-direction:column; gap:0; }
+  .node { background:#fff; border:1.5px solid #d97757; border-radius:10px; padding:14px 18px; width:520px; margin:0 auto; }
+  .node.gray { border-color:#bbb; }
+  .node .t { font-size:16px; font-weight:700; color:#1a1a1a; margin-bottom:4px; }
+  .node .d { font-size:13px; color:#555; line-height:1.6; }
+  .arrow { width:2px; height:34px; background:#d97757; margin:0 auto; position:relative; }
+  .arrow::after { content:""; position:absolute; bottom:0; left:-4px; border:5px solid transparent; border-top-color:#d97757; }
+  .arrow.gray { background:#bbb; } .arrow.gray::after { border-top-color:#bbb; }
+  .side { width:300px; float:right; margin:-10px 0 0 0; background:#fff3ee; border:1.5px dashed #d97757; border-radius:10px; padding:12px 14px; font-size:12.5px; color:#8a4632; line-height:1.7; }
+  .clear { clear:both; }
+</style>
+</head>
+<body>
+<h2>一份 Smart Reports 是怎么生成的</h2>
+<div class="sub">按 Anthropic 官方公告的功能描述绘制，示意用</div>
+<div class="flow">
+  <div class="node gray"><div class="t">① 员工的对话记录</div><div class="d">团队成员在 Claude 里的全部对话，存储在企业租户内</div></div>
+  <div class="arrow gray"></div>
+  <div class="node"><div class="t">② Claude 抽样读取</div><div class="d">管理员选定团队 + 日期范围 + 产品后，Claude 读取对话样本</div></div>
+  <div class="arrow"></div>
+  <div class="node"><div class="t">③ 归类成工作流（workstreams）</div><div class="d">由模型判断每段对话属于哪类工作、算不算产出、有没有跑题</div></div>
+  <div class="arrow"></div>
+  <div class="node"><div class="t">④ 生成报告</div><div class="d">每类工作的花费、产出物、卡点，外加一份「建议固化成技能」清单</div></div>
+  <div class="arrow"></div>
+  <div class="node gray"><div class="t">⑤ 管理员 / team lead 查看</div><div class="d">Owner 可把权限下放给各组负责人；报告可回答自定义问题</div></div>
+</div>
+<div class="side">员工不参与的环节：②③④<br>归类规则不公开、对话样本员工不知情、报告内容员工无权查看或申诉——「你的产出」由模型单方面定义</div>
+<div class="clear"></div>
+</body>
+</html>
