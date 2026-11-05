@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f6f7f9; }
+  #shot { width:1080px; padding:48px 52px; background:#f6f7f9; }
+  .title { font-size:34px; font-weight:700; color:#1a1a1a; margin-bottom:6px; }
+  .sub { font-size:17px; color:#6b7280; margin-bottom:28px; }
+  .cols { display:flex; gap:24px; }
+  .col { flex:1; border-radius:16px; padding:26px 26px 20px; }
+  .down { background:#fff; border:1.5px solid #e5e7eb; }
+  .up { background:#0f3d2e; color:#fff; }
+  .col h3 { font-size:21px; margin-bottom:4px; }
+  .down h3 { color:#b42318; }
+  .col .tag { font-size:14px; margin-bottom:16px; }
+  .down .tag { color:#9ca3af; }
+  .up .tag { color:#9fd8bd; }
+  .item { padding:13px 0; border-top:1px solid rgba(128,128,128,.18); }
+  .item b { display:block; font-size:18px; margin-bottom:3px; }
+  .item span { font-size:14.5px; line-height:1.5; }
+  .down .item span { color:#6b7280; }
+  .up .item span { color:#cdeede; }
+  .foot { margin-top:24px; font-size:15px; color:#6b7280; text-align:center; }
+</style>
+</head>
+<body>
+<div id="shot">
+  <div class="title">agent 7×24 之后，哪些活越来越不值钱</div>
+  <div class="sub">依据：DeepSeek《Super-agent 设计探索》（2026-10-31）、Anthropic 就业报告（2026-10-16）+ 本人一年重度使用实测</div>
+  <div class="cols">
+    <div class="col down">
+      <h3>📉 正在贬值</h3>
+      <div class="tag">agent 正在接管，别再把筹码押在这里</div>
+      <div class="item"><b>把需求翻译成代码</b><span>翻译层接近零边际成本，攒年限的老路走不通</span></div>
+      <div class="item"><b>「人在场」</b><span>7×24 常驻后，「出事有人在线」本身不再值钱</span></div>
+      <div class="item"><b>手速与产出量</b><span>人均 commit 半年涨 5 倍，速度正在通胀</span></div>
+    </div>
+    <div class="col up">
+      <h3>📈 正在升值</h3>
+      <div class="tag">agent 越自治，这几样越贵——结算的是你的注意力</div>
+      <div class="item"><b>写清边界</b><span>空值、上限、并发，写不出来的地方就是需求本身的坑</span></div>
+      <div class="item"><b>快速验收的判断力</b><span>平均水平已无差异，分水岭在你能不能拦住那 5% 的刁钻错</span></div>
+      <div class="item"><b>兜底的领域深度</b><span>「命令执行了≠事情办成了」，没人问的那部分就是人还在的原因</span></div>
+    </div>
+  </div>
+  <div class="foot">剩的是「对结果负责的注意力」：过程注意力贬值，责任注意力升值</div>
+</div>
+</body>
+</html>

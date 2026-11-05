@@ -1,0 +1,508 @@
+{
+  "date": "2026-11-04",
+  "limits": {
+    "maxUsers": 25,
+    "skipUsers": 0,
+    "minReadMs": 20000,
+    "maxReadMs": 40000,
+    "minGapMs": 60000,
+    "maxGapMs": 180000,
+    "minAnswersToCheck": 1
+  },
+  "truncated": true,
+  "results": [
+    {
+      "token": "wang-zhu-jiang-85",
+      "name": "王宁江",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2099520640709665786",
+          "title": "为什么不在黄河沿岸大量发展用水工业？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2094019066298118252",
+          "title": "垃圾焚烧发电后还可以做砖瓦吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "chenalliang-ge-wei-du",
+      "name": "Bike Man",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2101059951527572405",
+          "title": "如何看待 dsh推出的 Creator Mode？它是否真正降低了创建 Agent 和插件的门槛？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2100174888493395987",
+          "title": "如何评价Deepseek Harness发布的super-agent构想？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "lt-6-36",
+      "name": "龙腾虎跃LT",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2101205537601877648",
+          "title": "有哪些让你印象深刻的诗词？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2100843499314796466",
+          "title": "有没有一首诗词让你觉得喜欢？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "zhang-si-cheng-24",
+      "name": "心思方成",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2100884082569769598",
+          "title": "地方方言是如何消失的？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2099936076429259792",
+          "title": "人的一生，为什么说是短暂的？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "ztc-38-61",
+      "name": "ztc",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2101283165226774556",
+          "title": "为什么詹姆斯十进总决赛可以算作荣誉，NBA就没有亚军这个说法？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2101212424816833837",
+          "title": "如何看待「没有人类能比 LLM 写出更好的代码，接受现实，别再自欺了」这一言论？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "Sean-63-73",
+      "name": "Sean",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2100882470178665823",
+          "title": "媒体谈高校现「讨好式」教学，少数教师为评教分数刻意降难度、放宽标准，会催生更多水课吗？深层原因是什么？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2100713858834997344",
+          "title": "研究生复试被导师说是「花架子」怎么办？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "63-95-64-40",
+      "name": "发光中",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2101425162134500713",
+          "title": "高敏感人怎么才能把注意力专心在学习上呢？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2101058043215622462",
+          "title": "为什么每天时间都不够用，有什么时间管理的方法？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "yang-yang-56-46-63",
+      "name": "优典",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2101228356004066190",
+          "title": "孩子上兴趣班目的，是为了一定让孩子拿成绩吗？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2100912762805343740",
+          "title": "孩子小学数学应用题总读不懂题意，家长该怎么辅导？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "zhi0ynrcm",
+      "name": "空林照月",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2100892062946218289",
+          "title": "为什么太阳光偏偏能够照到地球上呢？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2100660405643363207",
+          "title": "“旅行者1号”现在飞到哪了？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "li-wencao",
+      "name": "李文操",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2101217609547101639",
+          "title": "神经元之间传递信号，是电信号吗，速度多少？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2100857538157851061",
+          "title": "为什么有的细胞可以再生，有的不可以？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "rou-bao-zi-41-41",
+      "name": "建筑从业人员",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2101048931991950472",
+          "title": "明知道辞职后可能找不到比现在好的工作，还可能找不到工作，但是好像就是想辞职，为什么？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2101044922002552128",
+          "title": "不上班为什么也很烦恼？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "jiang-you-jie-mo",
+      "name": "酱油芥末",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/1884056551502885416",
+          "title": "体制内，躺平了会有升迁机会吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/3343942373",
+          "title": "人民的名义中程度这种小角色是不是考公，人人都有机会当上?",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "tao-li-bu-yan-70-80",
+      "name": "方方放下",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2101382949946111944",
+          "title": "办公室养生党都在偷偷吃什么？求推荐那种又健康又能摸鱼的零食！？",
+          "ok": true,
+          "note": ""
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2101366886181114910",
+          "title": "你最近一次情绪「破防」是什么时候？因为什么事情？",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "yi-ge-a-tui",
+      "name": "一个阿颓",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2059992951741272884",
+          "title": "有没有一种「落后」的生活方式，仔细想后竟让人有点羡慕？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2044854278716748528",
+          "title": "如何评价 6 月 1 日华为发布路由 Q7 电线版？搭载的 PLC3.0 技术如何实现全屋跑满千兆？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "hu-kun-bing",
+      "name": "冰昆湖",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2096635037139715546",
+          "title": "录制视频用的麦克风有哪些好的推荐?",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2096634643005101306",
+          "title": "有哪些性价比高的适合新入门的小白的麦克风？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "gqw-28-25",
+      "name": "知乎用户GQW",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2100643999187056028",
+          "title": "26岁存款15w月薪7k想买c260l 建议买吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2099532160730506102",
+          "title": "预算40万左右，40多岁买两门六缸的宝马M240，还是更实用的YU7 GT？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "shou-you-yu-xiang-40",
+      "name": "手有余香",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2785449615",
+          "title": "为什么有的人说挺俄的其实是就是挺中派，挺乌的其实就是亲西方派？他们的逻辑到底是什么？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2785447742",
+          "title": "你是如何看待网上\"政治正确\"式的“孝乌”的认知战浪潮的？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "qmqy",
+      "name": "Sam80975",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/1338728889",
+          "title": "现在什么浏览器比较好？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/1338615123",
+          "title": "「帮助好友提问」2020届准备出国毕业生目前还没有工作应该家里蹲磨练技术还是先随便找个工作上手再说?",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "qwqchu-xin-jiang",
+      "name": "qwq初心酱",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2093652694934341605",
+          "title": "什么是人生的最顶级享受？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2084065221874803285",
+          "title": "大家如何看待“大狗叫”梗已经被彻底解构？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "qia-nong-ni-ya",
+      "name": "薇薇安大人",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2005755505126159994",
+          "title": "有什么办法可以娶个美国中产小女生以拯救她摆脱斩杀线威胁？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2005748849180971445",
+          "title": "如何评价牢A（斯奎奇大王）说美国女人拼了命想嫁中国男人？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "jdjzb",
+      "name": "jdjzb",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    },
+    {
+      "token": "wang-yang-12-13-84",
+      "name": "汪洋",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/2034036189418745874",
+          "title": "中国人想要休息，真的只有辞职吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        },
+        {
+          "url": "https://www.zhihu.com/answer/2003243442084528501",
+          "title": "大年30，加班10000，别说谎你去吗？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "thor-97-67",
+      "name": "知乎用户",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://www.zhihu.com/answer/3389873276",
+          "title": "送男朋友四百块钱的机械键盘合适嘛？会不会有点便宜？",
+          "ok": false,
+          "note": "已赞过，跳过"
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "wo-men-du-bian-liao-20",
+      "name": "魔方数码",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [
+        {
+          "url": "https://zhuanlan.zhihu.com/p/2100906160819910619",
+          "title": "【睡眠耳机推荐2026】双十一选购睡眠耳机哪个更值得入手？睡眠耳机真的有用吗？爆肝实测多款睡眠耳机热品牌！睡眠耳机入门之",
+          "ok": false,
+          "note": "打开/阅读失败：PageNavigationTimeoutError: page.goto timed out after 15000ms waiting for load; "
+        },
+        {
+          "url": "https://zhuanlan.zhihu.com/p/2099844443775971550",
+          "title": "2026双十一头戴式耳机推荐：10款热门耳机深度测评，南卡、索尼、西圣、苹果哪款好？头戴式耳机从百元款到千元旗舰一篇讲明",
+          "ok": true,
+          "note": ""
+        }
+      ],
+      "skipped": null
+    },
+    {
+      "token": "han-wen-cheng",
+      "name": "转场码农",
+      "tier": "铁粉",
+      "votesTarget": 2,
+      "voted": [],
+      "skipped": "没有可赞的回答/文章"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f5f6f8; padding: 40px; }
+  .card { width: 880px; background: #fff; border-radius: 16px; padding: 36px 40px; box-shadow: 0 4px 24px rgba(0,0,0,.08); }
+  h2 { font-size: 30px; color: #1a1a1a; margin-bottom: 6px; }
+  .sub { font-size: 15px; color: #999; margin-bottom: 26px; }
+  .flow { display: flex; align-items: stretch; gap: 12px; margin-bottom: 22px; }
+  .step { flex: 1; background: #f7f8fa; border: 1px solid #ececee; border-radius: 12px; padding: 18px 16px; }
+  .step .label { font-size: 14px; color: #888; margin-bottom: 8px; }
+  .step .num { font-size: 26px; font-weight: 700; color: #1a1a1a; }
+  .step .note { font-size: 13px; color: #999; margin-top: 6px; }
+  .arrow { align-self: center; font-size: 24px; color: #c8c9cc; }
+  .result { background: #fff5f4; border: 1px solid #ffd6d2; border-radius: 12px; padding: 16px 20px; font-size: 17px; color: #c0392b; }
+  .result b { font-size: 22px; }
+  .foot { margin-top: 18px; font-size: 13px; color: #aaa; }
+</style>
+</head>
+<body>
+<div class="card" id="shot">
+  <h2>「亏 13 万」怎么亏出来的</h2>
+  <div class="sub">按公开报道的两个报价复算，数据截至 2026 年 10 月 26 日前后</div>
+  <div class="flow">
+    <div class="step">
+      <div class="label">① 预售期收货价</div>
+      <div class="num">20,560 元</div>
+      <div class="note">256GB 线上成交均价（科创板日报）</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="step">
+      <div class="label">② 一周后报价</div>
+      <div class="num">16,238 元</div>
+      <div class="note">得物星光白 256GB（财联社 10/26）</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="step">
+      <div class="label">③ 每台浮亏</div>
+      <div class="num">≈ 4,300 元</div>
+      <div class="note">20,560 − 16,238 = 4,322</div>
+    </div>
+  </div>
+  <div class="result">压货 <b>30 台</b>、本金约 <b>62 万</b> → 浮亏 ≈ <b>13 万元</b></div>
+  <div class="foot">注：这是按传言量级做的算术推演，非某本真实台账；前提是把流水生意做成了库存生意且没跑掉。</div>
+</div>
+</body>
+</html>
