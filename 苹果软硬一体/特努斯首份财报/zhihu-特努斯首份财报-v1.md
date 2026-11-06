@@ -20,7 +20,7 @@
 
 真金白银的部分是：这批货是涨着价卖出去的。国行 Pro 起售价 8999 涨到 9999，Pro Max 顶配涨了 3500。机械可变光圈、60W 档快充，近三年 Pro 系列最大的一次硬件升级，消费者认，涨着价也抢。
 
-![iPhone 18 Pro 可变光圈模组](raw/iphone18pro-aperture.jpg)
+![iPhone 18 Pro 可变光圈模组](https://www.apple.com.cn/v/iphone-18-pro/a/images/overview/highlights/main_camera_startframe__dbtqkrydkxua_large_2x.jpg)
 
 （图源：Apple 官网）
 
@@ -46,7 +46,7 @@
 
 一份财报定不了战略，但定得了叙事。盘后跌的那 3 个多点，跌的不是这份财报，是下季度指引里那两个点的让利——市场已经在提前给存储成本定价了。<!-- 判断句 -->
 
-![约翰·特努斯官方肖像](raw/ternus-official.jpg)
+![约翰·特努斯官方肖像](https://www.apple.com.cn/leadership/images/overview/John_Ternus.jpg.large_2x.jpg)
 
 （图源：苹果官网 Leadership 页面）
 
@@ -56,7 +56,7 @@
 
 第二件，别被「盘后跌 3%」吓到，那不代表苹果生意变差。创纪录的财报配上让两个点的指引，这是「眼下很好、明年要贴钱」的组合，市场分的正是这笔账。<!-- 判断句 -->光看新闻标题以为苹果崩了的，属于被标题带了节奏。
 
-![季度营收与毛利率趋势图](raw/ithome-main.jpg)
+![季度营收与毛利率趋势图](https://img.ithome.com/newsuploadfiles/2026/11/a93157c6-1f6d-4ce3-b21e-b3748141b8f0.jpg)
 
 （图源：IT之家，转 AppleInsider 数据）
 
@@ -68,9 +68,9 @@ Duo 是 10 月才开卖的，这份财报里一分钱都没算进去。
 
 所以下个季度是苹果历史上头一回：第一个计入完整销售周期的 iPhone 18 Pro 季度，叠加第一个 Duo 季度。这轮换机周期真正的峰值，还没进报表。
 
-![iPhone Duo 折叠屏渲染图](raw/iphone-duo-render.jpg)
+![iPhone Duo 折叠屏渲染图](https://www.apple.com.cn/newsroom/images/2026/09/apple-unveils-iphone-duo/article/Apple-iPhone-Duo-colors-260909_big.jpg.large_2x.jpg)
 
-（图源：媒体渲染图）
+（图源：Apple 官网新闻稿）
 
 ## 最后回答题目：怎么评价这份创纪录成绩
 
@@ -93,12 +93,11 @@ Duo 是 10 月才开卖的，这份财报里一分钱都没算进去。
 （事实核查：以上内容基于上述公开资料整理，资料截至 2026 年 11 月 3 日；盘后跌幅各源口径 2%–4% 不等，文中取财报电话会后的最大跌幅口径。）
 
 <!-- 图片溯源映射（发布前删除本段）
-发布方式：手动发布（国内免注册图床 imgchr/imgloc/uguu/litterbox 经作者实测均不可达）。
-正文用本地相对路径，填编辑器时手动上传以下 4 张本地图（本目录 raw/ 下）。
-备用外链（若网络可达）：imgchr -> https://s41.ax1x.com/2026/11/06/pnfpfOI.jpg 等，见 git 历史；
-GitHub 持久副本：assets/imgs/ternus-q4fy26/（可用 gh-proxy.com 前缀引用）。
-raw/iphone18pro-aperture.jpg
-raw/ternus-official.jpg
-raw/ithome-main.jpg
-raw/iphone-duo-render.jpg
+发布方式：外链直贴。免费图床（imgchr/imgloc/uguu/litterbox/gh-proxy）经作者网络实测均不可达，
+改用信源站自己的图：Apple 中国官网 CDN（apple.com.cn，国内可达）+ IT之家图床（img.ithome.com）。
+均为原图直链，无需图床。本地备份见 raw/ 目录（含本地 Duo 渲染图 raw/iphone-duo-render.jpg）。
+raw/iphone18pro-aperture.jpg -> https://www.apple.com.cn/v/iphone-18-pro/a/images/overview/highlights/main_camera_startframe__dbtqkrydkxua_large_2x.jpg
+raw/ternus-official.jpg -> https://www.apple.com.cn/leadership/images/overview/John_Ternus.jpg.large_2x.jpg
+raw/ithome-main.jpg -> https://img.ithome.com/newsuploadfiles/2026/11/a93157c6-1f6d-4ce3-b21e-b3748141b8f0.jpg
+raw/iphone-duo-official.jpg -> https://www.apple.com.cn/newsroom/images/2026/09/apple-unveils-iphone-duo/article/Apple-iPhone-Duo-colors-260909_big.jpg.large_2x.jpg
 -->
