@@ -37,6 +37,8 @@ node .agents/skills/image-host-upload/upload.js <文章.md> [--time 12h] [--forc
 | 兜底 4 | tmpfiles.org | 境外，免注册，1h 过期，返回 JSON 需转 `/dl/` 直链 | 本网络连接被重置，不可用 |
 
 > 图床可用性随网络环境变化，上传时会自动按链回退。曾测试放弃的国内候选：SM.MS（服务迁移中，302）、z4a.net（证书失效）、imgurl.org/imgse.com（已弃用跳 imgchr.com）。若未来境外图床恢复可用，脚本自动兜底，无需改代码。
+>
+> **2026-11-06 实战教训（作者网络实测）**：imgchr（s41.ax1x.com）、imgloc（i.imgs.ovh）、uguu、litterbox、gh-proxy 在作者网络均不可达，免费图床方案整体失效。此题最终走**手动发布**：草稿保留本地相对路径，填编辑器时手动上传本地图；图片同时提交 GitHub 仓库作持久副本（jsDelivr 对大仓库不缓存会 301 跳 raw，境外镜像可用 gh-proxy.com 前缀）。遇到作者反馈「图床访问不了」时，先试一条链接让作者确认可达，再全量替换，不要连换多个床。
 
 ## 核心纪律：缓存即溯源凭据
 
