@@ -5,3 +5,15 @@ AppleIntelligence国行实测/dev-demo/.build
 .DS_Store
 Flutter-iOS27适配/Xcode27构建要求Flutter怎么适配/_demo
 .agents/*
+
+# 数据底座：db 是本地工作文件，不入库。
+# 所有数据都能从 md / json 源文件重跑 scripts/db/import.mjs 重建，
+# 因此 dump.sql 也不入库；需要备份时手动 `sqlite3 data/zhihu.db .dump > data/dump.sql`。
+data/zhihu.db
+data/zhihu.db-wal
+data/zhihu.db-shm
+data/dump.sql
+data/render-preview/
+
+# 原始采集数据（answers/liker-scan/scout-run/followed-pool）统一放这里，不入库
+data/raw/

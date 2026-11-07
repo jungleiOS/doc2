@@ -9,11 +9,12 @@ import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from "node:fs";
+import { likerRawDir } from "./paths.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "../..");
 const date = process.argv[2] && !process.argv[2].startsWith("-") ? process.argv[2] : new Date().toLocaleDateString("sv-SE");
-const dir = path.join(repoRoot, "analytics", "liker-scan");
+const dir = likerRawDir;
 const reportFile = path.join(dir, `report-${date}.md`);
 const seenFile = path.join(dir, "seen-users.json");
 // 追加轮次输出到独立文件，避免覆盖当日常规轮结果

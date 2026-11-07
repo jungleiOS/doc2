@@ -7,13 +7,10 @@
 // - likeDays = 各 raw 文件里用户 firstSeenDate 的并集。局限：raw 的 liked 事件只记了时刻
 //   没记日期，窗口内多次点赞会被归入首次出现日，可能低估点赞天数；逐日跑 fetch 后新数据无此问题
 // - lastEngaged = engage-*.json 里该用户有成功点赞（ok=true）的最新文件日期
-import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from "node:fs";
+import { likerRawDir as dir } from "./paths.mjs";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const repoRoot = path.resolve(__dirname, "../..");
-const dir = path.join(repoRoot, "analytics", "liker-scan");
 const seenFile = path.join(dir, "seen-users.json");
 
 const seen = JSON.parse(fs.readFileSync(seenFile, "utf-8"));

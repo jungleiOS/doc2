@@ -33,7 +33,8 @@
 
 - **`_主稿/`**：下划线前缀排最前，存放主稿文章、主稿配图、截图脚本和 `assets/`（HTML 源 + `cover-assets/` + `raw/`）。
 - **`<问题名>/`**：每个衍生问题一个目录，目录名用问题核心关键词。目录内文稿和配图**平铺散放**，不建 `images/` 或平台子目录。平台靠文件名前缀区分：`知乎回答-` / `zhihu-` / `百家号版-` / `公众号版-`。
-- **`问题对应表.md`**：话题级，登记所有问题的草稿文件、链接、发布状态。放在话题根目录。
+- **`问题对应表.md`**：话题级，登记所有问题的草稿文件、链接、发布状态。放在话题根目录。**仍是人工登记源**，改完后必须跑 `node scripts/db/sync.mjs` 同步（见下一条）。
+- **数据底座 `data/`**：`data/zhihu.db` 是本地数据库（不入 git，可从源文件重建）。`node scripts/db/import.mjs` 导入、`node scripts/db/render.mjs --write` 渲染，`node scripts/db/sync.mjs` 一条命令完成两步。生成物有两份：`outlines/问题对应表.md`（全部草稿按话题汇总的总表）和 `outlines/选题看板.md`（状态/待发布/表现视图），**禁止手改**，改了会被 `render.mjs --check` 拦下；人工登记源仍是各话题目录的 `问题对应表.md` 与 `outlines/选题历史.md`。查询直接 `sqlite3 data/zhihu.db`，表结构与常用 SQL 见 `data/README.md`。**原始采集数据统一写 `data/raw/`（已 gitignore，不入版本库）**：`answers-*.json`、`liker-scan/*.json`、`scout-raw/run-*.json`、`followed-pool.jsonl`；采集完跑一次 `sync` 才进库，`data/raw/` 里的文件不会出现在 `git status`。
 - **图片溯源映射块**：图床外链直接写在原稿里，本地路径 → 图床 URL 的映射以 HTML 注释块附在原稿文尾（发布前删除）。不再生成 `-hosted.md` 副本。
 - **`图源清单.md`**：配图信源溯源，跟配图放在同一问题目录。
 - 禁止根目录 `drafts/`：所有草稿必须归入对应话题的问题目录。如果新问题不属于任何现有话题，先创建话题目录再存草稿。

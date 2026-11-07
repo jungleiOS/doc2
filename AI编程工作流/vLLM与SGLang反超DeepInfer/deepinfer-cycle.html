@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1200px; height:640px; background:#0d1117; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#e6edf3; }
+  h1 { font-size:34px; font-weight:700; margin-bottom:8px; letter-spacing:1px; }
+  .sub { font-size:16px; color:#8b949e; margin-bottom:44px; }
+  .flow { display:flex; align-items:center; gap:0; }
+  .node { width:230px; padding:26px 18px; border-radius:14px; text-align:center; border:2px solid; }
+  .node .t { font-size:21px; font-weight:700; margin-bottom:10px; }
+  .node .d { font-size:14px; line-height:1.55; color:#c9d1d9; }
+  .n1 { border-color:#58a6ff; background:rgba(56,139,253,.12); }
+  .n2 { border-color:#3fb950; background:rgba(63,185,80,.12); }
+  .n3 { border-color:#d29922; background:rgba(210,153,34,.12); }
+  .n4 { border-color:#f778ba; background:rgba(247,120,186,.12); }
+  .arrow { width:78px; text-align:center; font-size:34px; color:#8b949e; flex-shrink:0; }
+  .arrow span { display:block; font-size:13px; margin-top:6px; color:#c9d1d9; }
+  .foot { margin-top:42px; font-size:14px; color:#8b949e; }
+</style>
+</head>
+<body>
+  <h1>DeepInfer 开源反哺循环</h1>
+  <div class="sub">DeepSeek 开源推理引擎 → 主流框架快速吸收 → 部分成绩反超</div>
+  <div class="flow">
+    <div class="node n1">
+      <div class="t">DeepInfer 开源</div>
+      <div class="d">DeepSeek 2026.10 开源推理引擎，含 MLA / MTP 等推理优化</div>
+    </div>
+    <div class="arrow">→<span>代码公开</span></div>
+    <div class="node n2">
+      <div class="t">vLLM / SGLang 吸收</div>
+      <div class="d">两大框架数天内合入核心优化，发布对标 benchmark</div>
+    </div>
+    <div class="arrow">→<span>互相验证</span></div>
+    <div class="node n3">
+      <div class="t">部分成绩反超</div>
+      <div class="d">吸收后框架在部分吞吐 / 延迟指标上反超原版实现</div>
+    </div>
+    <div class="arrow">→<span>回流社区</span></div>
+    <div class="node n4">
+      <div class="t">成为事实标准</div>
+      <div class="d">优化沉淀为社区共识，推理引擎进入「开源迭代」节奏</div>
+    </div>
+  </div>
+  <div class="foot">示意图 · 根据量子位 2026-10-26 报道整理（36kr.com/p/4042588576404358）</div>
+</body>
+</html>

@@ -78,20 +78,20 @@ EOF
 
 ## 7.1 关注问题池增速快照（2026-10-12 起，每次选题必做）
 
-关注的问题列表（第一来源）每次选题都会重抓，把**每个扫过的问题**（不论选没选）追加一行 JSONL 到 `analytics/followed-pool.jsonl`（工作目录用绝对路径，文件不存在则创建）：
+关注的问题列表（第一来源）每次选题都会重抓，把**每个扫过的问题**（不论选没选）追加一行 JSONL 到 `data/raw/followed-pool.jsonl`（已 gitignore）（工作目录用绝对路径，文件不存在则创建）：
 
 ```bash
 node - <<'EOF'
 import fs from 'fs';
 const line = {date:'YYYY-MM-DD', id:'问题ID', title:'标题', followers:0, views:0, answers:0, type:'普通'};
-fs.appendFileSync('<仓库根>/analytics/followed-pool.jsonl', JSON.stringify(line)+'\n');
+fs.appendFileSync('<仓库根>/data/raw/followed-pool.jsonl', JSON.stringify(line)+'\n');
 EOF
 ```
 
 `type` 字段区分来源 skill：`'普通'`（zhihu-question-scout）或 `'带货'`（zhihu-haowu-scout）。追加式 O(1)，不读不重写。查询某题增速（流式读全文，几百行毫秒级）：
 
 ```bash
-node -e "const fs=require('fs');const rows=fs.readFileSync('<仓库根>/analytics/followed-pool.jsonl','utf8').trim().split('\n').map(JSON.parse).filter(r=>r.id==='<问题ID>');if(rows.length<2){console.log('快照不足');process.exit(0)}const a=rows[0],b=rows[rows.length-1];const days=(new Date(b.date)-new Date(a.date))/864e5;console.log('快照',rows.length,'次，',days.toFixed(0),'天，日浏览增量',((b.views-a.views)/days).toFixed(0),'，日关注增量',((b.followers-a.followers)/days).toFixed(1))"
+node -e "const fs=require('fs');const rows=fs.readFileSync('<仓库根>/data/raw/followed-pool.jsonl','utf8').trim().split('\n').map(JSON.parse).filter(r=>r.id==='<问题ID>');if(rows.length<2){console.log('快照不足');process.exit(0)}const a=rows[0],b=rows[rows.length-1];const days=(new Date(b.date)-new Date(a.date))/864e5;console.log('快照',rows.length,'次，',days.toFixed(0),'天，日浏览增量',((b.views-a.views)/days).toFixed(0),'，日关注增量',((b.followers-a.followers)/days).toFixed(1))"
 ```
 
 攒够 4 周数据后，把「日浏览增量 >500 → D 直接 ≥4」从预留接口转为正式规则，并在活性判定中加入增速信号（增速 >0 的静默常青题放宽 D 封顶）。到时先用已有数据回测一遍阈值再转正。

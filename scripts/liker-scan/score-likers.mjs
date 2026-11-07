@@ -2,17 +2,14 @@
 // 读取 analytics/liker-scan/raw-YYYY-MM-DD.json，按信号打分分级，输出 Markdown 报告。
 // A/B/C/D 级 = 回关建议（只看本轮新抓用户）；R 级 = 回赞名单（按互动亲密度，见文件底部 R 级区块）。
 // 用法：node scripts/liker-scan/score-likers.mjs [raw文件日期，默认今天]
-import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from "node:fs";
+import { likerRawDir as dir, likerReportDir } from "./paths.mjs";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const repoRoot = path.resolve(__dirname, "../..");
 const date = process.argv[2] ?? new Date().toLocaleDateString("sv-SE");
-const dir = path.join(repoRoot, "analytics", "liker-scan");
 const rawFile = path.join(dir, `raw-${date}.json`);
 const seenFile = path.join(dir, "seen-users.json");
-const reportFile = path.join(dir, `report-${date}.md`);
+const reportFile = path.join(likerReportDir, `report-${date}.md`);
 
 // ---- 可调阈值 ----
 const THRESHOLDS = {

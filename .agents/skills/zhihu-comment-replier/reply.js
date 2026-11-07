@@ -9,7 +9,7 @@
 // 依赖：同仓库 references/ 下无；须在已登录知乎的 ego-browser task space 中运行，
 //       首次使用先创建/复用 space，把 space id 填到下方 SPACE_ID（或用环境变量 EGO_SPACE_ID）。
 
-const SPACE_ID = process.env.EGO_SPACE_ID ? Number(process.env.EGO_SPACE_ID) : 18; // 默认复用 zhihu-comment-replier space（2026-11-02 会话 space id=18；space 被 finish 后需重建并更新此处；实测 ego nodejs 不接收环境变量，改动请改这里）
+const SPACE_ID = process.env.EGO_SPACE_ID ? Number(process.env.EGO_SPACE_ID) : 23; // 默认复用 zhihu-comment-replier space（2026-11-06 会话 space id=23；space 被 finish 后需重建并更新此处；实测 ego nodejs 不接收环境变量，改动请改这里）
 
 const fs = await import("node:fs/promises");
 const REPO = "/Users/jiangjun/Documents/kimi/Workspaces/zhihu";

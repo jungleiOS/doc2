@@ -7,12 +7,13 @@ import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from "node:fs";
+import { likerRawDir } from "./paths.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "../..");
 const days = Number(process.argv[2] ?? 2);
 const today = new Date().toLocaleDateString("sv-SE"); // YYYY-MM-DD（本地时区）
-const outDir = path.join(repoRoot, "analytics", "liker-scan");
+const outDir = likerRawDir;
 const outFile = path.join(outDir, `raw-${today}.json`);
 const seenFile = path.join(outDir, "seen-users.json");
 

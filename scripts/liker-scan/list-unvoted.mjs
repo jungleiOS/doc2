@@ -3,8 +3,8 @@
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { likerRawDir as dir } from "./paths.mjs";
 
-const dir = "analytics/liker-scan";
 const seen = JSON.parse(fs.readFileSync(path.join(dir, "seen-users.json"), "utf-8"));
 
 // 互动档案里已知已赞的 URL（脚本点的 + 打开时发现已赞的）
