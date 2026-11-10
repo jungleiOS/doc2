@@ -136,11 +136,3 @@ Postman 会不会是最后一家这么干的，大概率不是。<!-- 判断句 
 
 数据截至 2026-11-10。官方 11 月 5 日宣布回滚该改动并锁定 issue 线程，回滚后的实际行为以新版实测为准。「12.35.1 仍静默安装但不再生成信任记录」一说源自 issue 评论区单一报告者（附日志摘录），未获独立复现。
 
-<!-- 图片溯源映射（发布前删除本段）
-AI编程工作流/Postman静默塞插件/02-github-issue-log.png -> 02-github-issue-log.png
-AI编程工作流/Postman静默塞插件/01-github-issue-top.png -> 01-github-issue-top.png
-AI编程工作流/Postman静默塞插件/03-github-codex-hooks-ts.png -> 03-github-codex-hooks-ts.png
-AI编程工作流/Postman静默塞插件/04-postman-official.png -> 04-postman-official.png
-AI编程工作流/Postman静默塞插件/06-landian-news.png -> 06-landian-news.png
-重传命令：node .agents/skills/image-host-upload/upload.js --force "AI编程工作流/Postman静默塞插件/zhihu-Postman静默塞插件-v1.md"
--->
