@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; padding: 56px 64px;
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #ffffff; color: #1a1a1a;
+  }
+  .title { font-size: 38px; font-weight: 700; margin-bottom: 8px; }
+  .subtitle { font-size: 21px; color: #666; margin-bottom: 44px; }
+  .chart { display: flex; align-items: flex-end; gap: 56px; padding: 0 20px; height: 430px; border-bottom: 3px solid #333; }
+  .bar-wrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; flex: 1; }
+  .bar { width: 168px; border-radius: 8px 8px 0 0; position: relative; }
+  .val { position: absolute; top: -50px; left: -30px; right: -30px; text-align: center; font-size: 30px; font-weight: 700; white-space: nowrap; }
+  .labels { display: flex; gap: 56px; padding: 0 20px; }
+  .lab { flex: 1; text-align: center; }
+  .label { margin-top: 18px; font-size: 22px; word-break: keep-all; line-height: 1.5; }
+  .src { margin-top: 8px; font-size: 17px; white-space: nowrap; color: #999; text-align: center; }
+  .note { margin-top: 36px; font-size: 19px; color: #888; line-height: 1.7; }
+</style>
+</head>
+<body>
+  <div class="title">同一个 2026 年：一家公司的内部样本 vs 两万开发者的市场遥测</div>
+  <div class="subtitle">产出端都在涨，差额全部堆在审查队列里</div>
+  <div class="chart">
+    <div class="bar-wrap">
+      <div class="bar" style="height: 340px; background:#4a7dff;"><div class="val">5.1×</div></div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar" style="height: 100px; background:#7ba3ff;"><div class="val">+66%</div></div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar" style="height: 390px; background:#e8743b;"><div class="val">+441.5%</div></div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar" style="height: 130px; background:#f0a377;"><div class="val">+54%</div></div>
+    </div>
+  </div>
+  <div class="labels">
+    <div class="lab">
+      <div class="label">工程师人均提交量<br>（Anthropic<br>内部）</div>
+      <div class="src">2025-12→2026-05</div>
+    </div>
+    <div class="lab">
+      <div class="label">人均完成需求单元数<br>（Faros 统计）</div>
+      <div class="src">22,000 名开发者</div>
+    </div>
+    <div class="lab">
+      <div class="label">代码评审中位等待时长<br>（Faros 统计）</div>
+      <div class="src">22,000 名开发者</div>
+    </div>
+    <div class="lab">
+      <div class="label">人均 bug 数<br>（Faros 统计）</div>
+      <div class="src">22,000 名开发者</div>
+    </div>
+  </div>
+  <div class="note">两组数据来源与统计口径完全不同，柱子高低不可直接比较，放在一起的用意只在说明：产出端的涨幅，有很大一部分以审查时长和 bug 的形式堆在下游。数据源：Anthropic《How employment is changing at Anthropic》（2026-10-16）；Faros AI《The Acceleration Whiplash》（2026）。</div>
+</body>
+</html>

@@ -55,7 +55,7 @@
 
 ## 3. 可用的 Agent Skills
 
-本项目已配置 19 个 Skill，执行对应任务时优先加载并遵循：`khazix-writer`、`zhihu-viral-answer`、`frontend-design`、`fact-checker`、`neat-freak`、`zhihu-question-scout`（流量选题）、`zhihu-haowu-scout`（带货选题，公共流程见 `zhihu-question-scout/scout-common.md`）、`zhihu-hot-scout`、`zhihu-answer-drafter`、`zhihu-comment-replier`、`zhihu-answer-tracker`、`zhihu-haowu-drafter`（带货起草，公共流程见 `zhihu-answer-drafter/drafter-common.md`，商品级选品插卡并入自原 haowu-evaluator）、`zhihu-draft-scorer`（成稿质量打分：六维 0-10、事实红线一票打回、双权重流量/带货；2026-11-03 起不再被起草流自动调用，起草质检改为三审——批评家+数据校验家+信息增量家，见 drafter-common §6.5，本 skill 仅手动触发）、`zhihu-geo-optimizer`、`zhihu-to-baijiahao`、`gzh-design`、`hv-analysis`、`image-host-upload`、`zhihu`（知乎开放平台官方 CLI）。
+本项目已配置 20 个 Skill，执行对应任务时优先加载并遵循：`khazix-writer`、`zhihu-viral-answer`、`frontend-design`、`fact-checker`、`neat-freak`、`zhihu-question-scout`（流量选题）、`zhihu-haowu-scout`（带货选题，公共流程见 `zhihu-question-scout/scout-common.md`）、`zhihu-hot-scout`、`zhihu-answer-drafter`、`zhihu-comment-replier`（批处理时把可引用的真实评论沉淀到话题目录 `评论区素材库.md`，起草回答的素材检索源之一）、`zhihu-comment-miner`（用官方 CLI 批量挖已发布回答的整条评论区，A/B 级素材 + 可转化选题清单沉淀进同一个 `评论区素材库.md`，drafter 的素材检索源与选题信号源）、`zhihu-answer-tracker`、`zhihu-haowu-drafter`（带货起草，公共流程见 `zhihu-answer-drafter/drafter-common.md`，商品级选品插卡并入自原 haowu-evaluator）、`zhihu-draft-scorer`（成稿质量打分：六维 0-10、事实红线一票打回、双权重流量/带货；2026-11-03 起不再被起草流自动调用，起草质检改为三审——批评家+数据校验家+信息增量家，见 drafter-common §6.5，本 skill 仅手动触发）、`zhihu-geo-optimizer`、`zhihu-to-baijiahao`、`gzh-design`、`hv-analysis`、`image-host-upload`、`zhihu`（知乎开放平台官方 CLI）。
 
 各 Skill 的路径与详细触发场景见 `.agents/skills/README.md`；使用时先读对应 `SKILL.md` 全文，按其流程、模板、禁忌执行，完成后按其质量清单自检。
 

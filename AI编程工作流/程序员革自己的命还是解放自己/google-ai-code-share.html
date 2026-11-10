@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; padding: 56px 64px;
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #ffffff; color: #1a1a1a;
+  }
+  .title { font-size: 40px; font-weight: 700; margin-bottom: 8px; }
+  .subtitle { font-size: 22px; color: #666; margin-bottom: 48px; }
+  .chart { display: flex; align-items: flex-end; gap: 120px; padding: 0 40px; height: 420px; border-bottom: 3px solid #333; }
+  .bar-wrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+  .bar { width: 170px; background: #4a7dff; border-radius: 8px 8px 0 0; position: relative; }
+  .val { position: absolute; top: -52px; left: 0; right: 0; text-align: center; font-size: 34px; font-weight: 700; }
+  .q3 { position: absolute; top: -52px; left: 0; right: 0; text-align: center; font-size: 26px; color: #999; }
+  .label { margin-top: 20px; font-size: 24px; text-align: center; line-height: 1.5; }
+  .note { margin-top: 40px; font-size: 19px; color: #888; line-height: 1.7; }
+</style>
+</head>
+<body>
+  <div class="title">Google 新代码中由 AI 生成的比例：三个时点的官方口径</div>
+  <div class="subtitle">按 Alphabet 财报电话会及 Google Cloud Next '26 演讲整理</div>
+  <div class="chart">
+    <div class="bar-wrap">
+      <div class="bar" style="height: 125px;"><div class="val">&gt;25%</div></div>
+      <div class="label">2024 财年 Q3<br>（2024-10 财报电话会）</div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar" style="height: 240px;"><div class="val">接近 50%</div></div>
+      <div class="label">2025 财年 Q3<br>（2025-10 财报电话会）</div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar" style="height: 375px; background:#2b5fd9;"><div class="q3" style="color:#2b5fd9; font-weight:700;">75%</div></div>
+      <div class="label">2026-04<br>（Cloud Next '26 大会）</div>
+    </div>
+  </div>
+  <div class="note">口径均为「AI 生成、经工程师审查接受」；2024、2025 数字出自 Alphabet 财报电话会皮查伊发言，75% 出自 2026-04-22 Cloud Next '26 大会皮查伊演讲。</div>
+</body>
+</html>

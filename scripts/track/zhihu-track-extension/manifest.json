@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "知乎答主选题追踪",
+  "version": "1.0.0",
+  "description": "在知乎回答/文章页的作者名片旁注入「＋追踪答主」按钮，一键把选题品味好的答主加入本地追踪名单（需配合本地服务使用）",
+  "host_permissions": ["http://127.0.0.1:43121/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "追踪名单（查看 / 移除）"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.zhihu.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

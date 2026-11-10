@@ -125,6 +125,19 @@ SELECT path, geo_json FROM drafts WHERE geo_json IS NOT NULL;
 SELECT raw_line FROM raw_lines WHERE source_file = 'outlines/选题历史.md' AND line_no = 875;
 ```
 
+## 选题追踪工具集（scripts/track/）
+
+追踪一批「选题品味好」的知乎答主，采集其最近回答辅助选题。
+
+| 文件 | 作用 | 入库 |
+|------|------|------|
+| `data/tracked-authors.jsonl` | 追踪名单，人工 + Chrome 扩展共同维护，urlToken 去重 | ✅ 版本库文件 |
+| `data/raw/track-snapshot/<urlToken>.json` | 每位答主最近的回答快照（diff 基线） | ❌ gitignore |
+| `data/raw/tracked-answers-YYYY-MM-DD.jsonl` | 每日抓到的增量新回答 | ❌ gitignore |
+| `analytics/track/report-YYYY-MM-DD.md` | 人读的选题报告（按作者分组、点赞降序） | ✅ |
+
+命令：`node scripts/track/server.mjs`（本地写回服务，配合 Chrome 扩展 `scripts/track/zhihu-track-extension/`）；`node scripts/track/collect.mjs [--limit 20]`（ego-browser 抓最近回答）；`node scripts/track/report.mjs [--days 7]`（生成选题报告）。
+
 ## 已知限制
 
 - `analytics/answers-2026-09-08.json` 是损坏的 JSON（标题内的引号未转义），整份跳过，原文件未改动，报告里有记录。

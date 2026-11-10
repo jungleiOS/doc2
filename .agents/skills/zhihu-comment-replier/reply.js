@@ -9,7 +9,7 @@
 // 依赖：同仓库 references/ 下无；须在已登录知乎的 ego-browser task space 中运行，
 //       首次使用先创建/复用 space，把 space id 填到下方 SPACE_ID（或用环境变量 EGO_SPACE_ID）。
 
-const SPACE_ID = process.env.EGO_SPACE_ID ? Number(process.env.EGO_SPACE_ID) : 23; // 默认复用 zhihu-comment-replier space（2026-11-06 会话 space id=23；space 被 finish 后需重建并更新此处；实测 ego nodejs 不接收环境变量，改动请改这里）
+const SPACE_ID = process.env.EGO_SPACE_ID ? Number(process.env.EGO_SPACE_ID) : 2; // 默认复用 zhihu-comment-replier space（2026-11-07 会话 space id=2；space 被 finish/失效后需重建并更新此处；实测 ego nodejs 不接收环境变量，改动请改这里）
 
 const fs = await import("node:fs/promises");
 const REPO = "/Users/jiangjun/Documents/kimi/Workspaces/zhihu";
@@ -31,16 +31,27 @@ if (!answerUrl || !matchKeyword || !replyText) {
 for (const p of ARG_CANDIDATES) await fs.rm(p, { force: true });
 
 const task = await taskSpace(SPACE_ID);
-const page = task.page("p1");
+const fail = (msg) => { throw new Error("ABORT: " + msg); }; // 逻辑错误（找不到块/校验不过）：不重试
 
-const fail = (msg) => { console.error("ABORT:", msg); process.exit(1); };
+async function runOnce() {
+// 每次运行开新页面：重载回答页会把渲染进程卡死（2026-11-07 实测），关旧开新 + 经首页暖导航才稳
+for (const p of await task.pages()) { try { await p.close(); } catch {} }
+const page = await task.newPage();
+console.log("使用新页面:", page.label);
 
 // 1. 打开回答并展开评论区
 // 注意：回答页有多张回答卡片，必须点「我自己这条回答」的评论按钮，
 // 否则弹层是别人的评论区（2026-10-14 实测踩坑：点全页第一个「N 条评论」会开错评论区）
-await page.goto(answerUrl);
-await page.waitForLoadState();
 const myAnswerId = answerUrl.match(/answer\/(\d+)/)?.[1] ?? null;
+await page.goto("https://www.zhihu.com");
+await page.waitForLoadState();
+try {
+  await page.goto(answerUrl);
+} catch (e) {
+  console.log("goto 超时但导航已提交，继续等待:", String(e).slice(0, 100));
+  await page.waitForTimeout(5000);
+}
+await page.waitForTimeout(3000);
 await page.evaluate((aid) => {
   const card = document.querySelector(`a[href*="/answer/${aid}"]`)?.closest("div");
   let scope = null, n = card;
@@ -151,3 +162,20 @@ for (const id of [...new Set([commentId, rootId])]) {
 }
 if (!hit.length) fail("接口验证失败：目标评论及其线程 root 的子评论里都找不到刚发的回复");
 console.log("OK 已发送，子评论 id:", hit[0].id, "author:", hit[0].author?.member?.name);
+} // runOnce
+
+// 渲染进程卡死类错误（PageEvaluationTimeoutError 等）自动重置页面重试，最多 3 次；ABORT（逻辑错误）不重试
+let lastErr = null;
+for (let i = 1; i <= 3; i++) {
+  try {
+    await runOnce();
+    lastErr = null;
+    break;
+  } catch (e) {
+    lastErr = e;
+    if (String(e && e.message).startsWith("ABORT")) break;
+    console.log(`第 ${i}/3 次尝试失败，8 秒后重置页面重试:`, String(e).slice(0, 140));
+    await new Promise((r) => setTimeout(r, 8000));
+  }
+}
+if (lastErr) { console.error("FAILED:", String(lastErr).slice(0, 300)); process.exit(1); }

@@ -21,13 +21,13 @@ notify() {
 }
 
 # 1. 抓取（2 天窗口）
-FETCH_OUT=$(node scripts/liker-scan/fetch-likers.mjs) || {
+FETCH_OUT=$(node scripts/liker-scan/fetch-likers.mjs 2>&1) || {
   echo "fetch 失败，中止：$FETCH_OUT"
   notify "知乎每日任务" "fetch-likers 失败，详见 $LOG"
   exit 1
 }
 echo "$FETCH_OUT"
-TOTAL=$(echo "$FETCH_OUT" | grep -o '"total":[0-9]*' | head -1 | cut -d: -f2)
+TOTAL=$(echo "$FETCH_OUT" | grep -oE '"total":[[:space:]]*[0-9]+' | head -1 | grep -oE '[0-9]+$')
 if [ "${TOTAL:-0}" -eq 0 ]; then
   echo "抓到 0 人，判断为登录态失效，中止（不跑 engage/回采）"
   notify "知乎每日任务" "知乎登录态疑似失效，今日点赞/回采已跳过，请先在浏览器登录 zhihu.com"
