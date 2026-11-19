@@ -77,14 +77,15 @@ node scripts/track/report.mjs --days 14
 launchctl print gui/$(id -u)/com.jiangjun.zhihu-track-server | grep state
 launchctl kickstart gui/$(id -u)/com.jiangjun.zhihu-track-server
 launchctl bootout gui/$(id -u)/com.jiangjun.zhihu-track-server   # 想恢复：launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.jiangjun.zhihu-track-server.plist
-tail -f data/raw/track-server.log        # 服务日志
-tail -f data/raw/track-schedule.log      # 定时采集日志（脚本内记录）
-cat data/raw/track-collect-launchd.log   # launchd 视角的采集输出
+tail -f ~/Library/Logs/zhihu-track/server.log   # 服务日志
+tail -f data/raw/track-schedule.log             # 定时采集日志（脚本内记录）
+cat ~/Library/Logs/zhihu-track/collect.log      # launchd 视角的采集输出
 ```
 
 注意：
 - plist 里写死了 node 绝对路径（nvm 版），升 node 大版本后要改 plist 里的路径。
 - **不要用 crontab 托管**（2026-11-09 踩过坑）：macOS 的 cron 无 Full Disk Access，脚本会被「Operation not permitted」静默拦死，且邮件通知到 `/var/mail` 没人看。launchd 是正道。
+- **launchd 的 StandardOutPath/StandardErrorPath 不能指向 `~/Documents` 下的文件**（2026-11-13 踩过坑）：launchd 打开日志文件被 TCC 拦（xpcproxy exit 78 EX_CONFIG），任务永远起不来。日志一律写 `~/Library/Logs/zhihu-track/`；脚本内部自己写 `data/raw/` 不受限（node 进程有 Documents 权限）。plist 改过之后必须 `bootout` + `bootstrap` 重载才会生效。
 
 ## 注意事项
 

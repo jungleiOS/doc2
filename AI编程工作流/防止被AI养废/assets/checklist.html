@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    background: #f7f6f3;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    padding: 56px 48px 40px;
+  }
+  .title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #1f2329;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: #8a8f99;
+    margin-bottom: 40px;
+  }
+  .cards {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .card {
+    flex: 1;
+    background: #ffffff;
+    border: 2px solid #e3e1dc;
+    border-radius: 16px;
+    padding: 30px 26px 26px;
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+  }
+  .card .tag {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 5px 14px;
+    margin-bottom: 16px;
+  }
+  .card .name {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .card ul { list-style: none; }
+  .card li {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4b5160;
+    padding: 9px 0 9px 22px;
+    position: relative;
+    border-bottom: 1px dashed #eceae5;
+  }
+  .card li:last-child { border-bottom: none; }
+  .card li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 17px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .card.c1 .tag { background: #2f9e6e; }
+  .card.c1 .name { color: #237a54; }
+  .card.c1 li::before { background: #2f9e6e; }
+  .card.c2 .tag { background: #d83931; }
+  .card.c2 .name { color: #b32f28; }
+  .card.c2 { background: #fffafa; border-color: #efc9c6; }
+  .card.c2 li::before { background: #d83931; }
+  .card.c3 .tag { background: #2f6fed; }
+  .card.c3 .name { color: #2458c4; }
+  .card.c3 li::before { background: #2f6fed; }
+  .card .note {
+    margin-top: auto;
+    padding-top: 16px;
+    font-size: 13px;
+    color: #9aa0aa;
+    line-height: 1.6;
+  }
+  .footer {
+    margin-top: 36px;
+    text-align: center;
+    font-size: 13px;
+    color: #a8adb7;
+  }
+</style>
+</head>
+<body>
+  <div class="title">AI 编程三档取舍清单</div>
+  <div class="subtitle">不是所有活都该自己写，也不是所有判断都该交出去——关键是分档</div>
+  <div class="cards">
+    <div class="card c1">
+      <span class="tag">第一档</span>
+      <div class="name">放心外包</div>
+      <ul>
+        <li>样板代码 / 脚手架</li>
+        <li>CRUD 接口</li>
+        <li>迁移脚本</li>
+        <li>单测样板</li>
+        <li>文档与注释</li>
+      </ul>
+      <div class="note">特点：错了代价低、模式固定、有测试兜底</div>
+    </div>
+    <div class="card c2">
+      <span class="tag">第二档</span>
+      <div class="name">必须自己练</div>
+      <ul>
+        <li>故障定位</li>
+        <li>性能调优</li>
+        <li>并发与事务判断</li>
+      </ul>
+      <div class="note">特点：AI 一沉默出错就是生产事故，监督 AI 本身就需要这些能力</div>
+    </div>
+    <div class="card c3">
+      <span class="tag">第三档</span>
+      <div class="name">用预测代替审查</div>
+      <ul>
+        <li>动手前先写下预期</li>
+        <li>交卷后核对猜中几个</li>
+        <li>再找一件它没检查到的事</li>
+      </ul>
+      <div class="note">特点：强制脑子先转一圈，对抗「看着挺对就通过」</div>
+    </div>
+  </div>
+  <div class="footer">图源：自制</div>
+</body>
+</html>

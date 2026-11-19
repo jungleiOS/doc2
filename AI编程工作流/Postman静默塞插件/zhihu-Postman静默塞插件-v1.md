@@ -25,13 +25,13 @@ Postman 自己的日志把过程记得清清楚楚（[issue 正文第 1 节](htt
 >
 > （以上引文有删节，原文这一行还记录了开关状态等字段）
 
-![issue 中贴的日志实锤与配置改动](02-github-issue-log.png)
+![issue 中贴的日志实锤与配置改动](https://i.imgs.ovh/2026/11/10/f2204044a8e8a368e01828e26682addd.png)
 
 *图源：GitHub issue #14370 截图（日志实锤段与配置改动段）*
 
 这次安装往四处写了东西，性质不太一样。<!-- 判断句 -->两处是普通配置写入：~/.codex/config.toml 里多了 Postman 的插件市场和插件条目，~/.claude/settings.json 里启用了它的官方插件，版本 2.0.1，用户级范围。一处最重：config.toml 的 hooks.state 段落里，躺着一条 postman 的信任记录——就是下面要细说的那枚章。还有一处最容易被忽略：~/.local/bin 里多了一个 Postman 可执行文件，一个命令行工具，以后就算卸载桌面应用，它都不一定带得走。
 
-![GitHub issue #14370 标题与正文首屏](01-github-issue-top.png)
+![GitHub issue #14370 标题与正文首屏](https://i.imgs.ovh/2026/11/10/2fdcfa725b8828565d3315b6d9720f08.png)
 
 *图源：GitHub issue #14370 截图*
 
@@ -57,7 +57,7 @@ Postman 往这个入口里写的开场白是这么一段（[源码原文，sessi
 
 也要补一句对它公平的核查结果：评论区有技术用户实测发现，部分 Codex 版本遇到没有信任记录的 hook 会直接跳过不执行，不一定真跑了；12.35.1 版本的第二例报告里，信任记录也确实没生成。<!-- 事实：issue 评论区 foma-agent、ronthedrummer -->所以准确的表述是「安装器试图替你批准」，而不是「它每次都批准成功了」——意图有实锤，效果分版本。<!-- 判断句 -->
 
-![codex-hooks.ts 源码：approvePostmanHook](03-github-codex-hooks-ts.png)
+![codex-hooks.ts 源码：approvePostmanHook](https://i.imgs.ovh/2026/11/10/4d1ffa7d264e54c2f7d8348b0a71a698.png)
 
 *图源：postman-plugin 仓库固定 revision 6c8e452 的 installer/src/hosts/codex-hooks.ts 页面截图，提交信息「auto-approve Postman's Codex hook (#124)」可见（注：该函数在 11 月 3 日后的 main 分支已改名为 revokePostmanHookApproval，链接必须用固定 revision）*
 
@@ -71,7 +71,7 @@ Postman 往这个入口里写的开场白是这么一段（[源码原文，sessi
 
 这个入口天然就成了新的分发渠道。以前软件抢的是你的开始菜单和浏览器主页，现在抢的是你 agent 的开场白——位置更少，价值更高，因为开场白直接影响 agent 的每一次决策。<!-- 判断句 -->
 
-![Postman 官网：API engine for your agents](04-postman-official.png)
+![Postman 官网：API engine for your agents](https://i.imgs.ovh/2026/11/10/97e241c262d657cd76d4ff335128a1be.png)
 
 *图源：Postman 官网首页截图（无登录态截取）*
 
@@ -93,7 +93,7 @@ Postman 是第一家被拿到源码级证据实锤的，但动机并不特殊：
 
 这个反转本身挺有信息量。<!-- 判断句 -->一家公司在两天里从「让同意更明确」滑到「整个回滚」，说明它在内部评估这件事时，压根没把「往别人的 agent 里写指令」这条线当回事。<!-- 判断句 -->
 
-![蓝点网报道：插件插入配置的媒体示意](06-landian-news.png)
+![蓝点网报道：插件插入配置的媒体示意](https://i.imgs.ovh/2026/11/10/a5e26a1a0c2ab5001a31a2747290497f.png)
 
 *图源：蓝点网报道页面截图（含媒体自绘示意图：Postman 插件插入 Codex/Claude Code 配置，SessionStart hook 被「自动批准」高亮）*
 
@@ -136,3 +136,11 @@ Postman 会不会是最后一家这么干的，大概率不是。<!-- 判断句 
 
 数据截至 2026-11-10。官方 11 月 5 日宣布回滚该改动并锁定 issue 线程，回滚后的实际行为以新版实测为准。「12.35.1 仍静默安装但不再生成信任记录」一说源自 issue 评论区单一报告者（附日志摘录），未获独立复现。
 
+<!-- 图片溯源映射（发布前删除本段）
+AI编程工作流/Postman静默塞插件/02-github-issue-log.png -> https://i.imgs.ovh/2026/11/10/f2204044a8e8a368e01828e26682addd.png
+AI编程工作流/Postman静默塞插件/01-github-issue-top.png -> https://i.imgs.ovh/2026/11/10/2fdcfa725b8828565d3315b6d9720f08.png
+AI编程工作流/Postman静默塞插件/03-github-codex-hooks-ts.png -> https://i.imgs.ovh/2026/11/10/4d1ffa7d264e54c2f7d8348b0a71a698.png
+AI编程工作流/Postman静默塞插件/04-postman-official.png -> https://i.imgs.ovh/2026/11/10/97e241c262d657cd76d4ff335128a1be.png
+AI编程工作流/Postman静默塞插件/06-landian-news.png -> https://i.imgs.ovh/2026/11/10/a5e26a1a0c2ab5001a31a2747290497f.png
+重传命令：node .agents/skills/image-host-upload/upload.js --force "AI编程工作流/Postman静默塞插件/zhihu-Postman静默塞插件-v1.md"
+-->

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1200px; font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:#f5f5f7; padding:48px; }
+  h2 { text-align:center; font-size:34px; color:#1d1d1f; margin-bottom:8px; }
+  .sub { text-align:center; font-size:18px; color:#6e6e73; margin-bottom:36px; }
+  .row { display:flex; gap:32px; }
+  .card { flex:1; background:#fff; border-radius:24px; padding:32px; box-shadow:0 4px 24px rgba(0,0,0,.06); }
+  .tag { display:inline-block; font-size:16px; font-weight:600; padding:6px 16px; border-radius:999px; margin-bottom:20px; }
+  .tag2d { background:#ffe9d6; color:#b2500a; }
+  .tag3d { background:#d9f2e3; color:#0f7a3d; }
+  .card h3 { font-size:26px; color:#1d1d1f; margin-bottom:20px; }
+  .face { width:180px; height:180px; margin:0 auto 24px; position:relative; }
+  .face img, .face svg { width:100%; height:100%; }
+  ul { list-style:none; }
+  li { font-size:18px; color:#3a3a3c; line-height:1.7; padding-left:22px; position:relative; margin-bottom:10px; }
+  li::before { content:""; position:absolute; left:0; top:13px; width:8px; height:8px; border-radius:50%; background:#c7c7cc; }
+  .warn { background:#fff5f5; border:1px solid #ffd6d6; border-radius:12px; padding:14px 18px; font-size:17px; color:#c0272d; line-height:1.6; margin-top:8px; }
+  .ok { background:#f0faf4; border:1px solid #c9ecd6; border-radius:12px; padding:14px 18px; font-size:17px; color:#0f7a3d; line-height:1.6; margin-top:8px; }
+  .dots { position:absolute; inset:0; }
+</style>
+</head>
+<body>
+  <h2>2D 人脸识别 vs Face ID 3D 结构光</h2>
+  <div class="sub">iPhone Duo 这次加的是左边这种</div>
+  <div class="row">
+    <div class="card">
+      <span class="tag tag2d">2D 人脸识别</span>
+      <h3>拍一张平面照片来比对</h3>
+      <div class="face">
+        <svg viewBox="0 0 100 100">
+          <rect x="0" y="0" width="100" height="100" rx="16" fill="#eef0f3"/>
+          <ellipse cx="50" cy="42" rx="16" ry="20" fill="#b9bec6"/>
+          <path d="M28 88 Q50 62 72 88 Z" fill="#b9bec6"/>
+        </svg>
+      </div>
+      <ul>
+        <li>只用普通前置摄像头</li>
+        <li>拿到的是一张平面图</li>
+        <li>能分辨五官位置和轮廓</li>
+      </ul>
+      <div class="warn">平面照片可以骗过它，所以它只被允许解锁锁屏</div>
+    </div>
+    <div class="card">
+      <span class="tag tag3d">Face ID 3D 结构光</span>
+      <h3>往脸上打三万个光点测深度</h3>
+      <div class="face">
+        <svg viewBox="0 0 100 100">
+          <rect x="0" y="0" width="100" height="100" rx="16" fill="#eef7f1"/>
+          <ellipse cx="50" cy="42" rx="16" ry="20" fill="#9fc7ae"/>
+          <path d="M28 88 Q50 62 72 88 Z" fill="#9fc7ae"/>
+          <g fill="#0f7a3d">
+            <circle cx="42" cy="34" r="1.4"/><circle cx="50" cy="32" r="1.4"/><circle cx="58" cy="34" r="1.4"/>
+            <circle cx="40" cy="42" r="1.4"/><circle cx="48" cy="40" r="1.4"/><circle cx="56" cy="42" r="1.4"/><circle cx="62" cy="44" r="1.4"/>
+            <circle cx="38" cy="50" r="1.4"/><circle cx="46" cy="48" r="1.4"/><circle cx="54" cy="50" r="1.4"/><circle cx="60" cy="52" r="1.4"/>
+            <circle cx="44" cy="56" r="1.4"/><circle cx="52" cy="56" r="1.4"/><circle cx="58" cy="58" r="1.4"/>
+            <circle cx="40" cy="66" r="1.4"/><circle cx="50" cy="64" r="1.4"/><circle cx="60" cy="66" r="1.4"/>
+          </g>
+        </svg>
+      </div>
+      <ul>
+        <li>原深感镜头投射 30000+ 红外光点</li>
+        <li>读回来一张带深度的立体「石膏像」</li>
+        <li>照片、视频都骗不过去</li>
+      </ul>
+      <div class="ok">所以它能管支付、密码这些高安全场景</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -193,7 +193,17 @@ try {
     for (const f of result.failed) console.log(`- ${f.name}（${f.token}）：${f.error}`);
   }
   console.log(`\n增量已写入：${result.outFile}`);
-  console.log("提示：跑 node scripts/track/report.mjs 生成选题报告（追踪数据为独立数据流，不走 scripts/db/sync.mjs）。");
+  // 抓完即入库，避免新数据只堆在 data/raw
+  try {
+    execFileSync(process.execPath, [path.join(repoRoot, "scripts", "db", "import.mjs")], {
+      cwd: repoRoot,
+      stdio: "ignore",
+    });
+    console.log("已同步到 data/zhihu.db（tracked_answers 表）");
+  } catch (err) {
+    console.error(`入库失败（原始文件已保留，可稍后手动跑 sync）：${err.message}`);
+  }
+  console.log("提示：跑 node scripts/track/report.mjs 生成选题报告。");
 } catch (err) {
   console.error("抓取失败：", err.message);
   process.exit(1);

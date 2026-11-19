@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background:#f7f8fa; margin:0; padding:36px; width:1080px; box-sizing:border-box; }
+  h1 { font-size:34px; margin:0 0 6px; color:#1a1a1a; }
+  .sub { font-size:20px; color:#666; margin-bottom:28px; }
+  .cols { display:flex; gap:24px; }
+  .col { flex:1; background:#fff; border-radius:16px; padding:24px; border:1px solid #e3e5e8; }
+  .col.dead { background:#fafafa; border-color:#ddd; }
+  .col h2 { font-size:24px; margin:0 0 4px; }
+  .tag { display:inline-block; font-size:16px; padding:3px 12px; border-radius:12px; margin-bottom:14px; }
+  .tag.red { background:#fdeceb; color:#c0392b; }
+  .tag.green { background:#e8f6ee; color:#1e8449; }
+  .box { border-radius:10px; padding:12px 16px; font-size:20px; margin:10px 0; text-align:center; }
+  .box.gray { background:#eef0f2; color:#444; }
+  .box.blue { background:#e8f0fe; color:#1a4fa0; }
+  .box.win { background:#dff3ff; color:#0b5394; border:2px solid #6fa8dc; font-weight:600; }
+  .box.phone { background:#fff4e5; color:#b45f06; border:2px solid #f0b45a; font-weight:600; }
+  .arrow { text-align:center; font-size:22px; color:#999; margin:2px 0; }
+  .note { font-size:17px; color:#888; line-height:1.5; margin-top:14px; }
+  .lock { font-size:18px; color:#c0392b; font-weight:600; text-align:center; margin:6px 0; }
+  .chain { display:flex; align-items:stretch; gap:0; margin:12px 0; }
+  .chain .box { flex:1; margin:0 4px; font-size:18px; display:flex; align-items:center; justify-content:center; }
+  .chain .plus { align-self:center; font-size:22px; color:#999; }
+</style>
+</head>
+<body>
+  <h1>同一件事，两条路：在 iPhone 里跑 Windows 11</h1>
+  <div class="sub">老路 2023 年就被苹果封死，WindowsiOS 走的是新路（示意图，据公开报道整理）</div>
+  <div class="cols">
+    <div class="col dead">
+      <h2>老路：硬件虚拟机（UTM 时代）</h2>
+      <span class="tag red">iOS 16.4 起被苹果关闭</span>
+      <div class="box phone">iPhone 芯片的虚拟化硬件</div>
+      <div class="arrow">↓ 直接借用</div>
+      <div class="box blue">苹果 Hypervisor.framework 接口</div>
+      <div class="lock">⛔ 普通未越狱设备不再开放</div>
+      <div class="arrow">↓</div>
+      <div class="box win">Windows 11</div>
+      <div class="note">残余方案 UTM SE 退回软件解释执行：开机进桌面要几十分钟，Edge 这类软件基本卡死。</div>
+    </div>
+    <div class="col">
+      <h2>新路：纯软件二进制翻译（WindowsiOS）</h2>
+      <span class="tag green">不依赖苹果任何接口 · 无需越狱</span>
+      <div class="chain">
+        <div class="box blue">翻译引擎<br>（Husk）</div>
+        <div class="plus">+</div>
+        <div class="box blue">软件内存管理<br>（软件 MMU）</div>
+        <div class="plus">+</div>
+        <div class="box blue">整套虚拟电脑硬件<br>（UEFI/ACPI/NVMe/网卡）</div>
+      </div>
+      <div class="arrow">↓ 边跑边翻译，接近原生速度</div>
+      <div class="box win">Windows 11 on ARM（还能跑 x86 老软件）</div>
+      <div class="note">代价：Windows 比 macOS 挑剔——内存页要 4KB、不认设备树，翻译引擎得逐条给非对齐内存指令兜底。</div>
+    </div>
+  </div>
+</body>
+</html>

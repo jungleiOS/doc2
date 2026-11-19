@@ -36,7 +36,7 @@ EOF
 
 知乎问题来源共五个，**按优先级从高到低**：
 
-0. **官方问题发现（2026-10-22 新增，每轮选题第 0 步）**：知乎官方 CLI `question recommend`——画像模式 1-2 次（`"$CLI" question recommend --count 20`），主题模式按领域关键词 2-3 次（如 `--query '充电器'`、`--query '充电宝'`、`--query 'iPad'`）。实测画像模式推荐质量高（推题直接命中苹果生态/数码画像），正好替代原「第四来源」里靠浏览器按时间排序搜的打捞动作。返回只有标题+链接，无统计数据，全部进阶段 B 精评。额度 `question_discovery` 100 次/自然日（与 `question answers` 共用），一轮选题用 5 次以内，充裕。CLI 路径：`CLI="$HOME/Library/Application Support/zhihu-cli/current/zhihu-cli"`。
+0. **官方问题发现（2026-10-22 新增，每轮选题第 0 步；2026-11-10 起脚本化，禁止手动跑 CLI）**：运行 `node scripts/scout/cli-recommend.mjs --save`（画像 2 次 + 主题 3 次，固定 5 次调用，配额充裕），落盘 `data/raw/cli-recommend-YYYY-MM-DD.json`（约 60+ 题）。CLI 题无统计数据且量太大，**不得整包进精评**：先按选题领域（苹果生态/数码/AI 编程素材族）筛掉明显不符的，取Top 10-15 的 id 交给 pipeline 的 `ids` 参数进阶段 B 精评（LLM 判断段会补匹配理由）。**每轮必跑，漏跑视为流程事故**（2026-11-10 曾漏跑导致候选质量下降）；脚本退出码非 0（配额耗尽/未登录）时中止本轮并报错，不得静默跳过。历史手动用法：`"$CLI" question recommend --count 20`，主题 `--query '充电器'` 等。实测画像模式推荐质量高（推题直接命中苹果生态/数码画像），正好替代原「第四来源」里靠浏览器按时间排序搜的打捞动作。返回只有标题+链接，无统计数据，全部进阶段 B 精评。额度 `question_discovery` 100 次/自然日（与 `question answers` 共用），一轮选题用 5 次以内，充裕。CLI 路径：`CLI="$HOME/Library/Application Support/zhihu-cli/current/zhihu-cli"`。
 1. **关注的问题（第一浏览器来源，2026-10-11 起）**：`https://www.zhihu.com/people/<自己的用户ID>/following/questions`（如 `/people/jungle-26-32/following/questions`；注意旧入口 `/follow/questions` 已 404，个人主页关注订阅区也没有直达链接，直接拼这个 URL）——用户自己点过关注的问题，意图纯度最高，优先从这里选题。**列表页每个问题项自带关注时间和回答数/关注数，无需滚动即可读到**；列表分页加载（底部有页码），按关注时间倒序，翻到出现 3 天前的条目即可停。**只取最近 3 天关注的问题**（关注量不大，更早的不用抓）。提取用 `a[href*="/question/"]` 选择器，过滤掉「问题圆桌/话题」等非问题链接，只看 `href` 以数字结尾的。抓不到就先 `snapshot` 看登录墙。
 2. **邀请回答**：`https://www.zhihu.com/creator/featured-question/invited`
 3. **推荐问题**：`https://www.zhihu.com/creator/featured-question/recommend`

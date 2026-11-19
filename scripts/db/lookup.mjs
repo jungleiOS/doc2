@@ -60,7 +60,13 @@ const db = new DatabaseSync(dbPath, { readOnly: true });
 const questions = db
   .prepare(
     `SELECT q.question_id, q.title, q.status, q.first_seen, q.last_seen,
-            (SELECT COUNT(*) FROM drafts d WHERE d.question_id = q.question_id) AS draft_count
+            (SELECT COUNT(*) FROM drafts d WHERE d.question_id = q.question_id) AS draft_count,
+            (SELECT d.reason FROM question_decisions d
+              WHERE d.question_id = q.question_id AND d.decision = 'rejected'
+              ORDER BY d.run_date DESC LIMIT 1) AS last_reject,
+            (SELECT d.run_date FROM question_decisions d
+              WHERE d.question_id = q.question_id AND d.decision = 'rejected'
+              ORDER BY d.run_date DESC LIMIT 1) AS last_reject_date
      FROM questions q
      WHERE (? = '' OR q.title LIKE ?)
        AND (? IS NULL OR COALESCE(q.last_seen, q.first_seen) >= ?)
@@ -109,7 +115,9 @@ if (shownCandidates.length) {
   for (const q of shownCandidates) {
     const title = (q.title ?? "（无标题）").slice(0, 60);
     const draftsNote = q.draft_count > 0 ? `（草稿 ${q.draft_count} 篇）` : "";
-    console.log(`- ${title}${draftsNote}｜首次 ${q.first_seen ?? "?"}`);
+    // 上一轮被筛掉的题直接说明原因，省得再翻 scout 记录
+    const rejectNote = q.last_reject ? `｜${q.last_reject_date} 被拒：${q.last_reject}` : "";
+    console.log(`- ${title}${draftsNote}｜首次 ${q.first_seen ?? "?"}${rejectNote}`);
   }
   if (hiddenCandidates > 0) {
     console.log(`\n……另有 ${hiddenCandidates} 条候选，关键词再具体些，或加 --limit 数量。`);

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    background: #f7f6f3;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    padding: 52px 48px 40px;
+  }
+  .title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #1f2329;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: #8a8f99;
+    margin-bottom: 40px;
+  }
+  .flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+  .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .marker {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .bubble {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 999px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+  }
+  .bubble .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 7px;
+    vertical-align: 1px;
+  }
+  .m1 .bubble {
+    color: #2f6fed;
+    background: #ffffff;
+    border: 2px dashed #2f6fed;
+  }
+  .m1 .bubble .dot { background: #2f6fed; }
+  .m2 .bubble {
+    color: #ffffff;
+    background: #e8830c;
+    border: 2px solid #e8830c;
+  }
+  .m3 .bubble { visibility: hidden; }
+  .pin {
+    width: 2px;
+    height: 14px;
+    margin-top: -1px;
+    position: relative;
+    z-index: 1;
+  }
+  .m1 .pin { background: #2f6fed; }
+  .m2 .pin { background: #e8830c; }
+  .slide-arrow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 140%;
+    height: 76px;
+    z-index: 3;
+  }
+  .slide-arrow svg { display: block; overflow: visible; }
+  .slide-label {
+    position: absolute;
+    top: -8px;
+    left: 62%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    color: #c2410c;
+    font-weight: 600;
+    white-space: nowrap;
+    background: #f7f6f3;
+    padding: 0 6px;
+  }
+  .stage {
+    background: #ffffff;
+    border: 2px solid #e3e1dc;
+    border-radius: 16px;
+    padding: 32px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 280px;
+  }
+  .stage .num {
+    font-size: 14px;
+    font-weight: 600;
+    color: #b0aca4;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+  .stage .name {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .stage .en {
+    font-size: 13px;
+    color: #9aa0aa;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+  }
+  .stage .desc {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #4b5160;
+  }
+  .stage.s1 .name { color: #2f6fed; }
+  .stage.s2 .name { color: #e8830c; }
+  .stage.s3 { background: #fff5f4; border-color: #f2c4be; }
+  .stage.s3 .name { color: #d83931; }
+  .arrow {
+    align-self: center;
+    flex: 0 0 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    color: #c4c0b8;
+    font-weight: 700;
+    margin-top: 130px;
+  }
+  .footer {
+    margin-top: 34px;
+    text-align: center;
+    font-size: 13px;
+    color: #a8adb7;
+  }
+</style>
+</head>
+<body>
+  <div class="title">从「会用 AI」到「被 AI 养废」，只有三步</div>
+  <div class="subtitle">Osmani 提出的三阶段光谱：每一步都渐进、隐蔽、当下显得合情合理</div>
+  <div class="flow">
+    <div class="col">
+      <div class="marker m1">
+        <div class="slide-arrow">
+          <svg width="100%" height="76" viewBox="0 0 100 76" preserveAspectRatio="none">
+            <defs>
+              <marker id="ah" markerWidth="9" markerHeight="9" refX="6.5" refY="3.5" orient="auto">
+                <path d="M0,0 L7.5,3.5 L0,7 Z" fill="#e8830c"/>
+              </marker>
+            </defs>
+            <path d="M2 64 C 22 6, 62 2, 88 56" fill="none" stroke="#e8830c" stroke-width="2.5" stroke-dasharray="6 5" vector-effect="non-scaling-stroke" marker-end="url(#ah)"/>
+          </svg>
+          <div class="slide-label">多数人的实际位置</div>
+        </div>
+        <div class="bubble"><span class="dot"></span>你以为你在这</div>
+        <div class="pin"></div>
+      </div>
+      <div class="stage s1">
+        <div class="num">阶段 1</div>
+        <div class="name">认知卸载</div>
+        <div class="en">COGNITIVE OFFLOADING</div>
+        <div class="desc">活给 AI 干<br>判断还在我<br>结果由我负责</div>
+      </div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="col">
+      <div class="marker m2">
+        <div class="bubble">实际你多半在这<span class="dot" style="margin-left:7px;margin-right:0;background:#ffffff"></span></div>
+        <div class="pin"></div>
+      </div>
+      <div class="stage s2">
+        <div class="num">阶段 2</div>
+        <div class="name">判断延后</div>
+        <div class="en">DEFERRAL</div>
+        <div class="desc">AI 的答案<br>成了下一步的<br>默认依据</div>
+      </div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="col">
+      <div class="marker m3">
+        <div class="bubble">占位</div>
+        <div class="pin" style="visibility:hidden"></div>
+      </div>
+      <div class="stage s3">
+        <div class="num">阶段 3</div>
+        <div class="name">认知投降</div>
+        <div class="en">COGNITIVE SURRENDER</div>
+        <div class="desc">连检查的意识<br>都没了<br>AI 说的肯定有道理</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">图源：自制</div>
+</body>
+</html>

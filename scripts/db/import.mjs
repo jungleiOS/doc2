@@ -63,6 +63,9 @@ const stats = {
   mergedRows: 0,
   poolRows: 0,
   topicTables: 0,
+  decisions: 0,
+  trackedAnswers: 0,
+  recommend: 0,
 };
 
 /**
@@ -389,10 +392,11 @@ function openDb({ reset = false } = {}) {
     updateDraft: db.prepare(`UPDATE drafts SET
       question_id = ?, question_url = ?, date = ?, platform = ?, version = ?, summary = ?,
       status = ?, status_raw = ?, geo_json = ?, source_file = ?, raw_line_id = ? WHERE path = ?`),
-    upsertAnswer: db.prepare(`INSERT INTO answers (answer_url, question_id, published_at)
-      VALUES (?, ?, ?)
+    upsertAnswer: db.prepare(`INSERT INTO answers (answer_url, question_id, question_title, published_at)
+      VALUES (?, ?, ?, ?)
       ON CONFLICT(answer_url) DO UPDATE SET
         question_id = COALESCE(excluded.question_id, answers.question_id),
+        question_title = COALESCE(excluded.question_title, answers.question_title),
         published_at = COALESCE(answers.published_at, excluded.published_at)`),
     insertSnapshot: db.prepare(`INSERT OR REPLACE INTO snapshots (
       snapshot_date, answer_url, reads, upvotes, comments, favorites, likes,
@@ -422,6 +426,35 @@ function openDb({ reset = false } = {}) {
     insertEvent: db.prepare(
       "INSERT OR REPLACE INTO liker_events (event_date, token, action, detail_json) VALUES (?, ?, ?, ?)"
     ),
+    insertDecision: db.prepare(`INSERT INTO question_decisions (
+      run_date, question_id, decision, rank, score, reason, title, sources_json, payload_json
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(run_date, question_id, decision) DO UPDATE SET
+      rank = excluded.rank,
+      score = excluded.score,
+      reason = excluded.reason,
+      title = COALESCE(excluded.title, question_decisions.title),
+      sources_json = COALESCE(excluded.sources_json, question_decisions.sources_json),
+      payload_json = excluded.payload_json`),
+    insertTrackedAnswer: db.prepare(`INSERT INTO tracked_answers (
+      answer_url, question_id, question_title, author_token, author_name,
+      voteup_count, created_time, found_at, raw_json
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(answer_url) DO UPDATE SET
+      question_id = COALESCE(excluded.question_id, tracked_answers.question_id),
+      question_title = COALESCE(excluded.question_title, tracked_answers.question_title),
+      author_token = COALESCE(excluded.author_token, tracked_answers.author_token),
+      author_name = COALESCE(excluded.author_name, tracked_answers.author_name),
+      voteup_count = COALESCE(excluded.voteup_count, tracked_answers.voteup_count),
+      created_time = COALESCE(excluded.created_time, tracked_answers.created_time),
+      found_at = excluded.found_at,
+      raw_json = excluded.raw_json`),
+    insertRecommend: db.prepare(`INSERT INTO recommend_items (
+      rec_date, question_id, title, query
+    ) VALUES (?, ?, ?, ?)
+    ON CONFLICT(rec_date, question_id) DO UPDATE SET
+      title = COALESCE(excluded.title, recommend_items.title),
+      query = COALESCE(excluded.query, recommend_items.query)`),
   };
 }
 
@@ -834,7 +867,7 @@ function importAnswerSnapshots() {
         continue;
       }
       const publishedAt = normalizePublishedAt(item.publishedAt, snapshotDate);
-      stmts.upsertAnswer.run(answerUrl, item.questionId ?? null, publishedAt);
+      stmts.upsertAnswer.run(answerUrl, item.questionId ?? null, item.questionTitle ?? null, publishedAt);
       stmts.insertSnapshot.run(
         snapshotDate,
         answerUrl,
@@ -901,9 +934,124 @@ function importFollowedPool() {
         parseStatus: "ok",
       }, "pool");
     } catch (err) {
-      stats.skipped.push({ file: rel, reason: `第 ${idx + 1} 行解析失败：${err.message}` });
+      stats.skipped.push({ file: candidates.join(" / "), reason: `第 ${idx + 1} 行解析失败：${err.message}` });
     }
   });
+}
+
+/** scout-run-*.json：选题决策记录（入选 / 拒绝 / 跳过） */
+function importScoutRuns() {
+  const dir = path.join(repoRoot, "data/raw");
+  if (!fs.existsSync(dir)) return;
+  for (const file of fs.readdirSync(dir).filter((f) => /^scout-run-.+\.json$/.test(f))) {
+    const rel = path.join("data/raw", file);
+    let data;
+    try {
+      data = JSON.parse(fs.readFileSync(path.join(dir, file), "utf8"));
+    } catch (err) {
+      stats.skipped.push({ file: rel, reason: `JSON 解析失败：${err.message}` });
+      continue;
+    }
+    const runDate = data.date ?? file.match(/(\d{4}-\d{2}-\d{2})/)?.[1] ?? null;
+    if (!runDate) {
+      stats.skipped.push({ file: rel, reason: "缺少 date 字段，无法定位运行日期" });
+      continue;
+    }
+
+    const put = (item, decision, rank) => {
+      const qid = item?.id != null ? String(item.id) : null;
+      if (!qid) return;
+      // reason/skip 是字符串，veto 可能是数组或对象，统一转成可读文本
+      const rawReason = item.reason ?? item.skip ?? item.veto ?? null;
+      const reason =
+        rawReason == null
+          ? null
+          : typeof rawReason === "string"
+            ? rawReason
+            : Array.isArray(rawReason)
+              ? rawReason.join("；")
+              : JSON.stringify(rawReason);
+      stmts.insertDecision.run(
+        runDate,
+        qid,
+        decision,
+        rank,
+        Number.isFinite(item.total) ? item.total : null,
+        reason,
+        item.title ?? null,
+        Array.isArray(item.sources) ? JSON.stringify(item.sources) : null,
+        JSON.stringify(item)
+      );
+      stats.decisions += 1;
+    };
+
+    (data.ranked ?? []).forEach((item, idx) => put(item, "ranked", idx + 1));
+    (data.rejected ?? []).forEach((item) => put(item, "rejected", null));
+    (data.skipped ?? []).forEach((item) => put(item, "skipped", null));
+  }
+}
+
+/** tracked-answers-*.jsonl：关注作者的新回答 */
+function importTrackedAnswers() {
+  const dir = path.join(repoRoot, "data/raw");
+  if (!fs.existsSync(dir)) return;
+  for (const file of fs.readdirSync(dir).filter((f) => /^tracked-answers-.+\.jsonl$/.test(f))) {
+    const rel = path.join("data/raw", file);
+    const fallbackDate = file.match(/(\d{4}-\d{2}-\d{2})/)?.[1] ?? null;
+    const lines = fs
+      .readFileSync(path.join(dir, file), "utf8")
+      .split("\n")
+      .filter((l) => l.trim());
+
+    lines.forEach((line, idx) => {
+      let rec;
+      try {
+        rec = JSON.parse(line);
+      } catch (err) {
+        stats.skipped.push({ file: rel, reason: `第 ${idx + 1} 行解析失败：${err.message}` });
+        return;
+      }
+      if (!rec.answerUrl) return;
+      stmts.insertTrackedAnswer.run(
+        rec.answerUrl,
+        rec.questionId != null ? String(rec.questionId) : null,
+        rec.questionTitle ?? null,
+        rec.authorToken ?? null,
+        rec.authorName ?? null,
+        Number.isFinite(rec.voteupCount) ? rec.voteupCount : null,
+        rec.createdTime == null ? null : String(rec.createdTime),
+        rec.foundAt ?? fallbackDate ?? "unknown",
+        JSON.stringify(rec)
+      );
+      stats.trackedAnswers += 1;
+    });
+  }
+}
+
+/** cli-recommend-*.json：知乎推荐流 */
+function importRecommendItems() {
+  const dir = path.join(repoRoot, "data/raw");
+  if (!fs.existsSync(dir)) return;
+  for (const file of fs.readdirSync(dir).filter((f) => /^cli-recommend-.+\.json$/.test(f))) {
+    const rel = path.join("data/raw", file);
+    let data;
+    try {
+      data = JSON.parse(fs.readFileSync(path.join(dir, file), "utf8"));
+    } catch (err) {
+      stats.skipped.push({ file: rel, reason: `JSON 解析失败：${err.message}` });
+      continue;
+    }
+    const recDate = data.date ?? file.match(/(\d{4}-\d{2}-\d{2})/)?.[1] ?? null;
+    if (!recDate || !Array.isArray(data.items)) {
+      stats.skipped.push({ file: rel, reason: "缺少 date 或 items，结构不符" });
+      continue;
+    }
+    for (const item of data.items) {
+      if (item?.id == null) continue;
+      stmts.insertRecommend.run(recDate, String(item.id), item.title ?? null, item.query ?? null);
+      stats.recommend += 1;
+    }
+  }
 }
 
 /** liker-scan：seen-users.json + raw-*.json + engage-*.json（新数据在 data/raw，历史在 analytics） */
@@ -1009,6 +1157,58 @@ function importLikerScanFrom(dir) {
   }
 }
 
+// ---------- 落地区审计 ----------
+// 回答「data/raw 里的文件到底进没进库」：逐条目归类为 已入库 / 已知忽略 / 未接入。
+// 未接入的会一直堆积，本节让它们显形，而不是静默沉在目录里。
+
+const INGESTED_RULES = [
+  { test: (n) => /^answers-\d{4}-\d{2}-\d{2}\.json$/.test(n), note: "回答快照 → snapshots" },
+  { test: (n) => /^scout-run-.+\.json$/.test(n), note: "选题决策 → question_decisions" },
+  { test: (n) => /^tracked-answers-.+\.jsonl$/.test(n), note: "关注作者新回答 → tracked_answers" },
+  { test: (n) => /^cli-recommend-.+\.json$/.test(n), note: "推荐流 → recommend_items" },
+  { test: (n) => n === "followed-pool.jsonl", note: "关注问题池 → questions" },
+  { test: (n) => n === "liker-scan", note: "互动扫描 → likers / liker_events" },
+];
+
+const IGNORED_RULES = [
+  { test: (n) => n.endsWith(".log"), note: "运行日志，无需入库" },
+  {
+    test: (n) => /^scout-raw-.+\.json$/.test(n),
+    note: "采集原始响应，关键字段已存进 question_decisions 的 payload_json",
+  },
+  {
+    test: (n) => n === "collect-result.json",
+    note: "上轮采集的控制台结果，明细见 tracked-answers-*.jsonl",
+  },
+  { test: (n) => n === "track-snapshot", note: "快照原始响应，明细已在 answers-*.json" },
+];
+
+function auditLandingZone() {
+  const rawDir = path.join(repoRoot, "data/raw");
+  const result = { ingested: [], ignored: [], unhandled: [] };
+  if (!fs.existsSync(rawDir)) return result;
+
+  for (const entry of fs.readdirSync(rawDir, { withFileTypes: true })) {
+    const name = entry.name;
+    const mtime = fs.statSync(path.join(rawDir, name)).mtime;
+    const hit = INGESTED_RULES.find((r) => r.test(name));
+    if (hit) {
+      result.ingested.push({ name, note: hit.note, mtime });
+      continue;
+    }
+    const skip = IGNORED_RULES.find((r) => r.test(name));
+    if (skip) {
+      result.ignored.push({ name, note: skip.note, mtime });
+      continue;
+    }
+    result.unhandled.push({ name, note: "无导入通道", mtime });
+  }
+
+  const byNewest = (a, b) => b.mtime - a.mtime;
+  result.unhandled.sort(byNewest);
+  return result;
+}
+
 // ---------- 主流程 ----------
 
 function main() {
@@ -1021,6 +1221,9 @@ function main() {
     importTopicDraftTables();
     importAnswerSnapshots();
     importFollowedPool();
+    importScoutRuns();
+    importTrackedAnswers();
+    importRecommendItems();
     importLikerScan();
     db.exec("COMMIT");
   } catch (err) {
@@ -1037,8 +1240,16 @@ function main() {
     events: db.prepare("SELECT COUNT(*) AS n FROM liker_events").get().n,
     rawLines: db.prepare("SELECT COUNT(*) AS n FROM raw_lines").get().n,
     geoDrafts: db.prepare("SELECT COUNT(*) AS n FROM drafts WHERE geo_json IS NOT NULL").get().n,
+    decisions: db.prepare("SELECT COUNT(*) AS n FROM question_decisions").get().n,
+    trackedAnswers: db.prepare("SELECT COUNT(*) AS n FROM tracked_answers").get().n,
+    recommend: db.prepare("SELECT COUNT(*) AS n FROM recommend_items").get().n,
   };
   db.close();
+
+  const landing = auditLandingZone();
+  const fmtTime = (d) =>
+    `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")} ` +
+    `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
 
   const report = `# 迁移报告
 
@@ -1056,6 +1267,9 @@ function main() {
 | answers | ${counts.answers} |
 | likers | ${counts.likers} |
 | liker_events | ${counts.events} |
+| question_decisions | ${counts.decisions} |
+| tracked_answers | ${counts.trackedAnswers} |
+| recommend_items | ${counts.recommend} |
 | raw_lines | ${counts.rawLines} |
 
 带 GEO 关键词矩阵的草稿：${counts.geoDrafts} 篇
@@ -1090,7 +1304,23 @@ ${stats.skipped.length ? stats.skipped.map((s) => `- \`${s.file}\`：${s.reason}
 ${stats.unparsed.length ? stats.unparsed.slice(0, 30).map((u) => `- \`${u.file}\` 第 ${u.line} 行（${u.kind}）：\`${u.raw.slice(0, 120)}\``).join("\n") : "- 无"}
 ${stats.unparsed.length > 30 ? `\n……共 ${stats.unparsed.length} 条，仅列前 30` : ""}
 
-## 七、悬空草稿引用（问题行缺失，question_id 已置空）
+## 七、data/raw 落地区审计
+
+> \`data/raw\` 是原始数据落地区，数据库从中派生。本节逐条列出顶层每个文件的去向。
+
+**已入库（${landing.ingested.length}）**
+
+${landing.ingested.map((f) => `- \`${f.name}\` → ${f.note}`).join("\n") || "- 无"}
+
+**已知忽略（${landing.ignored.length}）**
+
+${landing.ignored.map((f) => `- \`${f.name}\`：${f.note}`).join("\n") || "- 无"}
+
+**未接入（${landing.unhandled.length}）**${landing.unhandled.length ? "：这些文件没有导入通道，数据不会进库" : ""}
+
+${landing.unhandled.map((f) => `- \`${f.name}\`（${fmtTime(f.mtime)}）：${f.note}`).join("\n") || "- 无"}
+
+## 八、悬空草稿引用（问题行缺失，question_id 已置空）
 
 ${stats.orphanDrafts.length ? stats.orphanDrafts.map((o) => `- \`${o.path}\`：引用问题 ${o.questionId}`).join("\n") : "- 无"}
 `;
@@ -1103,6 +1333,10 @@ ${stats.orphanDrafts.length ? stats.orphanDrafts.map((o) => `- \`${o.path}\`：�
   if (stats.skipped.length) {
     console.log("\n跳过的文件：");
     stats.skipped.forEach((s) => console.log(`  - ${s.file}: ${s.reason}`));
+  }
+  if (landing.unhandled.length) {
+    console.log(`\n⚠ data/raw 有 ${landing.unhandled.length} 个文件没有导入通道（数据不会进库）：`);
+    landing.unhandled.forEach((f) => console.log(`  - ${f.name}（${fmtTime(f.mtime)}）`));
   }
 }
 

@@ -17,3 +17,6 @@ data/render-preview/
 
 # 原始采集数据（answers/liker-scan/scout-run/followed-pool）统一放这里，不入库
 data/raw/
+
+# 数据库重建前的备份，只是安全网
+data/zhihu.db.bak

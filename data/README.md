@@ -2,6 +2,8 @@
 
 知乎内容工作区的本地数据库。草稿登记、选题历史、回答表现、互动用户全部入库，可 SQL 查询。
 
+**不想敲 SQL 就看板**：`./scripts/dashboard/start.sh` 起本地可视化（回答表现 / 选题池 / 互动关系三个 Tab），见 [`scripts/dashboard/README.md`](../scripts/dashboard/README.md)。
+
 ## 文件
 
 | 文件 | 作用 | 是否入库 |
@@ -55,11 +57,23 @@ sqlite3 data/zhihu.db
 
 | 目录 | 放什么 | 入库 |
 |------|--------|------|
-| `data/raw/` | **机器采集的原始数据**：`answers-*.json`、`liker-scan/*.json`、`scout-raw/run-*.json`、`followed-pool.jsonl` | ❌ gitignore |
+| `data/raw/` | **机器采集的原始数据**：`answers-*.json`、`liker-scan/*.json`、`scout-raw/run-*.json`、`followed-pool.jsonl`、`tracked-answers-*.jsonl`、`cli-recommend-*.json` | ❌ gitignore（原始留档） |
 | `analytics/` | **人读的报告**：`liker-scan/report-*.md`、`选题画像.md`、带货/选题复盘 md | ✅ |
 | `outlines/` | 人工登记源（`选题历史.md`）+ 生成物（总表、看板） | ✅ |
 
-采集类 skill（tracker / scout / liker-scan）现在全部写 `data/raw/`，跑完自动提示 `sync`；工程目录不再堆 json。
+采集类 skill（tracker / scout / liker-scan）现在全部写 `data/raw/`，写完自动 `import` 入库，工程目录不再堆 json。
+
+### 落地区审计
+
+`data/raw` 是原始数据的落地区，数据库从它派生。每次 `import` 会逐条归类顶层文件，写进 `import-report.md` 第七节：
+
+| 分类 | 含义 | 当前文件 |
+|------|------|----------|
+| 已入库 | 有导入通道，数据在表里 | `answers-*.json`、`followed-pool.jsonl`、`liker-scan/`、`scout-run-*.json`、`scout-raw-*.json`、`tracked-answers-*.jsonl`、`cli-recommend-*.json` |
+| 已知忽略 | 过程产物，不需要进库 | `*.log`、`collect-result.json`、`track-snapshot/` |
+| **未接入** | **没有导入通道，会一直堆积** | 有任何一个就会在 `import` 结束时打印 ⚠ 警告 |
+
+新采集脚本产出的文件名若不在上面两类里，会立刻被列为「未接入」——这是防止数据静默漏库的闸门。
 
 ## 数据源与生成物
 
@@ -80,6 +94,9 @@ sqlite3 data/zhihu.db
 - `drafts`：草稿登记，`source_file` 记来源表，`geo_json` 存 GEO 关键词矩阵
 - `answers` / `snapshots`：回答与每日表现快照（每个回答保留多期）
 - `likers` / `liker_events`：liker-scan 的互动用户与回赞/答谢事件
+- `question_decisions`：每轮 scout 的选题决策（入选 / 拒绝 / 跳过 + 分数 + 原因），可回溯「当时为什么没选这题」
+- `tracked_answers`：追踪答主的新回答（谁在答我关注的题）
+- `recommend_items`：知乎推荐流，按推荐词（`query`）统计命中
 - 视图 `v_latest_snapshot`（每个回答最新一期）、`v_question_index`（问题 + 关联草稿）
 
 ## 常用查询

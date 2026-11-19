@@ -56,6 +56,7 @@ const health = await new Promise((resolve) => {
 
 if (health.status !== "logged-in") {
   log(`探活未通过（状态：${health.status}），跳过本次采集`);
+  if (health.out.trim()) log(`探活输出：${health.out.trim().slice(0, 500)}`);
   process.exit(0);
 }
 
@@ -94,5 +95,27 @@ if (newCount > 0) {
   log(`完成：新增 ${newCount} 条，已通知`);
 } else {
   log("完成：无新增，不打扰");
+}
+
+// ---- 看板复扫：已选未答高分题每天一次复抓快照算增量（失败不阻断主流程）----
+const refetch = spawnSync(EGO, ["nodejs"], {
+  input: `globalThis.SCOUT_CFG={root:'${REPO}'};\n` + fs.readFileSync(path.join(REPO, "scripts/scout/watchlist-refetch.mjs"), "utf8"),
+  stdio: ["pipe", "pipe", "pipe"],
+  timeout: 600_000,
+  maxBuffer: 16 * 1024 * 1024,
+});
+fs.appendFileSync(LOG, refetch.stdout.toString());
+if (refetch.stderr.length) fs.appendFileSync(LOG, refetch.stderr.toString());
+const m = (refetch.stdout.toString().match(/SUMMARY:(\d+) 起量(\d+)/) || []);
+if (refetch.status === 0 && m) {
+  log(`看板复扫完成：${m[1]} 题，起量 ${m[2]} 题`);
+  if (Number(m[2]) > 0) {
+    spawnSync("osascript", [
+      "-e",
+      `display notification "看板 ${m[2]} 道题正在起量，详见 data/raw/watchlist-refetch-*" with title "选题追踪" sound name "Glass"`,
+    ], { stdio: "ignore" });
+  }
+} else {
+  log(`看板复扫失败（状态 ${refetch.status}），下次定时再试`);
 }
 process.exit(0);

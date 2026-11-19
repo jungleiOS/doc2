@@ -13,6 +13,9 @@ mkdir -p data/raw/liker-scan analytics/liker-scan
 LOG="data/raw/liker-scan/cron-$(date +%F).log"
 exec >>"$LOG" 2>&1
 
+# launchd 拉起时 PATH 极简（无 nvm/volta、无 ~/.local/bin），这里补齐脚本依赖的命令行工具
+export PATH="$HOME/.nvm/versions/node/v24.13.0/bin:$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
 echo "===== daily-engage start $(date '+%F %T') ====="
 
 # macOS 通知（失败告警用）

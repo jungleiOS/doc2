@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>知乎内容工作台</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <h1>知乎内容工作台</h1>
+    <span class="freshness" id="freshness">载入中…</span>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-view="answers">回答表现</button>
+    <button class="tab" data-view="pool">选题池</button>
+    <button class="tab" data-view="social">互动关系</button>
+  </nav>
+  <button class="refresh" id="refresh" title="重新拉取数据">刷新</button>
+</header>
+
+<main>
+  <!-- 画面二：回答表现 -->
+  <section class="view active" id="view-answers">
+    <div class="cards" id="answer-cards"></div>
+
+    <div class="panel-grid">
+      <div class="panel">
+        <h2>赞阅比分档</h2>
+        <p class="hint">每篇回答的「赞同 ÷ 阅读」。分档越靠左，说明同样阅读量换来的赞越多。</p>
+        <div id="chart-rate-buckets" class="chart"></div>
+      </div>
+      <div class="panel">
+        <h2>高阅读 · 低转化</h2>
+        <p class="hint">阅读量高于中位数、但赞阅比低于平均值的稿子——最值得复盘的一批。</p>
+        <div id="list-low-efficiency" class="list"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>阅读量 Top 12</h2>
+      <p class="hint">条形长度是阅读量，颜色深浅是赞阅比。鼠标悬停看具体数字。</p>
+      <div id="chart-top-reads" class="chart"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>全部回答</h2>
+        <div class="sorts" id="answer-sorts">
+          <button class="sort active" data-sort="reads">按阅读</button>
+          <button class="sort" data-sort="upvoteRate">按赞阅比</button>
+          <button class="sort" data-sort="favoriteRate">按收藏率</button>
+          <button class="sort" data-sort="readDelta">按阅读增量</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="answer-table">
+          <thead>
+            <tr>
+              <th>标题</th>
+              <th class="num">阅读</th>
+              <th class="num">赞同</th>
+              <th class="num">赞阅比</th>
+              <th class="num">收藏率</th>
+              <th class="num">最后快照</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 画面三：选题池 -->
+  <section class="view" id="view-pool">
+    <div class="cards" id="pool-cards"></div>
+
+    <div class="panel-grid">
+      <div class="panel">
+        <h2>问题池状态</h2>
+        <p class="hint">候选 = 采集进来但还没处理的池子。</p>
+        <div id="chart-pool-status" class="chart"></div>
+      </div>
+      <div class="panel">
+        <h2>问题来源</h2>
+        <p class="hint">邀请、推荐、搜索各占多少。</p>
+        <div id="chart-pool-source" class="chart"></div>
+      </div>
+    </div>
+
+    <div class="panel-grid">
+      <div class="panel">
+        <h2>每轮选题决策</h2>
+        <p class="hint">每根柱子是一轮 scout：入选 / 拒绝 / 跳过各多少。</p>
+        <div id="chart-decisions" class="chart"></div>
+      </div>
+      <div class="panel">
+        <h2>拒绝原因排行</h2>
+        <p class="hint">数字已归一成 N，方便归类。回答数超限是最常见的拒因。</p>
+        <div id="list-rejects" class="list"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>最近一轮入选、但还没写的题</h2>
+      <p class="hint">这批是当前最该优先处理的清单。</p>
+      <div id="list-ranked-not-written" class="list"></div>
+    </div>
+  </section>
+
+  <!-- 画面四：互动关系 -->
+  <section class="view" id="view-social">
+    <div class="cards" id="social-cards"></div>
+
+    <div class="panel-grid">
+      <div class="panel-stack">
+        <div class="panel">
+          <h2>互动深度分布</h2>
+          <p class="hint">这些人各自赞过你多少次。次数越多，关系越实。</p>
+          <div id="chart-tiers" class="chart"></div>
+        </div>
+        <div class="panel">
+          <h2>每日回赞次数</h2>
+          <p class="hint">最近十几天的执行记录，稳定在每天 20 次上下。</p>
+          <div id="chart-events" class="chart"></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>待回赞清单</h2>
+        <p class="hint" id="pending-hint">赞过你但还没被回赞的人，按点赞次数排。</p>
+        <div id="list-pending-vote" class="list"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>互动最频繁的人</h2>
+      <p class="hint">按累计点赞次数排序。</p>
+      <div class="table-wrap">
+        <table class="data-table" id="liker-table">
+          <thead>
+            <tr>
+              <th>昵称</th>
+              <th class="num">赞过我</th>
+              <th class="num">关注者</th>
+              <th class="num">获赞</th>
+              <th>最近出现</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

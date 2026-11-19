@@ -58,9 +58,10 @@ CREATE TABLE IF NOT EXISTS drafts (
 
 -- 回答与每日快照
 CREATE TABLE IF NOT EXISTS answers (
-  answer_url   TEXT PRIMARY KEY,
-  question_id  TEXT,
-  published_at TEXT
+  answer_url     TEXT PRIMARY KEY,
+  question_id    TEXT,             -- 多数快照没带 ID，靠标题也能识别
+  question_title TEXT,             -- 从快照 raw_json.questionTitle 回填
+  published_at   TEXT
 );
 
 CREATE TABLE IF NOT EXISTS snapshots (
@@ -103,6 +104,45 @@ CREATE TABLE IF NOT EXISTS liker_events (
   action     TEXT NOT NULL,      -- voted|thanked
   detail_json TEXT,
   PRIMARY KEY (event_date, token, action)
+);
+
+-- 选题决策记录：scout-run-*.json 的 ranked / rejected / skipped
+-- 用途：回溯「当时为什么选这题」「为什么跳过」，避免重复评估
+CREATE TABLE IF NOT EXISTS question_decisions (
+  run_date      TEXT NOT NULL,
+  question_id   TEXT NOT NULL,
+  decision      TEXT NOT NULL,  -- ranked|rejected|skipped
+  rank          INTEGER,        -- ranked 时的名次
+  score         INTEGER,
+  reason        TEXT,           -- rejected 原因 / skipped 的 skip 说明
+  title         TEXT,
+  sources_json  TEXT,           -- 该题来自哪些列表（邀请/搜索/回捞…）
+  payload_json  TEXT NOT NULL,  -- 整条兜底
+  PRIMARY KEY (run_date, question_id, decision)
+);
+
+-- 关注作者的新回答：tracked-answers-*.jsonl
+-- 用途：别人答了我在跟的题、判断赛道竞争强度
+CREATE TABLE IF NOT EXISTS tracked_answers (
+  answer_url     TEXT PRIMARY KEY,
+  question_id    TEXT,
+  question_title TEXT,
+  author_token   TEXT,
+  author_name    TEXT,
+  voteup_count   INTEGER,
+  created_time   TEXT,
+  found_at       TEXT NOT NULL,
+  raw_json       TEXT NOT NULL
+);
+
+-- 知乎推荐流：cli-recommend-*.json
+-- 用途：选题候选来源之一，按推荐词（query）反查命中率
+CREATE TABLE IF NOT EXISTS recommend_items (
+  rec_date    TEXT NOT NULL,
+  question_id TEXT NOT NULL,
+  title       TEXT,
+  query       TEXT,             -- 触发该推荐的检索词
+  PRIMARY KEY (rec_date, question_id)
 );
 
 -- 每个回答的最新一次快照

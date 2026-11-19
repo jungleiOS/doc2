@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1100px;
+    background: #f5f5f7;
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+    padding: 40px;
+  }
+  .title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d1d1f;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: #86868b;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .tiers { display: flex; flex-direction: column; gap: 20px; }
+  .tier {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+  }
+  .tier-num {
+    flex-shrink: 0;
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 700;
+    color: #fff;
+    margin-top: 4px;
+  }
+  .tier-1 .tier-num { background: #0071e3; }
+  .tier-2 .tier-num { background: #5e5ce6; }
+  .tier-3 .tier-num { background: #bf4800; }
+  .tier-body { flex: 1; }
+  .tier-name {
+    font-size: 19px; font-weight: 700; color: #1d1d1f; margin-bottom: 4px;
+  }
+  .tier-desc {
+    font-size: 14px; color: #86868b; margin-bottom: 14px; line-height: 1.5;
+  }
+  .tier-pick {
+    display: flex; align-items: center; gap: 12px;
+    background: #f5f5f7; border-radius: 10px; padding: 12px 16px;
+  }
+  .tier-pick .label { font-size: 13px; color: #86868b; flex-shrink: 0; }
+  .tier-pick .machine { font-size: 17px; font-weight: 700; }
+  .tier-1 .machine, .tier-2 .machine { color: #0071e3; }
+  .tier-3 .machine { color: #bf4800; }
+  .tier-pick .why { font-size: 13px; color: #424245; line-height: 1.5; }
+  .footer {
+    text-align: center; font-size: 12px; color: #aeaeb2; margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+
+<div class="title">办公负载三档 · 对号入座</div>
+<div class="subtitle">同样叫「办公」，对电脑的要求差了三档</div>
+
+<div class="tiers">
+
+  <div class="tier tier-1">
+    <div class="tier-num">1</div>
+    <div class="tier-body">
+      <div class="tier-name">文档网页档</div>
+      <div class="tier-desc">Word / Excel / PPT、邮件、微信钉钉、二三十个浏览器标签页</div>
+      <div class="tier-pick">
+        <span class="label">选</span>
+        <span class="machine">MacBook Air（16GB+512GB）</span>
+        <span class="why">性能过剩，无风扇永远安静，续航最长；Pro 的所有优势这一档一个都用不上</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tier tier-2">
+    <div class="tier-num">2</div>
+    <div class="tier-body">
+      <div class="tier-name">外接多开档</div>
+      <div class="tier-desc">常年外接显示器、经常带电脑去客户那投屏、几十个标签页+会议软件常驻</div>
+      <div class="tier-pick">
+        <span class="label">选</span>
+        <span class="machine">MacBook Air 也能扛，但 Pro 更省心</span>
+        <span class="why">差在 HDMI 直连、接口数量和 120Hz 屏幕——天天发生的小烦躁和眼睛的事</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tier tier-3">
+    <div class="tier-num">3</div>
+    <div class="tier-body">
+      <div class="tier-name">本地重载档</div>
+      <div class="tier-desc">剪 4K 视频、跑编译、本地大模型、批量修图导出</div>
+      <div class="tier-pick">
+        <span class="label">选</span>
+        <span class="machine">MacBook Pro</span>
+        <span class="why">Air 无风扇，持续重负载会降频；Pro 的主动散热是干活的底线，不是锦上添花</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">判断框架：按你每天的真实负载对号，不按机器的名字选</div>
+
+</body>
+</html>
