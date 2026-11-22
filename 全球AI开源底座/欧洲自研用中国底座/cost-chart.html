@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin:0; background:#ffffff; font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; }
+  .wrap { width:1080px; padding:64px 72px; box-sizing:border-box; background:#ffffff; }
+  h1 { font-size:40px; margin:0 0 12px 0; color:#111; font-weight:700; }
+  .sub { font-size:22px; color:#666; margin-bottom:52px; }
+  .chart { display:flex; align-items:flex-end; gap:140px; padding:0 60px 0 60px; height:560px; border-left:3px solid #ddd; border-bottom:3px solid #333; }
+  .col { display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%; width:300px; }
+  .val { font-size:34px; font-weight:700; margin-bottom:14px; }
+  .bar { width:240px; border-radius:12px 12px 0 0; }
+  .bar1 { height:430px; background:linear-gradient(180deg,#e05252,#b03030); }
+  .bar2 { height:22px; background:linear-gradient(180deg,#3f7fd6,#2a5aa8); margin-bottom:4px; }
+  .name { margin-top:26px; text-align:center; }
+  .name .t { font-size:26px; font-weight:600; color:#222; line-height:1.45; }
+  .name .d { font-size:20px; color:#777; margin-top:6px; line-height:1.5; }
+  .src { margin-top:52px; font-size:18px; color:#999; line-height:1.8; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>从零预训练 vs 基于开源底座：成本差着两个数量级</h1>
+  <div class="sub">单位：美元（训练算力成本量级对比，非线性示意）</div>
+  <div class="chart">
+    <div class="col">
+      <div class="val" style="color:#b03030;">≈1 亿美元</div>
+      <div class="bar bar1"></div>
+      <div class="name">
+        <div class="t">从零预训练前沿开源模型<br>（Meta Llama 3 405B 公开口径）</div>
+        <div class="d">还需数千张顶级 GPU 集群 + 顶级数据工程团队</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="val" style="color:#2a5aa8;">≈560 万美元</div>
+      <div class="bar bar2"></div>
+      <div class="name">
+        <div class="t">基于开源底座训练/蒸馏<br>（DeepSeek-R1 公开口径）</div>
+        <div class="d">一套底座，几百上千万美元就能出旗舰模型</div>
+      </div>
+    </div>
+  </div>
+  <div class="src">
+    数据来源：Meta 公开披露 Llama 3 训练算力成本约 1 亿美元量级（多家媒体转引）；DeepSeek 论文披露 R1 训练成本 557.6 万美元（V3 训练 278.8 万 H800 GPU 小时折算）。柱高非线性示意，仅表达数量级差异。
+  </div>
+</div>
+</body>
+</html>

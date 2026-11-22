@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"/>
+<style>
+:root{--bg:#0f1419;--card:#1a2332;--line:#2d3a4d;--text:#e8eef7;--muted:#9aa8bc;--a:#5b9fd4;--b:#6bc4a6;--c:#d4a35b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:"PingFang SC","Helvetica Neue",sans-serif;width:1200px;padding:48px 56px}
+h1{font-size:32px;font-weight:650;margin-bottom:10px}
+.sub{color:var(--muted);font-size:17px;margin-bottom:32px;line-height:1.55}
+.row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;min-height:250px}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;padding:4px 10px;border-radius:999px;margin-bottom:14px}
+.card:nth-child(1) .tag{background:rgba(91,159,212,.18);color:var(--a)}
+.card:nth-child(2) .tag{background:rgba(107,196,166,.18);color:var(--b)}
+.card:nth-child(3) .tag{background:rgba(212,163,91,.18);color:var(--c)}
+.card h2{font-size:22px;margin-bottom:12px}
+.card p{color:var(--muted);font-size:15px;line-height:1.65}
+.foot{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:15px;line-height:1.6}
+.foot strong{color:var(--text)}
+</style></head><body>
+<h1>欧洲大买家真正写进合同的三道硬约束</h1>
+<p class="sub">驻留、追责、可控部署——专有模型也能满足。开源/开放权重是可控的加成项，不是这三条的必需解。</p>
+<div class="row">
+<div class="card"><div class="tag">01</div><h2>数据驻留</h2><p>敏感提示词、文档、微调语料放在哪国机房、归谁管辖。国防和银行尤其硬。</p></div>
+<div class="card"><div class="tag">02</div><h2>可审计可追责</h2><p>谁调用了模型、输出依据是什么、出事找谁。公共机构和高风险场景更盯日志与责任链。</p></div>
+<div class="card"><div class="tag">03</div><h2>可控部署</h2><p>能不能进自己的机房或专有云、责任边界清不清楚。专有企业模型 + 本地部署，同样能过这关。</p></div>
+</div>
+<p class="foot"><strong>读法：</strong>这三条解释「为什么要主权可控的本土底座」。开源另有自己的理由——生态、门槛、可换底座——别跟采购硬约束绑死。</p>
+</body></html>

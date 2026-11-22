@@ -1,6 +1,6 @@
 # 迁移报告
 
-生成时间：2026-11-18T15:27:56.444Z
+生成时间：2026-11-22T10:07:49.241Z
 数据源：只读导入，未修改任何原始文件
 数据库：`data/zhihu.db`（已加入 .gitignore，不入库）
 
@@ -8,42 +8,42 @@
 
 | 表 | 行数 |
 |----|------|
-| questions | 1606 |
-| drafts | 181 |
-| snapshots | 674 |
-| answers | 135 |
-| likers | 627 |
-| liker_events | 523 |
-| question_decisions | 1514 |
-| tracked_answers | 194 |
-| recommend_items | 393 |
-| raw_lines | 1988 |
+| questions | 1754 |
+| drafts | 191 |
+| snapshots | 805 |
+| answers | 141 |
+| likers | 671 |
+| liker_events | 574 |
+| question_decisions | 1850 |
+| tracked_answers | 286 |
+| recommend_items | 603 |
+| raw_lines | 2059 |
 
 带 GEO 关键词矩阵的草稿：6 篇
 
 ## 二、选题历史解析
 
-- 选题历史记录行（拆分粘连后）：742
+- 选题历史记录行（拆分粘连后）：768
 - 结构化成功：0
 - 部分解析（缺标题或缺日期）：0
 - 复盘行：126
-- 草稿行：1
+- 草稿行：0
 - 粘连行拆分：1
-- followed-pool 导入行：5188
-- 话题级问题对应表：35 张
+- followed-pool 导入行：5541
+- 话题级问题对应表：37 张
 
 ## 三、answers 快照
 
-- 成功导入快照记录：674
+- 成功导入快照记录：805
 
 ## 四、GEO 矩阵归属
 
-- 第 350 行 → `平板选购指南2026/三千预算iPad还是安卓平板/知乎回答-三千预算iPad还是安卓平板-v1.md`（匹配分 0.76）
-- 第 354 行 → `iOS功能/国行iPhone调休闹钟/知乎回答-国行iPhone调休闹钟-v1.md`（匹配分 1.00）
-- 第 358 行 → `iPhone18Pro/全球售价/知乎回答-iPhone18Pro全球售价-v1.md`（匹配分 0.96）
-- 第 362 行 → `iPhone18Pro/国行SiriAI/知乎回答-iPhone18Pro国行SiriAI-v1.md`（匹配分 0.87）
-- 第 366 行 → `iOS功能/iPhone接力功能/知乎回答-iPhone接力功能-v2.md`（匹配分 0.83）
-- 第 370 行 → `平板选购指南2026/iPadPro主力生产力/知乎回答-iPadPro主力生产力-v1.md`（匹配分 0.87）
+- 第 371 行 → `平板选购指南2026/三千预算iPad还是安卓平板/知乎回答-三千预算iPad还是安卓平板-v1.md`（匹配分 0.76）
+- 第 375 行 → `iOS功能/国行iPhone调休闹钟/知乎回答-国行iPhone调休闹钟-v1.md`（匹配分 1.00）
+- 第 379 行 → `iPhone18Pro/全球售价/知乎回答-iPhone18Pro全球售价-v1.md`（匹配分 0.96）
+- 第 383 行 → `iPhone18Pro/国行SiriAI/知乎回答-iPhone18Pro国行SiriAI-v1.md`（匹配分 0.87）
+- 第 387 行 → `iOS功能/iPhone接力功能/知乎回答-iPhone接力功能-v2.md`（匹配分 0.83）
+- 第 391 行 → `平板选购指南2026/iPadPro主力生产力/知乎回答-iPadPro主力生产力-v1.md`（匹配分 0.87）
 
 
 
@@ -60,7 +60,7 @@
 
 > `data/raw` 是原始数据落地区，数据库从中派生。本节逐条列出顶层每个文件的去向。
 
-**已入库（62）**
+**已入库（76）**
 
 - `answers-2026-11-05.json` → 回答快照 → snapshots
 - `answers-2026-11-08.json` → 回答快照 → snapshots
@@ -73,12 +73,18 @@
 - `answers-2026-11-16.json` → 回答快照 → snapshots
 - `answers-2026-11-17.json` → 回答快照 → snapshots
 - `answers-2026-11-18.json` → 回答快照 → snapshots
+- `answers-2026-11-19.json` → 回答快照 → snapshots
+- `answers-2026-11-20.json` → 回答快照 → snapshots
+- `answers-2026-11-21.json` → 回答快照 → snapshots
 - `cli-recommend-2026-11-10.json` → 推荐流 → recommend_items
 - `cli-recommend-2026-11-11.json` → 推荐流 → recommend_items
 - `cli-recommend-2026-11-12.json` → 推荐流 → recommend_items
 - `cli-recommend-2026-11-13.json` → 推荐流 → recommend_items
 - `cli-recommend-2026-11-16.json` → 推荐流 → recommend_items
 - `cli-recommend-2026-11-18.json` → 推荐流 → recommend_items
+- `cli-recommend-2026-11-19.json` → 推荐流 → recommend_items
+- `cli-recommend-2026-11-20.json` → 推荐流 → recommend_items
+- `cli-recommend-2026-11-21.json` → 推荐流 → recommend_items
 - `followed-pool.jsonl` → 关注问题池 → questions
 - `liker-scan` → 互动扫描 → likers / liker_events
 - `scout-run-2026-11-05-2138.json` → 选题决策 → question_decisions
@@ -114,6 +120,10 @@
 - `scout-run-2026-11-18-2206.json` → 选题决策 → question_decisions
 - `scout-run-2026-11-18-2214.json` → 选题决策 → question_decisions
 - `scout-run-2026-11-18-2215.json` → 选题决策 → question_decisions
+- `scout-run-2026-11-19-1518.json` → 选题决策 → question_decisions
+- `scout-run-2026-11-19-1521.json` → 选题决策 → question_decisions
+- `scout-run-2026-11-20-2156.json` → 选题决策 → question_decisions
+- `scout-run-2026-11-21-2045.json` → 选题决策 → question_decisions
 - `tracked-answers-2026-11-08.jsonl` → 关注作者新回答 → tracked_answers
 - `tracked-answers-2026-11-09.jsonl` → 关注作者新回答 → tracked_answers
 - `tracked-answers-2026-11-10.jsonl` → 关注作者新回答 → tracked_answers
@@ -124,8 +134,12 @@
 - `tracked-answers-2026-11-16.jsonl` → 关注作者新回答 → tracked_answers
 - `tracked-answers-2026-11-17.jsonl` → 关注作者新回答 → tracked_answers
 - `tracked-answers-2026-11-18.jsonl` → 关注作者新回答 → tracked_answers
+- `tracked-answers-2026-11-19.jsonl` → 关注作者新回答 → tracked_answers
+- `tracked-answers-2026-11-20.jsonl` → 关注作者新回答 → tracked_answers
+- `tracked-answers-2026-11-21.jsonl` → 关注作者新回答 → tracked_answers
+- `tracked-answers-2026-11-22.jsonl` → 关注作者新回答 → tracked_answers
 
-**已知忽略（48）**
+**已知忽略（58）**
 
 - `collect-result.json`：上轮采集的控制台结果，明细见 tracked-answers-*.jsonl
 - `scout-raw-2026-11-05-2135.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
@@ -171,14 +185,28 @@
 - `scout-raw-2026-11-18-zzmerged.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
 - `scout-raw-2026-11-18-zzzzmerge2.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
 - `scout-raw-2026-11-18-zzzzzzfinal.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
+- `scout-raw-2026-11-19-1500.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
+- `scout-raw-2026-11-19-1505.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
+- `scout-raw-2026-11-19-1512.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
+- `scout-raw-2026-11-19-merged.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
+- `scout-raw-2026-11-20-2142.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
+- `scout-raw-2026-11-20-2146.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
+- `scout-raw-2026-11-20-2148.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
+- `scout-raw-2026-11-20-2152.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
+- `scout-raw-2026-11-20-merged.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
+- `scout-raw-2026-11-21-2037.json`：采集原始响应，关键字段已存进 question_decisions 的 payload_json
 - `track-collect-launchd.log`：运行日志，无需入库
 - `track-schedule.log`：运行日志，无需入库
 - `track-server.log`：运行日志，无需入库
 - `track-snapshot`：快照原始响应，明细已在 answers-*.json
 
-**未接入（7）**：这些文件没有导入通道，数据不会进库
+**未接入（11）**：这些文件没有导入通道，数据不会进库
 
-- `question-snapshots.jsonl`（2026-11-18 22:13）：无导入通道
+- `watchlist-refetch-2026-11-22.json`（2026-11-22 13:08）：无导入通道
+- `question-snapshots.jsonl`（2026-11-22 13:08）：无导入通道
+- `watchlist-refetch-2026-11-21.json`（2026-11-21 18:08）：无导入通道
+- `watchlist-refetch-2026-11-20.json`（2026-11-20 18:08）：无导入通道
+- `watchlist-refetch-2026-11-19.json`（2026-11-19 18:09）：无导入通道
 - `watchlist-refetch-2026-11-18.json`（2026-11-18 18:09）：无导入通道
 - `watchlist-refetch-2026-11-17.json`（2026-11-17 18:09）：无导入通道
 - `watchlist-refetch-2026-11-16.json`（2026-11-16 18:09）：无导入通道

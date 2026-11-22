@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin:0; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:#f6f7f9; }
+  .wrap { width: 1000px; padding: 40px; box-sizing: border-box; }
+  h2 { font-size: 30px; color: #1a1a1a; margin: 0 0 6px; }
+  .sub { font-size: 15px; color: #8590a6; margin-bottom: 28px; }
+  .flow { display: flex; align-items: stretch; gap: 0; }
+  .node { flex: 1; background: #fff; border: 2px solid #e4e7ee; border-radius: 14px; padding: 20px 16px; text-align: center; position: relative; }
+  .node .step { font-size: 13px; color: #8590a6; margin-bottom: 8px; }
+  .node .title { font-size: 20px; font-weight: 700; color: #175199; margin-bottom: 8px; }
+  .node .desc { font-size: 14px; color: #444; line-height: 1.6; }
+  .arrow { align-self: center; font-size: 28px; color: #b0b8c4; padding: 0 6px; flex: none; }
+  .branch { margin-top: 26px; display: flex; gap: 16px; }
+  .chip { flex: 1; background: #eef4ff; border: 1.5px solid #b8ccf0; border-radius: 10px; padding: 12px 10px; text-align: center; font-size: 15px; color: #175199; font-weight: 600; }
+  .note { margin-top: 26px; font-size: 13px; color: #8590a6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h2>知乎创作者的变现链路</h2>
+  <div class="sub">个人经验梳理：从答题到收入的四个环节</div>
+  <div class="flow">
+    <div class="node">
+      <div class="step">第一步</div>
+      <div class="title">答题攒等级</div>
+      <div class="desc">从关注的问题、邀请里选题，持续输出垂直内容</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="node">
+      <div class="step">第二步</div>
+      <div class="title">等级解锁权限</div>
+      <div class="desc">创作等级提升后，带货、咨询等权限陆续开放</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="node">
+      <div class="step">第三步</div>
+      <div class="title">第一笔收入</div>
+      <div class="desc">好物推荐：回答挂商品卡片，成交拿佣金</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="node">
+      <div class="step">第四步</div>
+      <div class="title">收入多元化</div>
+      <div class="desc">盐选小说、付费咨询、品牌任务、盐粒奖励</div>
+    </div>
+  </div>
+  <div class="branch">
+    <div class="chip">好物推荐佣金</div>
+    <div class="chip">盐选小说分成</div>
+    <div class="chip">付费咨询</div>
+    <div class="chip">盐粒兑换</div>
+  </div>
+  <div class="note">注：盐粒为知乎站内激励形式；好物推荐、盐选、付费咨询均为知乎官方创作者功能。</div>
+</div>
+</body>
+</html>

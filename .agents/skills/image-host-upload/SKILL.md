@@ -1,6 +1,6 @@
 ---
 name: image-host-upload
-description: 发布前把 Markdown 文章里的本地图片一键上传到免费临时图床，替换为外链 URL。适用场景：知乎/百家号等会抓取正文外链图并转存到自己服务器的平台——先用图床 URL 贴入编辑器，平台转存后即完成图片迁移，无需手动一张张上传。当用户说「传图床」「图片换外链」「发布前处理图片」「图床上传」时触发；其他 Skill（如 zhihu-answer-drafter 配图完成后）也应调用本 Skill。
+description: 发布前把 Markdown 文章里的本地图片一键上传到免费临时图床，替换为外链 URL。适用场景：知乎/百家号等会抓取正文外链图并转存到自己服务器的平台——先用图床 URL 贴入编辑器，平台转存后即完成图片迁移，无需手动一张张上传。当用户说「传图床」「图片换外链」「发布前处理图片」「图床上传」时触发；知乎起草流（zhihu-answer-drafter / zhihu-haowu-drafter）在**作者定稿后**调用本 Skill（见 drafter-common §8），起草改稿期间不调用。
 ---
 
 # 临时图床上传（image-host-upload）
